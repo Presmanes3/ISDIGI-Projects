@@ -1,0 +1,28 @@
+module tb_FIFO(
+    
+);
+
+// Declare inputs
+reg [7:0] DATA_IN;
+reg READ;
+reg WRITE;
+reg CLEAR_N;
+reg RESET_N;
+reg CLK;
+
+// Declare outputs
+wire [7:0] DATA_OUT;
+wire F_FULL_N;			// Used to indicate that FIFO is full
+wire F_EMPTY_N;			// Used to indicate that FIFO is empty
+wire [4:0] USE_DW;		// Used to indicate how many elements are in use
+
+
+FIFO_32_8 DUV(
+    .*
+)
+
+
+
+
+    
+endmodule
