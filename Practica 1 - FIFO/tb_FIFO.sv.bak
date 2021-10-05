@@ -2,27 +2,39 @@ module tb_FIFO(
     
 );
 
-// Declare inputs
-reg [7:0] DATA_IN;
-reg READ;
-reg WRITE;
-reg CLEAR_N;
-reg RESET_N;
-reg CLK;
+// Define the fifo interface for wiring easily
+FIFO_IFF fifo_iff();
 
-// Declare outputs
-wire [7:0] DATA_OUT;
-wire F_FULL_N;			// Used to indicate that FIFO is full
-wire F_EMPTY_N;			// Used to indicate that FIFO is empty
-wire [4:0] USE_DW;		// Used to indicate how many elements are in use
+// Pass the fifo interface to the test cases module
+test_cases tests(
+    .fifo_iff(fifo_iff)
+);
+
+// Pass the fifo interface to the test tasks module
 
 
+// Pass the fifo interface to the DUV
 FIFO_32_8 DUV(
-    .*
-)
+    .fifo_iff(fifo_iff)
+);
 
 
+initial begin
+    tests.basic_tasks.init();
 
+    tests.basic_tasks.reset();
 
+    @(negedge fifo_iff.CLK)
+
+    tests.basic_tasks.write(8'b00000001);
+
+    #tests.basic_tasks.T;
+
+    tests.basic_tasks.write(8'b00000001);
+
+    #tests.basic_tasks.T;
+
+    $stop;
+end
     
 endmodule

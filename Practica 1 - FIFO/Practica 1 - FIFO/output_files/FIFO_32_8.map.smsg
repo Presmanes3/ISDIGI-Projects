@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at FIFO_32_8.sv(136): always construct contains both blocking and non-blocking assignments File: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/Practica 1 - FIFO/FIFO_32_8.sv Line: 136
-Info (10281): Verilog HDL Declaration information at FIFO_32_8.sv(39): object "USE_DW" differs only in case from object "use_dw" in the same scope File: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/Practica 1 - FIFO/FIFO_32_8.sv Line: 39

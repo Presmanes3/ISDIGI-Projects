@@ -1,6 +1,0 @@
-
-State Machine - |FIFO_32_8|current_state
-Name current_state.EMPTY current_state.FULL current_state.OTHER 
-current_state.EMPTY 0 0 0 
-current_state.OTHER 1 0 1 
-current_state.FULL 1 1 0 
