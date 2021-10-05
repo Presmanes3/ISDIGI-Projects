@@ -24,8 +24,8 @@ initial begin
 
     @(posedge fifo_iff.CLK);
 
-    tests.test_output_equals_input_on_write();
-
+    tests.run_tests_input_output();
+    
     $stop;
 end
     
