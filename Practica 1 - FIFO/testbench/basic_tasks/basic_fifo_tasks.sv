@@ -1,4 +1,4 @@
-module test_tasks(
+module basic_fifo_tasks(
 	FIFO_IFF fifo_iff
 );
 
@@ -6,13 +6,13 @@ module test_tasks(
 
 parameter T = 10;       // Time unit in ps
 
-// Declare registers for tasks
-reg [7:0] DATA_IN_;
-reg READ_;
-reg WRITE_;
-reg CLEAR_N_;
-reg RESET_N_;
-reg CLK_;
+// Declare logicisters for tasks
+logic [7:0] DATA_IN_;
+logic READ_;
+logic WRITE_;
+logic CLEAR_N_;
+logic RESET_N_;
+logic CLK_;
 
 // Assignmets for wires
 assign fifo_iff.DATA_IN 	= DATA_IN_;
@@ -49,22 +49,22 @@ task clear();
 	CLEAR_N_ 	= 1;
 endtask
 
-// Enable read reg
+// Enable read logic
 task enable_read();
     READ_ 	= 1;
 endtask
 
-// Disable read reg
+// Disable read logic
 task disable_read();
     READ_ 	= 0;
 endtask
 
-// Enable write reg
+// Enable write logic
 task enable_write();
 	WRITE_	= 1;
 endtask
 
-// Disable write reg
+// Disable write logic
 task disable_write();
 	WRITE_	= 0;
 endtask

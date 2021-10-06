@@ -26,45 +26,45 @@ typedef enum bit[1:0] {EMPTY = 2'b00, OTHER = 2'b01, FULL = 2'b10} STATES;
 STATES current_state 	= EMPTY;
 STATES next_state		= EMPTY;
 
-// ====== COUNTER W REGISTERS ===== //
-reg counter_w_end;
-reg counter_w_enable = 1'b0;;
-reg [4:0]counter_w_current_value;
+// ====== COUNTER W logicISTERS ===== //
+logic counter_w_end;
+logic counter_w_enable 	= 1'b0;;
+logic [4:0]counter_w_current_value;
 
-// ====== COUNTER R REGISTERS ===== //
-reg counter_r_end;
-reg counter_r_enable 				= 1'b0;
-reg [4:0]counter_r_current_value;
+// ====== COUNTER R logicISTERS ===== //
+logic counter_r_end;
+logic counter_r_enable 	= 1'b0;
+logic [4:0]counter_r_current_value;
 
-// ====== COUNTER DW REGISTERS ===== //
-reg use_dw_end;
-reg counter_dw_enable 	= 1'b0;
+// ====== COUNTER DW logicISTERS ===== //
+logic use_dw_end;
+logic counter_dw_enable = 1'b0;
 
-reg counter_dw_mode 	= 1'b1;
+logic counter_dw_mode 	= 1'b1;
 
 // ===== CONCATENATION WRITE-READ INPUTS ===== //
-wire [1:2] read_write_conc;
+logic [1:2] read_write_conc;
 
 assign read_write_conc = {fifo_iff.WRITE, fifo_iff.READ};
 
 // ===== RESET CONTROLLER ===== //
-reg reset_sinc	= 1'b1;
-reg reset_asinc	= 1'b1;
+logic reset_sinc	= 1'b1;
+logic reset_asinc	= 1'b1;
 
-wire reset_controller;
+logic reset_controller;
 
 assign reset_controller = reset_sinc && reset_asinc;
 
 // ===== ACTIVATION FLAGS ===== //
-wire flag_use_dw_31;
+logic flag_use_dw_31;
 assign flag_use_dw_31 = fifo_iff.USE_DW == 31;
 
-wire flag_use_dw_1;
+logic flag_use_dw_1;
 assign flag_use_dw_1 = fifo_iff.USE_DW == 1;
 
 // ===== OTHERS ===== //
-wire [7:0] ram_data_out;
-reg output_selector = 1'b0;
+logic [7:0] ram_data_out;
+logic output_selector = 1'b0;
 
 
 
@@ -122,14 +122,11 @@ RAM_DP	#(.mem_depth(32),  .size(8)) PILA
 					);
 					
 always @(negedge fifo_iff.RESET_N or posedge fifo_iff.CLK)begin
-	reset_asinc = 1;
-	
 	if(!fifo_iff.RESET_N)begin
 		current_state 		= EMPTY;
 		reset_asinc = 0;
 	end
 	else begin
-		
 		current_state		= next_state;
 	end
 end
@@ -140,6 +137,7 @@ always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
 
 	next_state = current_state;
 	reset_sinc = 1;
+	reset_asinc = 1;
 
 	counter_r_enable 	= 0;
 	counter_w_enable 	= 0;
@@ -203,7 +201,7 @@ always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
 					counter_dw_mode		= 0;	// Substract mode
 					counter_dw_enable 	= 1;
 					
-					if(flag_use_dw_1 == 1)
+					if(flag_use_dw_1)
 						next_state 		= EMPTY;
 					else 
 						next_state 		= OTHER;
@@ -217,7 +215,7 @@ always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
 					counter_dw_mode		= 1;	// Add mode
 					counter_dw_enable 	= 1;
 					
-					if(flag_use_dw_31 == 31)
+					if(flag_use_dw_31)
 						next_state 		= FULL;
 					else
 						next_state 		= OTHER;
