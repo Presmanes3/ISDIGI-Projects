@@ -1,9 +1,54 @@
-{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/basic_tasks/basic_fifo_tasks.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/basic_tasks/basic_fifo_tasks.sv}
+{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module basic_fifo_tasks
+-- Compiling interface FSM_IFF
+-- Compiling module battery_test_fsm
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(65): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(70): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(75): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(82): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(93): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(101): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(110): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(121): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(127): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(133): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(140): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(152): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(161): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(168): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(183): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(189): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(197): (vlog-2240) Treating stand-alone use of function 'test_format_display' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(207): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(211): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(215): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(219): (vlog-2240) Treating stand-alone use of function 'check_assertion' as an implicit VOID cast.
+
+** Warning: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv(227): (vlog-2240) Treating stand-alone use of function 'battery_test_display' as an implicit VOID cast.
+
 
 Top level modules:
-	basic_fifo_tasks
+	battery_test_fsm
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -64,5 +109,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	--none--
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module basic_fifo_tasks
+
+Top level modules:
+	basic_fifo_tasks
 
 } {} {}}

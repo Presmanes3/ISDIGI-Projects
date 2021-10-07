@@ -4,7 +4,7 @@ module basic_fifo_tasks(
 
 `timescale 1ns/1ps
 
-parameter T = 10;       // Time unit in ps
+parameter T = 20;       // Time unit in ps
 
 // Declare logicisters for tasks
 logic [7:0] DATA_IN_;

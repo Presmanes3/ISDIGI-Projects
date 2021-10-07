@@ -21,8 +21,6 @@ module battery_test_fsm(
     FSM_IFF fsm_iff
 );
 
-`timescale 1ns/1ps
-
 parameter T = 20;       // Time unit in ps
 
 // Include format functions for tests
@@ -53,15 +51,11 @@ task write();
     basic_tasks.enable_write();
     basic_tasks.disable_read();
     basic_tasks.write(8'b0000001);
-
-    #T;
 endtask
 
 task read();
     basic_tasks.disable_write();
-    basic_tasks.enable_read();
-
-    #T;
+    basic_tasks.read();
 endtask
 
 
@@ -87,7 +81,13 @@ endtask
 task test_change_state_empty_other();
     test_format_display("test_change_state_empty_other");
 
+    @(posedge fifo_iff.CLK);
+
     reset();
+
+    #T;
+
+    basic_tasks.disable_read();
 
     // Check state == EMPTY
     check_assertion("CURRENT STATE == EMPTY");
@@ -95,6 +95,8 @@ task test_change_state_empty_other();
         else $error("CURRENT STATE !- EMPTY");
 
     write();
+
+    #1;
 
     check_assertion("CURRENT STATE == OTHER");
     assert (fsm_iff.current_state == OTHER)
@@ -107,7 +109,13 @@ endtask
 task test_change_state_other_empty();
     test_format_display("test_change_state_other_empty");
 
+    @(posedge fifo_iff.CLK);
+
     reset();
+
+    #T;
+
+    
 
     // Check state == EMPTY
     check_assertion("CURRENT STATE == EMPTY");
@@ -131,7 +139,11 @@ endtask
 task test_change_state_other_full();
     test_format_display("test_change_state_other_full");
 
+    @(posedge fifo_iff.CLK);
+
     reset();
+
+    #T;
 
     for (int i=0; i < 31; ++i) begin
         write();
@@ -143,6 +155,9 @@ task test_change_state_other_full();
 
     write();
 
+    basic_tasks.enable_write();
+    basic_tasks.disable_read();
+
     check_assertion("CURRENT STATE == FULL");
     assert (fsm_iff.current_state == FULL)
         else $error("CURRENT STATE !- FULL");
@@ -152,15 +167,40 @@ endtask
 task test_change_state_full_other();
     test_format_display("test_change_state_full_other");
 
-    // Write 31 element
-    // Check state == FULL
-    // Read 1 element
-    // Check state == OTHER
+    @(posedge fifo_iff.CLK);
+
+    reset();
+
+    #T;
+
+    for (int i=0; i <= 32; ++i) begin
+        write();
+    end
+
+    basic_tasks.enable_write();
+    basic_tasks.disable_read();
+
+    check_assertion("CURRENT STATE == FULL");
+    assert (fsm_iff.current_state == FULL)
+        else $error("CURRENT STATE !- FULL");
+
+    read();
+
+    check_assertion("CURRENT STATE == OTHER");
+    assert (fsm_iff.current_state == OTHER)
+        else $error("CURRENT STATE !- OTHER");
+
 endtask
 
 // === TESTS BASICS === //
 task test_force_write();
     test_format_display("test_force_write");
+
+    @(posedge fifo_iff.CLK);
+
+    reset();
+
+    #T;
 
     write();
 

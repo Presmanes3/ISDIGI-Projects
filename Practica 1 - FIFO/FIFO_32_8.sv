@@ -22,6 +22,7 @@ module FIFO_32_8(
 						
 						
 typedef enum bit[1:0] {EMPTY = 2'b00, OTHER = 2'b01, FULL = 2'b10} STATES;
+typedef enum bit {OUT_IS_IN = 0, OUT_IS_RAM = 1} OUTPUTS;
 
 STATES current_state 	= EMPTY;
 STATES next_state		= EMPTY;
@@ -128,13 +129,11 @@ always @(negedge fifo_iff.RESET_N or posedge fifo_iff.CLK)begin
 	end
 	else begin
 		current_state		= next_state;
+
 	end
 end
-	
 
-//, read_write_conc, flag_use_dw_31, flag_use_dw_1
-always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
-
+always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_use_dw_1 ) begin
 	next_state = current_state;
 	reset_sinc = 1;
 	reset_asinc = 1;
@@ -211,15 +210,18 @@ always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
 				
 				// WRITE = 1 || READ = 0
 				2'b10:begin			
-					counter_w_enable 	= 1;
-					counter_dw_mode		= 1;	// Add mode
-					counter_dw_enable 	= 1;
+
 					
 					if(flag_use_dw_31)
-						next_state 		= FULL;
+						next_state 			= FULL;
 					else
-						next_state 		= OTHER;
+						next_state 			= OTHER;
+						counter_w_enable 	= 1;
+						counter_dw_mode		= 1;	// Add mode
+						counter_dw_enable 	= 1;
+						output_selector 	= 1;
 					
+
 				end
 				
 				// WRITE = 1 || READ = 1
