@@ -22,14 +22,14 @@ module FIFO_32_8(
 						
 						
 typedef enum bit[1:0] {EMPTY = 2'b00, OTHER = 2'b01, FULL = 2'b10} STATES;
-typedef enum bit {OUT_IS_IN = 0, OUT_IS_RAM = 1} OUTPUTS;
+typedef enum bit {OUT_IS_IN = 1'b0, OUT_IS_RAM = 1'b1} OUTPUTS;
 
 STATES current_state 	= EMPTY;
 STATES next_state		= EMPTY;
 
 // ====== COUNTER W logicISTERS ===== //
 logic counter_w_end;
-logic counter_w_enable 	= 1'b0;;
+logic counter_w_enable 	= 1'b0;
 logic [4:0]counter_w_current_value;
 
 // ====== COUNTER R logicISTERS ===== //
@@ -112,17 +112,21 @@ counter use_dw (
 						);
 defparam use_dw.final_value = 32;
 
+assign ram_write_enable = fifo_iff.WRITE && (fifo_iff.F_FULL_N == 1'b1);
+
 RAM_DP	#(.mem_depth(32),  .size(8)) PILA
 				  (.data_in(fifo_iff.DATA_IN),
-					.wren (fifo_iff.WRITE),
+					.wren (ram_write_enable),
 					.clock(fifo_iff.CLK),
 					.rden(fifo_iff.READ),
 					.data_out(ram_data_out),
 					.rdaddress(counter_r_current_value),
 					.wraddress(counter_w_current_value)
 					);
+
 					
 always @(negedge fifo_iff.RESET_N or posedge fifo_iff.CLK)begin
+	reset_asinc = 1;
 	if(!fifo_iff.RESET_N)begin
 		current_state 		= EMPTY;
 		reset_asinc = 0;
@@ -133,10 +137,11 @@ always @(negedge fifo_iff.RESET_N or posedge fifo_iff.CLK)begin
 	end
 end
 
-always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_use_dw_1 ) begin
+
+always @( current_state, read_write_conc, flag_use_dw_31, flag_use_dw_1 ) begin
 	next_state = current_state;
+	
 	reset_sinc = 1;
-	reset_asinc = 1;
 
 	counter_r_enable 	= 0;
 	counter_w_enable 	= 0;
@@ -176,7 +181,7 @@ always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_u
 				2'b11:begin			
 					next_state 			= EMPTY;
 					
-					output_selector 	= 1;
+					output_selector 	= OUT_IS_IN;
 				end
 			
 				default:begin 
@@ -205,13 +210,11 @@ always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_u
 					else 
 						next_state 		= OTHER;
 					
-					output_selector 	= 1;
+					output_selector 	= OUT_IS_RAM;
 				end
 				
 				// WRITE = 1 || READ = 0
 				2'b10:begin			
-
-					
 					if(flag_use_dw_31)
 						next_state 			= FULL;
 					else
@@ -219,16 +222,14 @@ always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_u
 						counter_w_enable 	= 1;
 						counter_dw_mode		= 1;	// Add mode
 						counter_dw_enable 	= 1;
-						output_selector 	= 1;
-					
-
+						output_selector 	= OUT_IS_IN;
 				end
 				
 				// WRITE = 1 || READ = 1
 				2'b11:begin			
 					counter_r_enable  	= 1;
 					counter_w_enable 	= 1;
-					output_selector 	= 1;
+					output_selector 	= OUT_IS_RAM;
 					
 					next_state 			= OTHER;
 				end
@@ -255,7 +256,7 @@ always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_u
 					counter_dw_enable 	= 1;
 					counter_dw_mode		= 0;	// Substract mode
 					
-					output_selector 	= 1;
+					output_selector 	= OUT_IS_RAM;
 					next_state 			= OTHER;
 				end
 				
@@ -267,7 +268,7 @@ always @( current_state, read_write_conc, posedge flag_use_dw_31, posedge flag_u
 					counter_r_enable 	= 1;
 					counter_w_enable  	= 1;
 					
-					output_selector 	= 1;
+					output_selector 	= OUT_IS_RAM;
 					
 					next_state 			= FULL;
 				end

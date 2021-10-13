@@ -20,11 +20,4 @@ begin
 end     
 
 
-ejemplo_evaluar_ram: assert property (@(posedge clock)  (wren&&wraddress==rdaddress)##1 !wren&&$stable(rdaddress)|->NO_BYPASS);
-sequence NO_BYPASS;
- logic [7:0] aux, aux2;
-  (1, aux=data_in, aux2=mem[rdaddress]) ##1 (data_out===aux2) ##1 (data_out===aux) ;
-endsequence
-
-
 endmodule 

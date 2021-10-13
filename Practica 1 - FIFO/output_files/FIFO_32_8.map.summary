@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Oct 04 13:55:33 2021
+Analysis & Synthesis Status : Successful - Sun Oct 10 13:34:32 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : FIFO_32_8
 Top-level Entity Name : FIFO_32_8
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 17
+Total registers : 26
 Total pins : 28
 Total virtual pins : 0
 Total block memory bits : 256

@@ -46,6 +46,9 @@ endtask
 task clear();
 	CLEAR_N_ 	= 0;
 	@(posedge CLK_);
+
+	#1;
+	
 	CLEAR_N_ 	= 1;
 endtask
 
