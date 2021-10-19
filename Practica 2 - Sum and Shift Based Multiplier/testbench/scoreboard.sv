@@ -3,11 +3,12 @@ class scoreboard;
 system_iff sys_iff;
 
 
-task multiply(reg A,reg B);
+task multiply();
     
 endtask
 
-task compare_outputs(reg ideal_result, reg real_result);
+task compare_outputs();
 
 endtask
+
 endclass
