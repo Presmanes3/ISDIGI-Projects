@@ -18,6 +18,9 @@ initial begin
 
     // Link system interface
     scoreboard_.sys_iff = sys_iff;
+
+    multi_control_module.bts.inicializar(); //ejecuto la task inicializar
+
 end
 
 
