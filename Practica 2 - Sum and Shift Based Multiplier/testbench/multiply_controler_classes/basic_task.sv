@@ -1,6 +1,4 @@
 class basic_task;
-
-    system_iff sys_iff;
     
     task inicializar();
         sys_iff.A = 0;
@@ -16,8 +14,14 @@ class basic_task;
         sys_iff.RESET_N = 1'b0; 
     endtask
 
-   
-    resultadoCorrecto: assert property (Fin_Mult |=> S_ideal == S_real) else $info("ASSERTION ERROR/resultadoCorrecto: Valor del resultado INCORRECTO");
-    valorReset: assert property ()
+    // covergroup valoresx;
+    //     coverpoint cositas;
+    // endgroup;
 
-endtask
+
+   
+    // resultadoCorrecto: assert property (sys_iff.fin_mult |=> S_ideal == S_real) else $info("ASSERTION ERROR/resultadoCorrecto: Valor del resultado INCORRECTO");
+    // valorResetFuncional: assert property (!sys_iff.RESET_N |=> sys_iff.S_ideal == 0) else $info("ASSERTION ERROR/valorResetFuncional: Reset funcional incorrecto");
+    // valorResetReal: assert property (!sys_iff.RESET_N |=> sys_iff.S_real == 0) else $info("ASSERTION ERROR/valorResetReal: Reset real incorrecto");
+
+endclass

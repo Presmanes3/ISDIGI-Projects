@@ -1,9 +1,12 @@
+`include "scoreboard.sv"
+`include "interface.sv"
+
 module testbench(
     
 );
 
 // Instanciate the common system interface for signals
-system_iff sys_iff;
+system_iff sys_iff();
 
 // Instanciate scoreboard
 scoreboard scoreboard_;
@@ -15,9 +18,6 @@ multipli_control multi_control_module(
 
 initial begin
     scoreboard_ = new();
-
-    // Link system interface
-    scoreboard_.sys_iff = sys_iff;
 
     multi_control_module.bts.inicializar(); //ejecuto la task inicializar
 

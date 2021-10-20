@@ -1,7 +1,7 @@
 interface system_iff;
 
-    reg A_bits;
-    reg B_bits;
+    parameter A_bits;
+    parameter B_bits;
 
     logic [A_bits - 1 : 0] A;
     logic [B_bits - 1 : 0] B;
@@ -14,7 +14,7 @@ interface system_iff;
     logic rst;
 
     logic S_ideal;
-    logis S_real;
+    logic S_real;
 
     logic CLK;
     logic RESET_N;
