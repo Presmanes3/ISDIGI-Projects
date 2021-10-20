@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'fifo_iff.CLK'
+Slack : 6.003
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fifo_iff.CLK'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fifo_iff.CLK'
+Slack : 3.413
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fifo_iff.CLK'
+Slack : 5.790
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fifo_iff.CLK'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fifo_iff.CLK'
+Slack : 3.345
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fifo_iff.CLK'
+Slack : 8.048
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fifo_iff.CLK'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fifo_iff.CLK'
+Slack : 3.844
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fifo_iff.CLK'
+Slack : 8.107
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fifo_iff.CLK'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fifo_iff.CLK'
+Slack : 3.831
+TNS   : 0.000
+
+------------------------------------------------------------

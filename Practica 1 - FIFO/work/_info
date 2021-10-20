@@ -1,0 +1,413 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA/17.1
+T_opt
+!s110 1633864437
+Vl8U__milSAJ>5c8TTGY9c3
+04 7 4 work tb_FIFO fast 0
+=14-8c8caaac07cd-6162caf4-3b2-8b0
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z1 OL;O;10.4;61
+R0
+T_opt1
+!s110 1633358916
+Vm9m@CZ>ZhZWIeXHnZ<cmP2
+04 5 4 work mux21 fast 0
+=1-8c8caaac07cd-615b1444-cd-6e88
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt1
+R1
+R0
+T_opt2
+!s110 1633424919
+V^fYWTUd2Q:3eg>E^R:X110
+04 10 4 work test_cases fast 0
+=1-8c8caaac07cd-615c1617-102-5c8c
+R2
+n@_opt2
+R1
+R0
+vbasic_fifo_tasks
+Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z4 !s110 1633868011
+!i10b 1
+!s100 5BjCbYoX61YSIEAXVUW_A2
+IbCi?KfdkLYO2M=zF2cE;f2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+!s105 basic_fifo_tasks_sv_unit
+S1
+Z6 dC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO
+w1633864403
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv
+L0 1
+Z7 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1633868011.544000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/basic_fifo_tasks.sv|
+!i113 0
+Z8 o-work work -sv
+vbattery_test
+R3
+R4
+!i10b 1
+!s100 cOA^a8JD:M06fVHbiR]?=2
+IgamXn>FVLWlYKo:G8Mbzj0
+R5
+!s105 battery_test_sv_unit
+S1
+R6
+w1633864447
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test.sv
+Z9 Fdisplay_format.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633868011.589000
+!s107 display_format.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test.sv|
+!i113 0
+R8
+vbattery_test_basics
+R3
+!s110 1633516704
+!i10b 1
+!s100 VXFmdMIB4NW8jeE_<5D8j1
+I36ZDkU7mZNTaDIYijgA_90
+R5
+!s105 battery_test_basics_sv_unit
+S1
+R6
+w1633445172
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_basics.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_basics.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633516704.810000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_basics.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_basics.sv|
+!i113 0
+R8
+vbattery_test_counters
+R3
+!s110 1633532413
+!i10b 1
+!s100 kfMP6VaJak5k1g^DlAb_^2
+IRoP3Q>]DHigO6E86i6i4^0
+R5
+!s105 battery_test_counters_sv_unit
+S1
+R6
+Z10 w1633526910
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_counters.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_counters.sv
+R9
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633532413.970000
+!s107 display_format.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_counters.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_counters.sv|
+!i113 0
+R8
+vbattery_test_fsm
+R3
+Z11 !s110 1633532414
+!i10b 1
+!s100 5WJmoLUAIVV_37Fo>UT4U2
+ISEznG:[?lG[N^4T_X7Y`42
+R5
+Z12 !s105 battery_test_fsm_sv_unit
+S1
+R6
+Z13 w1633532410
+Z14 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv
+Z15 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv
+R9
+Z16 L0 19
+R7
+r1
+!s85 0
+31
+Z17 !s108 1633532414.016000
+Z18 !s107 display_format.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/battery_test/battery_test_fsm.sv|
+!i113 0
+R8
+vcounter
+R3
+R4
+!i10b 1
+!s100 dTX[QP?ZViT0l3hzNNPf10
+I5geQ<mcC9H7[lc10cM8642
+R5
+Z20 !s105 counter_sv_unit
+S1
+R6
+Z21 w1633864411
+Z22 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/counter.sv
+Z23 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/counter.sv
+FMathFun.vh
+L0 12
+R7
+r1
+!s85 0
+31
+Z24 !s108 1633868011.353000
+Z25 !s107 MathFun.vh|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/counter.sv|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/counter.sv|
+!i113 0
+R8
+YCOUNTER_WIRING_IFF
+R3
+R4
+!i10b 1
+!s100 BAl<S6>Jh4>Tgki=LTYS[2
+IA`=dA[ACEcA<N_c7Zd:kQ0
+R5
+R20
+S1
+R6
+R21
+R22
+R23
+L0 1
+R7
+r1
+!s85 0
+31
+R24
+R25
+R26
+!i113 0
+R8
+n@c@o@u@n@t@e@r_@w@i@r@i@n@g_@i@f@f
+Xdisplay_format_sv_unit
+R3
+R4
+!i10b 1
+!s100 1:bGeX:1iY?2aVY_BQP3P3
+IaSzGZ2fVlih7JRHOLg2bX3
+VaSzGZ2fVlih7JRHOLg2bX3
+!i103 1
+S1
+R6
+R10
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/display_format.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/display_format.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633868011.400000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/display_format.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/display_format.sv|
+!i113 0
+R8
+vFIFO_32_8
+R3
+R4
+!i10b 1
+!s100 T7nIR7e2IfAM1NiVO_7BL3
+I8e`2HdLMA5OUjJ479C;M33
+R5
+Z27 !s105 FIFO_32_8_sv_unit
+S1
+R6
+Z28 w1633865068
+Z29 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv
+Z30 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv
+R16
+R7
+r1
+!s85 0
+31
+Z31 !s108 1633868011.443000
+Z32 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/FIFO_32_8.sv|
+!i113 0
+R8
+n@f@i@f@o_32_8
+YFIFO_IFF
+R3
+R4
+!i10b 1
+!s100 <<6lNQ_Nkm>8EdO?L>J0K1
+IhD88EGf1K7U1bTlJo>3T23
+R5
+R27
+S1
+R6
+R28
+R29
+R30
+L0 1
+R7
+r1
+!s85 0
+31
+R31
+R32
+R33
+!i113 0
+R8
+n@f@i@f@o_@i@f@f
+YFSM_IFF
+R3
+R11
+!i10b 1
+!s100 fE47gbWkJAi[5e]9>EzhB1
+IE;a87PGX<z=BBiNjFY61D1
+R5
+R12
+S1
+R6
+R13
+R14
+R15
+L0 1
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 0
+R8
+n@f@s@m_@i@f@f
+vmux21
+R4
+!i10b 1
+!s100 _LT6<I=Ud:MEY67DdAaJE0
+IRh3@mZ:P8d454i<;Z<7DQ3
+R5
+R6
+w1633358976
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/mux21.v
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/mux21.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633868011.496000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/mux21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/mux21.v|
+!i113 0
+o-work work
+vRAM_DP
+R3
+R4
+!i10b 1
+!s100 o9=iWQS89[_=gGBCl[30>2
+IXUX0?6b@ioY^DUM`kR1X[3
+R5
+!s105 RAM_DP_sv_unit
+S1
+R6
+w1633864407
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/RAM_DP.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/RAM_DP.sv
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1633868011.309000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/RAM_DP.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/RAM_DP.sv|
+!i113 0
+R8
+n@r@a@m_@d@p
+vtb_FIFO
+R3
+R4
+!i10b 1
+!s100 Ag:?2=gUhkPh=oETDNle22
+IjlnTKMgHgWgVW>23AmlIT3
+R5
+!s105 tb_FIFO_sv_unit
+S1
+R6
+w1633864401
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/tb_FIFO.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/tb_FIFO.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633868011.261000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/tb_FIFO.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/tb_FIFO.sv|
+!i113 0
+R8
+ntb_@f@i@f@o
+vtest_cases
+R3
+!s110 1633445293
+!i10b 1
+!s100 MDOX`AZzCE9UkiKeEa[Eb0
+IZQT9Fhai5EgmLMe^P][M>2
+R5
+!s105 test_cases_sv_unit
+S1
+R6
+w1633445285
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 1 - FIFO\testbench\test_cases.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 1 - FIFO\testbench\test_cases.sv
+R9
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633445293.531000
+!s107 display_format.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 1 - FIFO\testbench\test_cases.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 1 - FIFO\testbench\test_cases.sv|
+!i113 0
+R8
+vtest_tasks
+R3
+!s110 1633444399
+!i10b 1
+!s100 i>REd?9];H5oD`]kSUI4?1
+Ii@ol5:T^B<nonBI`WK]W_0
+R5
+!s105 test_tasks_sv_unit
+S1
+R6
+w1633439255
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/test_tasks.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/test_tasks.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1633444399.101000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/test_tasks.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 1 - FIFO/testbench/test_tasks.sv|
+!i113 0
+R8
