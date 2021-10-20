@@ -1,7 +1,7 @@
 interface system_iff;
 
-    parameter A_bits;
-    parameter B_bits;
+    parameter A_bits = 0;
+    parameter B_bits = 0;
 
     logic [A_bits - 1 : 0] A;
     logic [B_bits - 1 : 0] B;
