@@ -4,11 +4,8 @@
 
         system_iff sys_iff;
 
-	    rand bit [sys_iff.A_bits -1:0]  A;
-        rand bit [sys_iff.B_bits -1:0]  B;
+	    rand bit [sys_iff.A_bits -1:0]  sys_iff.A;
+        rand bit [sys_iff.B_bits -1:0]  sys_iff.B;
 
-        initial begin
-            
-        end
 
     endclass
