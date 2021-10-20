@@ -1,24 +1,30 @@
-`include "interface.sv"
 `include "multiply_controler_classes/random.sv"
 `include "multiply_controler_classes/basic_task.sv"
 
-module multipli_control (system_iff sys_iff);
+module multipli_control ();
 
     //Inicializo asignador aleatorio
     RCSG random;
 
     basic_task bts;
 
+    task get_random_values;
+
+        if (!random.randomize()) begin
+			$display("randomization failed");
+			$finish();
+		end
+
+    endtask;
+
+
     initial begin
         bts = new;
-        bts.sys_iff = sys_iff;
 
         random = new;
-        
-        if (!randomInst.randomize()) begin
-				$display("randomization failed");
-				$finish();
-			end
-        
+
+        sys_iff.A = random.A_;
+        sys_iff.A = random.B_;
+
     end
 endmodule
