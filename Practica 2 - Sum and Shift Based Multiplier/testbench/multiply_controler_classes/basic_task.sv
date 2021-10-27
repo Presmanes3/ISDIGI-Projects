@@ -6,12 +6,17 @@ class basic_task;
         testbench.sys_iff.CLK = 1'b0;
         testbench.sys_iff.RESET_N = 1'b1;
         testbench.sys_iff.start = 1'b0;
+        testbench.sys_iff.S = 0;
+        testbench.sys_iff.fin_mult = 1'b0;
+        testbench.sys_iff.S_ideal = 0;
+        testbench.sys_iff.S_real = 0;
     endtask
 
-    task reset(A,B,RESET_N,CLK);
-        testbench.sys_iff.RESET_N = 1'b1;
-        @(negedge CLK)
-        testbench.sys_iff.RESET_N = 1'b0; 
+    task reset();
+        @(negedge testbench.sys_iff.CLK)
+        testbench.sys_iff.RESET_N = 1'b0;
+        @(negedge testbench.sys_iff.CLK)
+        testbench.sys_iff.RESET_N = 1'b1; 
     endtask
 
      covergroup rango_valores; //Compruebo que paso por todos los valores
