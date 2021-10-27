@@ -7,221 +7,231 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/questasim64_10.4/examples
+Z0 dC:/questasim64_10.4/examples
 T_opt
-!s110 1634741720
-Vjj_`W5O_C@DVhPTCdj<nY3
-04 9 4 work testbench fast 0
-=1-8c8caaac07cd-61702dd8-166-2fec
-o-quiet -auto_acc_if_foreign -work work +acc
+!s110 1635343436
+V2AGL_f0B?HVcicoK[[1LG0
+Z1 04 9 4 work testbench fast 0
+=1-8c8caaac07cd-61795c4c-294-62f0
+o-quiet -auto_acc_if_foreign -work work
 n@_opt
-OL;O;10.4;61
+Z2 OL;O;10.4;61
+R0
+T_opt1
+!s110 1635344256
+Vi8TedZ1JKJLZ2jLKS59QA0
+R1
+=9-8c8caaac07cd-61795f80-13e-42b8
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt1
+R2
+R0
 Xbasic_task_sv_unit
-Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1634741718
+Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z4 !s110 1635344315
 !i10b 1
-!s100 KQ=R]9LXPfm9_>aIClEFd2
-IQz[S8e><aTZi:1c3>=RM81
-VQz[S8e><aTZi:1c3>=RM81
+!s100 b:c[93cCb_TlzP]Fl8XQM2
+ILjiz93T_ii]IHEOMigbBT1
+VLjiz93T_ii]IHEOMigbBT1
 !i103 1
 S1
-Z2 dC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier
-Z3 w1634741633
+Z5 dC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier
+w1635342842
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv
 L0 1
-Z4 OL;L;10.4;61
+Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1634741718.441000
+!s108 1635344315.851000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv|
 !i113 0
-Z5 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vmultipli_control
-R0
-DXx4 work 24 multipli_control_sv_unit 0 22 SGRbR=BD9>dDQ1DBn:oHz0
-Z6 VDg1SIo80bB@j0V0VzS_@n1
+R3
+DXx4 work 24 multipli_control_sv_unit 0 22 NI@`^ijh^0hjgmGZ]Lh742
+Z8 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 31
 !i10b 1
-!s100 efWbcE8CR5SZPZmaWEgW]0
-IPdk?8PeToS:VnB:_23ZPT1
+!s100 DHIaTFaeEfH<gBJ;JiaT82
+Ij6KH=E7WI34EcAE6RIIBO3
 !s105 multipli_control_sv_unit
 S1
-R2
-w1634741431
-Z7 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
-Z8 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
-L0 4
-R4
-Z9 !s108 1634741718.288000
-Z10 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\basic_task.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\random.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
-Z11 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
-!i113 0
 R5
+Z9 w1635343559
+Z10 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
+Z11 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
+L0 4
+R6
+Z12 !s108 1635344315.702000
+Z13 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\basic_task.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\random.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
+!i113 0
+R7
 Xmultipli_control_sv_unit
-R0
-VSGRbR=BD9>dDQ1DBn:oHz0
+R3
+VNI@`^ijh^0hjgmGZ]Lh742
 r1
 !s85 0
 31
 !i10b 1
-!s100 :ji[k<ndd46:gjC[n_Li?0
-ISGRbR=BD9>dDQ1DBn:oHz0
+!s100 UAU?k[N<zEgYo0KJ]:3731
+INI@`^ijh^0hjgmGZ]Lh742
 !i103 1
 S1
-R2
-R3
-R7
-R8
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\random.sv
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\basic_task.sv
-L0 2
-R4
+R5
 R9
 R10
 R11
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\random.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\basic_task.sv
+L0 2
+R6
+R12
+R13
+R14
 !i113 0
-R5
+R7
 vmultipli_parallel
-R0
-R1
+R3
+R4
 !i10b 1
 !s100 L;[XE2aP02`MYm748;UF10
 IlmdJj3R5XVo^8J[NgJeR53
-R6
+R8
 !s105 multipli_parallel_sv_unit
 S1
-R2
+R5
 w1634734965
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv
 L0 18
-R4
+R6
 r1
 !s85 0
 31
-!s108 1634741718.192000
+!s108 1635344315.610000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv|
 !i113 0
-R5
+R7
 Xrandom_sv_unit
-R0
-R1
+R3
+R4
 !i10b 1
 !s100 MfnDP46FgIWUDEl;aEH^Y0
 I:K0f;_5?k^:FkGYi92jHY3
 V:K0f;_5?k^:FkGYi92jHY3
 !i103 1
 S1
-R2
+R5
 w1634741485
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv
 L0 2
-R4
+R6
 r1
 !s85 0
 31
-!s108 1634741718.489000
+!s108 1635344315.899000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
 !i113 0
-R5
+R7
 Xscoreboard_sv_unit
-R0
-R1
+R3
+R4
 !i10b 1
-!s100 mH1A<JhYUJEhd^fYf5a;k1
-I?]2e@zXA:N7dA_>z@6FV91
-V?]2e@zXA:N7dA_>z@6FV91
+!s100 R>mb4BHbSVjLGhde3?8?A3
+Ia[L`Ka=HNn6hLO08EYcC20
+Va[L`Ka=HNn6hLO08EYcC20
 !i103 1
 S1
-R2
-w1634741605
+R5
+Z15 w1635344308
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-!s108 1634741718.341000
+!s108 1635344315.753000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv|
 !i113 0
-R5
+R7
 Ysystem_iff
-R0
-Z12 DXx4 work 17 testbench_sv_unit 0 22 Tnh<=1B::2oXfKTN^B;fg2
-R6
+R3
+Z16 DXx4 work 17 testbench_sv_unit 0 22 19M5:WBYOn>@GXUC22JDH3
+R8
 r1
 !s85 0
 31
 !i10b 1
-!s100 UEe_FBMB_CQVDVHhHiLR61
-I<0o[imH9X;56Vo=a:Cnl`2
-Z13 !s105 testbench_sv_unit
+!s100 K;?FWe0Li5U8aKcMC9hCf3
+I@^N_MV2^AOT;A4KZDMcG=1
+Z17 !s105 testbench_sv_unit
 S1
-R2
-w1634741687
+R5
+w1635342106
 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv
-Z14 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv
+Z18 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv
 L0 1
-R4
-Z15 !s108 1634741718.389000
-Z16 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
-!i113 0
-R5
-vtestbench
-R0
-R12
 R6
-r1
-!s85 0
-31
-!i10b 1
-!s100 adXLWX`iH`@h=V@=W^XK72
-I]jOMiZcT]nPV>O]IFS`020
-R13
-S1
-R2
-Z18 w1634741713
-Z19 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
-Z20 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
-L0 4
-R4
-R15
-R16
-R17
+Z19 !s108 1635344315.800000
+Z20 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
 !i113 0
-R5
-Xtestbench_sv_unit
-R0
-VTnh<=1B::2oXfKTN^B;fg2
+R7
+vtestbench
+R3
+R16
+R8
 r1
 !s85 0
 31
 !i10b 1
-!s100 VlDHke1:^U>DQ6=_eCem82
-ITnh<=1B::2oXfKTN^B;fg2
-!i103 1
+!s100 Z`PQNZNB^`SAg?;@UfPdW2
+IRO4a4bIR_o<3=i8PF8Dz]1
+R17
 S1
-R2
-R18
+R5
+w1635343826
+Z22 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
+Z23 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
+L0 4
+R6
 R19
 R20
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv
-R14
-L0 1
-R4
-R15
-R16
-R17
+R21
 !i113 0
+R7
+Xtestbench_sv_unit
+R3
+V19M5:WBYOn>@GXUC22JDH3
+r1
+!s85 0
+31
+!i10b 1
+!s100 WfM@Znz35g?;0SCJX6EVG3
+I19M5:WBYOn>@GXUC22JDH3
+!i103 1
+S1
 R5
+R15
+R22
+R23
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv
+R18
+L0 1
+R6
+R19
+R20
+R21
+!i113 0
+R7

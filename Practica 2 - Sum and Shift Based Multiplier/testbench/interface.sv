@@ -11,10 +11,8 @@ interface system_iff;
     logic S;
     logic fin_mult;
 
-    logic rst;
-
-    logic S_ideal;
-    logic S_real;
+    logic [A_bits*2 - 1 : 0] S_ideal;
+    logic [A_bits*2 - 1 : 0] S_real;
 
     logic CLK;
     logic RESET_N;

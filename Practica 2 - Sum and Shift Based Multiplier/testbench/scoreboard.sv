@@ -1,9 +1,18 @@
 class scoreboard;
 
-    task multiply(int A, int B);
+    int A_;
+    int B_;
+    int result;
+    
+    task multiply();
+
+        A_ = testbench.sys_iff.A;
+        B_ = testbench.sys_iff.B;
+
         if(testbench.sys_iff.start == 1'b1)
         begin
-            testbench.sys_iff.S_ideal = A * B;
+            result = A_ * B_;            
+            testbench.sys_iff.S_ideal = result;
         end
     endtask
 
@@ -15,8 +24,6 @@ class scoreboard;
                 $display("RESULTS ARE EQUAL");
             else
                 $display("RESULTS ARE EQUAL");
-        
-
         end
     endtask
 

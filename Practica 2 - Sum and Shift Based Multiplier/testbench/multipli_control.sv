@@ -15,6 +15,9 @@ module multipli_control ();
 			$finish();
 		end
 
+        sys_iff.A = random.A_;
+        sys_iff.B = random.B_;
+
     endtask;
 
 
