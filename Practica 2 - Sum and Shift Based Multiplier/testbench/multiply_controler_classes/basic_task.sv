@@ -29,9 +29,4 @@ class basic_task;
          b_cero: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B == 0);
      endgroup
 
-    //Hago varias aserciones para comprobar rapidamente que algunos valores son correctos
-    //  resultadoCorrecto: assert property (testbench.sys_iff.fin_mult |=> S_ideal == S_real) else $info("ASSERTION ERROR/resultadoCorrecto: Valor del resultado INCORRECTO");
-    //  valorResetFuncional: assert property (!testbench.sys_iff.RESET_N |=> testbench.sys_iff.S_ideal == 0) else $info("ASSERTION ERROR/valorResetFuncional: Reset funcional incorrecto");
-    //  valorResetReal: assert property (!testbench.sys_iff.RESET_N |=> testbench.sys_iff.S_real == 0) else $info("ASSERTION ERROR/valorResetReal: Reset real incorrecto");
-
 endclass

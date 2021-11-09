@@ -29,5 +29,10 @@ module multipli_control ();
         sys_iff.A = random.A_;
         sys_iff.A = random.B_;
 
+
+        resultadoCorrecto: assert property (@(negedge testbench.sys_iff.CLK) testbench.sys_iff.fin_mult |=> testbench.sys_iff.S_ideal == testbench.sys_iff.S_real) else $info("ASSERTION ERROR/resultadoCorrecto: Valor del resultado INCORRECTO");
+        valorResetFuncional: assert property (@(negedge testbench.sys_iff.CLK) !testbench.sys_iff.RESET_N |=> testbench.sys_iff.S_ideal == 0) else $info("ASSERTION ERROR/valorResetFuncional: Reset funcional incorrecto");
+        valorResetReal: assert property (@(negedge testbench.sys_iff.CLK) !testbench.sys_iff.RESET_N |=> testbench.sys_iff.S_real == 0) else $info("ASSERTION ERROR/valorResetReal: Reset real incorrecto");
+
     end
 endmodule
