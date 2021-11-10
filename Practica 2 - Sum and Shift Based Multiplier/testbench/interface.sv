@@ -8,7 +8,6 @@ interface system_iff;
 
     logic start;
 
-    logic S;
     logic fin_mult;
 
     logic [A_bits*2 - 1 : 0] S_ideal;

@@ -8,8 +8,7 @@ module multipli_control ();
 
     basic_task bts;
 
-    task get_random_values;
-
+    task get_random_values();
         if (!random.randomize()) begin
 			$display("randomization failed");
 			$finish();
@@ -18,7 +17,9 @@ module multipli_control ();
         sys_iff.A = random.A_;
         sys_iff.B = random.B_;
 
-    endtask;
+        $display();
+
+    endtask
 
 
     initial begin
