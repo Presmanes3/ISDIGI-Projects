@@ -19,14 +19,6 @@ class basic_task;
         testbench.sys_iff.RESET_N = 1'b1; 
     endtask
 
-     covergroup rango_valores; //Compruebo que paso por todos los valores
-         a_positivo: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A > 0);
-         a_negativo: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A < 0);
-         a_cero: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A == 0);
-
-         b_positivo: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B > 0);
-         b_negativo: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B < 0);
-         b_cero: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B == 0);
-     endgroup
+     
 
 endclass

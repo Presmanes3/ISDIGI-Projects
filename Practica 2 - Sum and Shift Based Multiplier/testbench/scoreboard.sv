@@ -27,7 +27,7 @@ class scoreboard #(parameter int size);
             // else
             //     $display("RESULTS ARE NOT EQUAL");
 
-            comprobar_resultados: assert (testbench.sys_iff.S_ideal == testbench.sys_iff.S_real) else $info("ASSERT ERROR:  RESULTS ARE NOT EQUAL")
+            comprobar_resultados: assert (testbench.sys_iff.S_ideal == testbench.sys_iff.S_real) else $info("ASSERT ERROR:  RESULTS ARE NOT EQUAL");
         end
     endtask
 

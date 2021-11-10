@@ -25,6 +25,7 @@ scoreboard #(size) scoreboard_;
 multipli_control multi_control_module(
 );
 
+
 // Instanciate the multipli parallel object
 multipli_parallel multipli_parallel_module(
                 .CLOCK(sys_iff.CLK), 
@@ -54,11 +55,28 @@ initial begin
 
     sys_iff.start = 1'b1;
 
-    @(posedge sys_iff.CLK)
+    @(negedge sys_iff.CLK)
 
-    @(sys_iff.fin_mult == 1'b1)
+    @(sys_iff.fin_mult == 1'b1) //MIRA ESTO //FINMULT TE LO TIENE Q DAR EL CIRCUITO, NO LO PONES TU
 
     scoreboard_.compare_outputs();
+
+
+    // COVERGROUP STRUCTURE
+    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 75);
+        begin
+            @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
+            multi_control_module.get_random_values();                        //Conseguir valores aleatorios
+
+            multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
+            multi_control_module.rango_valores_inst.sample();
+
+            sys_iff.start = 1'b1;                                            //Empiece a calcular la multi
+
+            @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
+
+            scoreboard_.compare_outputs();                                   //Comparamos los resultados
+        end
 
     $stop();
 
