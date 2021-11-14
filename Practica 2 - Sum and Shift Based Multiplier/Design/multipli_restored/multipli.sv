@@ -9,31 +9,30 @@ input logic [tamano-1:0] A, B;
 output logic [2*tamano-1:0] S;
 output logic END_MULT;
 
-wire [1:0] ACCU;
+wire [1:0] accu_operational_mode_selector;
 
-wire enableX, enableM, enableLO, enableSHI;
-wire CARGA_LO, CARGA_SHI, CARGA_X;
+wire shifter_X_enable, register_M_enable, shifter_LO_enable, shifter_HI_enable;
+wire shifter_LO_operational_mode, shifter_HI_operational_mode;
 
-wire clearX, clearSHI, clearLO;
+wire shifter_X_clear, shifter_HI_clear, shifter_LO_clear;
 
-wire [2:0] CONTROL;
+wire [2:0] control;
 
-FSM control (.CLK(CLOCK),
-				 .RESET(RESET),
-				 .START(START), 
-				 .CARGA_LO(CARGA_LO), 
-				 .CARGA_SHI(CARGA_SHI),
-				 .CARGA_X(CARGA_X), 
-				 .enableX(enableX), 
-				 .enableLO(enableLO), 
-				 .enableSHI(enableSHI), 
-				 .clearX(clearX),		
-				 .clearSHI(clearSHI),		
-				 .clearLO(clearLO),		
-				 .ACCU(ACCU),		
-				 .CONTROL(CONTROL), 			
-				 .enableM(enableM),
-				 .FINMULT(END_MULT)); 
+FSM ControlPath (	.CLK(CLOCK),
+					.RESET(RESET),
+					.START(START), 
+					.shifter_LO_operational_mode(shifter_LO_operational_mode), 
+					.shifter_HI_operational_mode(shifter_HI_operational_mode),
+					.shifter_X_enable(shifter_X_enable), 
+					.shifter_LO_enable(shifter_LO_enable), 
+					.shifter_HI_enable(shifter_HI_enable), 
+					.shifter_X_clear(shifter_X_clear),		
+					.shifter_HI_clear(shifter_HI_clear),		
+					.shifter_LO_clear(shifter_LO_clear),		
+					.accu_operational_mode_selector(accu_operational_mode_selector),		
+					.control(control), 			
+					.register_M_enable(register_M_enable),
+					.end_mult(END_MULT)); 
 
 				 
 				 
@@ -42,16 +41,15 @@ DataPath DataPath (	.A(A),
 					.CLOCK(CLOCK), 
 					.RESET(RESET), 
 					.S(S), 
-					.accu_operatinal_mode_selector(ACCU), 
-					.shifter_X_enable(enableX), 
-					.register_M_enable(enableM), 
-					.shifter_LO_enable(enableLO), 
-					.shifter_HI_enable(enableSHI), 
-					.shifter_LO_operational_mode(CARGA_LO), 
-					.shifter_HI_operational_mode(CARGA_SHI), 
-					.CARGA_X(CARGA_X),
-					.shifter_X_clear(clearX),
-					.shifter_HI_clear(clearSHI), 
-					.shifter_LO_clear(clearLO),
-					.control(CONTROL));
+					.accu_operatinal_mode_selector(accu_operational_mode_selector), 
+					.shifter_X_enable(shifter_X_enable), 
+					.register_M_enable(register_M_enable), 
+					.shifter_LO_enable(shifter_LO_enable), 
+					.shifter_HI_enable(shifter_HI_enable), 
+					.shifter_LO_operational_mode(shifter_LO_operational_mode), 
+					.shifter_HI_operational_mode(shifter_HI_operational_mode), 
+					.shifter_X_clear(shifter_X_clear),
+					.shifter_HI_clear(shifter_HI_clear), 
+					.shifter_LO_clear(shifter_LO_clear),
+					.control(control));
 endmodule

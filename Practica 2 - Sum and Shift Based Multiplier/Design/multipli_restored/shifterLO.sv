@@ -28,7 +28,7 @@ always @ (posedge CLOCK, negedge RESET)
 			if(mode == 1'b1)begin
 				parallel_data_out <= parallel_data_in;	
 			end else begin
-				for ( k=0; k<tamano-1; k=k+1) parallel_data_out[k] <= parallel_data_out[k+1];
+				for ( k = 0; k < tamano-1; k = k + 1) parallel_data_out[k] <= parallel_data_out[k+1];
 				parallel_data_out[tamano-1:tamano-2] <= serial_data_in[1:0];
 			end
 		end 

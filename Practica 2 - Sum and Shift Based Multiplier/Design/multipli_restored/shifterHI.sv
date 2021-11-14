@@ -28,6 +28,7 @@ always @ (posedge CLOCK, negedge RESET)
 				for ( k=0; k < tamano-1 ; k = k + 1) parallel_data_out[k] <= parallel_data_out[k+1];
 					
 				parallel_data_out[tamano - 1] <= serial_data_in;
+
 			end
 		end 
 		else parallel_data_out <= 0;

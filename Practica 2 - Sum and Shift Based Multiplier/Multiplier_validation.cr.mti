@@ -1,16 +1,22 @@
-{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv}
+{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module shifterHI
+
+Top level modules:
+	shifterHI
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module FSM
 
 Top level modules:
 	FSM
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module shifterHI
 
 Top level modules:
-	shifterHI
+	--none--
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -19,25 +25,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	DataPath
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-
-Top level modules:
-	--none--
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/multipli.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/multipli.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module multipli
 
 Top level modules:
 	multipli
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module contador
-
-Top level modules:
-	contador
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/DUV/multipli_parallel.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -46,11 +39,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	multipli_parallel
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module contador
 
 Top level modules:
-	--none--
+	contador
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -58,6 +52,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	registroM
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+
+Top level modules:
+	--none--
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -73,6 +73,13 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	registroX
 
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module shifterLO
+
+Top level modules:
+	shifterLO
+
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface system_iff
@@ -82,32 +89,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	multipli_control
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module shifterLO
-
-Top level modules:
-	shifterLO
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module ADDER
 
 Top level modules:
 	ADDER
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface system_iff
--- Compiling package testbench_sv_unit
--- Compiling interface system_iff
--- Compiling module multipli_parallel
--- Compiling module multipli
--- Compiling module testbench
-
-Top level modules:
-	multipli_parallel
-	testbench
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/interface.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
