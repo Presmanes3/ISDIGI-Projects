@@ -1,7 +1,7 @@
-   // RANDOM GENERATOR of A and B
-class RCSG;
+// RANDOM GENERATOR of A and B
+`include "../interface.sv"
 
-	rand bit [testbench.sys_iff.A_bits -1:0]  A_;
-    rand bit [testbench.sys_iff.B_bits -1:0]  B_;
-
+class RCSG #(int size);
+	rand bit [size -1:0]  A_;
+    rand bit [size -1:0]  B_;
 endclass

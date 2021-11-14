@@ -1,6 +1,7 @@
 `include "scoreboard.sv"
 `include "interface.sv"
 `include "DUV/multipli_parallel.sv"
+`include "../Design/multipli_restored/multipli.sv"
 
 module testbench(
     
@@ -19,68 +20,101 @@ defparam sys_iff.A_bits = size;
 defparam sys_iff.B_bits = size;
 
 // Instanciate scoreboard
-scoreboard #(size) scoreboard_;
+scoreboard #(size)  scoreboard_;
 
 // Instanciate multipli control and link system interface
 multipli_control multi_control_module(
 );
+defparam multi_control_module.size = size;
+
+int tries = 0;
 
 
-// Instanciate the multipli parallel object
-multipli_parallel multipli_parallel_module(
+// ========== IDEAL VERIFICATION MODEL ========== //
+// multipli_parallel multipli_model(
+//                 .CLOCK(sys_iff.CLK), 
+//                 .RESET(sys_iff.RESET_N), 
+//                 .END_MULT(sys_iff.fin_mult), 
+//                 .A(sys_iff.A), 
+//                 .B(sys_iff.B), 
+//                 .S(sys_iff.S_real), 
+//                 .START(sys_iff.start)
+// );
+
+// ========== REAL VERIFICATION MODEL ========== //
+multipli multipli_model(
                 .CLOCK(sys_iff.CLK), 
                 .RESET(sys_iff.RESET_N), 
                 .END_MULT(sys_iff.fin_mult), 
                 .A(sys_iff.A), 
                 .B(sys_iff.B), 
                 .S(sys_iff.S_real), 
-                .START(sys_iff.start)
-                );
+                .START(sys_iff.start)   
+);
 
 initial begin
     // RUN VVERIFICATION TESTS
+    scoreboard_ = new;
+
     multi_control_module.bts.inicializar();
     multi_control_module.bts.reset();
 
-    @(negedge sys_iff.CLK)
+    sys_iff.comparing = 1'b0;
 
-    multi_control_module.get_random_values();
-
-    @(negedge sys_iff.CLK)
-    
-    // TODO covertgroup sample
-
-
-    scoreboard_.multiply();
-
-    sys_iff.start = 1'b1;
-
-    @(negedge sys_iff.CLK)
-
-    @(sys_iff.fin_mult == 1'b1) //MIRA ESTO //FINMULT TE LO TIENE Q DAR EL CIRCUITO, NO LO PONES TU
-
-    scoreboard_.compare_outputs();
-
-
-    // COVERGROUP STRUCTURE
-    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 75);
-        begin
-            @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
-            multi_control_module.get_random_values();                        //Conseguir valores aleatorios
-
-            multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
-            multi_control_module.rango_valores_inst.sample();
-
-            sys_iff.start = 1'b1;                                            //Empiece a calcular la multi
-
-            @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
-
-            scoreboard_.compare_outputs();                                   //Comparamos los resultados
-        end
+    model_verification();
 
     $stop();
 
 end
+
+// Task for model verification 
+task model_verification();
+        do
+    //for (int i=0; i < 200; ++i) begin
+    begin
+        sys_iff.start = 1'b0;
+        $display("TRY [%d] >>> COVERAGE [%f]", tries ,multi_control_module.rango_valores_inst.get_inst_coverage());
+
+        if(tries >= 200) begin
+            $display("NUMBER OF TRIES EXCEEEDED!");
+            break;
+        end
+
+        @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
+        multi_control_module.get_random_values();                        //Conseguir valores aleatorios
+
+        @(negedge sys_iff.CLK)
+
+        multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
+        multi_control_module.rango_valores_inst.sample();
+
+        sys_iff.start = 1'b1;                                            //Empiece a calcular la multi
+
+        scoreboard_.multiply();
+
+        @(posedge sys_iff.CLK)
+
+        @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
+        
+        sys_iff.start = 1'b0;
+            
+        @(negedge sys_iff.CLK)
+        @(negedge sys_iff.CLK)
+
+        sys_iff.comparing = 1'b1;
+        scoreboard_.compare_outputs();                                   //Comparamos los resultados
+        #2;
+        sys_iff.comparing = 1'b0;
+
+        @(posedge sys_iff.CLK)
+
+        //multi_control_module.bts.reset();
+
+        tries = tries + 1;
+
+    end
+    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 90);
+endtask
 
 always  begin
     #(T/2)

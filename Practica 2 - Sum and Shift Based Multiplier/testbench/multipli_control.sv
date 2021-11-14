@@ -1,5 +1,5 @@
-`include "multiply_controler_classes/random.sv"
-`include "multiply_controler_classes/basic_task.sv"
+`include "./multiply_controler_classes/random.sv"
+`include "./multiply_controler_classes/basic_task.sv"
 
 covergroup rango_valores_grupos; //Compruebo que paso por todos los valores
     a_positivo: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A > 0);
@@ -18,8 +18,9 @@ endgroup
 
 module multipli_control ();
 
+    parameter size = 0;
     //Inicializo asignador aleatorio
-    RCSG random;
+    RCSG #(size) random;
 
     basic_task bts;
 
@@ -34,10 +35,10 @@ module multipli_control ();
 			$finish();
 		end
 
-        sys_iff.A = random.A_;
-        sys_iff.B = random.B_;
+        testbench.sys_iff.A = random.A_;
+        testbench.sys_iff.B = random.B_;
 
-        $display();
+        $display("GENERATED NUMBERS >>> A [%d] || B [%d]", $signed(testbench.sys_iff.A), $signed(testbench.sys_iff.B));
 
     endtask
 
@@ -47,8 +48,8 @@ module multipli_control ();
 
         random = new;
 
-        sys_iff.A = random.A_;
-        sys_iff.A = random.B_;
+        testbench.sys_iff.A = random.A_;
+        testbench.sys_iff.A = random.B_;
 
         rango_valores_grupos_inst = new;
         rango_valores_inst = new;

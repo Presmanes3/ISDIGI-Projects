@@ -15,5 +15,7 @@ interface system_iff;
 
     logic CLK;
     logic RESET_N;
+
+    logic comparing;
     
 endinterface
