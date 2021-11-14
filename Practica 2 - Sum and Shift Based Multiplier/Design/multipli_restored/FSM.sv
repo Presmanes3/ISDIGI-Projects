@@ -81,7 +81,14 @@ endcase
 end
 end
 always_comb
+
 	begin
+
+		accu_operational_mode_selector = 2'b00;
+		shifter_HI_clear = 1'b1;
+		shifter_LO_clear = 1'b1;
+		shifter_X_clear = 1'b1;
+
 	case(state)
 
 	Idle : begin
@@ -93,7 +100,10 @@ always_comb
 		counter_clear = 1'b0;
 
 		shifter_LO_enable = 1'b1;
+		shifter_HI_enable = 1'b1;
 		register_M_enable  = 1'b1;
+
+		shifter_LO_operational_mode = 1'b1;
 
 		shifter_X_clear = 1'b0;
 	end
