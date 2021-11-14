@@ -29,6 +29,9 @@ class scoreboard #(int size);
 
             comprobar_resultados: assert (testbench.sys_iff.S_ideal == testbench.sys_iff.S_real) else $info("ASSERT ERROR:  RESULTS ARE NOT EQUAL");
         end
+        else begin
+            $display("NOT COMPARING >>> FIN_MULT != 1");
+        end
     endtask
 
 endclass

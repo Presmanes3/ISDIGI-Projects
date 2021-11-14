@@ -20,7 +20,7 @@ else
 		count <= 0;
 	else
 		if(enable)
-			count <= count + 1'b1;
+			count <= count + 2'b10;
 		else
 			count <= count;
 end

@@ -1,12 +1,12 @@
 
-module registroX (qi, qi_1, CLOCK, RESET, enableX);
+module registroX (qi, q1_minus_1, CLOCK, RESET, enable);
 
 parameter tamano = 2;
 
 input [tamano-1:0] qi;
-input enableX;
+input enable;
 
-output reg qi_1;
+output reg q1_minus_1;
 
 input CLOCK, RESET;
 
@@ -14,17 +14,15 @@ always_ff @(posedge CLOCK, negedge RESET)
 begin
 	if(!RESET)
 		begin
-		qi_1 <= 0;
+		q1_minus_1 <= 0;
 		end
 	else
-	if(enableX)
+	if(enable)
 		begin
-		qi_1<= qi[0];
-
+		q1_minus_1 <= qi[0];
 		end
 	else
-		qi_1<=qi_1;
-
+		q1_minus_1<=q1_minus_1;
 end
-		
+
 endmodule

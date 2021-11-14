@@ -1,31 +1,31 @@
 
-module registroM (In_multi, Out_multi, CLOCK, RESET,enableM);
+module registroM (in_val, out_val, CLOCK, RESET, enable);
 
 parameter tamano = 8;
 
-input  [tamano-1:0] In_multi;
+input  [tamano-1:0] in_val;
 
-input CLOCK, RESET, enableM;
+input CLOCK, RESET, enable;
 
 reg [tamano:0] aux;
 
-output reg [tamano:0] Out_multi;
+output reg [tamano:0] out_val;
 
 always_ff @(posedge CLOCK, negedge RESET)
 begin
 	if (!RESET)
 		begin
-		Out_multi<= 0;
+			out_val<= 0;
 		end
 
-	else if (enableM)
+	else if (enable)
 		begin
-		aux[tamano-1:0] <= In_multi[tamano-1:0];
-		aux[tamano] <= In_multi[tamano-1];
+		aux[tamano-1:0] <= in_val[tamano-1:0];
+		aux[tamano] <= in_val[tamano-1];
 
-		Out_multi<= aux;
+		out_val<= aux;
 		end
-	else Out_multi<= Out_multi;
+	else out_val<= out_val;
 end
 
 endmodule
