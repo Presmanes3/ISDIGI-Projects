@@ -1,160 +1,240 @@
-module FSM (CLK,RESET,START, shifter_LO_operational_mode, shifter_HI_operational_mode, shifter_X_enable, shifter_LO_enable, shifter_HI_enable, shifter_X_clear,shifter_HI_clear,shifter_LO_clear,accu_operational_mode_selector,control,register_M_enable,end_mult);
+module FSM 
+#(parameter size = 8)
+(
+	input CLOCK,
+	input RESET,
+	input START,
 
-parameter n=8;
-parameter M = $clog2(n);
+	input [2 : 0] control,
 
-input CLK;
+	output reg shifter_HI_shift_enable,
+	output reg shifter_HI_load_enable,
+	output reg shifter_HI_clear,
 
-input RESET;
+	output reg shifter_LO_shift_enable,
+	output reg shifter_LO_load_enable,
+	output reg shifter_LO_clear,
 
-wire [3:0] COUNT;
- 
-input START;
+	output reg register_M_enable,
+	output reg register_M_clear,
 
-input [2:0] control;
+	output reg register_X_enable,
+	output reg register_X_clear,
+
+	output reg adder_enable,
+	output reg [1 : 0] adder_mode,
+
+	output reg END_MULT
+);
+
+wire [3:0] count_value;
 
 reg counter_enable;
-
-output reg end_mult;
-
-output reg [1:0] accu_operational_mode_selector;
-
-output reg shifter_LO_operational_mode,shifter_HI_operational_mode;
-
-output reg register_M_enable, shifter_X_enable, shifter_HI_enable, shifter_LO_enable;
-
-output reg shifter_HI_clear, shifter_X_clear, shifter_LO_clear;
-
 reg counter_clear;
 
 
 reg[3:0] state;
 
 
-parameter [2:0] Idle = 3'b001, Inicio = 3'b010, OP = 3'b011, SHIFT = 3'b100, NOTIFY = 3'b101;
+parameter [2:0] IDLE = 3'b001, INICIO = 3'b010, OP = 3'b011, SHIFT = 3'b100, NOTIFY = 3'b101;
 
 contador    contador(	.enable(counter_enable),
-                     	.clk(CLK),
+                     	.clk(CLOCK),
 						.reset(RESET),
-						.count(COUNT), 
+						.count(count_value), 
 						.clear(counter_clear));
 
 
-always_ff @ (posedge CLK, negedge RESET)
+always_ff @ (posedge CLOCK or negedge RESET) begin
+	if(!RESET) state <= IDLE;
+	else begin
+		case(state)
+			IDLE : begin 
+				if(START) 	state <= INICIO; 
+				else 		state <= IDLE; 
+			end
 
-  begin
-if(!RESET) state <= Idle;
-else
+			INICIO : begin 
+				state <= OP;
+			end
+
+			OP : begin 
+				state <= SHIFT; 
+			end
+
+			SHIFT :begin 
+				if(count_value == size) state <= NOTIFY; 
+				else 					state <= OP; 
+			end
+
+			NOTIFY :  begin 
+				if(!START) 	state <= IDLE; 
+				else 		state <= NOTIFY; 
+			end
+			default: 		state <= IDLE;
+		endcase
  
-   begin
-case(state)
-	Idle : 
-		begin if(START) state <= Inicio; 
-		else state <= Idle; 
 	end
-
-	Inicio :
-		begin 
-		state <= OP;
-		end
-
-	OP : 
-		begin 
-		state <= SHIFT; 
-		end
-
-	SHIFT : 
-		begin if(COUNT == n) 
-			state <= NOTIFY; 
-		else state <= OP; 
-		end
-
-	NOTIFY : 
-		begin if(!START) 
-			state <= Idle; 
-		else 
-			state <= NOTIFY; 
-		end
-	default: state<=Idle;
-endcase
- 
 end
-end
-always_comb
-
-	begin
-
-	accu_operational_mode_selector = 2'b00;
-	shifter_HI_clear = 1'b1;
-	shifter_LO_clear = 1'b1;
-	shifter_X_clear = 1'b1;
+always_comb begin
 
 	case(state)
 
-	Idle : begin
-		end_mult = 1'b0;
-	end
+		IDLE : begin
+				shifter_HI_shift_enable = 1'b0;
+				shifter_HI_load_enable 	= 1'b0;
+				shifter_HI_clear 		= 1'b0;
 
-	Inicio : begin  
-		counter_enable = 1'b0;
-		counter_clear = 1'b0;
+				shifter_LO_shift_enable = 1'b0;
+				shifter_LO_load_enable 	= 1'b0;
+				shifter_LO_clear 		= 1'b0;
 
-		shifter_LO_enable = 1'b1;
-		shifter_HI_enable = 1'b1;
-		register_M_enable  = 1'b1;
+				register_M_enable 		= 1'b0;
+				register_M_clear 		= 1'b0;
 
-		shifter_LO_operational_mode = 1'b1;
+				register_X_enable 		= 1'b0;
+				register_X_clear 		= 1'b0;
 
-		shifter_X_clear = 1'b0;
-	end
+				adder_enable 			= 1'b0;
+				adder_mode 				= 1'b0;
 
-	OP: begin
-		counter_clear = 1'b1;
-		counter_enable = 1'b1;
-
-		if(!(control == 3'b000 || control == 3'b111))begin
-
-			shifter_HI_operational_mode = 1'b1;
-			shifter_HI_enable = 1'b1;
-
-			if(control[1]^control[0] == 1'b1) begin
-				if(control[2] == 1'b1) begin
-					accu_operational_mode_selector = 2'b01;
-				end else begin
-					accu_operational_mode_selector = 2'b00;
-				end
-			end else begin
-				if(control[2] == 1'b1) begin
-					accu_operational_mode_selector = 2'b11;
-				end else begin
-					accu_operational_mode_selector = 2'b10;
-				end
-			end
-		end 
-
+				END_MULT 		= 1'b0;
 		end
 
-	SHIFT: begin
-		counter_clear = 1'b1;
+		INICIO : begin  
+				shifter_HI_shift_enable = 1'b0;
+				shifter_HI_load_enable 	= 1'b0;
+				shifter_HI_clear 		= 1'b0;
 
-		shifter_LO_operational_mode=1'b0;
-		shifter_HI_operational_mode=1'b0;
+				shifter_LO_shift_enable = 1'b0;
+				shifter_LO_load_enable 	= 1'b1;
+				shifter_LO_clear 		= 1'b1;
 
-		shifter_HI_enable = 1'b1;
-		shifter_LO_enable =1'b1;
-		shifter_X_enable =1'b1;
+				register_M_enable 		= 1'b1;
+				register_M_clear 		= 1'b1;
 
-		counter_enable = 1'b0;
-	end
+				register_X_enable 		= 1'b0;
+				register_X_clear 		= 1'b0;
 
-	NOTIFY: begin
+				adder_enable 			= 1'b0;
+				adder_mode 				= 1'b0;
 
-		end_mult = 1'b1;
-	end
-	default: begin
-		
-	end
-	
-endcase
+				END_MULT 				= 1'b0;
+		end
+
+		OP: begin
+
+				shifter_HI_shift_enable = 1'b0;
+				shifter_HI_clear 		= 1'b1;
+				
+
+				shifter_LO_shift_enable = 1'b0;
+				shifter_LO_load_enable 	= 1'b0;
+				shifter_LO_clear 		= 1'b1;
+
+				register_M_enable 		= 1'b0;
+				register_M_clear 		= 1'b1;
+
+				register_X_enable 		= 1'b0;
+				register_X_clear 		= 1'b1;
+
+				adder_enable 			= 1'b0;
+				adder_mode 				= 1'b0;
+
+				END_MULT 				= 1'b0;
+
+				counter_clear			= 1'b1;
+				counter_enable			= 1'b1;
+
+			if(!(control == 3'b000 || control == 3'b111)) begin
+
+				shifter_HI_load_enable 	= 1'b1;
+				
+			
+				adder_enable = 1'b1;
+
+				if( control[1] ^ control[0] == 1'b1) begin
+					if(control[2] == 1'b1) 	adder_mode = 2'b01;
+					else 					adder_mode = 2'b00;
+				
+				end else begin
+					if(control[2] == 1'b1) 	adder_mode = 2'b11;
+					else 					adder_mode = 2'b10;
+				end
+			end 
+		end
+
+		SHIFT: begin
+			shifter_HI_shift_enable = 1'b1;
+			shifter_HI_load_enable 	= 1'b0;
+			shifter_HI_clear 		= 1'b1;
+
+			shifter_LO_shift_enable = 1'b1;
+			shifter_LO_load_enable 	= 1'b0;
+			shifter_LO_clear 		= 1'b1;
+
+			register_M_enable 		= 1'b0;
+			register_M_clear 		= 1'b1;
+
+			register_X_enable 		= 1'b1;
+			register_X_clear 		= 1'b1;
+
+			adder_enable 			= 1'b0;
+			adder_mode 				= 1'b0;
+
+			END_MULT 				= 1'b0;
+
+			counter_clear			= 1'b1;
+			counter_enable			= 1'b0;
+		end
+
+		NOTIFY: begin
+			shifter_HI_shift_enable = 1'b0;
+			shifter_HI_load_enable 	= 1'b0;
+			shifter_HI_clear 		= 1'b1;
+
+			shifter_LO_shift_enable = 1'b0;
+			shifter_LO_load_enable 	= 1'b0;
+			shifter_LO_clear 		= 1'b1;
+
+			register_M_enable 		= 1'b0;
+			register_M_clear 		= 1'b1;
+
+			register_X_enable 		= 1'b0;
+			register_X_clear 		= 1'b1;
+
+			adder_enable 			= 1'b0;
+			adder_mode 				= 1'b0;
+
+			END_MULT 				= 1'b1;
+
+			counter_clear			= 1'b1;
+			counter_enable			= 1'b0;
+		end
+		default: begin
+			shifter_HI_shift_enable = 1'b0;
+			shifter_HI_load_enable 	= 1'b0;
+			shifter_HI_clear 		= 1'b0;
+
+			shifter_LO_shift_enable = 1'b0;
+			shifter_LO_load_enable 	= 1'b0;
+			shifter_LO_clear 		= 1'b0;
+
+			register_M_enable 		= 1'b0;
+			register_M_clear 		= 1'b0;
+
+			register_X_enable 		= 1'b0;
+			register_X_clear 		= 1'b0;
+
+			adder_enable 			= 1'b0;
+			adder_mode 				= 1'b0;
+
+			END_MULT 				= 1'b0;
+
+			counter_clear			= 1'b0;
+			counter_enable			= 1'b0;
+		end
+	endcase
 end
+
 endmodule 

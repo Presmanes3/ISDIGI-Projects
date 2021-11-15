@@ -1,85 +1,120 @@
-module DataPath (A, B, CLOCK, RESET, S, accu_operatinal_mode_selector, shifter_X_enable, register_M_enable, shifter_LO_enable, shifter_HI_enable, shifter_LO_operational_mode, shifter_HI_operational_mode, shifter_X_clear, shifter_HI_clear, shifter_LO_clear, control);
+module DataPath 
+#(parameter size = 8)
+(
+	input [size - 1 : 0] A, 
+	input [size - 1 : 0] B, 
+	input CLOCK, 
+	input RESET, 
 
-parameter size = 8;
+	input shifter_HI_shift_enable,
+	input shifter_HI_load_enable,
+	input shifter_HI_clear,
 
-input CLOCK, RESET;
-input logic [size-1:0] A, B;
-output logic [2*size-1:0] S;
+	input shifter_LO_shift_enable,
+	input shifter_LO_load_enable,
+	input shifter_LO_clear,
 
-input [1:0] accu_operatinal_mode_selector;
+	input register_M_enable,
+	input register_M_clear,
 
-input shifter_X_enable, register_M_enable, shifter_LO_enable, shifter_HI_enable;
-input shifter_LO_operational_mode, shifter_HI_operational_mode;
-input shifter_X_clear, shifter_HI_clear, shifter_LO_clear; 
+	input register_X_enable,
+	input register_X_clear,
 
-wire [size:0] register_M_out;
+	input adder_enable,
+	input [1:0] adder_mode,
 
-wire [size:0] shifter_HI_parallel_in, shifter_HI_parallel_out; //cargas en paralelo
+	output [2 * size - 1 : 0] S,
+	output [2 : 0] control
+);
 
-//división de salidas registro
-wire shifter_HI_serial_in; 
 
-assign shifter_HI_serial_in = shifter_HI_parallel_out[size];
-
-wire [1:0] shifter_Hi_serial_out, outSLO;
-
+wire [size:0] 	adder_out;
+wire [size - 1:0] 	register_M_out;
+wire [size:0] 	shifter_HI_parallel_out;
 wire [size-1:0] shifter_LO_parallel_out;
+wire [1 : 0]	shifter_HI_serial_out;
+wire [1 : 0]	shifter_LO_serial_out;
+wire 			reg_X_out;
 
-output [2:0] control;
+wire [2*size + 2 - 1 : 0]			total_signal;
 
-wire [1:0] shifter_LO_serial_output;
-wire qi, q1_minus_1; //entradas y salidas de X
+
+//instanciación Adder												
+adder 			#(.size(size + 1)) adder (	
+						.clk				(CLOCK),
+						.reset				(RESET),
+						.operational_mode	(adder_mode), 
+						.enable				(adder_enable),
+
+						.input_from_reg_M	({register_M_out[size - 1],register_M_out}), 
+						.input_from_reg_HI	(shifter_HI_parallel_out), 
+
+						.out				(adder_out)
+);
 
 //instanciación Registro M
-registroM registroM (	.CLOCK(CLOCK),
-						.RESET(RESET),
-						.in_val(B), 
-						.out_val(register_M_out),
-						.enable(register_M_enable));
-							
-//instanciación Adder												
-ADDER ADDER			(	.CLOCK(CLOCK),
-						.RESET(RESET),
-						.operational_mode(accu_operatinal_mode_selector),  
-						.input_from_reg_M(register_M_out), 
-						.input_from_reg_HI(shifter_HI_parallel_out), 
-						.out(shifter_HI_parallel_in));
+register	 	#(.size(size)) regigster_M (	
+						.clk				(CLOCK),
+						.reset				(RESET),
+						.enable				(register_M_enable),
+						.clear				(register_M_clear),
+
+						.in					(B),
+
+						.out				(register_M_out)
+);
+
+//instanciación Registro X						 
+register 		#(.size(1)) register_X (
+						.clk				(CLOCK),
+						.reset				(RESET),
+						.enable				(register_X_enable),
+						.clear				(register_X_clear),
+
+						.in					(shifter_LO_serial_out[1]),
+
+						.out				(reg_X_out)
+);
 
 //instanciación Shifter Q	(HI)					
-shifterHI shifterHI (	.CLOCK(CLOCK),
-						.RESET(shifter_HI_clear),
-						.mode(shifter_HI_operational_mode), 
-						.enable(shifter_HI_enable), 
-						.serial_data_in(shifter_HI_serial_in), 	
-						.serial_data_out(shifter_Hi_serial_out),
-						.parallel_data_in(shifter_HI_parallel_in), 
-						.parallel_data_out(shifter_HI_parallel_out));
+shiftRegister 	#(.size(size + 1)) shifter_HI (	
+						.clk				(CLOCK),
+						.reset				(RESET),
+						.clear 				(shifter_HI_clear),
+
+						.shift_enable		(shifter_HI_shift_enable), 
+						.load_enable		(shifter_HI_load_enable),
+
+						.serial_in			({shifter_HI_parallel_out[size], shifter_HI_parallel_out[size]}),
+						.parallel_in		(adder_out), 
+
+						.serial_out			(shifter_HI_serial_out),
+						.parallel_out		(shifter_HI_parallel_out)
+);
 						 
 //instanciación Shifter LO		
-shifterLO shifterLO (	.CLOCK(CLOCK),
-						.RESET(shifter_LO_clear),
-						.mode(shifter_LO_operational_mode), 
-						.enable(shifter_LO_enable), 
-						.serial_data_in(shifter_Hi_serial_out), 
-						.serial_data_out(shifter_LO_serial_output),
-						.parallel_data_in(A), 
-						.parallel_data_out(shifter_LO_parallel_out));
-						 			 
-//instanciación Registro X						 
-registroX registroX (	.CLOCK(CLOCK),
-						.RESET(shifter_X_clear),
-						.enable(shifter_X_enable),
-						.qi(shifter_LO_serial_output),
-						.q1_minus_1(q1_minus_1));
+shiftRegister 	#(.size(size)) shifter_LO (	
+						.clk				(CLOCK),
+						.reset				(RESET),
+						.clear 				(shifter_LO_clear),
+
+						.shift_enable		(shifter_LO_shift_enable), 
+						.load_enable		(shifter_LO_load_enable),
+
+						.serial_in			(shifter_HI_serial_out),
+						.parallel_in		(A), 
+
+						.serial_out			(shifter_LO_serial_out),
+						.parallel_out		(shifter_LO_parallel_out)
+);
 							
 
 //Asignación salida S real						
 assign S = {shifter_HI_parallel_out[size-1 : 0], shifter_LO_parallel_out};
 
+assign control = {shifter_LO_serial_out, reg_X_out};
 
-assign control = {shifter_LO_serial_output, q1_minus_1};
-
-
+assign total_signal = {shifter_HI_parallel_out, shifter_LO_parallel_out,  reg_X_out};
 
 
 

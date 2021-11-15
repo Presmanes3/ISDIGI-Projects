@@ -62,20 +62,23 @@ initial begin
 
     sys_iff.comparing = 1'b0;
 
-    simple_debug();
-    //model_verification();
+    // simple_debug(45, 96);
+    // simple_debug(-45, 96);
+    // simple_debug(45, -96);
+    // simple_debug(-45, -96);
+    model_verification();
 
     $stop();
 
 end
 
-task simple_debug();
+task simple_debug(int A__, int B__);
     sys_iff.start = 1'b0;
 
     @(ck)                                           //Solo cambio valores en los negedge
    
-    sys_iff.A = 5;
-    sys_iff.B = 7;
+    sys_iff.A = $signed(A__);
+    sys_iff.B = $signed(B__);
 
     @(ck)
 
@@ -100,7 +103,7 @@ task simple_debug();
 
     @(ck)
 
-    //multi_control_module.bts.reset();
+    multi_control_module.bts.reset();
 
     tries = tries + 1;
 endtask
@@ -143,7 +146,7 @@ task model_verification();
 
             @(ck)
 
-            //multi_control_module.bts.reset();
+            multi_control_module.bts.reset();
 
             tries = tries + 1;
 
