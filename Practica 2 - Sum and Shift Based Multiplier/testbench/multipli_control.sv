@@ -14,13 +14,10 @@ endgroup
 covergroup rango_valores;
     valores_A: coverpoint testbench.sys_iff.A;
     valores_B: coverpoint testbench.sys_iff.B;
+
 endgroup
 
-//Defino algunas constrains
-constraint pos_pos {A>0; B>0}
-constraint neg_neg {A<0; B<0}
-constraint pos_neg {A>0; B<0}
-constraint neg_pos {A<0; B>0}
+
 
 module multipli_control ();
     parameter size = 0;
