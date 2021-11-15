@@ -1,0 +1,40 @@
+module tb_FIFO(
+    
+);
+
+// Define the fifo interface for wiring easily
+FIFO_IFF fifo_iff();
+
+// Pass the fifo interface to the test cases module
+test_cases tests(
+    .fifo_iff(fifo_iff)
+);
+
+// Pass the fifo interface to the test tasks module
+
+
+// Pass the fifo interface to the DUV
+FIFO_32_8 DUV(
+    .fifo_iff(fifo_iff)
+);
+
+
+initial begin
+    tests.basic_tasks.init();
+
+    tests.basic_tasks.reset();
+
+    @(negedge fifo_iff.CLK)
+
+    tests.basic_tasks.write(8'b00000001);
+
+    #tests.basic_tasks.T;
+
+    tests.basic_tasks.write(8'b00000001);
+
+    #tests.basic_tasks.T;
+
+    $stop;
+end
+    
+endmodule

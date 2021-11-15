@@ -45,6 +45,7 @@ else
 	regA<=regA;
 	regB<=regB;
 	S_aux<=regA * regB;
+
 	END_MULT_aux<={1'b0,END_MULT_aux[2*tamano-1:1]};
 	end
 
