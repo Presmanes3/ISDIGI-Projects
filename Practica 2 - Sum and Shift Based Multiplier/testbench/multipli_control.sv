@@ -32,6 +32,36 @@ module multipli_control ();
 
 
     task get_random_values();
+
+        if (rango_valores_inst.get_inst_coverage() < 20)
+        begin
+            random.pos_pos.constraint_mode(1);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() < 40)
+        begin
+            random.pos_pos.constraint_mode(1);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() < 60)
+        begin
+            random.pos_pos.constraint_mode(0);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(1);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() < 80)
+        begin
+            random.pos_pos.constraint_mode(0);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(1);
+        end
+
         if (!random.randomize()) begin
 			$display("randomization failed");
 			$finish();
