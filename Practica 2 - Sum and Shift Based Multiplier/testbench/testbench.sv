@@ -1,7 +1,7 @@
 `include "scoreboard.sv"
 `include "interface.sv"
 `include "DUV/multipli_parallel.sv"
-`include "../Design/multipli_restored/multipli.sv"
+`include "../Design/multipli.sv"
 
 module testbench();
 
@@ -30,19 +30,18 @@ int tries = 0;
 
 
 // ========== IDEAL VERIFICATION MODEL ========== //
-/*
- multipli_parallel multipli_model(
-                 .CLOCK(sys_iff.CLK), 
-                 .RESET(sys_iff.RESET_N), 
-                 .END_MULT(sys_iff.fin_mult), 
-                 .A(sys_iff.A), 
-                 .B(sys_iff.B), 
-                 .S(sys_iff.S_real), 
-                 .START(sys_iff.start)
- );
-*/
+//  multipli_parallel multipli_model(
+//                  .CLOCK(sys_iff.CLK), 
+//                  .RESET(sys_iff.RESET_N), 
+//                  .END_MULT(sys_iff.fin_mult), 
+//                  .A(sys_iff.A), 
+//                  .B(sys_iff.B), 
+//                  .S(sys_iff.S_real), 
+//                  .START(sys_iff.start)
+//  );
 
 // ========== REAL VERIFICATION MODEL ========== //
+
 multipli_top multipli_model(
     .mport(sys_iff)
 );
