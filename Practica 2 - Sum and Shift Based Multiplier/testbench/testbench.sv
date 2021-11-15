@@ -30,28 +30,26 @@ int tries = 0;
 
 
 // ========== IDEAL VERIFICATION MODEL ========== //
- multipli_parallel multipli_model(
-                 .CLOCK(sys_iff.CLK), 
-                 .RESET(sys_iff.RESET_N), 
-                 .END_MULT(sys_iff.fin_mult), 
-                 .A(sys_iff.A), 
-                 .B(sys_iff.B), 
-                 .S(sys_iff.S_real), 
-                 .START(sys_iff.start)
- );
-
+// multipli_parallel multipli_model(
+//                 .CLOCK(sys_iff.CLK), 
+//                 .RESET(sys_iff.RESET_N), 
+//                 .END_MULT(sys_iff.fin_mult), 
+//                 .A(sys_iff.A), 
+//                 .B(sys_iff.B), 
+//                 .S(sys_iff.S_real), 
+//                 .START(sys_iff.start)
+// );
 
 // ========== REAL VERIFICATION MODEL ========== //
-/*
-multipli_top multipli_model(
-    .mport(sys_iff)
+multipli #(.size(size)) multipli_model(
+                .CLOCK(sys_iff.CLK), 
+                .RESET(sys_iff.RESET_N), 
+                .END_MULT(sys_iff.fin_mult), 
+                .A(sys_iff.A), 
+                .B(sys_iff.B), 
+                .S(sys_iff.S_real), 
+                .START(sys_iff.start)   
 );
-*/
-
-//Defino clocking block
-clocking ck @(posedge sys_iff.CLK); //usar ck como clock
-    default input #1ns output #1ns;
-endclocking:ck
 
 initial begin
     // RUN VVERIFICATION TESTS
@@ -75,12 +73,12 @@ end
 task simple_debug(int A__, int B__);
     sys_iff.start = 1'b0;
 
-    @(ck)                                           //Solo cambio valores en los negedge
+    @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
    
     sys_iff.A = $signed(A__);
     sys_iff.B = $signed(B__);
 
-    @(ck)
+    @(negedge sys_iff.CLK)
 
     multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
     multi_control_module.rango_valores_inst.sample();
@@ -89,19 +87,19 @@ task simple_debug(int A__, int B__);
 
     scoreboard_.multiply();
 
-    @(ck)
+    @(posedge sys_iff.CLK)
 
     @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
-    @(ck)
-    @(ck)
+    @(negedge sys_iff.CLK)
+    @(negedge sys_iff.CLK)
 
     sys_iff.comparing = 1'b1;
     scoreboard_.compare_outputs();                                   //Comparamos los resultados
     #2;
     sys_iff.comparing = 1'b0;
 
-    @(ck)
+    @(posedge sys_iff.CLK)
 
     multi_control_module.bts.reset();
 
@@ -120,10 +118,10 @@ task model_verification();
                 break;
             end
 
-            @(ck)                                           //Solo cambio valores en los negedge
+            @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
             multi_control_module.get_random_values();                        //Conseguir valores aleatorios
 
-            @(ck)
+            @(negedge sys_iff.CLK)
 
             multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
             multi_control_module.rango_valores_inst.sample();
@@ -132,19 +130,19 @@ task model_verification();
 
             scoreboard_.multiply();
 
-            @(ck)
+            @(posedge sys_iff.CLK)
 
             @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
-            @(ck)
-            @(ck)
+            @(negedge sys_iff.CLK)
+            @(negedge sys_iff.CLK)
 
             sys_iff.comparing = 1'b1;
             scoreboard_.compare_outputs();                                   //Comparamos los resultados
             #2;
             sys_iff.comparing = 1'b0;
 
-            @(ck)
+            @(posedge sys_iff.CLK)
 
             multi_control_module.bts.reset();
 

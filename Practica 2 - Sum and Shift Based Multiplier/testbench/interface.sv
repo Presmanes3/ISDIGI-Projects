@@ -17,10 +17,5 @@ interface system_iff;
     logic RESET_N;
 
     logic comparing;
-
-    modport DUV (
-    input CLK, RESET_N, A, B, start,
-    output S_real, fin_mult
-    );
-
+    
 endinterface
