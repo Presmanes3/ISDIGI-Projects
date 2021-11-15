@@ -30,6 +30,7 @@ int tries = 0;
 
 
 // ========== IDEAL VERIFICATION MODEL ========== //
+/*
  multipli_parallel multipli_model(
                  .CLOCK(sys_iff.CLK), 
                  .RESET(sys_iff.RESET_N), 
@@ -39,14 +40,13 @@ int tries = 0;
                  .S(sys_iff.S_real), 
                  .START(sys_iff.start)
  );
-
+*/
 
 // ========== REAL VERIFICATION MODEL ========== //
-/*
 multipli_top multipli_model(
     .mport(sys_iff)
 );
-*/
+
 
 //Defino clocking block
 clocking ck @(posedge sys_iff.CLK); //usar ck como clock
