@@ -17,7 +17,7 @@ always_comb
 begin
 	if(!RESET)
 		begin
-		out <= 0;
+			out <= 0;
 		end
 	else
 		begin
