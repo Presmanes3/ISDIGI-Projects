@@ -41,14 +41,8 @@ int tries = 0;
 // );
 
 // ========== REAL VERIFICATION MODEL ========== //
-multipli multipli_model(
-                .CLOCK(sys_iff.CLK), 
-                .RESET(sys_iff.RESET_N), 
-                .END_MULT(sys_iff.fin_mult), 
-                .A(sys_iff.A), 
-                .B(sys_iff.B), 
-                .S(sys_iff.S_real), 
-                .START(sys_iff.start)   
+multipli_top multipli_model(
+    .mport(sys_iff)
 );
 
 initial begin

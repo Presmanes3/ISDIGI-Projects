@@ -1,4 +1,4 @@
-module multipli(CLOCK, RESET, END_MULT, A, B, S, START);
+module multipli(START, A, B, S, END_MULT, CLOCK, RESET);
 
 // Define the size of the registers A and B
 parameter tamano=8;

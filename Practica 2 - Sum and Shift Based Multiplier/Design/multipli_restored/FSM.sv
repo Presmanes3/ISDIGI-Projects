@@ -152,9 +152,9 @@ always_comb
 		end_mult = 1'b1;
 	end
 	default: begin
-		end_mult = 1'b0;
+		
 	end
-	end
+	
 endcase
 end
 endmodule 
