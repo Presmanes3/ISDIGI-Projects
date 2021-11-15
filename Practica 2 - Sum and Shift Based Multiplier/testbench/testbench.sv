@@ -45,6 +45,11 @@ multipli_top multipli_model(
     .mport(sys_iff)
 );
 
+//Defino clocking block
+clocking ck @(posedge sys_iff.CLK); //usar ck como clock
+    default input #1ns output #1ns;
+endclocking:ck
+
 initial begin
     // RUN VVERIFICATION TESTS
     scoreboard_ = new;
@@ -64,12 +69,12 @@ end
 task simple_debug();
     sys_iff.start = 1'b0;
 
-    @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
+    @(ck)                                           //Solo cambio valores en los negedge
    
     sys_iff.A = 5;
     sys_iff.B = 7;
 
-    @(negedge sys_iff.CLK)
+    @(ck)
 
     multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
     multi_control_module.rango_valores_inst.sample();
@@ -78,19 +83,19 @@ task simple_debug();
 
     scoreboard_.multiply();
 
-    @(posedge sys_iff.CLK)
+    @(ck)
 
     @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
-    @(negedge sys_iff.CLK)
-    @(negedge sys_iff.CLK)
+    @(ck)
+    @(ck)
 
     sys_iff.comparing = 1'b1;
     scoreboard_.compare_outputs();                                   //Comparamos los resultados
     #2;
     sys_iff.comparing = 1'b0;
 
-    @(posedge sys_iff.CLK)
+    @(ck)
 
     //multi_control_module.bts.reset();
 
@@ -109,10 +114,10 @@ task model_verification();
                 break;
             end
 
-            @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
+            @(ck)                                           //Solo cambio valores en los negedge
             multi_control_module.get_random_values();                        //Conseguir valores aleatorios
 
-            @(negedge sys_iff.CLK)
+            @(ck)
 
             multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
             multi_control_module.rango_valores_inst.sample();
@@ -121,19 +126,19 @@ task model_verification();
 
             scoreboard_.multiply();
 
-            @(posedge sys_iff.CLK)
+            @(ck)
 
             @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
-            @(negedge sys_iff.CLK)
-            @(negedge sys_iff.CLK)
+            @(ck)
+            @(ck)
 
             sys_iff.comparing = 1'b1;
             scoreboard_.compare_outputs();                                   //Comparamos los resultados
             #2;
             sys_iff.comparing = 1'b0;
 
-            @(posedge sys_iff.CLK)
+            @(ck)
 
             //multi_control_module.bts.reset();
 

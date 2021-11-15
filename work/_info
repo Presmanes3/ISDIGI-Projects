@@ -20,68 +20,68 @@ n@_opt
 Z4 OL;O;2020.2;71
 R0
 T_opt1
-!s110 1636976568
-V;TFoIi<Vl37J`F[m>VT[n2
+!s110 1636988374
+VXEf<<m<GN^elS3AB5I4lM1
 R1
-=1-00d86105f367-619247b7-33e-26c4
+=1-00d86105f367-619275d5-2a9-3cb0
 R2
 R3
 n@_opt1
 R4
 vADDER
 Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1636976554
+Z6 !s110 1636988343
 !i10b 1
 !s100 CIY0<<dJ<z<EV_F>m<9cf1
-Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z7 !s11b Dg1SIo80bB@j0V0VzS_@n1
 Izd]P2UUfWbHXRPYJMh<nW0
-Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z8 dC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects
-Z9 w1636968534
+Z9 dC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects
+Z10 w1636968534
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv
-!i122 363
+!i122 443
 L0 1 38
-Z10 OL;L;2020.2;71
+Z11 OL;L;2020.2;71
 r1
 !s85 0
 31
-Z11 !s108 1636976554.000000
+Z12 !s108 1636988343.000000
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv|
 !i113 0
-Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 n@a@d@d@e@r
 vasignar
 R5
-Z13 !s110 1636976557
+Z14 !s110 1636988345
 !i10b 1
 !s100 8[]KSUFzE24lJA9KXlELX1
-R6
-I[GQ>YU;CnfGlSgzo7Obkb3
 R7
-S1
+I[GQ>YU;CnfGlSgzo7Obkb3
 R8
-Z14 w1636976552
-Z15 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv
-Z16 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv
-!i122 378
+S1
+R9
+Z15 w1636977244
+Z16 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv
+Z17 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv
+!i122 458
 L0 17 28
-R10
+R11
 r1
 !s85 0
 31
-Z17 !s108 1636976557.000000
-Z18 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv|
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv|
+Z18 !s108 1636988345.000000
+Z19 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_top.sv|
 !i113 0
-R12
+R13
 R3
 Xbasic_task_sv_unit
 R5
-R13
+R14
 V<@O@<^FMgBOIj`dUD[RcU0
 r1
 !s85 0
@@ -90,127 +90,127 @@ r1
 I<@O@<^FMgBOIj`dUD[RcU0
 !i103 1
 S1
-R8
+R9
 w1636571383
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv
-!i122 376
-Z20 L0 1 0
-R10
+!i122 456
+Z21 L0 1 0
+R11
 31
-Z21 !s108 1636976556.000000
+R18
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/basic_task.sv|
 !i113 0
-R12
+R13
 R3
 vcontador
 R5
-Z22 !s110 1636976555
+R6
 !i10b 1
 !s100 5[X06I4HIAO9mV_FbFhTJ0
-R6
-Il5hJ8Rj5=VRZ=zkP<HJ_G1
 R7
-S1
+Il5hJ8Rj5=VRZ=zkP<HJ_G1
 R8
-Z23 w1636915129
+S1
+R9
+Z22 w1636915129
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv
-!i122 364
+!i122 444
 L0 1 28
-R10
+R11
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/contador.sv|
 !i113 0
-R12
+R13
 R3
 vDataPath
 R5
-R22
+R6
 !i10b 1
 !s100 l?^P]?H<I`0mOT0cFl<Qe2
-R6
-IMzF6BMe@=i<Z9^4j4mBS61
 R7
-S1
+IMzF6BMe@=i<Z9^4j4mBS61
 R8
+S1
 R9
+R10
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv
-!i122 365
+!i122 445
 L0 1 86
-R10
+R11
 r1
 !s85 0
 31
-Z24 !s108 1636976555.000000
+R12
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/DataPath.sv|
 !i113 0
-R12
+R13
 R3
 n@data@path
 vFSM
 R5
-R22
+R6
 !i10b 1
 !s100 CVA=7@]NO8f<9IJo4Jnhf1
-R6
-I>OTGI:W=64SbZXdOc21Om3
 R7
-S1
+I>OTGI:W=64SbZXdOc21Om3
 R8
+S1
+R9
 w1636972292
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv
-!i122 366
+!i122 446
 L0 1 160
-R10
+R11
 r1
 !s85 0
 31
-R24
+R12
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/FSM.sv|
 !i113 0
-R12
+R13
 R3
 n@f@s@m
 vmultipli
 R5
-R13
+R14
 !i10b 1
 !s100 RC=_C9D^BI8jfeg`^FeM?1
-R6
-IeKn^[4l^:OQTi62ZjDDS31
 R7
-S1
+IeKn^[4l^:OQTi62ZjDDS31
 R8
+S1
+R9
 w1636972407
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv
-Z25 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv
-!i122 378
+Z23 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv
+!i122 458
 L0 1 55
-R10
+R11
 r1
 !s85 0
 31
-R17
 R18
 R19
+R20
 !i113 0
-R12
+R13
 R3
 vmultipli_control
 R5
 DXx4 work 24 multipli_control_sv_unit 0 22 8a@]ZJQnA8dQj;aHBAT;Z3
-Z26 !s110 1636976556
-R7
+R14
+R8
 r1
 !s85 0
 !i10b 1
@@ -218,23 +218,23 @@ r1
 Iko@jfoaOE>HBBDzX03NHN2
 !s105 multipli_control_sv_unit
 S1
-R8
-R23
-Z27 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
-Z28 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
-!i122 373
+R9
+R22
+Z24 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
+Z25 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv
+!i122 453
 L0 19 44
-R10
+R11
 31
-R21
-Z29 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\basic_task.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\..\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\random.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
-Z30 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
+Z26 !s108 1636988344.000000
+Z27 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\basic_task.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\..\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\random.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
+Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv|
 !i113 0
-R12
+R13
 R3
 Xmultipli_control_sv_unit
 R5
-R26
+R14
 V8a@]ZJQnA8dQj;aHBAT;Z3
 r1
 !s85 0
@@ -243,77 +243,77 @@ r1
 I8a@]ZJQnA8dQj;aHBAT;Z3
 !i103 1
 S1
-R8
-Z31 w1636972043
-R27
-R28
+R9
+Z29 w1636977238
+R24
+R25
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\random.sv
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\..\interface.sv
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\.\multiply_controler_classes\basic_task.sv
-!i122 373
-Z32 L0 4 0
-R10
+!i122 453
+Z30 L0 4 0
+R11
 31
-R21
-R29
-R30
+R26
+R27
+R28
 !i113 0
-R12
+R13
 R3
 vmultipli_parallel
 R5
-Z33 DXx4 work 17 testbench_sv_unit 0 22 :zM_^Gjka;cf=QZZ]AOje0
-R26
-R7
+Z31 DXx4 work 17 testbench_sv_unit 0 22 e7LJ18WOXgzZ@TM3WCNR;2
+R14
+R8
 r1
 !s85 0
 !i10b 1
 !s100 8P^2c?DdIWFZ[R?2CTI<?1
 Ii5PRZZ2Y?2:KU=HaSoQ;70
-Z34 !s105 testbench_sv_unit
+Z32 !s105 testbench_sv_unit
 S1
-R8
-R23
+R9
+R22
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\DUV\multipli_parallel.sv
-Z35 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\DUV\multipli_parallel.sv
-!i122 375
+Z33 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\DUV\multipli_parallel.sv
+!i122 455
 L0 18 50
-R10
+R11
 31
-R21
-Z36 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\DUV\multipli_parallel.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
+R18
+Z34 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\..\Design\multipli_restored\multipli.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\DUV\multipli_parallel.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv|
 !i113 0
-R12
+R13
 R3
 vmultipli_top
 R5
-R13
+R14
 !i10b 1
 !s100 Z1T;oK6;aF[]E1M1VJS=N3
-R6
-IJGkQPEH=9emD]>QB674mk2
 R7
-S1
+IJGkQPEH=9emD]>QB674mk2
 R8
-R14
+S1
+R9
 R15
 R16
-!i122 378
+R17
+!i122 458
 L0 3 13
-R10
+R11
 r1
 !s85 0
 31
-R17
 R18
 R19
+R20
 !i113 0
-R12
+R13
 R3
 Xrandom_sv_unit
 R5
-R13
+R14
 VMf7WZ9^XG]M1DZL^GNZ@40
 r1
 !s85 0
@@ -322,76 +322,76 @@ r1
 IMf7WZ9^XG]M1DZL^GNZ@40
 !i103 1
 S1
-R8
-R31
+R9
+R29
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv
-Z38 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\..\interface.sv
-!i122 377
-R32
-R10
+Z36 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\..\interface.sv
+!i122 457
+R30
+R11
 31
-R17
-Z39 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\..\interface.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
-Z40 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
+R18
+Z37 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\..\interface.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
+Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv|
 !i113 0
-R12
+R13
 R3
 vregistroM
 R5
-R22
+Z39 !s110 1636988344
 !i10b 1
 !s100 F>6g9m4fh5h@<4:dAfngO3
-R6
-ImlmieK?`HD>b9b;[V7Hc93
 R7
-S1
+ImlmieK?`HD>b9b;[V7Hc93
 R8
-R23
+S1
+R9
+R22
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv
-!i122 368
+!i122 448
 L0 2 30
-R10
+R11
 r1
 !s85 0
 31
-R24
+R12
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv|
 !i113 0
-R12
+R13
 R3
 nregistro@m
 vregistroX
 R5
-R22
+R39
 !i10b 1
 !s100 hm1<;@ND5fiPI;[58lGLE3
-R6
-IH7Sjd=dCKY:T6dF65EQbk1
 R7
-S1
+IH7Sjd=dCKY:T6dF65EQbk1
 R8
-R23
+S1
+R9
+R22
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroX.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroX.sv
-!i122 369
+!i122 449
 L0 2 27
-R10
+R11
 r1
 !s85 0
 31
-R24
+R26
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroX.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroX.sv|
 !i113 0
-R12
+R13
 R3
 nregistro@x
 Xscoreboard_sv_unit
 R5
-R26
+R14
 V662QBda0365@e9EIj]BBU2
 r1
 !s85 0
@@ -400,151 +400,151 @@ r1
 I662QBda0365@e9EIj]BBU2
 !i103 1
 S1
-R8
-R23
+R9
+R22
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv
-!i122 374
-R20
-R10
-31
+!i122 454
 R21
+R11
+31
+R18
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/scoreboard.sv|
 !i113 0
-R12
+R13
 R3
 vshifterHI
 R5
-R26
+R39
 !i10b 1
 !s100 W^Dfkjg@WHk@ZW4C[>WJa3
-R6
-ISRVXbcO8<VU8@[4IZN3Lf1
 R7
-S1
+ISRVXbcO8<VU8@[4IZN3Lf1
 R8
+S1
 R9
+R10
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv
-!i122 370
+!i122 450
 L0 2 42
-R10
+R11
 r1
 !s85 0
 31
-R24
+R26
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterHI.sv|
 !i113 0
-R12
+R13
 R3
 nshifter@h@i
 vshifterLO
 R5
-R26
+R39
 !i10b 1
 !s100 g9>bXF@mdm;QjcH9Z<fJS2
-R6
-IP7YiQ7UgR:ndAXIajM`Yl3
 R7
-S1
+IP7YiQ7UgR:ndAXIajM`Yl3
 R8
+S1
 R9
+R10
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv
-!i122 371
+!i122 451
 L0 3 38
-R10
+R11
 r1
 !s85 0
 31
-R21
+R26
 !s107 C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv|
 !i113 0
-R12
+R13
 R3
 nshifter@l@o
 Ysystem_iff
 !s105 random_sv_unit
 DXx4 work 14 random_sv_unit 0 22 Mf7WZ9^XG]M1DZL^GNZ@40
 R5
-R13
+R14
 !i10b 1
-!s100 ZV3gQ5m18zdMVmW`KYh>02
-R6
-IZX^SCfZWI>ELGJP4=65Gi0
+!s100 2d1Y?VXfD@DhTFlm^BdL61
 R7
-S1
+IdES6ch9]3<YBglX]d^g?83
 R8
-R31
+S1
+R9
+R29
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\multiply_controler_classes\..\interface.sv
-R38
-!i122 377
-R20
-R10
+R36
+!i122 457
+R21
+R11
 r1
 !s85 0
 31
-R17
-R39
-R40
+R18
+R37
+R38
 !i113 0
-R12
+R13
 R3
 vtestbench
 R5
-R33
-R26
-R7
+R31
+R14
+R8
 r1
 !s85 0
 !i10b 1
-!s100 OG<cOnJZi@Ca_dEEnQM=n0
-IDJhhmURGDRShh?O3chbmP0
-R34
+!s100 H5jhYBE4DS9VD9^lXHSZo0
+I2cC_OCTQ1z?T@Zj1enfEC3
+R32
 S1
-R8
-Z41 w1636975718
-Z42 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
-Z43 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
-!i122 375
-L0 6 151
-R10
+R9
+Z40 w1636988338
+Z41 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
+Z42 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
+!i122 455
+L0 6 156
+R11
 31
-R21
-R36
-R37
+R18
+R34
+R35
 !i113 0
-R12
+R13
 R3
 Xtestbench_sv_unit
 R5
-R26
-V:zM_^Gjka;cf=QZZ]AOje0
+R14
+Ve7LJ18WOXgzZ@TM3WCNR;2
 r1
 !s85 0
 !i10b 1
-!s100 _<zm4;ML3S?ZWJ[58M5z;3
-I:zM_^Gjka;cf=QZZ]AOje0
+!s100 KK@N:[^R0XR8ZG?9oXFA_1
+Ie7LJ18WOXgzZ@TM3WCNR;2
 !i103 1
 S1
-R8
+R9
+R40
 R41
 R42
-R43
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\scoreboard.sv
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 2 - Sum and Shift Based Multiplier\testbench\interface.sv
-R35
-R25
-!i122 375
-R20
-R10
-31
+R33
+R23
+!i122 455
 R21
-R36
-R37
+R11
+31
+R18
+R34
+R35
 !i113 0
-R12
+R13
 R3
