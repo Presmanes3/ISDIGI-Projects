@@ -10,19 +10,15 @@ input reset;
 output reg [M:0] count;
 
 
-always @ (posedge clk, negedge reset)
+always_ff @ (posedge clk or negedge reset)
 
 begin
-if(!reset)
-	count <= 0;
+if(!reset)			count <= 0;
 else
-	if(!clear)
-		count <= 0;
+	if(!clear)		count <= 0;
 	else
-		if(enable)
-			count <= count + 2'b10;
-		else
-			count <= count;
+		if(enable)	count <= count + 2'b10;	// Add in steps of 2
+		else		count <= count;
 end
 	
 endmodule

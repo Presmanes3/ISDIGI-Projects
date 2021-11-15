@@ -41,7 +41,7 @@ int tries = 0;
 // );
 
 // ========== REAL VERIFICATION MODEL ========== //
-multipli multipli_model(
+multipli #(.size(size)) multipli_model(
                 .CLOCK(sys_iff.CLK), 
                 .RESET(sys_iff.RESET_N), 
                 .END_MULT(sys_iff.fin_mult), 

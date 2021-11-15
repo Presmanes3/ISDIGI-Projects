@@ -1,55 +1,89 @@
-module multipli(CLOCK, RESET, END_MULT, A, B, S, START);
+module multipli
+#(parameter size = 8)
+(
+	input CLOCK, 
+	input RESET, 
+	input START,
+	
+	input [size - 1 : 0] A,
+	input [size - 1 : 0] B,
 
-// Define the size of the registers A and B
-parameter tamano=8;
 
-input CLOCK, RESET;
-input logic START;
-input logic [tamano-1:0] A, B;
-output logic [2*tamano-1:0] S;
-output logic END_MULT;
+	output logic [2 * size - 1 : 0] S,
+	output END_MULT
+);
 
-wire [1:0] accu_operational_mode_selector;
+wire shifter_HI_shift_enable;
+wire shifter_HI_load_enable;
+wire shifter_HI_clear;
 
-wire shifter_X_enable, register_M_enable, shifter_LO_enable, shifter_HI_enable;
-wire shifter_LO_operational_mode, shifter_HI_operational_mode;
+wire shifter_LO_shift_enable;
+wire shifter_LO_load_enable;
+wire shifter_LO_clear;
 
-wire shifter_X_clear, shifter_HI_clear, shifter_LO_clear;
+wire register_M_enable;
+wire register_M_clear;
 
-wire [2:0] control;
+wire register_X_enable;
+wire register_X_clear;
 
-FSM ControlPath (	.CLK(CLOCK),
+wire adder_enable;
+wire [1 : 0] adder_mode;
+wire [2 : 0] control;
+
+FSM #(.size(size)) ControlPath (	
+					.CLOCK(CLOCK),
 					.RESET(RESET),
-					.START(START), 
-					.shifter_LO_operational_mode(shifter_LO_operational_mode), 
-					.shifter_HI_operational_mode(shifter_HI_operational_mode),
-					.shifter_X_enable(shifter_X_enable), 
-					.shifter_LO_enable(shifter_LO_enable), 
-					.shifter_HI_enable(shifter_HI_enable), 
-					.shifter_X_clear(shifter_X_clear),		
-					.shifter_HI_clear(shifter_HI_clear),		
-					.shifter_LO_clear(shifter_LO_clear),		
-					.accu_operational_mode_selector(accu_operational_mode_selector),		
-					.control(control), 			
-					.register_M_enable(register_M_enable),
-					.end_mult(END_MULT)); 
+					.START(START),
 
-				 
-				 
-DataPath DataPath (	.A(A), 
-					.B(B), 
-					.CLOCK(CLOCK), 
-					.RESET(RESET), 
-					.S(S), 
-					.accu_operatinal_mode_selector(accu_operational_mode_selector), 
-					.shifter_X_enable(shifter_X_enable), 
-					.register_M_enable(register_M_enable), 
-					.shifter_LO_enable(shifter_LO_enable), 
-					.shifter_HI_enable(shifter_HI_enable), 
-					.shifter_LO_operational_mode(shifter_LO_operational_mode), 
-					.shifter_HI_operational_mode(shifter_HI_operational_mode), 
-					.shifter_X_clear(shifter_X_clear),
-					.shifter_HI_clear(shifter_HI_clear), 
+					.control(control),
+
+					.shifter_HI_shift_enable(shifter_HI_shift_enable),
+					.shifter_HI_load_enable(shifter_HI_load_enable),
+					.shifter_HI_clear(shifter_HI_clear),
+
+					.shifter_LO_shift_enable(shifter_LO_shift_enable),
+					.shifter_LO_load_enable(shifter_LO_load_enable),
 					.shifter_LO_clear(shifter_LO_clear),
-					.control(control));
+
+					.register_M_enable(register_M_enable),
+					.register_M_clear(register_M_clear),
+
+					.register_X_enable(register_X_enable),
+					.register_X_clear(register_X_clear),
+
+					.adder_enable(adder_enable),
+					.adder_mode(adder_mode),
+
+					.END_MULT(END_MULT)
+); 
+				 
+DataPath #(.size(size)) DataPath (	
+					.CLOCK(CLOCK),
+					.RESET(RESET),
+
+					.A(A),
+					.B(B),
+
+					.shifter_HI_shift_enable(shifter_HI_shift_enable),
+					.shifter_HI_load_enable(shifter_HI_load_enable),
+					.shifter_HI_clear(shifter_HI_clear),
+
+					.shifter_LO_shift_enable(shifter_LO_shift_enable),
+					.shifter_LO_load_enable(shifter_LO_load_enable),
+					.shifter_LO_clear(shifter_LO_clear),
+
+					.register_M_enable(register_M_enable),
+					.register_M_clear(register_M_clear),
+
+					.register_X_enable(register_X_enable),
+					.register_X_clear(register_X_clear),
+					
+					.adder_enable(adder_enable),
+					.adder_mode(adder_mode),
+
+					.S(S),
+
+					.control(control)
+);
 endmodule
