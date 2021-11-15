@@ -60,11 +60,48 @@ initial begin
 
     sys_iff.comparing = 1'b0;
 
-    model_verification();
+    simple_debug();
+    //model_verification();
 
     $stop();
 
 end
+
+task simple_debug();
+    sys_iff.start = 1'b0;
+
+    @(negedge sys_iff.CLK)                                           //Solo cambio valores en los negedge
+   
+    sys_iff.A = 5;
+    sys_iff.B = 7;
+
+    @(negedge sys_iff.CLK)
+
+    multi_control_module.rango_valores_grupos_inst.sample();         //Calculo el coverage
+    multi_control_module.rango_valores_inst.sample();
+
+    sys_iff.start = 1'b1;                                            //Empiece a calcular la multi
+
+    scoreboard_.multiply();
+
+    @(posedge sys_iff.CLK)
+
+    @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
+                
+    @(negedge sys_iff.CLK)
+    @(negedge sys_iff.CLK)
+
+    sys_iff.comparing = 1'b1;
+    scoreboard_.compare_outputs();                                   //Comparamos los resultados
+    #2;
+    sys_iff.comparing = 1'b0;
+
+    @(posedge sys_iff.CLK)
+
+    //multi_control_module.bts.reset();
+
+    tries = tries + 1;
+endtask
 
 // Task for model verification 
 task model_verification();

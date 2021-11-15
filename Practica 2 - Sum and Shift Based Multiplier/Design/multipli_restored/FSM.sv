@@ -84,10 +84,10 @@ always_comb
 
 	begin
 
-		accu_operational_mode_selector = 2'b00;
-		shifter_HI_clear = 1'b1;
-		shifter_LO_clear = 1'b1;
-		shifter_X_clear = 1'b1;
+	accu_operational_mode_selector = 2'b00;
+	shifter_HI_clear = 1'b1;
+	shifter_LO_clear = 1'b1;
+	shifter_X_clear = 1'b1;
 
 	case(state)
 
@@ -150,6 +150,10 @@ always_comb
 	NOTIFY: begin
 
 		end_mult = 1'b1;
+	end
+	default: begin
+		end_mult = 1'b0;
+	end
 	end
 endcase
 end
