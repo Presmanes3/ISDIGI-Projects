@@ -7,9 +7,9 @@ class RCSG #(int size);
 
     //Defino algunas constrains 
     ///*
-    constraint pos_pos {A_ > 0; B_ > 0};
-    constraint neg_neg {A_ < 0; B_ < 0};
-    constraint pos_neg {A_ > 0; B_ < 0};
-    constraint neg_pos {A_ < 0; B_ > 0};
+    constraint pos_pos {A_ > 0; B_ > 0;};
+    constraint neg_neg {A_ < 0; B_ < 0;};
+    constraint pos_neg {A_ > 0; B_ < 0;};
+    constraint neg_pos {A_ < 0; B_ > 0;};
     //*/
 endclass

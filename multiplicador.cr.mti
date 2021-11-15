@@ -49,7 +49,15 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	contador
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv} {0 vlog\ -work\ work\ -vopt\ -sv\ -stats=none\ \{C:/Users/ivanv/OneDrive/Escritorio/UPV/3\ TELECO/A/ISDIGI/ISDIGI-Projects/Practica\ 2\ -\ Sum\ and\ Shift\ Based\ Multiplier/testbench/multiply_controler_classes/random.sv\}\nQuestaSim-64\ vlog\ 2020.2\ Compiler\ 2020.04\ Apr\ 19\ 2020\n--\ Compiling\ interface\ system_iff\n**\ Error:\ (vlog-13069)\ C:/Users/ivanv/OneDrive/Escritorio/UPV/3\ TELECO/A/ISDIGI/ISDIGI-Projects/Practica\ 2\ -\ Sum\ and\ Shift\ Based\ Multiplier/testbench/multiply_controler_classes/random.sv(10):\ near\ \"\}\":\ syntax\ error,\ unexpected\ '\}'.\n**\ Error:\ (vlog-13069)\ C:/Users/ivanv/OneDrive/Escritorio/UPV/3\ TELECO/A/ISDIGI/ISDIGI-Projects/Practica\ 2\ -\ Sum\ and\ Shift\ Based\ Multiplier/testbench/multiply_controler_classes/random.sv(11):\ near\ \"\}\":\ syntax\ error,\ unexpected\ '\}'.\n**\ Error:\ (vlog-13069)\ C:/Users/ivanv/OneDrive/Escritorio/UPV/3\ TELECO/A/ISDIGI/ISDIGI-Projects/Practica\ 2\ -\ Sum\ and\ Shift\ Based\ Multiplier/testbench/multiply_controler_classes/random.sv(12):\ near\ \"\}\":\ syntax\ error,\ unexpected\ '\}'.\n**\ Error:\ (vlog-13069)\ C:/Users/ivanv/OneDrive/Escritorio/UPV/3\ TELECO/A/ISDIGI/ISDIGI-Projects/Practica\ 2\ -\ Sum\ and\ Shift\ Based\ Multiplier/testbench/multiply_controler_classes/random.sv(13):\ near\ \"\}\":\ syntax\ error,\ unexpected\ '\}'.\n\n {4.0 8.0} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multiply_controler_classes/random.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling interface system_iff
+-- Compiling package random_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/registroM.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module registroM
 
@@ -69,6 +77,15 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 
 Top level modules:
 	registroX
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling interface system_iff
+-- Compiling package multipli_control_sv_unit
+-- Compiling module multipli_control
+
+Top level modules:
+	multipli_control
 
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
