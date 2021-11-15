@@ -85,7 +85,7 @@ shiftRegister 	#(.size(size + 1)) shifter_HI (
 						.shift_enable		(shifter_HI_shift_enable), 
 						.load_enable		(shifter_HI_load_enable),
 
-						.serial_in			({adder_out[size], adder_out[size]}),
+						.serial_in			({shifter_HI_parallel_out[size], shifter_HI_parallel_out[size]}),
 						.parallel_in		(adder_out), 
 
 						.serial_out			(shifter_HI_serial_out),

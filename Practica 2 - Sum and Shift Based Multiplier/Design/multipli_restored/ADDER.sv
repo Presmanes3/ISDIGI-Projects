@@ -25,7 +25,7 @@ begin
 				
 				S1:	out = input_from_reg_HI - input_from_reg_M;
 				
-				S2:	out = input_from_reg_HI + input_from_reg_M;
+				S2:	out = input_from_reg_HI + 2*input_from_reg_M;
 				
 				S3:	out = input_from_reg_HI - 2*input_from_reg_M;
 			default: out = input_from_reg_HI + input_from_reg_M;
