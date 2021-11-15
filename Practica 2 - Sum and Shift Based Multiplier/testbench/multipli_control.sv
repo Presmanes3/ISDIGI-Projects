@@ -16,8 +16,13 @@ covergroup rango_valores;
     valores_B: coverpoint testbench.sys_iff.B;
 endgroup
 
-module multipli_control ();
+//Defino algunas constrains
+constraint pos_pos {A>0; B>0}
+constraint neg_neg {A<0; B<0}
+constraint pos_neg {A>0; B<0}
+constraint neg_pos {A<0; B>0}
 
+module multipli_control ();
     parameter size = 0;
     //Inicializo asignador aleatorio
     RCSG #(size) random;
