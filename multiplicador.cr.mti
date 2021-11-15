@@ -78,19 +78,6 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	registroX
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv}
-QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling package testbench_sv_unit
--- Compiling interface system_iff
--- Compiling module multipli_parallel
--- Compiling module multipli
--- Compiling module testbench
-
-Top level modules:
-	multipli_parallel
-	multipli
-	testbench
-
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/multipli_control.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling interface system_iff
@@ -100,12 +87,17 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	multipli_control
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling module shifterLO
+-- Compiling package testbench_sv_unit
+-- Compiling interface system_iff
+-- Compiling module multipli_parallel
+-- Compiling module multipli
+-- Compiling module testbench
 
 Top level modules:
-	shifterLO
+	multipli
+	testbench
 
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/ADDER.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
@@ -113,6 +105,13 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 
 Top level modules:
 	ADDER
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli_restored/shifterLO.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module shifterLO
+
+Top level modules:
+	shifterLO
 
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/testbench/interface.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
