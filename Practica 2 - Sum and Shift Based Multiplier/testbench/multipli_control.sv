@@ -2,22 +2,24 @@
 `include "./multiply_controler_classes/basic_task.sv"
 
 covergroup rango_valores_grupos; //Compruebo que paso por todos los valores
-    a_positivo: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A > 0);
-    a_negativo: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A < 0);
-    a_cero: coverpoint testbench.sys_iff.A iff(testbench.sys_iff.A == 0);
+    a_positivo: coverpoint testbench.sys_iff.A  iff(testbench.sys_iff.A > 0);
+    a_negativo: coverpoint testbench.sys_iff.A  iff(testbench.sys_iff.A < 0);
+    a_cero:     coverpoint testbench.sys_iff.A  iff(testbench.sys_iff.A == 0);
 
     b_positivo: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B > 0);
     b_negativo: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B < 0);
-    b_cero: coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B == 0);
+    b_cero:     coverpoint testbench.sys_iff.B iff(testbench.sys_iff.B == 0);
 endgroup
 
 covergroup rango_valores;
     valores_A: coverpoint testbench.sys_iff.A;
     valores_B: coverpoint testbench.sys_iff.B;
+
 endgroup
 
-module multipli_control ();
 
+
+module multipli_control ();
     parameter size = 0;
     //Inicializo asignador aleatorio
     RCSG #(size) random;
@@ -30,6 +32,36 @@ module multipli_control ();
 
 
     task get_random_values();
+
+        if (rango_valores_inst.get_inst_coverage() <= 22.5 && rango_valores_inst.get_inst_coverage() >= 0)
+        begin
+            random.pos_pos.constraint_mode(1);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() <= 45 && rango_valores_inst.get_inst_coverage() > 22.5)
+        begin
+            random.pos_pos.constraint_mode(0);
+            random.pos_neg.constraint_mode(1);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() <= 77.5 && rango_valores_inst.get_inst_coverage() > 45)
+        begin
+            random.pos_pos.constraint_mode(0);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(1);
+            random.neg_pos.constraint_mode(0);
+        end else
+        if (rango_valores_inst.get_inst_coverage() <= 90 && rango_valores_inst.get_inst_coverage() > 77.5)
+        begin
+            random.pos_pos.constraint_mode(0);
+            random.pos_neg.constraint_mode(0);
+            random.neg_neg.constraint_mode(0);
+            random.neg_pos.constraint_mode(1);
+        end
+
         if (!random.randomize()) begin
 			$display("randomization failed");
 			$finish();
