@@ -1,0 +1,8 @@
+
+State Machine - |multipli|FSM:ControlPath|state
+Name state.NOTIFY state.SHIFT state.OP state.INICIO state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.INICIO 0 0 0 1 1 
+state.OP 0 0 1 0 1 
+state.SHIFT 0 1 0 0 1 
+state.NOTIFY 1 0 0 0 1 

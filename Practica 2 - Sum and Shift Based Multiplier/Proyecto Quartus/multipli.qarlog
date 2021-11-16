@@ -1,0 +1,22 @@
+Quartus Prime Archive log --	C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.qarlog
+
+Archive:	C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.qar
+Date:		Tue Nov 16 12:42:53 2021
+Quartus Prime		17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/DataPath.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/FSM.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/adder.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/contador.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/register.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/shiftRegister.sv
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.out.sdc
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.qpf
+C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.qsf
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
