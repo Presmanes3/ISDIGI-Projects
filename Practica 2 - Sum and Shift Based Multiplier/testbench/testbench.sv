@@ -150,7 +150,7 @@ task model_verification();
             tries = tries + 1;
 
         end
-    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 90);
+    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 80);
 endtask
 
 always  begin
