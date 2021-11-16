@@ -27,7 +27,9 @@ module FSM
 	output reg END_MULT
 );
 
-wire [3:0] count_value;
+
+parameter mod = $clog2(size);
+wire [mod:0] count_value;
 
 reg counter_enable;
 reg counter_clear;
@@ -38,7 +40,7 @@ reg[3:0] state;
 
 localparam [2:0] IDLE = 3'b001, INICIO = 3'b010, OP = 3'b011, SHIFT = 3'b100, NOTIFY = 3'b101;
 
-contador    contador(	.enable(counter_enable),
+contador    #(.size(size)) contador(	.enable(counter_enable),
                      	.clk(CLOCK),
 						.reset(RESET),
 						.count(count_value), 
@@ -257,6 +259,8 @@ always_comb begin
 	endcase
 end
 
-realizar_mult:assert property (@(posedge CLOCK) disable iff(RESET==1'b0) START |-> ##(2+2*size) END_MULT==1'b1 ) else $error("CHEQUEO FSM: la multiplicación no dura los procesos que debería"); 
+
+// Check that end multiplication is set to high every 2 + size clock cycles when start is set to 1
+realizar_mult:assert property (@(posedge CLOCK) disable iff(RESET==1'b0) START |-> ##(2+size) END_MULT==1'b1 ) else $error("CHEQUEO FSM: la multiplicación no dura los procesos que debería"); 
 
 endmodule 
