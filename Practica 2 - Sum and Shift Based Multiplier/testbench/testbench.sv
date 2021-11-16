@@ -63,8 +63,8 @@ initial begin
 
     sys_iff.comparing = 1'b0;
 
-    simple_test(0, 96);
-    simple_test(-45, 0);
+    // simple_test(0, 96);
+    // simple_test(-45, 0);
 
     model_verification();
 
