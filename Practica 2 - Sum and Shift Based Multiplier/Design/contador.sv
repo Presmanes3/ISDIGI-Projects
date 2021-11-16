@@ -20,5 +20,16 @@ else
 		if(enable)	count <= count + 2'b10;	// Add in steps of 2
 		else		count <= count;
 end
+
+
+cuenta_correcta:assert property (@(negedge clk) disable iff(reset === 1'bx || count==size-1) enable |-> s1) else $error("CHEQUEO CONTADOR: el contador no cuenta bien");
+
+	
+sequence s1;
+	logic [modulo-1:0] aux;
+	(1,aux=count) ##1 (count == aux+1);
+endsequence
+
+	
 	
 endmodule

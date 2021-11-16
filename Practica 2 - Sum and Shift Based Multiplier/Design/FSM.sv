@@ -36,7 +36,7 @@ reg counter_clear;
 reg[3:0] state;
 
 
-parameter [2:0] IDLE = 3'b001, INICIO = 3'b010, OP = 3'b011, SHIFT = 3'b100, NOTIFY = 3'b101;
+localparam [2:0] IDLE = 3'b001, INICIO = 3'b010, OP = 3'b011, SHIFT = 3'b100, NOTIFY = 3'b101;
 
 contador    contador(	.enable(counter_enable),
                      	.clk(CLOCK),
@@ -77,7 +77,27 @@ always_ff @ (posedge CLOCK or negedge RESET) begin
 	end
 end
 always_comb begin
+			shifter_HI_shift_enable = 1'b0;
+			shifter_HI_load_enable 	= 1'b0;
+			shifter_HI_clear 		= 1'b0;
 
+			shifter_LO_shift_enable = 1'b0;
+			shifter_LO_load_enable 	= 1'b0;
+			shifter_LO_clear 		= 1'b0;
+
+			register_M_enable 		= 1'b0;
+			register_M_clear 		= 1'b0;
+
+			register_X_enable 		= 1'b0;
+			register_X_clear 		= 1'b0;
+
+			adder_enable 			= 1'b0;
+			adder_mode 				= 1'b0;
+
+			END_MULT 				= 1'b0;
+
+			counter_clear			= 1'b0;
+			counter_enable			= 1'b0;
 	case(state)
 
 		IDLE : begin
@@ -236,5 +256,7 @@ always_comb begin
 		end
 	endcase
 end
+
+realizar_mult:assert property (@(posedge CLOCK) disable iff(RESET==1'b0) START |-> ##(2+2*size) END_MULT==1'b1 ) else $error("CHEQUEO FSM: la multiplicación no dura los procesos que debería"); 
 
 endmodule 

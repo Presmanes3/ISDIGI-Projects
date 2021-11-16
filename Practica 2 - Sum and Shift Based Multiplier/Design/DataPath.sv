@@ -36,7 +36,8 @@ wire [1 : 0]	shifter_HI_serial_out;
 wire [1 : 0]	shifter_LO_serial_out;
 wire 			reg_X_out;
 
-wire [2*size + 2 - 1 : 0]			total_signal;
+//wire [2*size + 2 - 1 : 0]			total_signal; 
+// se usa para comporbar el hi-lo
 
 
 //instanciación Adder												
@@ -114,7 +115,7 @@ assign S = {shifter_HI_parallel_out[size-1 : 0], shifter_LO_parallel_out};
 
 assign control = {shifter_LO_serial_out, reg_X_out};
 
-assign total_signal = {shifter_HI_parallel_out, shifter_LO_parallel_out,  reg_X_out};
+//assign total_signal = {shifter_HI_parallel_out, shifter_LO_parallel_out,  reg_X_out};
 
 
 

@@ -17,4 +17,12 @@ always_ff @(posedge clk or negedge reset) begin
     else                out <= out;
 end
 
+
+regactivado:assert property (@(posedge clk) disable iff(reset==1'b0 || clear==1'b0) enable |-> s1) else $error("CHEQUEO REGISTRO: el registro no se activa bien");
+
+sequence s1;
+    logic [size-1:0] aux;
+    (1,aux=in) ##1 (out==aux);
+endsequence
+
 endmodule
