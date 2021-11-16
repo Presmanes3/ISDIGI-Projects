@@ -27,6 +27,7 @@ multipli_control multi_control_module(
 defparam multi_control_module.size = size;
 
 int tries = 0;
+int total_tries = 200;
 
 
 // ========== IDEAL VERIFICATION MODEL ========== //
@@ -62,17 +63,16 @@ initial begin
 
     sys_iff.comparing = 1'b0;
 
-    // simple_debug(45, 96);
-    // simple_debug(-45, 96);
-    // simple_debug(45, -96);
-    // simple_debug(-45, -96);
+    simple_test(0, 96);
+    simple_test(-45, 0);
+
     model_verification();
 
     $stop();
 
 end
 
-task simple_debug(int A__, int B__);
+task simple_test(int A__, int B__);
     sys_iff.start = 1'b0;
 
     @(ck)                                           //Solo cambio valores en los negedge
@@ -94,12 +94,8 @@ task simple_debug(int A__, int B__);
     @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
     @(ck)
-    @(ck)
 
-    sys_iff.comparing = 1'b1;
     scoreboard_.compare_outputs();                                   //Comparamos los resultados
-    #2;
-    sys_iff.comparing = 1'b0;
 
     @(ck)
 
@@ -115,7 +111,7 @@ task model_verification();
             sys_iff.start = 1'b0;
             $display("TRY [%d] >>> COVERAGE [%f]", tries ,multi_control_module.rango_valores_inst.get_inst_coverage());
 
-            if(tries >= 200) begin
+            if(tries >= total_tries) begin
                 $display("NUMBER OF TRIES EXCEEEDED!");
                 break;
             end
@@ -137,12 +133,8 @@ task model_verification();
             @(posedge sys_iff.fin_mult)                                      //Esperamos a que termine la multi
                 
             @(ck)
-            @(ck)
 
-            sys_iff.comparing = 1'b1;
             scoreboard_.compare_outputs();                                   //Comparamos los resultados
-            #2;
-            sys_iff.comparing = 1'b0;
 
             @(ck)
 
@@ -151,7 +143,7 @@ task model_verification();
             tries = tries + 1;
 
         end
-    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 90);
+    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 85);
 endtask
 
 always  begin
