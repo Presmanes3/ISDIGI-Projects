@@ -1,3 +1,5 @@
+`include "../basic_task.sv" //para llamar al random
+
 program test_alu(           
     input [31:0] A, B;
     input [4:0] alu_control;
@@ -8,7 +10,7 @@ program test_alu(
     logic OP_code
 
     initial begin
-        //meto valores a la ALU y comparo los results
+        
     end
 
 endprogram: test_alu
