@@ -37,22 +37,22 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task menor(A, B, result, zero, code);
         OP_code = 5'b01000;
-        ALU_menor: assert (A<B |=> __NO SE QUE PASA__) else $info("No detacta numeros A<B");
+        ALU_menor: assert (A<B == result) else $info("No detacta numeros A<B");
     endtask
     
     task menor_otra_opcion(A, B, result, zero, code);
         OP_code = 5'b01100;
-        ALU_menor_otra_opcion: assert (A<B |=> __NO SE QUE PASA__) else $info("No detacta numeros A<B por el segundo camino");
+        ALU_menor_otra_opcion: assert (A<B == result) else $info("No detacta numeros A<B por el segundo camino");
     endtask
 
     task mayor(A, B, result, zero, code);
         OP_code = 5'b11010;
-        ALU_mayor: assert (A>=B |=> __NO SE QUE PASA__) else $info("No detacta numeros A>=B");
+        ALU_mayor: assert (A>=B == result) else $info("No detacta numeros A>=B");
     endtask
 
     task mayor_otra_opcion(A, B, result, zero, code);
         OP_code = 5'b11010;
-        ALU_mayor_otra_opcion: assert (A>=B |=> __NO SE QUE PASA__) else $info("No detacta numeros A>=B por el segundo camino");
+        ALU_mayor_otra_opcion: assert (A>=B == result) else $info("No detacta numeros A>=B por el segundo camino");
     endtask
 
     task OR(A, B, result, zero, code);
