@@ -4,7 +4,7 @@
 /**
     @brief Top level entity for the RISC-V processor
 */
-module top_processor(
+module core(
 
 );
 
