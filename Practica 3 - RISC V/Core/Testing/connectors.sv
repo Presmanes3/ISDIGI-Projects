@@ -22,7 +22,7 @@ module asignar_alu(
 input wire [31:0] A_alu, B_alu;
 input wire [4:0] control_alu;
 output wire [31:0] result_alu;
-output wire zero;
+output wire zero_alu;
 
 ALU ALU_model(
     .input1(A_alu),
@@ -32,4 +32,3 @@ ALU ALU_model(
     .Zero(zero_alu)
 );
 endmodule
-//---------------------------------------------------------

@@ -1,9 +1,17 @@
 `include "interface.sv"
 
-class basic_task;
+class RCSG_32_AB;
+    rand bit signed [31:0] A_;
+    rand bit signed [31:0] B_;
+endclass
+
+
+module basic_task;
+
+    RCSG_32_AB random;
 
     initial begin
-        RCSG_32_AB random = new;
+        random = new;
 
         inicializar ();
     end
@@ -39,9 +47,4 @@ class basic_task;
 
      
 
-endclass
-
-class RCSG_32_AB;
-    rand bit signed [31:0] A_;
-    rand bit signed [31:0] B_;
-endclass
+endmodule
