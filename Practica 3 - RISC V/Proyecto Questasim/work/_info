@@ -11,7 +11,7 @@ cModel Technology
 dC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects
 vALU
 Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1637594389
+Z1 !s110 1637596948
 !i10b 1
 !s100 mWjD5SOKQidgNnd6jW0lU2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ Z4 dC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Pra
 w1637594348
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv
-!i122 110
+!i122 130
 L0 4 46
 Z5 OL;L;2020.2;71
 r1
 !s85 0
 31
-Z6 !s108 1637594389.000000
+Z6 !s108 1637596948.000000
 Z7 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv|
 Z8 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv|
 !i113 0
@@ -45,10 +45,10 @@ IonZaD>bnzelFJ@=E7eKYK3
 R3
 S1
 R4
-Z11 w1637594360
+Z11 w1637594576
 Z12 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv
 Z13 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv
-!i122 110
+!i122 130
 L0 4 9
 R5
 r1
@@ -69,18 +69,18 @@ VcI;H85i7lk35e>D5D2S7k2
 !i103 1
 S1
 R4
-R11
+w1637596401
 Z14 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv
 Z15 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv
 Z16 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\basic_task.sv
 Z17 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\interface.sv
-!i122 113
+!i122 123
 Z18 L0 3 0
 R5
 31
-Z19 !s108 1637594390.000000
+!s108 1637596407.000000
 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\basic_task.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv|
-Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv|
 !i113 0
 R9
 R10
@@ -97,7 +97,7 @@ R4
 R11
 R12
 R13
-!i122 110
+!i122 130
 L0 14 21
 R5
 r1
@@ -111,24 +111,27 @@ R9
 R10
 vbasic_task
 R0
-Z21 DXx4 work 14 alu_tb_sv_unit 0 22 cI;H85i7lk35e>D5D2S7k2
+R1
 !i10b 1
 !s100 CimRS5W5GdKNH[2?eCh153
+R2
 I:3=76jmH=BGckbkd3]_Vo1
 R3
-Z22 !s105 alu_tb_sv_unit
+Z20 !s105 alu_tb_sv_unit
 S1
 R4
 R11
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\basic_task.sv
 R16
-!i122 113
+!i122 133
 L0 9 42
 R5
+r1
+!s85 0
 31
+R6
+Z21 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\basic_task.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv|
 R19
-Z23 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\interface.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\basic_task.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/subcomponents/alu_tb.sv|
-R20
 !i113 0
 R9
 R10
@@ -147,8 +150,8 @@ R4
 R11
 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv
 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv
-Z24 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\interface.sv
-!i122 109
+Z22 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\interface.sv
+!i122 129
 R18
 R5
 31
@@ -159,10 +162,8 @@ R6
 R9
 R10
 Ysystem_iff
-R22
-R21
 R0
-Z25 !s110 1637594390
+R1
 !i10b 1
 !s100 NEWL3=h@6fKXmeIK?[fDz1
 R2
@@ -173,44 +174,48 @@ R4
 R11
 8C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\..\interface.sv
 R17
-!i122 113
+!i122 133
 L0 1 0
 R5
 r1
 !s85 0
 31
+R6
+R21
 R19
-R23
-R20
 !i113 0
 R9
 R10
 4test_alu
 R0
+R1
 !i10b 1
-!s100 NY0Y<BP5k7iXXTKeje_8A0
-IAQ:IRnG@olL8jzLnK076m2
+!s100 ]LzTY1E:BEOUk6b<d5]U12
+R2
+I1ZGdXg]Uo>Ha4<iWA<d[l2
 R3
-R22
+R20
 S1
 R4
-R11
+w1637596944
 R14
 R15
-!i122 113
+!i122 133
 R18
 R5
+r1
+!s85 0
 31
+R6
+R21
 R19
-R23
-R20
 !i113 0
 R9
 R10
 vtestbench
 R0
 DXx4 work 17 testbench_sv_unit 0 22 CXXnWzjAab<KaXZ=e:aB12
-R25
+R1
 R3
 r1
 !s85 0
@@ -221,21 +226,21 @@ I7k0h1=Db0XU56ZIbAU8g20
 S1
 R4
 R11
-Z26 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv
-Z27 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv
-!i122 112
+Z23 8C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv
+Z24 FC:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv
+!i122 132
 L0 4 28
 R5
 31
-R19
-Z28 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\basic_task.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\interface.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
+R6
+Z25 !s107 C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\basic_task.sv|C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\interface.sv|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
 !i113 0
 R9
 R10
 Xtestbench_sv_unit
 R0
-R25
+R1
 VCXXnWzjAab<KaXZ=e:aB12
 r1
 !s85 0
@@ -246,17 +251,17 @@ ICXXnWzjAab<KaXZ=e:aB12
 S1
 R4
 R11
-R26
-R27
+R23
 R24
+R22
 FC:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\basic_task.sv
-!i122 112
+!i122 132
 R18
 R5
 31
-R19
-R28
-R29
+R6
+R25
+R26
 !i113 0
 R9
 R10
