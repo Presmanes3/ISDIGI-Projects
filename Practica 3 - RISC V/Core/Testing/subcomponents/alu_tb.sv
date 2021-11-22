@@ -20,12 +20,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task suma_signed_A(A, B, result, alu_control, CLK, zero);
 
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
     begin
         alu_control = 5'b00000;
         ALU_SUMA: assert (A+B == result) else $info("ALU suma de forma incorrecta");
@@ -34,12 +29,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task suma_signed_B(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b11111;
@@ -49,12 +39,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task BEQ(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b00010;
@@ -64,12 +49,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task BNE(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b10000;
@@ -79,12 +59,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task menor(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b01000;
@@ -94,12 +69,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
     
     task menor_otra_opcion(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b01100;
@@ -109,12 +79,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task mayor(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b11010;
@@ -124,12 +89,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task mayor_otra_opcion(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b11010;
@@ -139,12 +99,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task OR(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b11000;
@@ -154,12 +109,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task AND(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b11100;
@@ -169,12 +119,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task shift_left_i(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b00100;
@@ -184,12 +129,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task shift_right_i(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b10100;
@@ -199,12 +139,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
 
     task shift_right_arith(A, B, result, alu_control, CLK, zero);
     
-    input [31:0] A; 
-    input [31:0] B;
-    input [4:0] alu_control;
-    input CLK;
-    input zero;
-    input [31:0] result;
+    
 
     begin
         alu_control = 5'b10110;
