@@ -6,7 +6,7 @@ class RCSG_32_AB;
 endclass
 
 
-module basic_task;
+module basic_task();
 
     RCSG_32_AB random;
 
@@ -21,7 +21,6 @@ module basic_task;
         testbench.sys_iff.RESET_N = 1;
         testbench.sys_iff.A_alu = 0;
         testbench.sys_iff.B_alu = 0;
-        testbench.sys_iff.control_alu = 0;
     endtask
 
     task reset();
@@ -37,10 +36,10 @@ module basic_task;
 			$finish();
 		end
 
-        testbench.sys_iff.A = random.A_;
-        testbench.sys_iff.B = random.B_;
+        testbench.sys_iff.A_alu = random.A_;
+        testbench.sys_iff.B_alu = random.B_;
 
-        $display("GENERATED NUMBERS >>> A [%d] || B [%d]", $signed(testbench.sys_iff.A), $signed(testbench.sys_iff.B));
+        $display("GENERATED NUMBERS >>> A [%d] || B [%d]", $signed(testbench.sys_iff.A_alu), $signed(testbench.sys_iff.B_alu));
     endtask
 
 

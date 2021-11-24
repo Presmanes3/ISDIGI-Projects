@@ -22,9 +22,9 @@ interface system_iff;
     */
     // SEÑALES ALU -------------------------
         logic [31:0] A_alu, B_alu;
-        logic [4:0] control_alu;
+        logic [3:0] control_alu;
         logic zero_alu;
-        logic result_alu;
+        logic [31:0] result_alu;
     //--------------------------------------
 
     // SEÑALES GENERALES -------------------

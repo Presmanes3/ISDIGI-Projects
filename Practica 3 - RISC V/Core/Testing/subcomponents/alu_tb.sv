@@ -1,149 +1,124 @@
-`include "../basic_task.sv" //para llamar al random
+`include "../basic_task.sv" 
 
-program test_alu(input [31:0] A, 
+
+module test_alu(input [31:0] A, 
                  input [31:0] B,
-                 input [4:0] alu_control,
-                 input CLK,
+                 output [3:0] alu_control,
                  input zero,
                  input [31:0] result);
 
+    check_alu check_alu_instance;
+
+    basic_task basic_task_instance();
+
     initial begin
-        basic_task.inicializar();
-        basic_task.reset();
-        basic_task.get_random_A_B();
-        check_alu.suma_signed_A(A, B, result, alu_control, CLK, zero);
+        basic_task_instance.inicializar();
+        basic_task_instance.reset();
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.ADD(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.SUB(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.AND(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.OR(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.XOR(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.COMPEQ(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        basic_task_instance.get_random_A_B();
+        check_alu_instance.COMP(A, B, result, alu_control, zero);
+
+        @(testbench.sys_iff.ck)
+
+        $stop(); //SOLO PROVISIONAL
     end
 
-endprogram
+endmodule
 
 class check_alu; //Todas las opciones aqui // revisar si las operaciones son signed o unsigned
 
-    task suma_signed_A(A, B, result, alu_control, CLK, zero);
+    task ADD(int A, int B, int result, alu_control, zero);
 
-    
     begin
-        alu_control = 5'b00000;
-        ALU_SUMA: assert (A+B == result) else $info("ALU suma de forma incorrecta");
+        alu_control = 4'b0000;
+        ADD_CKECK: assert (A+B == result) else $info("ALU ADD ERROR");
+        if(A+B == 0) ZERO_CHECK_ADD: assert (zero == 1'b1) else $info("Zero incorrect value");
     end
     endtask
 
-    task suma_signed_B(A, B, result, alu_control, CLK, zero);
-    
-    
+    task SUB(int A, int B, int result, alu_control, zero);
 
     begin
-        alu_control = 5'b11111;
-        ALU_SUMA: assert (A+B == result) else $info("ALU suma de forma incorrecta");
+        alu_control = 4'b0001;
+        SUB_CHECK: assert (A-B == result) else $info("ALU SUB ERROR");
+        if(A-B == 0) ZERO_CHECK_SUB: assert (zero == 1'b1) else $info("Zero incorrect value");
     end
     endtask
 
-    task BEQ(A, B, result, alu_control, CLK, zero);
-    
-    
-
+    task AND(int A, int B, int result, alu_control, zero);
+   
     begin
-        alu_control = 5'b00010;
-        ALU_BEQ: assert (A==B && 0 == zero) else $info("No detacta numeros iguales [BEQ]");
+        alu_control = 4'b0010;
+        AND_CHECK: assert (A&B == result) else $info("ALU AND ERROR");
+        if(A&B == 0) ZERO_CHECK_AND: assert (zero == 1'b1) else $info("Zero incorrect value");
     end
     endtask
 
-    task BNE(A, B, result, alu_control, CLK, zero);
-    
-    
-
+    task OR(int A, int B, int result, alu_control, zero);
+  
     begin
-        alu_control = 5'b10000;
-        ALU_BNE: assert (A!=B && 1 == zero) else $info("No detacta numeros distintos [BNE]");
+        alu_control = 4'b0011;
+        OR_CHECK: assert (A|B == result) else $info("ALU OR ERROR");
+        if(A|B == 0) ZERO_CHECK_OR: assert (zero == 1'b1) else $info("Zero incorrect value");
     end
     endtask
 
-    task menor(A, B, result, alu_control, CLK, zero);
-    
-    
-
+    task XOR(int A, int B, int result, alu_control, zero);
+  
     begin
-        alu_control = 5'b01000;
-        ALU_menor: assert (A<B == result) else $info("No detacta numeros A<B");
+        alu_control = 4'b0100;
+        XOR_CHECK: assert (A^B == result) else $info("ALU XOR ERROR");
+        if(A^B == 0) ZERO_CHECK_XOR: assert (zero == 1'b1) else $info("Zero incorrect value");
     end
     endtask
     
-    task menor_otra_opcion(A, B, result, alu_control, CLK, zero);
-    
-    
-
+    task COMPEQ(int A, int B, int result, alu_control, zero);
+   
     begin
-        alu_control = 5'b01100;
-        ALU_menor_otra_opcion: assert (A<B == result) else $info("No detacta numeros A<B por el segundo camino");
+        alu_control = 4'b0101;
+        COMPEQ_CHECK: assert (A<=B == result) else $info("ALU COMPEQ ERROR");
+        if(A<=B) ZERO_CHECK_COMPEQ: assert (zero == 1'b0) else $info("Zero incorrect value");
     end
     endtask
 
-    task mayor(A, B, result, alu_control, CLK, zero);
+    task COMP(int A, int B, int result, alu_control, zero);
     
-    
-
     begin
-        alu_control = 5'b11010;
-        ALU_mayor: assert (A>=B == result) else $info("No detacta numeros A>=B");
-    end
-    endtask
-
-    task mayor_otra_opcion(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b11010;
-        ALU_mayor_otra_opcion: assert (A>=B == result) else $info("No detacta numeros A>=B por el segundo camino");
-    end
-    endtask
-
-    task OR(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b11000;
-        OR: assert (A|B == result) else $info("Operacion OR incorrecta");
-    end
-    endtask
-
-    task AND(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b11100;
-        AND: assert (A&B == result) else $info("Opercaion AND incorrecta");
-    end
-    endtask
-
-    task shift_left_i(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b00100;
-        shift_left_i: assert ({A[30:0],B[0]} == result) else $info("Shift left incorrecto");
-    end
-    endtask
-
-    task shift_right_i(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b10100;
-        shift_right_i: assert ({B[0],A[30:0]} == result) else $info("Shift right incorrecto");
-    end
-    endtask
-
-    task shift_right_arith(A, B, result, alu_control, CLK, zero);
-    
-    
-
-    begin
-        alu_control = 5'b10110;
-        shift_right_arith: assert ({A[31],B[0],A[29:0]} == result) else $info("Shift right incorrecto");
+        alu_control = 4'b0110;
+        COMP_CHECK: assert (A<B == result) else $info("ALU COMP ERROR");
+        if(A<B) ZERO_CHECK_COMP: assert (zero == 1'b0) else $info("Zero incorrect value");
     end
     endtask
 
