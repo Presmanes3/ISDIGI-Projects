@@ -3,12 +3,12 @@
 @param alu_option   Signal from main control
 */
 module alu_controller(
-    input   [6:0]   func_7_bits;
-    input   [2:0]   func_3_bits;
+    input   [6:0]   func_7_bits,
+    input   [2:0]   func_3_bits,
 
-    input   [3:0]   alu_option;     // Signal for deciding type of instruction
+    input   [3:0]   alu_option,     // Signal for deciding type of instruction
 
-    output  [3:0]   alu_operation;  // Signal to the ALU
+    output  reg [3:0]   alu_operation  // Signal to the ALU
 );
 
 // Declare all the allowed operations
@@ -27,7 +27,7 @@ enum bit [3:0] {
 	U_HIGHER    = 4'b1011,
 	S_HIGHER    = 4'b1100,
 	SHIFT_LEFT  = 4'b1101,
-	SHIFT_RIGHT = 4'b1110,
+	SHIFT_RIGHT = 4'b1110
 } operations;
 
 
@@ -40,7 +40,7 @@ always_comb begin
                 // LUI
                 3'b010: alu_operation = ADD;
 
-                default: 
+                default: alu_operation = ADD;
             endcase
         end
 
@@ -63,7 +63,7 @@ always_comb begin
                 
                 // ANDI
                 3'b111: alu_operation = AND;
-                default: 
+                default: alu_operation = ADD;
             endcase
             
         end
@@ -77,7 +77,7 @@ always_comb begin
             case (func_3_bits)
                 //SW
                 3'b010: alu_operation = ADD;
-                default: 
+                default: alu_operation = ADD;
             endcase
         end
 
@@ -102,21 +102,24 @@ always_comb begin
 
                     // AND
                     3'b111: alu_operation = AND;
-                    default: 
+                    default: alu_operation = ADD;
                 endcase
             end else begin  // func_7_bits[5] == 1'b1
                 case (func_3_bits)
                     // SUB
                     3'b000: alu_operation = SUB;
-                    default: 
+                    default: alu_operation = ADD;
                 endcase
             end
             
         end
 
         4'b0111: begin
-            // LUI
-            3'b000: alu_operation = ADD;
+            case (func_3_bits)
+                // LUI
+                3'b000: alu_operation = ADD;
+                default: alu_operation = ADD;
+            endcase
         end
 
         4'b1100: begin
@@ -126,10 +129,10 @@ always_comb begin
 
                 // BNE
                 3'b001: alu_operation = XOR;
-                default: 
+                default: alu_operation = ADD;
             endcase
         end
-        default: 
+        default: alu_operation = ADD;
     endcase
 end
 

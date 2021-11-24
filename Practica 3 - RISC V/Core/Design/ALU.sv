@@ -28,7 +28,7 @@ enum bit [3:0] {
 	S_HIGHER    		= 4'b1100,
 	SHIFT_LEFT  		= 4'b1101,
 	SHIFT_RIGHT_LOGIC 	= 4'b1110,
-	SHIFT_RIGHT_ARIT 	= 4'b1111,
+	SHIFT_RIGHT_ARIT 	= 4'b1111
 } operations;
 
 // Assign the value for zero wire
