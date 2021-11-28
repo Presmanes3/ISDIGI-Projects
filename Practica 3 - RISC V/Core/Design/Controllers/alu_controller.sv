@@ -13,21 +13,22 @@ module alu_controller(
 
 // Declare all the allowed operations
 enum bit [3:0] {  
-	ADD         = 4'b0000,
-	SUB         = 4'b0001,
-	AND         = 4'b0010,
-	OR          = 4'b0011,
-	XOR         = 4'b0100,
-	U_LOW_EQ    = 4'b0101,
-	S_LOW_EQ    = 4'b0110,
-	U_HIGH_EQ   = 4'b0111,
-	S_HIGH_EQ   = 4'b1000,
-	U_LOWER     = 4'b1001,
-	S_LOWER     = 4'b1010,
-	U_HIGHER    = 4'b1011,
-	S_HIGHER    = 4'b1100,
-	SHIFT_LEFT  = 4'b1101,
-	SHIFT_RIGHT = 4'b1110
+	ADD         		= 4'b0000,
+	SUB         		= 4'b0001,
+	AND         		= 4'b0010,
+	OR          		= 4'b0011,
+	XOR         		= 4'b0100,
+	U_LOW_EQ    		= 4'b0101,	// NOT NEEDED
+	S_LOW_EQ    		= 4'b0110,	// NOT NEEDED
+	U_HIGH_EQ   		= 4'b0111,
+	S_HIGH_EQ   		= 4'b1000,
+	U_LOWER     		= 4'b1001,
+	S_LOWER     		= 4'b1010,
+	U_HIGHER    		= 4'b1011,
+	S_HIGHER    		= 4'b1100,
+	SHIFT_LEFT  		= 4'b1101,
+	SHIFT_RIGHT_LOGIC 	= 4'b1110,
+	SHIFT_RIGHT_ARIT 	= 4'b1111
 } operations;
 
 
