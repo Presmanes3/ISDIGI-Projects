@@ -1,4 +1,3 @@
-`include "interface.sv" 
 `include "basic_task.sv"
 
 module testbench();
@@ -24,7 +23,7 @@ module testbench();
     //--------------------------------------------------------------------------------
 
     // Instanciamos el test de la ALU ------------------------------------------------
-    test_alu test_alu_inst (sys_iff.A_alu, sys_iff.B_alu, sys_iff.control_alu, sys_iff.zero_alu, sys_iff.result_alu);
+    test_alu test_alu_inst (sys_iff.A_alu, sys_iff.B_alu, sys_iff.zero_alu, sys_iff.result_alu);
     //--------------------------------------------------------------------------------
 
     initial begin

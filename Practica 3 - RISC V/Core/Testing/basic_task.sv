@@ -21,6 +21,7 @@ module basic_task();
         testbench.sys_iff.RESET_N = 1;
         testbench.sys_iff.A_alu = 0;
         testbench.sys_iff.B_alu = 0;
+        testbench.sys_iff.control_alu = 0;
     endtask
 
     task reset();
