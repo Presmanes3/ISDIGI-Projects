@@ -1,4 +1,4 @@
-module pc
+module PC
 #(parameter size = 32)
 (
 	input clk,

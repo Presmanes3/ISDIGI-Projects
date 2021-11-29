@@ -11,125 +11,311 @@
 /**
     @brief Top level entity for the RISC-V processor
 */
-module core ();
-    parameter size =32;
-    wire [size-1:0] instruction_;
-    wire [size-1:0] inmux_out_1_;
-    wire [size-1:0] mux_out_2_;
-    wire [size-1:0] mux_out_pc_;
-    wire [size-1:0] operation_result_;
-    wire [size-1:0] pc_out_;
-    wire [size-1:0] mem_output_data_;
-    wire [size-1:0] read_data_1_;
-    wire [size-1:0] read_data_2_;
-    wire [size-1:0] imm_gen_;
-    wire Zero;
+module core 
+#(
+    parameter data_bits = 32,
+    parameter memory_size = 1024,
+    parameter memory_address_bits = $clog2(memory_size),
+    parameter program_file  = ""
+)
+(
+    input clk,
+    input reset
+);
 
-    wire [3:0] operation;
+    // wire [data_bits - 1 : 0] instruction_;
+    // wire [data_bits - 1 : 0] mux_3_in_out_;
+    // wire [data_bits - 1 : 0] mux_2_in_out_;
+    // wire [memory_address_bits - 1 : 0] data_memory_address_;
+    // wire [memory_address_bits - 1 : 0] pc_in_;
+    // wire [memory_address_bits - 1 : 0] pc_out_;
+    // wire [data_bits - 1 : 0] data_memory_output_data_;
+    // wire [data_bits - 1 : 0] read_data_1_;
+    // wire [data_bits - 1 : 0] read_data_2_;
+    // wire [data_bits - 1 : 0] immediate_generator_out_;
+    // wire [data_bits - 1 : 0] suma_adder_sum_;
+    // wire [3 : 0] alu_operation_;
+    // wire [3 : 0] alu_option_;
+    // wire [1 : 0] AuipcLui;
+    // wire [data_bits - 1 : 0] mux_mem_out;
+    // wire Zero;
+    // wire memory_to_register;
+
+    // wire [3:0] operation; 
+
+    // ========== DEFINE ALL WIRES ========== //
+    // Wiring for ADDER_SUM
+    wire [data_bits - 1 : 0] adder_sum_input_1;
+    wire [data_bits - 1 : 0] adder_sum_input_2;
+    wire [data_bits - 1 : 0] adder_sum_output;
+
+    // Wiring for ADDER_PC
+    wire [data_bits - 1 : 0] adder_pc_input_1;
+    wire [data_bits - 1 : 0] adder_pc_input_2;
+    wire [data_bits - 1 : 0] adder_pc_output;
+
+    // Wiring for PC
+    wire [data_bits - 1 : 0] pc_register_input;
+    wire [data_bits - 1 : 0] pc_register_output;
+    wire pc_register_clk;
+    wire pc_register_reset;
+
+    // Wiring for Instruction Memory (ROM)
+    wire instruction_memory_clk;
+    wire instruction_memory_write_enable;
+    wire instruction_memory_read_enable;
+    wire [data_bits - 1 : 0] instruction_memory_input_data;
+    wire [data_bits - 1 : 0] instruction_memory_output_data;
+    wire [memory_address_bits - 1 : 0] instruction_memory_read_address;
+
+    // Wiring for Data Memory (RAM)
+    wire data_memory_clk;
+    wire data_memory_write_enable;
+    wire data_memory_read_enable;
+    wire [data_bits - 1 : 0] data_memory_input_data;
+    wire [data_bits - 1 : 0] data_memory_output_data;
+    wire [memory_address_bits - 1 : 0] data_memory_read_address;
+
+    // Wiring for Register Bank
+    wire register_bank_clk;
+    wire [4 : 0] register_bank_read_register_1_address;
+    wire [4 : 0] register_bank_read_register_2_address;
+    wire [4 : 0] register_bank_write_register_address;
+    wire [data_bits - 1 : 0] register_bank_write_data;
+    wire register_bank_write_enable;
+    wire [data_bits - 1 : 0] register_bank_read_data_1;
+    wire [data_bits - 1 : 0] register_bank_read_data_2;
+
+    // Wiring for Immediate number generator
+    wire [data_bits - 1 : 0] immediate_generator_input;
+    wire [data_bits - 1 : 0] immediate_generator_output;
+
+    // Wiring for MUX_THREE
+    wire [data_bits - 1 : 0] mux_three_input_1;
+    wire [data_bits - 1 : 0] mux_three_input_2;
+    wire [data_bits - 1 : 0] mux_three_input_3;
+    wire [data_bits - 1 : 0] mux_three_output;
+    wire [1 : 0] mux_three_select;
+
+    // Wiring for ALU
+    wire [data_bits - 1 : 0] alu_input_1;
+    wire [data_bits - 1 : 0] alu_input_2;
+    wire [3 : 0] alu_operation;
+    wire [data_bits - 1 : 0] alu_result;
+    wire alu_zero;                
+
+    // Wiring for MUX_TWO_ALU
+    wire [data_bits - 1 : 0] mux_two_alu_input_1;
+    wire [data_bits - 1 : 0] mux_two_alu_input_2;
+    wire [data_bits - 1 : 0] mux_two_alu_output;
+    wire mux_two_alu_select;
+
+    // Wiring for MUX_TWO_DATA_MEM
+    wire [data_bits - 1 : 0] mux_two_data_mem_input_1;
+    wire [data_bits - 1 : 0] mux_two_data_mem_input_2;
+    wire [data_bits - 1 : 0] mux_two_data_mem_output;
+    wire mux_two_data_mem_select;
+
+    // Wiring for MUX_TWO_PC
+    wire [data_bits - 1 : 0] mux_two_pc_input_1;
+    wire [data_bits - 1 : 0] mux_two_pc_input_2;
+    wire [data_bits - 1 : 0] mux_two_pc_output;
+    wire mux_two_pc_select;
+
+    // Wiring for Main Controller
+    wire [6 : 0] main_controller_opcode;
+    wire main_controller_branch;
+    wire main_controller_memory_read;
+    wire main_controller_memory_to_register;
+    wire [3 : 0] main_controller_alu_option;
+    wire main_controller_memory_write;
+    wire main_controller_alu_source;
+    wire main_controller_register_write;
+    wire [1 : 0] main_controller_AuipcLui;
+
+    // Wiring for ALU controller
+    wire [6 : 0] alu_controller_func_7_bits;
+    wire [2 : 0] alu_controller_func_3_bits;
+    wire [3 : 0] alu_controller_alu_option;
+    wire [3 : 0] alu_controller_alu_operation;
+
+    // ========== ASSIGN CABLES ========== //
+    // ADDER SUM connections
+    assign adder_sum_input_1 = pc_register_output;
+    assign adder_sum_input_2 = immediate_generator_output;
+
+    // ADDER PC connections
+    assign adder_pc_input_1 = pc_register_output;
+    assign adder_pc_input_2 = 4;
+
+    // MUX TWO PC connections
+    assign mux_two_pc_input_1   = adder_pc_output;
+    assign mux_two_pc_input_2   = adder_sum_output;
+    assign mux_two_pc_select    = main_controller_branch & alu_zero;
+
+    // PC connections
+    assign pc_register_input    = mux_two_pc_output;
+    assign pc_register_clk      = clk;
+    assign pc_register_reset    = reset;
+
+    // Instruction Memory connections
+    assign instruction_memory_clk           = clk;
+    assign instruction_memory_write_enable  = 1'b0;
+    assign instruction_memory_read_enable   = 1'b1;
+    assign instruction_memory_input_data    = {32{1'b0}};
+    assign instruction_memory_read_address  = pc_register_output[memory_address_bits - 1 : 0];
+  
+    // Main controller connections
+    assign main_controller_opcode = instruction_memory_output_data[6 : 0];
+
+    // Register Bank connections
+    assign register_bank_clk                        = clk;
+    assign register_bank_read_register_1_address    = instruction_memory_output_data[19 : 15];
+    assign register_bank_read_register_2_address    = instruction_memory_output_data[24 : 20];
+    assign register_bank_write_register_address     = instruction_memory_output_data[11 : 7 ];
+    assign register_bank_write_data                 = mux_two_data_mem_output;
+    assign register_bank_write_enable               = main_controller_register_write;
+
+    // Immediate generator connections
+    assign immediate_generator_input = instruction_memory_output_data;
+
+    // MUX_THREE connections
+    assign mux_three_input_1    = pc_register_output;
+    assign mux_three_input_2    = 32'd0;
+    assign mux_three_input_3    = register_bank_read_data_1;
+    assign mux_three_select     = main_controller_AuipcLui; 
+
+    // MUX_TWO_ALU connections
+    assign mux_two_alu_input_1 = register_bank_read_data_2;
+    assign mux_two_alu_input_2 = immediate_generator_output;
+
+    // ALU controller connections
+    assign alu_controller_alu_option    = main_controller_alu_option;
+    assign alu_controller_func_7_bits   = instruction_memory_output_data[31 : 25];
+    assign alu_controller_func_3_bits   = instruction_memory_output_data[14 : 12];
+
+    // ALU connections
+    assign alu_input_1      = mux_three_output;
+    assign alu_input_2      = mux_two_alu_output;
+    assign alu_operation    = alu_controller_alu_operation;
+
+    // Data memory connections
+    assign data_memory_read_address = alu_result;
+    assign data_memory_input_data   = register_bank_read_data_2;
+    assign data_memory_write_enable = main_controller_memory_write;
+    assign data_memory_read_enable  = main_controller_memory_read;
 
 
-    ADDER ADDER_SUM (               //Adder cuya out es la entrada 1 del multiplexor conectado a PC
-                    .input1(imm_gen_),
-                    .input2(pc_out_),
-                    .out(suma_adder_sum)
+
+    // Configure Adders and PC
+    ADDER ADDER_SUM (                         // Adder cuya out es la entrada 1 del multiplexor conectado a PC
+        .input1 (adder_sum_input_1),    // Entrada a salida del generador de inmediatos
+        .input2 (adder_sum_input_2),    // Entrada a salida del pc
+        .out    (adder_sum_output)      // Salida al multiplexor de suma
     );
 
-    ADDER ADDER_MUX (             //Adder cuya ouput es la entrada 0 del multiplexor conectado a PC
-                    .input1(pc_out_),
-                    .input2(4),
-                    .out(suma_adder_mux)
+    ADDER ADDER_PC (                      // Adder cuya ouput es la entrada 0 del multiplexor conectado a PC
+        .input1 (adder_pc_input_1), // Entrada a salida del pc 
+        .input2 (adder_pc_input_2), // Entrada forzada a 4
+        .out    (adder_pc_output)   // Salida a
     );
 
-    ALU ALU (                       //ALU, sin más 
-                    .input1(inmux_out_1_),
-                    .input2(mux_out_2_),
-                    .operation(alu_operation_),
-                    .operation_result(operation_result_),
-                    .Zero(Zero)
+    mux_2_input mux_pc (                // multiplexor cuya salida está conectada a PC
+        .input1 (mux_two_pc_input_1),   // Entrada a salida del sumador 1
+        .input2 (mux_two_pc_input_2),   // Entrada a salida del sumador 'SUM'
+        .control(mux_two_pc_select),    // Control proveniente de la puerta AND
+        .out    (mux_two_pc_output)     // Salida a la entrada del pc
     );
 
-    data_memory data_memory (         //Memoria de datos
-                    .clk(clk),
-                    .write_enable(memory_write),
-                    .read_enable(memory_read),
-                    .address(operation_result_),
-                    .input_data(read_data_2_),
-                    .output_data(mem_output_data_)
+    PC PC (
+        .in     (pc_register_input),    // Entrada del pc
+        .out    (pc_register_output),    // Salida del pc
+        .clk    (pc_register_clk),
+        .reset  (pc_register_reset)
     );
 
-    mux_3_input mux_alu1 (      //multiplexor con el que definimos la primera entrada de la ALU
-                    .input0(pc),
-                    .input1(32'd0),
-                    .input2(read_data_1_),
-                    .control(AuipcLui),
-                    .out(inmux_out_1_)
+    ALU ALU (                      
+        .input1             (alu_input_1),      // Entrada a salida del multiplexor de 3 entradas
+        .input2             (alu_input_2),      // Entrada a salida del multiplexor de 2 entradas
+        .operation          (alu_operation),    // Señal que indica la operacion a realizar
+        .operation_result   (alu_result),       // Resultado de la operacion
+        .Zero               (alu_zero)          // Bit que indica si el resultado de la operacion es 0
     );
 
-    mux_2_input mux_alu2(           //multiplexor con el que definimos la segunda entrada de la ALU
-                    .input1(read_data_2_),
-                    .input2(imm_gen_),
-                    .control(alu_source),
-                    .out(mux_out_2_)
+    memory data_memory (         
+        .clk            (data_memory_clk),          // Clock del sistema
+        .write_enable   (data_memory_write_enable),   
+        .read_enable    (data_memory_read_enable),
+        .address        (data_memory_read_address),
+        .input_data     (data_memory_input_data),
+        .output_data    (data_memory_output_data)
     );
 
-    mux_2_input mux_mem (          //multiplexor a la salida de la memoria de datos
-                    .input1(mem_output_data_),
-                    .input2(operation_result_),
-                    .control(memory_to_register),
-                    .out(mux_out_3)
+    memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
+        .clk            (instruction_memory_clk),
+        .write_enable   (instruction_memory_write_enable),  // Forzamos el bit de escritura a 0 para evitar su escritura
+        .read_enable    (instruction_memory_read_enable),   // Forzamos el bit de lectura a 1 para forzar solo lectura
+        .address        (instruction_memory_read_address),  // Direccion de entrada a salida del pc
+        .input_data     (instruction_memory_input_data),    // Forzamos datos de entrada a 0
+        .output_data    (instruction_memory_output_data)    // La salida es la instruccion del sistema
     );
 
-    mux_2_input mux_pc (             //multiplexor cuya salida está conectada a PC
-                    .input1(suma_adder_mux),
-                    .input2(suma_adder_sum),
-                    .control(and_out),
-                    .out(mux_out_pc_)
+    mux_3_input mux_alu1 (                  // multiplexor con el que definimos la primera entrada de la ALU
+        .input0     (mux_three_input_1),    // Entrada a salida del pc
+        .input1     (mux_three_input_2),    // Entrada nula
+        .input2     (mux_three_input_3),    // Entrada a salida 1 con data leida del banco de registros
+        .control    (mux_three_select),
+        .out        (mux_three_output)      // Salida del multiplexor de 3 entradas
+    );
+
+    mux_2_input mux_alu2(                   // multiplexor con el que definimos la segunda entrada de la ALU
+        .input1     (mux_two_alu_input_1),  // Entrada a la salida 2 con data leida del banco de registros
+        .input2     (mux_two_alu_input_2),  // Entrada a la salida del generador de inmediatos   
+        .control    (mux_two_alu_select),   // Control al alu source
+        .out        (mux_two_alu_output)
+    );
+
+    mux_2_input mux_mem (                        // multiplexor a la salida de la memoria de datos
+        .input1     (mux_two_data_mem_input_1),  // Entrada a la salida de la memoria de datos
+        .input2     (mux_two_data_mem_input_2),  // Entrada a la salida del multiplexor
+        .control    (mux_two_data_mem_select),   //
+        .out        (mux_two_data_mem_output)
     );
 
     register_bank register_bank (
-                    .clk(clk),
-                    .read_register_1_addr(instruction_[19:15]),
-                    .read_register_2_addr(instruction_[24:20]),
-                    .write_register_addr(instruction_[11:7]),
-                    .write_data(mux_out_3),
-                    .write_enable(register_write),
-                    .read_data_1(read_data_1_),
-                    .read_data_2(read_data_2_)
+        .clk                    (register_bank_clk),
+        .read_register_1_addr   (register_bank_read_register_1_address),
+        .read_register_2_addr   (register_bank_read_register_2_address),
+        .write_register_addr    (register_bank_write_register_address),
+        .write_data             (register_bank_write_data),
+        .write_enable           (register_bank_write_enable),
+        .read_data_1            (register_bank_read_data_1),
+        .read_data_2            (register_bank_read_data_2)
     );
 
     imm_gen imm_gen (
-                    .inst(instruction_[31:0]),
-                    .imm_gen(imm_gen_)
-    );
-
-    instruction_memory instruction_memory (
-                    .read_address(pc_out_),
-                    .instruction_(instruction_)
+        .instruction    (immediate_generator_input),
+        .out            (immediate_generator_output)
     );
                 
-    PC PC(
-                    .in(mux_out_pc_),
-                    .out(pc_out_)
-    );
-
     // Instanciate the control module
     main_controller controller(
-                    .opcode(instruction_[6:0]),
-                    .branch(branch),
-                    .memory_read(memory_read),
-                    .memory_register(memory_register),
-                    .alu_option(alu_option),
-                    .memory_write(memory_write),
-                    .alu_source(alu_source),
-                    .register_write(register_write),
-                    .AuipcLui(AuipcLui)
+        .opcode             (main_controller_opcode),
+        .branch             (main_controller_branch),
+        .memory_read        (main_controller_memory_read),
+        .memory_to_register (main_controller_memory_to_register),
+        .alu_option         (main_controller_alu_option),
+        .memory_write       (main_controller_memory_write),
+        .alu_source         (main_controller_alu_source),
+        .register_write     (main_controller_register_write),
+        .AuipcLui           (main_controller_AuipcLui)
     );
 
     alu_controller alu_control(
-                    .func_7_bits(instruction_[31:24]),
-                    .func_3_bits(instruction_[14:12]),
-                    .alu_option(alu_option),
-                    .alu_operation(alu_operation_)
+        .func_7_bits    (alu_controller_func_7_bits),
+        .func_3_bits    (alu_controller_func_3_bits),
+        .alu_option     (alu_controller_alu_option),
+        .alu_operation  (alu_controller_alu_operation)
     );
 
 endmodule
