@@ -1,6 +1,6 @@
 `include "../Design/core.sv"
 
-module phase_2_testbench();
+module phase_2_testbench;
 
 // Clock generator
 reg clk;
@@ -9,7 +9,7 @@ always #(CLK_PERIOD/2) clk=~clk;
 
 reg reset;
 
-core #(.program_file("ADDI.mem")) core(
+core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
     .clk(clk),
     .reset(reset)
 );
@@ -17,10 +17,6 @@ core #(.program_file("ADDI.mem")) core(
 initial begin
     clk = 1;
     reset = 1;
-
-
-
-
     $stop();
 end
 

@@ -1,6 +1,6 @@
 module memory #(
     parameter size = 1024,
-    parameter input_file = "../Testing/Programs/Simple/ADDI.mem",
+    parameter input_file = "../Testing/Programs/Simple/R/ADD.mem",
     parameter charge_file = 1'b0,
     parameter bits = $clog2(size)  // Compute the number of bits needed for a given size
 ) (
@@ -16,12 +16,20 @@ module memory #(
 );
 
 // Create the data pool which will contain the information
-reg         [31:0]          data_pool [size - 1 : 0];
+reg         [31:0]          data_pool [0 : size - 1];
+
+parameter relative_path = "../../Proyecto Questasim/Basic Testing/../../";
+// parameter relative_path = "";
+parameter file_path = {relative_path, input_file};
+
 
 initial begin
+
     if(charge_file)begin
-        $display(">>> CHARGING FILE [%s] IN MEMORY", input_file);
-        $readmemh(input_file, data_pool );
+        $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
+        $readmemh(file_path, data_pool );
+
+        $display(data_pool);
     end
 end
 
