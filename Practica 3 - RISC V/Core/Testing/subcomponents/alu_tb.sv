@@ -10,8 +10,17 @@ module test_alu(input [31:0] A,
 
     basic_task basic_task_instance();
 
-
+/*
     initial begin
+        check_alu_instance = new check_alu();
+    end*/
+
+
+    initial
+    begin
+        check_alu_instance = new check_alu();
+
+
         basic_task_instance.inicializar();
         basic_task_instance.reset();
 
@@ -77,7 +86,7 @@ class check_alu; //Todas las opciones aqui // revisar si las operaciones son sig
     logic signed [31:0] ideal_res;
 
 
-    task ADD(int A, int B, int result, zero);
+    task ADD(logic [31:0] A, logic [31:0] B, logic result, zero);
 
     begin
         ideal_res = A+B;
