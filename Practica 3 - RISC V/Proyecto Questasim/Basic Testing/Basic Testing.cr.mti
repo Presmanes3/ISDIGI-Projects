@@ -1,21 +1,4 @@
-{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module memory
--- Compiling module register_bank
--- Compiling module main_controller
--- Compiling module alu_controller
--- Compiling module PC
--- Compiling module ADDER
--- Compiling module imm_gen
--- Compiling module mux_2_input
--- Compiling module mux_3_input
--- Compiling module core
--- Compiling module phase_2_testbench
-
-Top level modules:
-	phase_2_testbench
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
+{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module imm_gen
 
@@ -29,12 +12,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	main_controller
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/memory.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/memory.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module memory
+-- Compiling module register_bank
 
 Top level modules:
-	memory
+	register_bank
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ALU.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -57,28 +40,19 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ADDER
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module memory
--- Compiling module register_bank
--- Compiling module main_controller
--- Compiling module alu_controller
--- Compiling module PC
--- Compiling module ADDER
--- Compiling module imm_gen
--- Compiling module mux_2_input
--- Compiling module mux_3_input
--- Compiling module core
-
-Top level modules:
-	core
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module mux_2_input
 
 Top level modules:
 	mux_2_input
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module PC
+
+Top level modules:
+	PC
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -88,13 +62,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	basic_testing
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module PC
-
-Top level modules:
-	PC
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014

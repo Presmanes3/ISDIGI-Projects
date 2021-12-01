@@ -28,8 +28,6 @@ initial begin
     if(charge_file)begin
         $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
         $readmemh(file_path, data_pool );
-
-        $display(data_pool);
     end
 end
 
@@ -38,8 +36,10 @@ always_ff @( posedge clk ) begin
 end
 
 always_comb begin 
-    if(read_enable) output_data <= data_pool[address];
+    if(read_enable) output_data <= data_pool[address / 4];
 end
+
+
 
 // TODO add assert property for checking that input and output written and read
 

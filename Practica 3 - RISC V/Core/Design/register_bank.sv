@@ -11,11 +11,20 @@ module register_bank (
     output reg [31:0] read_data_2
 );
 
-reg [31:0] reg_pool [31:0];
+reg [31:0] reg_pool [0 : 31];
+
+parameter relative_path = "../../Proyecto Questasim/Basic Testing/../../";
+parameter input_file = "Core/Design/register_bank_init.mem";
+
+// parameter relative_path = "";
+parameter file_path = {relative_path, input_file};
+
+initial begin
+    $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
+    $readmemh(file_path, reg_pool );
+end
 
 always_ff @( posedge clk ) begin 
-    reg_pool[0] = 32'd0;
-    
     if(write_enable)begin
         if(write_register_addr != 5'b00000)begin
             reg_pool[write_register_addr] <= write_data;
@@ -23,10 +32,9 @@ always_ff @( posedge clk ) begin
     end
 end
 
-always_comb begin 
-    read_data_1 = reg_pool[read_register_1_addr];
-    read_data_2 = reg_pool[read_register_2_addr];
-end
+
+assign read_data_1 = reg_pool[read_register_1_addr];
+assign read_data_2 = reg_pool[read_register_2_addr];
 
 
 // TODO add assert property for writting

@@ -15,9 +15,22 @@ core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
 );
 
 initial begin
+
+    reset_();
+
     clk = 1;
-    reset = 1;
+
+    #(4*CLK_PERIOD);
+
     $stop();
 end
+
+task reset_();
+    reset = 0;
+
+    #(CLK_PERIOD);
+
+    reset = 1;
+endtask 
 
 endmodule

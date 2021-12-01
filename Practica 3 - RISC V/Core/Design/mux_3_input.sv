@@ -8,11 +8,13 @@ module mux_3_input
 	input [1:0] control
 );
 
-always_comb
-	case(control)
-		2'b00: 		out = input0; 
-		2'b01: 		out = input1;
-		2'b10: 		out = input2;
-		default: 	out = input0;
-	endcase
+always_comb begin
+		out = 0;
+		case(control)
+			2'b00: 		out = input0; 
+			2'b01: 		out = input1;
+			2'b10: 		out = input2;
+			default: 	out = input0;
+		endcase
+	end
 endmodule

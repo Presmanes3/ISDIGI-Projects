@@ -183,11 +183,13 @@ module core
     assign mux_three_input_1    = pc_register_output;
     assign mux_three_input_2    = 32'd0;
     assign mux_three_input_3    = register_bank_read_data_1;
-    assign mux_three_select     = main_controller_AuipcLui; 
+    //assign mux_three_select     = main_controller_AuipcLui; 
+    assign mux_three_select     = 2; 
 
     // MUX_TWO_ALU connections
     assign mux_two_alu_input_1 = register_bank_read_data_2;
     assign mux_two_alu_input_2 = immediate_generator_output;
+    assign mux_two_alu_select  = main_controller_alu_source;
 
     // ALU controller connections
     assign alu_controller_alu_option    = main_controller_alu_option;
@@ -200,6 +202,7 @@ module core
     assign alu_operation    = alu_controller_alu_operation;
 
     // Data memory connections
+    assign data_memory_clk          = clk;
     assign data_memory_read_address = alu_result;
     assign data_memory_input_data   = register_bank_read_data_2;
     assign data_memory_write_enable = main_controller_memory_write;

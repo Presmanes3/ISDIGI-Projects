@@ -7,12 +7,8 @@ module PC
 	output reg [size - 1 : 0] out
 );
 
-always @(posedge clk or negedge reset)
-	begin
-		if(!reset) begin
-			out <= 0;
-		end else begin
-			out <= in;
-		end
+always_ff @(posedge clk or negedge reset) begin
+		if(!reset) 	out = 0;
+		else 		out = in;
 	end
 endmodule 
