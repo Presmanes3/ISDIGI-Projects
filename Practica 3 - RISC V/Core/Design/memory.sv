@@ -24,7 +24,6 @@ parameter file_path = {relative_path, input_file};
 
 
 initial begin
-
     if(charge_file)begin
         $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
         $readmemh(file_path, data_pool );

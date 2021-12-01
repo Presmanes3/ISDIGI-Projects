@@ -20,7 +20,7 @@ parameter input_file = "Core/Design/register_bank_init.mem";
 parameter file_path = {relative_path, input_file};
 
 initial begin
-    $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
+    $display(">>> CHARGING FILE [%s] IN REGISTER BANK", file_path);
     $readmemh(file_path, reg_pool );
 end
 
