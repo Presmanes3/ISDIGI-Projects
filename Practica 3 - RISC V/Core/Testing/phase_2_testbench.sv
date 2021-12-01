@@ -1,36 +1,52 @@
 `include "../Design/core.sv"
-
+`include "verification_manager.sv"
 module phase_2_testbench;
 
-// Clock generator
-reg clk;
-localparam CLK_PERIOD = 10;
-always #(CLK_PERIOD/2) clk=~clk;
+    // Clock generator
+    reg clk = 0;
+    localparam CLK_PERIOD = 10;
+    always #(CLK_PERIOD/2) clk=~clk;
 
-reg reset;
+    reg reset;
 
-core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
-    .clk(clk),
-    .reset(reset)
-);
+    // core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
+    //     .clk(clk),
+    //     .reset(reset)
+    // );
 
-initial begin
+    
 
-    reset_();
+    core #(.program_file("Core/Testing/Programs/Simple/TUTI.mem")) core(
+        .clk(clk),
+        .reset(reset)
+    );
 
-    clk = 1;
+        verification_manager ver_duv;
 
-    #(4*CLK_PERIOD);
+    initial begin
 
-    $stop();
-end
+        ver_duv = new();
+        ver_duv.init();
 
-task reset_();
-    reset = 0;
+        reset_();
 
-    #(CLK_PERIOD);
+        clk = 1;
 
-    reset = 1;
-endtask 
+        #(1);
+
+        ver_duv.update();
+
+        $stop();
+    
+    end
+    
+
+    task reset_;
+        reset = 0;
+
+        #(CLK_PERIOD);
+
+        reset = 1;
+    endtask 
 
 endmodule
