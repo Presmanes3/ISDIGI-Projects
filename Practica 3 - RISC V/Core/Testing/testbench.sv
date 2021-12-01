@@ -1,4 +1,7 @@
 `include "basic_task.sv"
+`include "interface.sv"
+`include "subcomponents/alu_tb.sv"
+//`include "subcomponents/ram_tb.sv"
 
 module testbench();
     `timescale 1ns/100ps
@@ -23,11 +26,21 @@ module testbench();
     //--------------------------------------------------------------------------------
 
     // Instanciamos el test de la ALU ------------------------------------------------
-    test_alu test_alu_inst (sys_iff.A_alu, sys_iff.B_alu, sys_iff.zero_alu, sys_iff.result_alu);
+    test_alu test_alu_instance();
     //--------------------------------------------------------------------------------
 
+    basic_task basic_task_instance();
+
+    
+
     initial begin
+        basic_task_instance.inicializar();
+        basic_task_instance.reset();
         
+        // Compruebo la ALU
+        test_alu_instance.tb_alu();
+
+        $stop();
         
     end
 

@@ -1,4 +1,3 @@
-`include "interface.sv"
 
 class RCSG_32_AB;
     rand bit signed [31:0] A_;
@@ -12,8 +11,6 @@ module basic_task();
 
     initial begin
         random = new;
-
-        inicializar ();
     end
     
     task inicializar();
@@ -42,9 +39,5 @@ module basic_task();
 
         $display("GENERATED NUMBERS >>> A [%d] || B [%d]", $signed(testbench.sys_iff.A_alu), $signed(testbench.sys_iff.B_alu));
     endtask
-
-
-
-     
 
 endmodule
