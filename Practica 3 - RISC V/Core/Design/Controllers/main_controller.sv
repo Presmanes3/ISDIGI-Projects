@@ -34,6 +34,7 @@ module main_controller(
 assign alu_option = {opcode[6:4], opcode[2]};
 
 always_comb begin
+    AuipcLui = 2'b10;
     case (alu_option)
 
         // Type LOAD
@@ -103,6 +104,5 @@ always_comb begin
         end
     endcase
 end
-
 
 endmodule
