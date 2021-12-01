@@ -81,8 +81,14 @@ always_comb begin
             branch              = 1'b0;
         end
 
+        // Type Write in memory
         4'b0111: begin
-
+            alu_source          = 1'b0;
+            memory_to_register  = 1'b0;
+            memory_read         = 1'b0;
+            memory_write        = 1'b0;
+            register_write      = 1'b1;
+            branch              = 1'b0;
         end
 
         // Type CONDITIONAL JUMP

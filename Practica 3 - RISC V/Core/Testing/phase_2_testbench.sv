@@ -1,5 +1,7 @@
 `include "../Design/core.sv"
 `include "verification_manager.sv"
+`include "./fibonnaci_test.sv"
+
 module phase_2_testbench;
 
     // Clock generator
@@ -14,19 +16,28 @@ module phase_2_testbench;
     //     .reset(reset)
     // );
 
-    
+    // core #(.program_file("Core/Testing/Programs/Simple/TUTI.mem")) core(
+    //     .clk(clk),
+    //     .reset(reset)
+    // );
 
-    core #(.program_file("Core/Testing/Programs/Simple/TUTI.mem")) core(
+    core #(.program_file("Core/Testing/Programs/Complex/fibonnaci.mem")) core(
         .clk(clk),
         .reset(reset)
     );
 
-        verification_manager ver_duv;
+    fibonnaci_test fibonnaci_duv;
+
+    verification_manager ver_duv;
 
     initial begin
 
         ver_duv = new();
+        fibonnaci_duv = new();
+
         ver_duv.init();
+        fibonnaci_duv.init();
+        
 
         reset_();
 
@@ -34,7 +45,22 @@ module phase_2_testbench;
 
         #(1);
 
-        ver_duv.update();
+        while (core.instruction_memory_output_data != 32'h00100013)begin
+
+            
+
+            @(core.instruction_memory_output_data == 32'h00e68463)
+
+            fibonnaci_duv.golden_model.compute_new_number();
+
+            fibonnaci_duv.check();
+
+            ver_duv.update();
+        end
+
+        
+
+
 
         $stop();
     
