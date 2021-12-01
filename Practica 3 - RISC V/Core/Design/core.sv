@@ -191,6 +191,11 @@ module core
     assign mux_two_alu_input_2 = immediate_generator_output;
     assign mux_two_alu_select  = main_controller_alu_source;
 
+    // MUX_TWO_MEM connections
+    assign mux_two_data_mem_input_1 = alu_result;
+    assign mux_two_data_mem_input_2 = data_memory_output_data;
+    assign mux_two_data_mem_select  = main_controller_memory_to_register;
+
     // ALU controller connections
     assign alu_controller_alu_option    = main_controller_alu_option;
     assign alu_controller_func_7_bits   = instruction_memory_output_data[31 : 25];
