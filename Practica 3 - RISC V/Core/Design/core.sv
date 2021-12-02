@@ -7,6 +7,7 @@
 `include "immgen.sv"
 `include "mux_2_input.sv"
 `include "mux_3_input.sv"
+`include "jump_controller.sv"
 
 /**
     @brief Top level entity for the RISC-V processor
@@ -122,6 +123,12 @@ module core
     wire [data_bits - 1 : 0] mux_two_pc_output;
     wire mux_two_pc_select;
 
+    // Wiring for JUM_CONTROLLER
+    wire jump_controller_branch;
+    wire [2:0] jump_controller_func_3_bits;
+    wire jump_controller_zero;
+    wire jump_controller_select;
+
     // Wiring for Main Controller
     wire [6 : 0] main_controller_opcode;
     wire main_controller_branch;
@@ -151,7 +158,12 @@ module core
     // MUX TWO PC connections
     assign mux_two_pc_input_1   = adder_pc_output;
     assign mux_two_pc_input_2   = adder_sum_output;
-    assign mux_two_pc_select    = main_controller_branch & alu_zero;
+    assign mux_two_pc_select    = jump_controller_select;
+
+    // JUMP CONTROLLER connections
+    assign jump_controller_branch       = main_controller_branch;
+    assign jump_controller_func_3_bits  = alu_controller_func_3_bits;
+    assign jump_controller_zero         = alu_zero;
 
     // PC connections
     assign pc_register_input    = mux_two_pc_output;
@@ -183,11 +195,18 @@ module core
     assign mux_three_input_1    = pc_register_output;
     assign mux_three_input_2    = 32'd0;
     assign mux_three_input_3    = register_bank_read_data_1;
-    assign mux_three_select     = main_controller_AuipcLui; 
+    //assign mux_three_select     = main_controller_AuipcLui; 
+    assign mux_three_select     = 2; 
 
     // MUX_TWO_ALU connections
     assign mux_two_alu_input_1 = register_bank_read_data_2;
     assign mux_two_alu_input_2 = immediate_generator_output;
+    assign mux_two_alu_select  = main_controller_alu_source;
+
+    // MUX_TWO_MEM connections
+    assign mux_two_data_mem_input_1 = alu_result;
+    assign mux_two_data_mem_input_2 = data_memory_output_data;
+    assign mux_two_data_mem_select  = main_controller_memory_to_register;
 
     // ALU controller connections
     assign alu_controller_alu_option    = main_controller_alu_option;
@@ -200,6 +219,7 @@ module core
     assign alu_operation    = alu_controller_alu_operation;
 
     // Data memory connections
+    assign data_memory_clk          = clk;
     assign data_memory_read_address = alu_result;
     assign data_memory_input_data   = register_bank_read_data_2;
     assign data_memory_write_enable = main_controller_memory_write;
@@ -232,6 +252,13 @@ module core
         .out    (pc_register_output),    // Salida del pc
         .clk    (pc_register_clk),
         .reset  (pc_register_reset)
+    );
+
+    jump_controller jump_controller_(
+        .branch(jump_controller_branch),
+        .func_3_bits(jump_controller_func_3_bits),
+        .zero(jump_controller_zero),
+        .select(jump_controller_select)
     );
 
     ALU ALU (                      

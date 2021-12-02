@@ -7,11 +7,13 @@ module mux_2_input
 	input control
 );
 
-always_comb
-	case(control)
-		0: 			out = input1; 
-		1: 			out = input2;
-		default: 	out = input1;
-	endcase
+always_comb begin
+		out = 0;
+		case(control)
+			0: 			out = input1; 
+			1: 			out = input2;
+			default: 	out = input1;
+		endcase
+	end
 endmodule
 

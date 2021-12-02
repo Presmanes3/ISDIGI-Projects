@@ -1,0 +1,89 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /phase_2_testbench/core/clk
+add wave -noupdate /phase_2_testbench/core/reset
+add wave -noupdate -group {Adder SUM} /phase_2_testbench/core/adder_sum_input_1
+add wave -noupdate -group {Adder SUM} /phase_2_testbench/core/adder_sum_input_2
+add wave -noupdate -group {Adder SUM} /phase_2_testbench/core/adder_sum_output
+add wave -noupdate -group {Adder PC} /phase_2_testbench/core/adder_pc_input_1
+add wave -noupdate -group {Adder PC} /phase_2_testbench/core/adder_pc_input_2
+add wave -noupdate -group {Adder PC} /phase_2_testbench/core/adder_pc_output
+add wave -noupdate -group {PC register} /phase_2_testbench/core/pc_register_input
+add wave -noupdate -group {PC register} /phase_2_testbench/core/pc_register_output
+add wave -noupdate -group {PC register} /phase_2_testbench/core/pc_register_clk
+add wave -noupdate -group {PC register} /phase_2_testbench/core/pc_register_reset
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_clk
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_write_enable
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_read_enable
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_input_data
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_output_data
+add wave -noupdate -expand -group {Instruction Memory} /phase_2_testbench/core/instruction_memory_read_address
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_clk
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_write_enable
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_read_enable
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_input_data
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_output_data
+add wave -noupdate -group {Data Memory} /phase_2_testbench/core/data_memory_read_address
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_clk
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_read_register_1_address
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_read_register_2_address
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_write_register_address
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_write_data
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_write_enable
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_read_data_1
+add wave -noupdate -group {Register Bank} /phase_2_testbench/core/register_bank_read_data_2
+add wave -noupdate -expand -group {Immediate Generator} /phase_2_testbench/core/immediate_generator_input
+add wave -noupdate -expand -group {Immediate Generator} /phase_2_testbench/core/immediate_generator_output
+add wave -noupdate -group {Multiplexer Three inputs} /phase_2_testbench/core/mux_three_input_1
+add wave -noupdate -group {Multiplexer Three inputs} /phase_2_testbench/core/mux_three_input_2
+add wave -noupdate -group {Multiplexer Three inputs} /phase_2_testbench/core/mux_three_input_3
+add wave -noupdate -group {Multiplexer Three inputs} /phase_2_testbench/core/mux_three_output
+add wave -noupdate -group {Multiplexer Three inputs} /phase_2_testbench/core/mux_three_select
+add wave -noupdate -expand -group ALU /phase_2_testbench/core/alu_input_1
+add wave -noupdate -expand -group ALU /phase_2_testbench/core/alu_input_2
+add wave -noupdate -expand -group ALU /phase_2_testbench/core/alu_operation
+add wave -noupdate -expand -group ALU /phase_2_testbench/core/alu_result
+add wave -noupdate -expand -group ALU /phase_2_testbench/core/alu_zero
+add wave -noupdate -group {Multiplexer ALU} /phase_2_testbench/core/mux_two_alu_input_2
+add wave -noupdate -group {Multiplexer ALU} /phase_2_testbench/core/mux_two_alu_output
+add wave -noupdate -group {Multiplexer ALU} /phase_2_testbench/core/mux_two_alu_select
+add wave -noupdate -group {Multiplexer ALU} /phase_2_testbench/core/mux_two_alu_input_1
+add wave -noupdate -group {Multiplexer Data Mem} /phase_2_testbench/core/mux_two_data_mem_input_1
+add wave -noupdate -group {Multiplexer Data Mem} /phase_2_testbench/core/mux_two_data_mem_input_2
+add wave -noupdate -group {Multiplexer Data Mem} /phase_2_testbench/core/mux_two_data_mem_output
+add wave -noupdate -group {Multiplexer Data Mem} /phase_2_testbench/core/mux_two_data_mem_select
+add wave -noupdate -group {Multiplexer PC} /phase_2_testbench/core/mux_two_pc_input_1
+add wave -noupdate -group {Multiplexer PC} /phase_2_testbench/core/mux_two_pc_input_2
+add wave -noupdate -group {Multiplexer PC} /phase_2_testbench/core/mux_two_pc_output
+add wave -noupdate -group {Multiplexer PC} /phase_2_testbench/core/mux_two_pc_select
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_opcode
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_branch
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_memory_read
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_memory_to_register
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_alu_option
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_memory_write
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_alu_source
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_register_write
+add wave -noupdate -group {Main Controller} /phase_2_testbench/core/main_controller_AuipcLui
+add wave -noupdate -group {Alu Controller} /phase_2_testbench/core/alu_controller_func_7_bits
+add wave -noupdate -group {Alu Controller} /phase_2_testbench/core/alu_controller_func_3_bits
+add wave -noupdate -group {Alu Controller} /phase_2_testbench/core/alu_controller_alu_option
+add wave -noupdate -group {Alu Controller} /phase_2_testbench/core/alu_controller_alu_operation
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {8 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 389
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {0 ns} {59 ns}
