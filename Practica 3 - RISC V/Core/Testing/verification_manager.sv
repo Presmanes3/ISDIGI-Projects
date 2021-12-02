@@ -38,14 +38,15 @@ class verification_manager;
 
     task update;
 
-        alu_option = {phase_2_testbench.core.main_controller_opcode[6:4], phase_2_testbench.core.main_controller_opcode[2]};
-        
+        this.alu_option = 0;
+        this.alu_option = phase_2_testbench.core.main_controller_alu_option;
+        $display("[%b] > %b", phase_2_testbench.core.main_controller_opcode, this.alu_option);
         this.verify_main_controller();
     
     endtask //automatic
 
     task  verify_main_controller;
-        case (alu_option)
+        case (this.alu_option)
             // Type LOAD
             4'b0000: begin 
                 $display("Verifying type LOAD instruction");

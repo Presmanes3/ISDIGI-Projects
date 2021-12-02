@@ -47,7 +47,7 @@ module phase_2_testbench;
 
         while (core.instruction_memory_output_data != 32'h00100013)begin
 
-            
+
 
             @(core.instruction_memory_output_data == 32'h00e68463)
 
@@ -55,6 +55,7 @@ module phase_2_testbench;
 
             fibonnaci_duv.check();
 
+            #(1);
             ver_duv.update();
         end
 
