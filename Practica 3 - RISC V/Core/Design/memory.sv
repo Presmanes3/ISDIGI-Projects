@@ -31,11 +31,11 @@ initial begin
 end
 
 always_ff @( posedge clk ) begin 
-    if(write_enable) data_pool[address] <= input_data;
+    if(write_enable) data_pool[address / 4] = input_data;
 end
 
 always_comb begin 
-    if(read_enable) output_data <= data_pool[address / 4];
+    if(read_enable) output_data = data_pool[address / 4];
 end
 
 

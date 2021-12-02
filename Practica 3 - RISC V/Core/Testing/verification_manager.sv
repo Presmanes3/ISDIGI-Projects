@@ -40,7 +40,8 @@ class verification_manager;
 
         this.alu_option = 0;
         this.alu_option = phase_2_testbench.core.main_controller_alu_option;
-        $display("[%b] > %b", phase_2_testbench.core.main_controller_opcode, this.alu_option);
+
+
         this.verify_main_controller();
     
     endtask //automatic

@@ -12,7 +12,6 @@ module phase_2_testbench;
 
     reg reset;
 
-    reg count = 0;
     // core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
     //     .clk(clk),
     //     .reset(reset)
@@ -46,19 +45,27 @@ module phase_2_testbench;
 
         wait_fibonnaci_setup();
 
-        while ((core.instruction_memory_output_data != 32'h00100013) && (count < 30))begin
+        while (core.instruction_memory_output_data != 32'h00100013)begin
 
-            fibonnaci_duv.check();
+            @(core.instruction_memory_output_data == 32'h005003b3)
+            $display("REGISTER 7 [%d]", core.register_bank.reg_pool[7]);
 
-            @(core.instruction_memory_output_data == 32'h00e68463)
+            @(core.instruction_memory_output_data == 32'h006282b3)
+            $display("REGISTER 5 [%d]", core.register_bank.reg_pool[5]);
+
+            @(core.instruction_memory_output_data == 32'h00700333)
+            $display("REGISTER 6 [%d]", core.register_bank.reg_pool[6]);
+            
+            @(core.instruction_memory_output_data == 32'hfee694e3)
 
             fibonnaci_duv.golden_model.compute_new_number();
-            // fibonnaci_duv.golden_model.compute_new_number();
-            // fibonnaci_duv.check();
-
-            count = count + 1;
-            //ver_duv.update();  
+            fibonnaci_duv.check();
+            //ver_duv.update();
         end
+
+        
+
+
 
         $stop();
     
