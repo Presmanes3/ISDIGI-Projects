@@ -6,6 +6,7 @@ module imm_gen
 );
 
 reg [6:0] opcode;
+reg sign_extention;
 
 reg [3:0] alu_option;
 
@@ -14,12 +15,36 @@ always_comb begin
     alu_option = {opcode[6:4], opcode[2]};
 
     case(alu_option)
-        4'b0010: out = { {21{instruction[31]}},    instruction[30:20]                                         };
-        //7'b0000001  : out = { {21{instruction[31]}},    instruction[30:25],    instruction[11:7]                          };
-        //7'b0000010  : out = { {20{instruction[31]}},    instruction[7],        instruction[30:25],    instruction[11:8],     1'b0};
-        //7'b0000011  : out = { instruction[31:12],       12'b0                                               };
-        //7'b0000100  : out = { {12{instruction[31]}},    instruction[19:12],    instruction[20],       instruction[30:21],    1'b0};
-        default: out = 4'b0000; 
+        // Type I
+        4'b0010: begin
+            sign_extention = {20{instruction[31]}};
+
+            out[31:12]  = sign_extention; 
+            out[11:0]   = instruction[31:20];
+        end 
+        // Type S 
+        4'b1100: begin 
+            sign_extention = {20{instruction[31]}};
+
+            out[31:12]  = sign_extention;
+            out[11:5]   = instruction[31:25];
+            out[4:0]    = instruction[11:7];
+        end
+        // Type SB
+        4'b1100: begin 
+            
+            sign_extention = {19{instruction[31]}};
+
+            out[31:13]  = sign_extention;
+            out[12]     = instruction[31];
+            out[11]     = instruction[7];
+            out[10:5]   = instruction[30:25];
+            out[4:1]    = instruction[11:8];
+            out[0]      = 0;
+
+        end
+
+    default: out = 0; 
     endcase
 end
 endmodule
