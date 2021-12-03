@@ -171,11 +171,11 @@ module core
     assign pc_register_reset    = reset;
 
     // Instruction Memory connections
-    assign instruction_memory_clk           = clk;
+    assign instruction_memory_clk           = 1'b0;
     assign instruction_memory_write_enable  = 1'b0;
     assign instruction_memory_read_enable   = 1'b1;
     assign instruction_memory_input_data    = {32{1'b0}};
-    assign instruction_memory_read_address  = pc_register_output[memory_address_bits - 1 : 0];
+    assign instruction_memory_read_address  = pc_register_output[memory_address_bits - 1 : 2];
   
     // Main controller connections
     assign main_controller_opcode = instruction_memory_output_data[6 : 0];
@@ -220,12 +220,10 @@ module core
 
     // Data memory connections
     assign data_memory_clk          = clk;
-    assign data_memory_read_address = alu_result;
+    assign data_memory_read_address = alu_result[data_bits - 1 : 2];
     assign data_memory_input_data   = register_bank_read_data_2;
     assign data_memory_write_enable = main_controller_memory_write;
     assign data_memory_read_enable  = main_controller_memory_read;
-
-
 
     // Configure Adders and PC
     ADDER ADDER_SUM (                         // Adder cuya out es la entrada 1 del multiplexor conectado a PC
@@ -344,5 +342,9 @@ module core
         .alu_option     (alu_controller_alu_option),
         .alu_operation  (alu_controller_alu_operation)
     );
+
+
+
+
 
 endmodule
