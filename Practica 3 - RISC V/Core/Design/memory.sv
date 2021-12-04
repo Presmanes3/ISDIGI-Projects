@@ -35,6 +35,7 @@ always_ff @( posedge clk ) begin
 end
 
 always_comb begin 
+    output_data = 0;
     if(read_enable) output_data = data_pool[address];
 end
 
