@@ -130,6 +130,18 @@ always_comb begin
 
                 // BNE
                 3'b001: alu_operation = XOR;
+
+                // BLT 
+                3'b100: alu_operation = S_LOWER;
+
+                // BGE
+                3'b101: alu_operation = S_HIGH_EQ;
+
+                // BLTU
+                3'b110: alu_operation = U_LOWER;
+
+                // BGEU
+                3'b111: alu_operation = U_HIGH_EQ;
                 default: alu_operation = ADD;
             endcase
         end
