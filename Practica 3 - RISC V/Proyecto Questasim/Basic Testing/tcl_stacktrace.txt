@@ -30,3 +30,22 @@ Trace back: Too many nested dialog boxes
     (command bound to event)
   <2:C:/questasim64_10.4/win64/tk8.5/bgerror.tcl:92: ::tkerror {Too many nested dialog boxes}
   <1:eval:1: ::tk::dialog::error::bgerror {Too many nested dialog boxes}
+Sat Dec 04 18:09:55 CET 2021
+Trace back: invalid command name ""
+    while executing
+"$sci config -state normal"
+    (method "::vsimwidgets::Srcobj::ReadOnly" body line 14)
+    invoked from within
+"ReadOnly 0"
+    (method "::vsimwidgets::Srcobj::SourceReplaceFile" body line 4)
+    invoked from within
+"SourceReplaceFile $fileName"
+    (method "::vsimwidgets::Srcobj::CheckModification" body line 26)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/questasim64_10.4/win64/tk8.5/bgerror.tcl:92: ::tkerror {invalid command name ""}
+  <1:eval:1: ::tk::dialog::error::bgerror {invalid command name ""}
