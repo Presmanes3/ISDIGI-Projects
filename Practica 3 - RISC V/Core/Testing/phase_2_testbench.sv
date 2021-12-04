@@ -23,12 +23,14 @@ module phase_2_testbench;
     //     .reset(reset)
     // );
 
-    core #(.program_file("Core/Testing/Programs/Complex/fibonnaci.mem")) core(
+    core #(.program_file("Core/Testing/Programs/Complex/fibonnaci_20.mem")) core(
         .clk(clk),
         .reset(reset)
     );
 
     fibonnaci_test fibonnaci_duv;
+    int current_fib_number;
+    int prev_fib_number;
 
     verification_manager ver_duv;
 
@@ -46,18 +48,15 @@ module phase_2_testbench;
 
         wait_fibonnaci_setup();
 
-        while ((core.instruction_memory_output_data != 32'h00100013) && (count < 30))begin
+        check_numbers_are_equal();
 
-            fibonnaci_duv.check();
+        while ((core.instruction_memory_output_data != 32'h00100013))begin
 
-            @(core.instruction_memory_output_data == 32'h00e68463)
+            wait_till_processor_computes_new_number();
+            check_numbers_are_equal();
 
             fibonnaci_duv.golden_model.compute_new_number();
-            // fibonnaci_duv.golden_model.compute_new_number();
-            // fibonnaci_duv.check();
 
-            count = count + 1;
-            //ver_duv.update();  
         end
 
         $stop();
@@ -65,9 +64,20 @@ module phase_2_testbench;
     end
 
     task wait_fibonnaci_setup();
-        @(core.instruction_memory_output_data == 32'h06562223)
-        @(posedge core.clk);
+        @(core.instruction_memory_output_data == 32'h06562223);
     endtask 
+
+    task wait_till_processor_computes_new_number();
+        @(core.instruction_memory_output_data == 32'h00e68463);
+    endtask
+
+    task check_numbers_are_equal();
+        current_fib_number = core.register_bank.reg_pool[5];
+        prev_fib_number = core.register_bank.reg_pool[6];
+
+        fibonnaci_duv.check(current_fib_number, prev_fib_number);
+    endtask
+
     
 
     task reset_;
