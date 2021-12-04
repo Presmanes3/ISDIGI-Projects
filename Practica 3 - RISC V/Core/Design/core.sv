@@ -24,26 +24,6 @@ module core
     input reset
 );
 
-    // wire [data_bits - 1 : 0] instruction_;
-    // wire [data_bits - 1 : 0] mux_3_in_out_;
-    // wire [data_bits - 1 : 0] mux_2_in_out_;
-    // wire [memory_address_bits - 1 : 0] data_memory_address_;
-    // wire [memory_address_bits - 1 : 0] pc_in_;
-    // wire [memory_address_bits - 1 : 0] pc_out_;
-    // wire [data_bits - 1 : 0] data_memory_output_data_;
-    // wire [data_bits - 1 : 0] read_data_1_;
-    // wire [data_bits - 1 : 0] read_data_2_;
-    // wire [data_bits - 1 : 0] immediate_generator_out_;
-    // wire [data_bits - 1 : 0] suma_adder_sum_;
-    // wire [3 : 0] alu_operation_;
-    // wire [3 : 0] alu_option_;
-    // wire [1 : 0] AuipcLui;
-    // wire [data_bits - 1 : 0] mux_mem_out;
-    // wire Zero;
-    // wire memory_to_register;
-
-    // wire [3:0] operation; 
-
     // ========== DEFINE ALL WIRES ========== //
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
@@ -342,6 +322,10 @@ module core
         .alu_option     (alu_controller_alu_option),
         .alu_operation  (alu_controller_alu_operation)
     );
+
+
+// Check correctly working of the ADD instruction
+
 
 
 
