@@ -1,88 +1,269 @@
-`include "../basic_task.sv" //para llamar al random
 
-program test_alu(           
-    input [31:0] A, B;
-    input [4:0] alu_control;
-    input CLK;
-    output zero;
-    output [31:0] result;
-);
-    logic OP_code
 
-    initial begin
-        
-    end
+class check_alu; //Todas las opciones aqui
 
-endprogram: test_alu
-
-class check_alu; //Todas las opciones aqui // revisar si las operaciones son signed o unsigned
-
-    task suma_signed_A(A, B, result, zero, code);
-        OP_code = 5'b00000;
-        ALU_SUMA: assert (A+B == result) else $info("ALU suma de forma incorrecta");
+    logic flag = 1'b0;
+    task flag_check();
+        if(!flag) $display("-------- LA ALU FUNCIONA CORRECTAMENTE --------");
     endtask
 
-    task suma_signed_B(A, B, result, zero, code);
-        OP_code = 5'b11111;
-        ALU_SUMA: assert (A+B == result) else $info("ALU suma de forma incorrecta");
+    task ADD();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu+testbench.sys_iff.B_alu;
+        ADD_CKECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU ADD ERROR");end
+        if(ideal_res == 0) ZERO_CHECK_ADD: assert (testbench.sys_iff.zero_alu == 1'b1) else $info("Zero incorrect value");
+    
     endtask
 
-    task BEQ(A, B, result, zero, code);
-        OP_code = 5'b00010;
-        ALU_BEQ: assert (A==B |=> 0 == zero) else $info("No detacta numeros iguales [BEQ]");
+    task SUB();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu-testbench.sys_iff.B_alu;
+        SUB_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU SUB ERROR");end
+        if(ideal_res == 0) ZERO_CHECK_SUB: assert (testbench.sys_iff.zero_alu == 1'b1) else $info("Zero incorrect value");
+    
     endtask
 
-    task BNE(A, B, result, zero, code);
-        OP_code = 5'b10000;
-        ALU_BNE: assert (A!=B |=> 1 == zero) else $info("No detacta numeros distintos [BNE]");
+    task AND();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu&testbench.sys_iff.B_alu;
+        AND_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU AND ERROR");end
+        if(ideal_res == 0) ZERO_CHECK_AND: assert (testbench.sys_iff.zero_alu == 1'b1) else $info("Zero incorrect value");
+    
     endtask
 
-    task menor(A, B, result, zero, code);
-        OP_code = 5'b01000;
-        ALU_menor: assert (A<B == result) else $info("No detacta numeros A<B");
+    task OR();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu|testbench.sys_iff.B_alu;
+        OR_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU OR ERROR");end
+        if(ideal_res == 0) ZERO_CHECK_OR: assert (testbench.sys_iff.zero_alu == 1'b1) else $info("Zero incorrect value");
+    
+    endtask
+
+    task XOR();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu^testbench.sys_iff.B_alu;
+        XOR_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU XOR ERROR");end
+        if(ideal_res == 0) ZERO_CHECK_XOR: assert (testbench.sys_iff.zero_alu == 1'b1) else $info("Zero incorrect value");
+    
     endtask
     
-    task menor_otra_opcion(A, B, result, zero, code);
-        OP_code = 5'b01100;
-        ALU_menor_otra_opcion: assert (A<B == result) else $info("No detacta numeros A<B por el segundo camino");
+    task U_LOW_EQ();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu<=testbench.sys_iff.B_alu;
+        U_LOW_EQ_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU U_LOW_EQ ERROR");end
+        if(ideal_res) ZERO_CHECK_U_LOW_EQ: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    
     endtask
 
-    task mayor(A, B, result, zero, code);
-        OP_code = 5'b11010;
-        ALU_mayor: assert (A>=B == result) else $info("No detacta numeros A>=B");
+    task S_LOW_EQ();
+        logic signed [31:0] ideal_res;
+        ideal_res = $signed(testbench.sys_iff.A_alu)<= $signed(testbench.sys_iff.B_alu);
+        S_LOW_EQ_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU S_LOW_EQ ERROR");end
+        if(ideal_res) ZERO_CHECK_S_LOW_EQ: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    
     endtask
 
-    task mayor_otra_opcion(A, B, result, zero, code);
-        OP_code = 5'b11010;
-        ALU_mayor_otra_opcion: assert (A>=B == result) else $info("No detacta numeros A>=B por el segundo camino");
+    task U_HIGH_EQ();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu>=testbench.sys_iff.B_alu;
+        U_HIGH_EQ_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU U_LOW_EQ ERROR");end
+        if(ideal_res) ZERO_CHECK_U_HIGH_EQ: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    
     endtask
 
-    task OR(A, B, result, zero, code);
-        OP_code = 5'b11000;
-        OR: assert (A|B == result) else $info("Operacion OR incorrecta");
+    task S_HIGH_EQ();
+        logic signed [31:0] ideal_res;
+        ideal_res = $signed(testbench.sys_iff.A_alu)>= $signed(testbench.sys_iff.B_alu);
+        S_HIGH_EQ_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU S_LOW_EQ ERROR");end
+        if(ideal_res) ZERO_CHECK_S_HIGH_EQ: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    
     endtask
 
-    task AND(A, B, result, zero, code);
-        OP_code = 5'b11100;
-        AND: assert (A&B == result) else $info("Opercaion AND incorrecta");
+    task U_LOWER();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu<testbench.sys_iff.B_alu;
+        U_LOWER_EQ_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU U_LOWER ERROR");end
+        if(ideal_res) ZERO_CHECK_U_LOWER_EQ: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
     endtask
 
-    task shift_left_i(A, B, result, zero, code);
-        OP_code = 5'b00100;
-        logic [30:0] newA = A[30:0];
-        shift_left_i: assert ({newA,B} == result) else $info("Shift left incorrecto");
+    task S_LOWER();
+        logic signed [31:0] ideal_res;
+        ideal_res = $signed(testbench.sys_iff.A_alu)< $signed(testbench.sys_iff.B_alu);
+        S_LOWER_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU S_LOWER ERROR");end
+        if(ideal_res) ZERO_CHECK_S_LOWER: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
     endtask
 
-    task shift_right_i(A, B, result, zero, code);
-        OP_code = 5'b10100;
-        logic [30:0] newA = A[30:0];
-        shift_right_i: assert ({B,newA} == result) else $info("Shift right incorrecto");
+    task U_HIGHER();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu>testbench.sys_iff.B_alu;
+        U_HIGHER_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU U_HIGHER ERROR");end
+        if(ideal_res) ZERO_CHECK_U_HIGHER: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
     endtask
 
-    task shift_right_arith(A, B, result, zero, code);
-        OP_code = 5'b10110;
-        logic [29:0] newA = A[29:0];
-        shift_right_arith: assert ({A[31],B,newA} == result) else $info("Shift right incorrecto");
+    task S_HIGHER();
+        logic signed [31:0] ideal_res;
+        ideal_res = $signed(testbench.sys_iff.A_alu)> $signed(testbench.sys_iff.B_alu);
+        S_HIGHER_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU S_HIGHER ERROR");end
+        if(ideal_res) ZERO_CHECK_S_HIGHER: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    endtask
+
+    task SHIFT_LEFT();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu<<testbench.sys_iff.B_alu;
+        SHIFT_LEFT_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU SHIFT_LEFT ERROR");end
+        if(ideal_res) ZERO_CHECK_SHIFT_LEFT: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    endtask
+
+    task SHIFT_RIGHT_LOGIC();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu>>testbench.sys_iff.B_alu;
+        SHIFT_RIGHT_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU SHIFT_RIGHT_LOGIC ERROR");end
+        if(ideal_res) ZERO_CHECK_SHIFT_RIGHT: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
+    endtask
+
+    task SHIFT_RIGHT_ARIT();
+        logic signed [31:0] ideal_res;
+        ideal_res = testbench.sys_iff.A_alu>>>testbench.sys_iff.B_alu;
+        SHIFT_RIGH_ARITT_CHECK: assert (ideal_res == testbench.sys_iff.result_alu) else begin flag=1; $info("ALU SHIFT_RIGHT_ARIT ERROR");end
+        if(ideal_res) ZERO_CHECK_SHIFT_RIGHT_ARIT: assert (testbench.sys_iff.zero_alu == 1'b0) else $info("Zero incorrect value");
     endtask
 
 endclass
+
+
+
+ 
+module test_alu();
+
+    check_alu check_alu_instance;
+
+    basic_task basic_task_instance();
+
+    initial begin
+        check_alu_instance = new ;
+    end
+
+
+    task tb_alu();
+        begin
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0000;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.ADD();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0001;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.SUB();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0010;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.AND();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0011;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.OR();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0100;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.XOR();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0101;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.U_LOW_EQ();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0110;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.S_LOW_EQ();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b0111;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.U_HIGH_EQ();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1000;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.S_HIGH_EQ();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1001;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.U_LOWER();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1010;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.S_LOWER();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1011;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.U_HIGHER();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1100;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.S_HIGHER();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1101;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.SHIFT_LEFT();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1110;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.SHIFT_RIGHT_LOGIC();
+
+            @(testbench.sys_iff.ck)
+
+            basic_task_instance.get_random_A_B();
+            testbench.sys_iff.control_alu = 4'b1111;
+            @(testbench.sys_iff.ck)
+            check_alu_instance.SHIFT_RIGHT_ARIT();
+
+            @(testbench.sys_iff.ck)
+            check_alu_instance.flag_check();
+
+            
+
+        end
+    endtask
+
+endmodule

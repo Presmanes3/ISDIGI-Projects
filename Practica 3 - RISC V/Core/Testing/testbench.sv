@@ -1,5 +1,7 @@
-`include "interface.sv" 
 `include "basic_task.sv"
+`include "interface.sv"
+`include "subcomponents/alu_tb.sv"
+//`include "subcomponents/ram_tb.sv"
 
 module testbench();
     `timescale 1ns/100ps
@@ -13,13 +15,6 @@ module testbench();
     end
     //-------------------------------------------------------------------------------
 
-    // Definimos clocking block -----------------------------------------------------
-    clocking ck @(posedge sys_iff.CLK); //usar ck como clock
-        default input #1ns output #1ns;
-    endclocking:ck
-    assign sys_iff.ck = ck;
-    //-------------------------------------------------------------------------------
-
     // Instanciate the common system interface for signals ---------------------------
     system_iff sys_iff();
     //--------------------------------------------------------------------------------
@@ -29,5 +24,24 @@ module testbench();
         .modport_alu(sys_iff)
     );
     //--------------------------------------------------------------------------------
+
+    // Instanciamos el test de la ALU ------------------------------------------------
+    test_alu test_alu_instance();
+    //--------------------------------------------------------------------------------
+
+    basic_task basic_task_instance();
+
+    
+
+    initial begin
+        basic_task_instance.inicializar();
+        basic_task_instance.reset();
+        
+        // Compruebo la ALU
+        test_alu_instance.tb_alu();
+
+        $stop();
+        
+    end
 
 endmodule
