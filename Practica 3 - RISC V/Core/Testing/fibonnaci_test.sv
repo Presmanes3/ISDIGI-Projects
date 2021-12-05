@@ -9,13 +9,13 @@ class fibonnaci_test;
         golden_model.init();
     endtask
 
-    task check;
-        int real_number = phase_2_testbench.core.register_bank.reg_pool[5];
-        int golden_number = golden_model.prev_number;
+    task check(int current_fib_number, int prev_fib_number);
+        int golden_number_current = golden_model.current_number;
+        int golden_number_prev = golden_model.prev_number;
 
-        $display("[CHECKING FIBONNACI] > [%d] == [%d]", real_number, golden_number);
-        // assert (real_number == golden_number) 
-        // else   $info("ERROR [FIBONNACI CHECK] NUMBERS ARE DIFFERENT");
+        $display("[RISC V] : [%d] [%d] <     > [GOLDEN] : [%d] [%d]", prev_fib_number, current_fib_number, golden_number_prev, golden_number_current);
+        assert (current_fib_number == golden_number_current && prev_fib_number == golden_number_prev) 
+        else   $info("ERROR [FIBONNACI CHECK] NUMBERS ARE DIFFERENT");
     endtask //automatic
 
 endclass //fibonnaci_scoreboard
