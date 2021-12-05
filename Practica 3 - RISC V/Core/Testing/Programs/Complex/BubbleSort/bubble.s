@@ -58,4 +58,46 @@ SWAP:
     beq x0, x0, CONTINUE_SORT	 #Continue
 
 FINISH:
-    addi x0, x0, 0
+
+
+
+#addi x10, x0, 0
+#addi x12, x13, 1
+#addi x10, x10, 1 # i=1
+
+
+#Loop1: #for1
+#beq x10, x12, F1 #compara i con N
+#addi x10, x10, 1 #incrementa i
+#addi x11, x0, 0 # j = 0
+#addi x15, x0, 0 
+#addi x16, x0, 0
+
+#Loop2: #for2
+#beq x11, x13, Loop1 #compara j con N-1
+#addi x11, x11, 1 #incrementa j
+
+#addi x14, x11, 1 #j+1
+
+#addi x15, x15, 4
+#addi x16, x15, 4
+
+#lw x5, 156(x15) # obtener N
+#lw x6, 156(x16) # obtener N+1
+
+#bge x5, x6, IF  #j>j+1
+#j Loop2 #j<j+1
+#IF: 
+#beq x5, x6, Loop2 #j = j+1
+
+#addi x7, x5, 0 #temp=lista[j]
+#addi x5, x6, 0 #lista[j]=lista[j+1]
+#addi x6, x7, 0 #lista[j+1]=temp
+
+#sw x5, 156(x15) #almacenar N
+#sw x6, 156(x16) #almacenar N+1
+
+#j Loop2 #continua 2for
+
+
+#F1: #fin

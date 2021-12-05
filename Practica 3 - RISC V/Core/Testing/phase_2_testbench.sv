@@ -14,15 +14,15 @@ module phase_2_testbench;
 
     reg count = 0;
 
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_10.mem")) core(
-        .clk(clk),
-        .reset(reset)
-    );
-
-    // core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
+    // core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_10.mem")) core(
     //     .clk(clk),
     //     .reset(reset)
     // );
+
+    core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
+        .clk(clk),
+        .reset(reset)
+    );
 
 
     fibonnaci_test fibonnaci_duv;
@@ -41,7 +41,7 @@ module phase_2_testbench;
         
         reset_();
 
-        @(core.instruction_memory_output_data == 32'h00000013);
+        @(core.instruction_memory_output_data == 32'hfc000ae3);
 
 
         $stop();
