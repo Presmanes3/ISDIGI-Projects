@@ -14,7 +14,7 @@ module phase_2_testbench;
 
     reg count = 0;
 
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_10.mem")) core(
+    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core(
         .clk(clk),
         .reset(reset)
     );
