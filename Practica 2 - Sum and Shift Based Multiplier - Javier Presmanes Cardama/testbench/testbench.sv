@@ -41,6 +41,7 @@ int total_tries = 200;
 //                  .START(sys_iff.start)
 //  );
 
+
 // ========== REAL VERIFICATION MODEL ========== //
 
 multipli_top multipli_model(
@@ -142,11 +143,7 @@ task model_verification();
             tries = tries + 1;
 
         end
-<<<<<<< HEAD:Practica 2 - Sum and Shift Based Multiplier/testbench/testbench.sv
-    while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 80);
-=======
     while (multi_control_module.rango_valores_inst.get_inst_coverage() <= 85);
->>>>>>> Tarea3:Practica 2 - Sum and Shift Based Multiplier - Javier Presmanes Cardama/testbench/testbench.sv
 endtask
 
 always  begin
