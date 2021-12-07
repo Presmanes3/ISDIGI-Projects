@@ -1,12 +1,11 @@
 `include "../Design/core.sv"
-`include "verification_manager.sv"
 `include "./bubble_sort_test.sv"
 
 module bubble_sort_verificator;
 
     // Clock generator
     reg clk = 0;
-    localparam CLK_PERIOD = 10;
+    localparam CLK_PERIOD = 20;
     always #(CLK_PERIOD/2) clk=~clk;
 
     clocking ck @(posedge clk); //usar ck como clock
@@ -25,21 +24,16 @@ module bubble_sort_verificator;
     //     .reset(reset)
     // );
 
-    core #(.program_file("Core/Testing/Programs/Complex/bubble.mem")) core(
+    core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
         .clk(clk),
         .reset(reset)
     );
 
     bubble_test bubble_duv;
 
-    verification_manager ver_duv;
-
     initial begin
-
-        ver_duv = new();
         bubble_duv = new();
 
-        ver_duv.init();
         bubble_duv.init();
         
 
@@ -49,23 +43,10 @@ module bubble_sort_verificator;
 
         #(1);
 
-        while (bubble_duv.golden_bubble_model.i<8)begin
+            @(core.instruction_memory_output_data != 32'h00000013)
 
-
-
-            @(ck)
-
-            bubble_duv.golden_bubble_model.compute_new_number();
 
             bubble_duv.check();
-
-            #(1);
-            ver_duv.update();
-        end
-
-        
-
-
 
         $stop();
     

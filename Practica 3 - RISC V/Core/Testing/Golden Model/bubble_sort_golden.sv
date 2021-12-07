@@ -1,4 +1,4 @@
-class bubble_golden;
+class bubble_golden; //EN DESHUSO
 
     int current_number;
     int prev_number;
@@ -23,6 +23,7 @@ class bubble_golden;
         numeros[7] = 24;
     endtask
 
+    /*
     task compute_new_number;
         if(i<8) //Se llega al resultado como mucho en N-1 ciclos
             begin  
@@ -38,5 +39,5 @@ class bubble_golden;
                 i = i+1;
             end
     endtask 
-
+*/
 endclass

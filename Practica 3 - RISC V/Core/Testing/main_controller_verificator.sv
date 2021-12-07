@@ -44,7 +44,7 @@ this.AuipcLui
     endfunction
 
     task check;
-
+        
         assert (phase_2_testbench.core.main_controller_branch == this.branch)
         else $info("ERROR [BRANCH] BIT VALUE");
 
@@ -67,4 +67,5 @@ this.AuipcLui
         else $info("ERROR [AUIPCLUI] BIT VALUE");
         
     endtask 
+    
 endclass 
