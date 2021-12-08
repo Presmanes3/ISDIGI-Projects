@@ -39,14 +39,11 @@ module bubble_sort_verificator;
 
         reset_();
 
-        clk = 1;
-
         #(1);
 
-            @(core.instruction_memory_output_data != 32'h00000013)
+        @(core.instruction_memory_output_data == 32'h00000013)
 
-
-            bubble_duv.check();
+        bubble_duv.check();
 
         $stop();
     
