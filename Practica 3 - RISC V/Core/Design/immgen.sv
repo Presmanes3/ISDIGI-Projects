@@ -24,6 +24,13 @@ always_comb begin
             out[31:12]  = sign_extention; 
             out[11:0]   = instruction[31:20];
         end 
+        // Type I
+        4'b0000: begin
+            sign_extention = {20{instruction[31]}};
+
+            out[31:12]  = sign_extention; 
+            out[11:0]   = instruction[31:20];
+        end 
         // Type S 
         4'b1000: begin 
             sign_extention = {20{instruction[31]}};
