@@ -76,7 +76,7 @@ module memory_tb;
     task simultaneo();
         write_enable = 1;
         read_enable = 1;
-        address = 2;
+        address = 5;
         input_data = 9;
     endtask
 
