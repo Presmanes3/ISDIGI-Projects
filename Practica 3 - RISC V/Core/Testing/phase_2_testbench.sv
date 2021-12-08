@@ -14,7 +14,7 @@ module phase_2_testbench;
 
     reg count = 0;
 
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_10.mem")) core(
+    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core(
         .clk(clk),
         .reset(reset)
     );
@@ -34,14 +34,21 @@ module phase_2_testbench;
     initial begin
 
         ver_duv = new();
+        $display("1");
         fibonnaci_duv = new();
+        $display("2");
 
         ver_duv.init();
+        $display("3");
         fibonnaci_duv.init();
+        $display("4");
         
         reset_();
+       
+        $display("5");
 
-        @(core.instruction_memory_output_data == 32'h00000013);
+        test_fibbo();
+        $display("6");
 
 
         $stop();
@@ -49,16 +56,23 @@ module phase_2_testbench;
     end
 
     task test_fibbo();
+        $display("5.1");
         wait_fibonnaci_setup();
+        $display("5.2");
 
         check_numbers_are_equal();
+        $display("5.3");
 
         while ((core.instruction_memory_output_data != 32'h00000013))begin
+            $display("5.4");
 
             wait_till_processor_computes_new_number();
+            $display("5.5");
             check_numbers_are_equal();
+            $display("5.6");
 
             fibonnaci_duv.golden_model.compute_new_number();
+            $display("5.7");
 
         end
         

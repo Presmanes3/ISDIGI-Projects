@@ -1,0 +1,114 @@
+{C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/jump_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/jump_controller.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module jump_controller
+
+Top level modules:
+	jump_controller
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module register_bank
+
+Top level modules:
+	register_bank
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ALU.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_3_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_3_input.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module mux_3_input
+
+Top level modules:
+	mux_3_input
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ADDER.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/ADDER.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module ADDER
+
+Top level modules:
+	ADDER
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module core
+
+Top level modules:
+	core
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module mux_2_input
+
+Top level modules:
+	mux_2_input
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module alu_controller
+
+Top level modules:
+	alu_controller
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module core
+-- Compiling package bubble_sort_verificator_sv_unit
+-- Compiling module bubble_sort_verificator
+
+Top level modules:
+	bubble_sort_verificator
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module imm_gen
+
+Top level modules:
+	imm_gen
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module main_controller
+
+Top level modules:
+	main_controller
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling package bubble_sort_test_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}}
