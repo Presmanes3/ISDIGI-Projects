@@ -14,16 +14,6 @@ module bubble_sort_verificator;
 
     reg reset;
 
-    // core #(.program_file("Core/Testing/Programs/Simple/R/ADD.mem")) core(
-    //     .clk(clk),
-    //     .reset(reset)
-    // );
-
-    // core #(.program_file("Core/Testing/Programs/Simple/TUTI.mem")) core(
-    //     .clk(clk),
-    //     .reset(reset)
-    // );
-
     core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
         .clk(clk),
         .reset(reset)
@@ -36,11 +26,9 @@ module bubble_sort_verificator;
 
         bubble_duv.init();
         
-
         reset_();
 
-        #(1);
-
+        // Wait until program end to check
         @(core.instruction_memory_output_data == 32'h00000013)
 
         bubble_duv.check();
