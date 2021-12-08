@@ -1,3 +1,4 @@
+
 class main_controller_verificator;
 
     string name;

@@ -10,12 +10,12 @@ module memory_tb;
 
     logic write_enable;
     logic read_enable;
-    logic address;
-    logic input_data;
-    logic output_data;
+    logic [9:0] address;
+    logic [31:0] input_data;
+    logic [31:0] output_data;
 
 
-    core core(
+    memory memory_inst(
         .clk(clk),
         .write_enable(write_enable),
         .read_enable(read_enable),
@@ -39,6 +39,15 @@ module memory_tb;
         @(negedge clk)
 
         check();
+        
+        @(negedge clk)
+
+        simultaneo();
+
+        @(negedge clk)
+        
+
+        check2();
 
         $stop();
     
@@ -64,8 +73,19 @@ module memory_tb;
         address = 2;
     endtask
 
+    task simultaneo();
+        write_enable = 1;
+        read_enable = 1;
+        address = 2;
+        input_data = 9;
+    endtask
+
     task check();
         assert (output_data == 8) else   $info("La memoria no ha leido el valor correcto");
+    endtask
+
+    task check2();
+        assert (output_data == 9) else   $info("La memoria no ha leido el valor correcto");
     endtask
 
 
