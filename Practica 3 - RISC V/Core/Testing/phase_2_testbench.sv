@@ -7,22 +7,22 @@ module phase_2_testbench;
     `timescale 1ps/1ps
     // Clock generator
     reg clk = 0;
-    localparam CLK_PERIOD = 10;
-    always #(CLK_PERIOD/2) clk=~clk;
+    localparam CLK_PERIOD = 20;
+    always #(CLK_PERIOD/2) clk = ~clk;
 
     reg reset;
 
     reg count = 0;
 
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core(
-        .clk(clk),
-        .reset(reset)
-    );
-
-    // core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
+    // core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core(
     //     .clk(clk),
     //     .reset(reset)
     // );
+
+    core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core(
+        .clk(clk),
+        .reset(reset)
+    );
 
 
     fibonnaci_test fibonnaci_duv;
@@ -34,26 +34,43 @@ module phase_2_testbench;
     initial begin
 
         ver_duv = new();
-        $display("1");
+
         fibonnaci_duv = new();
-        $display("2");
+
 
         ver_duv.init();
-        $display("3");
+
         fibonnaci_duv.init();
-        $display("4");
-        
+
         reset_();
-       
-        $display("5");
 
-        test_fibbo();
-        $display("6");
-
+        // test_fibbo();
+        
+        test_bubble();
 
         $stop();
     
     end
+
+    task test_bubble();
+
+        // Wait for the registers setup
+        @(core.instruction_memory_output_data == 32'h00520e63);
+
+        @(core.instruction_memory_output_data == 32'h00000013);
+
+
+        // while (core.instruction_memory_output_data != 32'h00000013) begin
+            
+        //     // Wait until checking if finished
+        //     //@(core.instruction_memory_output_data == 32'h02041263)
+        //     // Wait till swap
+        //     // @(core.instruction_memory_output_data == 32'h0263c263)
+
+        //     $display("New instruction charged!");
+            
+        // end
+    endtask //automatic
 
     task test_fibbo();
         $display("5.1");
