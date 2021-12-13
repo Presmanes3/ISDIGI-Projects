@@ -17,12 +17,13 @@ interface system_iff;
         logic [15:0] DOUT;
         // ENTRADA
         logic [15:0] DIN;
+        logic RESET_N
     //--------------------------------------
 
 
     // SEÑALES GENERALES -------------------
     logic CLK;
-    logic RESET_N;
+    logic RESET_N; // Activo a nivel bajo
     //--------------------------------------
 
     // Definimos clocking block -----------------------------------------------------
@@ -32,7 +33,7 @@ interface system_iff;
     //-------------------------------------------------------------------------------
 
     modport modport_DUV (
-    input DOUT, CLK,
+    input DOUT, CLK, RESET_N,
     output DIN
     );
 

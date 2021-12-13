@@ -1,5 +1,6 @@
 `include "basic_task.sv"
 `include "interface.sv"
+`include "check.sv"
 
 
 
@@ -35,6 +36,7 @@ module testbench();
         basic_task_instance.reset();
         
         // Inicio la comprobación
+        fibo_test();
         
 
         $stop();
