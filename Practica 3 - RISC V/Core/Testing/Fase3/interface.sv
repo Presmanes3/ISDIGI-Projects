@@ -17,7 +17,6 @@ interface system_iff;
         logic [15:0] DOUT;
         // ENTRADA
         logic [15:0] DIN;
-        logic RESET_N
     //--------------------------------------
 
 

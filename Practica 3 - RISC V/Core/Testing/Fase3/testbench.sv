@@ -14,7 +14,7 @@ module testbench();
         #(T/2)
         sys_iff.CLK = ~sys_iff.CLK;
     end
-    //-------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------
 
     // Instanciate the common system interface for signals ---------------------------
     system_iff sys_iff();
@@ -28,15 +28,27 @@ module testbench();
 
     basic_task basic_task_instance();
 
-    // DIRECCION CARPETA PROGRAMAS: Core/Testing/Programs/Complex/xxx.mem
+    // Instanciación clase de test ---------------------------------------------------
+    core_test core_test_inst;
+    //--------------------------------------------------------------------------------
     
 
     initial begin
+        // Inicializo las class -----
+        core_test_inst = new;
+        //--------------------------
+
         basic_task_instance.inicializar();
         basic_task_instance.reset();
         
-        // Inicio la comprobación
-        fibo_test();
+        // Inicio de la comprobación
+        @(sys_iff.ck)
+        
+        core_test_inst.fibo_test();
+
+        @(sys_iff.ck)
+
+        core_test_inst.bubble_test();
         
 
         $stop();

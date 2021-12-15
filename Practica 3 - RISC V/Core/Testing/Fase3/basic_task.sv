@@ -1,5 +1,5 @@
 
-class RCSG_32_AB;
+class RCSG_DIN;
     rand bit signed [15:0] DIN;
 endclass
 
@@ -16,6 +16,7 @@ module basic_task();
         testbench.sys_iff.CLK = 0;
         testbench.sys_iff.RESET_N = 1;
         testbench.sys_iff.DIN = 0;
+    endtask
 
     task reset();
         @(testbench.sys_iff.ck)
@@ -32,7 +33,7 @@ module basic_task();
 
         testbench.sys_iff.DIN= random_DIN.DIN;
 
-        $display("GENERATED DIN >>> ", $signed(testbench.sys_iff.DIN);
+        $display("GENERATED DIN >>> ", $signed(testbench.sys_iff.DIN));
     endtask
 
 endmodule
