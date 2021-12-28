@@ -68,12 +68,14 @@ always_comb begin
                 // SLLI
                 3'b001: alu_operation = SHIFT_LEFT;
 
-                // SRLI
                 3'b101: begin
-                    if(func_7_bits) alu_operation = SHIFT_RIGHT_LOGIC;
+                    // SRLI
+                    if(func_7_bits[5]) alu_operation = SHIFT_RIGHT_LOGIC;
+
+                    // SRAI
                     else alu_operation = SHIFT_RIGHT_ARIT;
                 end
-                
+
                 default: alu_operation = ADD;
             endcase
             
@@ -99,6 +101,9 @@ always_comb begin
                     // ADD
                     3'b000: alu_operation = ADD;
 
+                    // SLL
+                    3'b001: alu_operation = SHIFT_LEFT;
+
                     // SLT 
                     3'b010: alu_operation = S_LOWER;
 
@@ -107,6 +112,9 @@ always_comb begin
 
                     // XOR
                     3'b100: alu_operation = XOR;
+
+                    // SRL
+                    3'b101: alu_operation = SHIFT_RIGHT_LOGIC;
 
                     // OR
                     3'b110: alu_operation = OR;
@@ -119,6 +127,9 @@ always_comb begin
                 case (func_3_bits)
                     // SUB
                     3'b000: alu_operation = SUB;
+
+                    // SRA
+                    3'b101: alu_operation = SHIFT_RIGHT_ARIT;
                     default: alu_operation = ADD;
                 endcase
             end
@@ -154,6 +165,11 @@ always_comb begin
                 3'b111: alu_operation = U_HIGH_EQ;
                 default: alu_operation = ADD;
             endcase
+        end
+
+        4'b1101:begin
+            // JAL y JALR
+            alu_operation = ADD;
         end
         default: alu_operation = ADD;
     endcase
