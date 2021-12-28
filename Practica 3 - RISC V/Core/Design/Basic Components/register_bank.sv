@@ -14,7 +14,7 @@ module register_bank (
 reg [31:0] reg_pool [0 : 31];
 
 parameter relative_path = "../../Proyecto Questasim/Basic Testing/../../";
-parameter input_file = "Core/Design/register_bank_init.mem";
+parameter input_file = "Core/Design/Basic Components/register_bank_init.mem";
 
 // parameter relative_path = "";
 parameter file_path = {relative_path, input_file};
