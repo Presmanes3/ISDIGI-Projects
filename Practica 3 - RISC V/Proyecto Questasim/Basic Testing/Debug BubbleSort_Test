@@ -1,0 +1,69 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/clk
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/write_enable
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/read_enable
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/address
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/input_data
+add wave -noupdate -group {Instruction Memory} /bubble_sort_verificator/core/instruction_memory/output_data
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/input1
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/input2
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/operation
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/operation_result
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/Zero
+add wave -noupdate -group ALU /bubble_sort_verificator/core/ALU/operations
+add wave -noupdate -group {Jump Controller} /bubble_sort_verificator/core/jump_controller_/branch
+add wave -noupdate -group {Jump Controller} /bubble_sort_verificator/core/jump_controller_/func_3_bits
+add wave -noupdate -group {Jump Controller} /bubble_sort_verificator/core/jump_controller_/zero
+add wave -noupdate -group {Jump Controller} /bubble_sort_verificator/core/jump_controller_/select
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/clk
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/write_enable
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/read_enable
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/address
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/input_data
+add wave -noupdate -group {Data Memory} /bubble_sort_verificator/core/data_memory/output_data
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/opcode
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/branch
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/memory_read
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/memory_to_register
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/alu_option
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/memory_write
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/alu_source
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/register_write
+add wave -noupdate -group {Main Controller} /bubble_sort_verificator/core/controller/AuipcLui
+add wave -noupdate -group {Alu Controller} /bubble_sort_verificator/core/alu_control/func_7_bits
+add wave -noupdate -group {Alu Controller} /bubble_sort_verificator/core/alu_control/func_3_bits
+add wave -noupdate -group {Alu Controller} /bubble_sort_verificator/core/alu_control/alu_option
+add wave -noupdate -group {Alu Controller} /bubble_sort_verificator/core/alu_control/alu_operation
+add wave -noupdate -group {Alu Controller} /bubble_sort_verificator/core/alu_control/operations
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/clk
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/read_register_1_addr
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/read_register_2_addr
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/write_register_addr
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/write_data
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/write_enable
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/read_data_1
+add wave -noupdate -group {Register Bank} /bubble_sort_verificator/core/register_bank/read_data_2
+add wave -noupdate -group {Immediate Generator} /bubble_sort_verificator/core/imm_gen/instruction
+add wave -noupdate -group {Immediate Generator} /bubble_sort_verificator/core/imm_gen/out
+add wave -noupdate -group {Immediate Generator} /bubble_sort_verificator/core/imm_gen/sign_extention
+add wave -noupdate -group {Immediate Generator} /bubble_sort_verificator/core/imm_gen/opcode
+add wave -noupdate -group {Immediate Generator} /bubble_sort_verificator/core/imm_gen/alu_option
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+quietly wave cursor active 0
+configure wave -namecolwidth 394
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {0 ns} {734 ns}

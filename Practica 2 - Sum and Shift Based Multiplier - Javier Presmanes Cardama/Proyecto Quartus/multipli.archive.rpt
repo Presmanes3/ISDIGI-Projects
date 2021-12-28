@@ -1,0 +1,94 @@
+Archive Project report for multipli
+Tue Nov 16 12:42:53 2021
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Nov 16 12:42:53 2021 ;
+; Revision Name          ; multipli                              ;
+; Top-level Entity Name  ; multipli                              ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Warning (292006): Can't contact license server "1717@158.42.250.86" -- this server will be ignored.
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Proyecto Quartus/multipli.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'multipli.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Tue Nov 16 12:42:53 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Files Archived                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------------------------------+
+; ../Design/adder.sv                                                                                                                 ;
+; ../Design/contador.sv                                                                                                              ;
+; ../Design/DataPath.sv                                                                                                              ;
+; ../Design/FSM.sv                                                                                                                   ;
+; ../Design/multipli.sv                                                                                                              ;
+; ../Design/register.sv                                                                                                              ;
+; ../Design/shiftRegister.sv                                                                                                         ;
+; c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf                                                                       ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/adder.sv         ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/contador.sv      ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/DataPath.sv      ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/FSM.sv           ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/multipli.sv      ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/register.sv      ;
+; C:/Users/mrpas/OneDrive/Documentos/ISDIGI/Prac/ISDIGI-Projects/Practica 2 - Sum and Shift Based Multiplier/Design/shiftRegister.sv ;
+; multipli.out.sdc                                                                                                                   ;
+; multipli.qpf                                                                                                                       ;
+; multipli.qsf                                                                                                                       ;
++------------------------------------------------------------------------------------------------------------------------------------+
+
+

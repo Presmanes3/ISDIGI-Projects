@@ -1,0 +1,625 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.4/examples
+T_opt
+!s110 1638981786
+V9heAPmVz?[J070;YN0eSl1
+04 17 4 work phase_2_testbench fast 0
+=1-8c8caaac07cd-61b0e09a-147-58f8
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.4;61
+R0
+T_opt1
+!s110 1638989625
+Vk:@R1ALS>3X^I2zF>8^Fn2
+04 2 4 work PC fast 0
+04 11 4 work mux_3_input fast 0
+04 11 4 work mux_2_input fast 0
+04 6 4 work memory fast 0
+04 15 4 work main_controller fast 0
+=1-8c8caaac07cd-61b0ff38-3bd-5720
+R1
+n@_opt1
+R2
+T_opt2
+!s110 1638981035
+VHX0M8o0]9CSWKgej1ag@V2
+04 23 4 work bubble_sort_verificator fast 0
+=1-8c8caaac07cd-61b0ddab-11b-3d50
+R1
+n@_opt2
+R2
+R0
+vADDER
+Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 n``PGB_?0l;SCzG?eE=W>1
+IXj=YFF=_8m1BgH`:PD;b32
+Z5 !s105 fibonnaci_verificator_sv_unit
+S1
+Z6 dC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Proyecto Questasim/Basic Testing
+Z7 w1638698711
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv
+Z8 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv
+L0 1
+Z9 OL;L;10.4;61
+Z10 !s108 1638989588.971000
+Z11 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/fibonnaci_verificator.sv|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/fibonnaci_verificator.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a@d@d@e@r
+vALU
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;md^hAFo[2T2mO^VII1mm0
+IeDkVE_R3kRIT2R9j^TA7G0
+Z14 !s105 connectors_sv_unit
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv
+L0 4
+R9
+Z15 !s108 1638989588.866000
+Z16 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ALU.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv|
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv|
+!i113 0
+R13
+n@a@l@u
+valu_conector
+R3
+Z18 !s110 1638989588
+!i10b 1
+!s100 l`73bXRIS4nYn;2^Rohdh0
+I@eD1;FLdA0gUANF3mXokz1
+R4
+R14
+S1
+R6
+Z19 w1638979647
+Z20 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv
+Z21 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/connectors.sv
+L0 4
+R9
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R13
+valu_controller
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 n9I=WAlNbOhB@TU28dUJU1
+IYEklWX[6:If0k7<?l=EhI3
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv
+Z22 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv
+L0 5
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vasignar_alu
+R3
+R18
+!i10b 1
+!s100 U?EFcFDN18hCz;akSLQ223
+ICT6kgk=hjS30akHHjJDHN1
+R4
+R14
+S1
+R6
+R19
+R20
+R21
+L0 14
+R9
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R13
+vbasic_task
+R3
+DXx4 work 18 basic_task_sv_unit 0 22 f3`Bn]Q?RUhET75cX1dAl2
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 >;:VdKB_Yne5=N44zzQ?e3
+I>JO9Cjz8mHo;jXE]znk^B0
+!s105 basic_task_sv_unit
+S1
+R6
+R19
+Z23 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv
+Z24 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv
+L0 8
+R9
+Z25 !s108 1638989588.680000
+Z26 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_task.sv|
+!i113 0
+R13
+Xbasic_task_sv_unit
+R3
+Vf3`Bn]Q?RUhET75cX1dAl2
+r1
+!s85 0
+31
+!i10b 1
+!s100 M3C`@B9^dTlMDd;J@MnL00
+If3`Bn]Q?RUhET75cX1dAl2
+!i103 1
+S1
+R6
+R19
+R23
+R24
+L0 2
+R9
+R25
+R26
+R27
+!i113 0
+R13
+vbasic_testing
+R3
+!s110 1638989587
+!i10b 1
+!s100 d2OJZ:>GU2doI;EVL[g?32
+IMHkPh4ekB1nBNB>>^Cdj02
+R4
+!s105 basic_testing_sv_unit
+S1
+R6
+R7
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv
+L0 4
+R9
+r1
+!s85 0
+31
+!s108 1638989587.843000
+!s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/basic_testing.sv|
+!i113 0
+R13
+Xbubble_sort_test_sv_unit
+R3
+R18
+!i10b 1
+!s100 AkGf?[ciSk[hVAgEZzkYi2
+Ik>LSci=GR>T7B8ezj4C;02
+Vk>LSci=GR>T7B8ezj4C;02
+!i103 1
+S1
+R6
+Z28 w1638986400
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\Golden Model\bubble_sort_golden.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1638989588.734000
+!s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\Golden Model\bubble_sort_golden.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_test.sv|
+!i113 0
+R13
+vbubble_sort_verificator
+R3
+DXx4 work 31 bubble_sort_verificator_sv_unit 0 22 ofi?WJ`?g[a:E8dDY>VYF0
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ]^;:_1=Qe2ziNQ:LmENQh0
+IZfJ=a;T?6O98ES8=2GlO@1
+!s105 bubble_sort_verificator_sv_unit
+S1
+R6
+w1638986129
+Z29 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv
+Z30 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv
+L0 4
+R9
+Z31 !s108 1638989588.786000
+Z32 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\bubble_sort_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\bubble_sort_test.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/bubble_sort_verificator.sv|
+!i113 0
+R13
+Xbubble_sort_verificator_sv_unit
+R3
+Vofi?WJ`?g[a:E8dDY>VYF0
+r1
+!s85 0
+31
+!i10b 1
+!s100 SOIg=1a[k8GhN_9c5;?^k2
+Iofi?WJ`?g[a:E8dDY>VYF0
+!i103 1
+S1
+R6
+R28
+R29
+R30
+Z34 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv
+Z35 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv
+Z36 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv
+Z37 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv
+R22
+Z38 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv
+R8
+Z39 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv
+Z40 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv
+Z41 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv
+Z42 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\bubble_sort_test.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\bubble_sort_golden.sv
+L0 1
+R9
+R31
+R32
+R33
+!i113 0
+R13
+vcore
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 YLlk=c2R`X:V[zd[j>o6g1
+IH11bAK03oLTeS_?]5HfV73
+R5
+S1
+R6
+w1638985445
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv
+R34
+L0 15
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vfibonnaci_verificator
+R3
+DXx4 work 29 fibonnaci_verificator_sv_unit 0 22 O9?Rl4CE6zk>aH:<mfjL^3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?MHel9H32mQO53QOQ^HU]0
+IR2?b^;YzaS281R_hEUhVF0
+R5
+S1
+R6
+Z43 w1638989433
+Z44 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/fibonnaci_verificator.sv
+Z45 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/fibonnaci_verificator.sv
+L0 5
+R9
+Z46 !s108 1638989498.422000
+Z47 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\verification_manager.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/fibonnaci_verificator.sv|
+R12
+!i113 0
+R13
+Xfibonnaci_verificator_sv_unit
+R3
+VO9?Rl4CE6zk>aH:<mfjL^3
+r1
+!s85 0
+31
+!i10b 1
+!s100 C7[UfTEbCUVM;aE_<M;iG3
+IO9?Rl4CE6zk>aH:<mfjL^3
+!i103 1
+S1
+R6
+R43
+R44
+R45
+R34
+R35
+R36
+R37
+R22
+R38
+R8
+R39
+R40
+R41
+R42
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\verification_manager.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv
+L0 1
+R9
+R46
+R47
+R12
+!i113 0
+R13
+vimm_gen
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 38ilmD?mjP[gn1W9UFkhM0
+Ii6BP`8S?F^VE7UIkLNM503
+R5
+S1
+R6
+w1638985026
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv
+R39
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vjump_controller
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 J:00^Daen<@iH;cIR^zj=0
+Iin]g>i8T6>2`FkDR0d0<j3
+R5
+S1
+R6
+w1638985403
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv
+R42
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vmain_controller
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 VcoQ^OlHVU_YW?YG>cQX01
+IZMWS:NkAVniTPXJPP^f7d2
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv
+R37
+L0 18
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vmemory
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^D]1_a:U:4bO?Qeif=[]n1
+ICD4YM3HBkH[@aQ26ReGL20
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv
+R35
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vmux_2_input
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 G]6L5hE>T8WSlMW@hIXH_0
+I4DIJMTc=6K;bDUJ]Q8XnW0
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv
+R40
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vmux_3_input
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;[QFXA<iChKF_=B]90Cl91
+I?^?^ggghZP>UAShRBkoYP3
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv
+R41
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+vPC
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 CQ5c^K]lfamS^>nkWmTo@1
+ID_@YI0bdhU<A6j<OzC`:E1
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv
+R38
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+n@p@c
+vregister_bank
+R3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 YoZW3;ABkz`RoDzM0JUb^1
+IFVS2:ndkP436?86`ENJO;2
+R5
+S1
+R6
+R7
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv
+R36
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+Ysystem_iff
+R3
+R18
+!i10b 1
+!s100 gJII_S8gc^C=:lOI^1:Sd0
+Id;mORXG@aIHdD595@<4DV1
+R4
+!s105 interface_sv_unit
+S1
+R6
+R19
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/interface.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/interface.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1638989588.921000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/interface.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/interface.sv|
+!i113 0
+R13
+vtest_alu
+R3
+Z48 DXx4 work 17 testbench_sv_unit 0 22 T8C222JglNfQGePT[fJgH3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 T0DMB?H4D=EPbgARD5LI;1
+IPT?VZS500SckSbZ0[XA[j1
+Z49 !s105 testbench_sv_unit
+S1
+R6
+R19
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\alu_tb.sv
+Z50 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\alu_tb.sv
+L0 136
+R9
+Z51 !s108 1638989588.617000
+Z52 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\subcomponents\alu_tb.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
+Z53 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv|
+!i113 0
+R13
+vtestbench
+R3
+R48
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 3EhhjKo5>ZPJzlZJ>3nbd1
+IgNIFjXcS@<F[J3H:Bf3]i3
+R49
+S1
+R6
+R19
+Z54 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/testbench.sv
+Z55 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Tele

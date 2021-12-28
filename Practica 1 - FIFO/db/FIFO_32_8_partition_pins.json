@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fifo_iff.USE_DW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.USE_DW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.USE_DW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.USE_DW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.USE_DW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.F_EMPTY_N",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.F_FULL_N",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.CLK",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.CLEAR_N",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.WRITE",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.READ",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fifo_iff.DATA_IN[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
