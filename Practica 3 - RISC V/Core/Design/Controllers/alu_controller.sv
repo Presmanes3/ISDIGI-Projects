@@ -64,6 +64,16 @@ always_comb begin
                 
                 // ANDI
                 3'b111: alu_operation = AND;
+
+                // SLLI
+                3'b001: alu_operation = SHIFT_LEFT;
+
+                // SRLI
+                3'b101: begin
+                    if(func_7_bits) alu_operation = SHIFT_RIGHT_LOGIC;
+                    else alu_operation = SHIFT_RIGHT_ARIT;
+                end
+                
                 default: alu_operation = ADD;
             endcase
             
