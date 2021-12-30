@@ -26,7 +26,7 @@ module basic_task();
     endtask
 
     task get_random_DIN();
-        if (!random.randomize()) begin
+        if (!random_DIN.randomize()) begin
 			$display("randomization failed");
 			$finish();
 		end

@@ -5,13 +5,10 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	jump_controller
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling module duv_conector
--- Compiling module asignar_duv
-** Error: (vlog-13069) C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv(24): near ".": syntax error, unexpected '.', expecting ')'.
 
-} {5.0 6.0} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/register_bank.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module register_bank
 
@@ -78,25 +75,6 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	mux_2_input
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv}
-QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling module memory
--- Compiling module register_bank
--- Compiling module main_controller
--- Compiling module alu_controller
--- Compiling module PC
--- Compiling module ADDER
--- Compiling module imm_gen
--- Compiling module mux_2_input
--- Compiling module mux_3_input
--- Compiling module jump_controller
--- Compiling module core
--- Compiling module core_instances
--- Compiling package check_sv_unit
-
-Top level modules:
-	core_instances
-
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module alu_controller
@@ -110,6 +88,29 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 
 Top level modules:
 	PC
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling package testbench_sv_unit
+-- Compiling module basic_task
+-- Compiling interface system_iff
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module core
+-- Compiling module core_instances
+-- Compiling module testbench
+
+Top level modules:
+	core_instances
+	testbench
 
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020

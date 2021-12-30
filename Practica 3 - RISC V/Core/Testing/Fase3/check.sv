@@ -21,6 +21,7 @@ module core_instances;
 endmodule
 
 class core_test;
+
     task fibo_test();
 
         int Nmax_num = 20;
