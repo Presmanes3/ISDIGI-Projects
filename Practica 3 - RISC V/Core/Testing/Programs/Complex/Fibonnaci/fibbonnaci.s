@@ -11,13 +11,13 @@ addi x4, x0, 0
 
 addi x13, x0, 0
 
-sw x4, 100(x12)
+sw x4, 0(x12)
 
 addi x12, x12, 4 #incrementa contador posicion direccion
 addi x13, x13, 1 #incrementa contador cadena
 
 Loop:
-sw  x5, 100(x12) # Save register x5 with current value into memory
+sw  x5, 0(x12) # Save register x5 with current value into memory
 
 addi x12, x12, 4 # Increment memory offset
 addi x13, x13, 1 # Increment for loop variable

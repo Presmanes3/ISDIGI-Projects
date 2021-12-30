@@ -11,30 +11,31 @@ class bubble_test;
 
     task check;
     
-        assert ( 25 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000bc]) 
+        assert ( 32'h3 == bubble_sort_verificator.core.data_memory.data_pool[0]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 0 ARE DIFFERENT");
 
-        assert ( 24 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000b8]) 
+        assert ( 32'h3 == bubble_sort_verificator.core.data_memory.data_pool[1]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 1 ARE DIFFERENT");
 
-        assert ( 8 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000b4]) 
+        assert ( 32'h5 == bubble_sort_verificator.core.data_memory.data_pool[2]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 2 ARE DIFFERENT");
 
-        assert ( 7 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000b0]) 
+        assert ( 32'h6 == bubble_sort_verificator.core.data_memory.data_pool[3]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 3 ARE DIFFERENT");
 
-        assert ( 6 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000ac]) 
+        assert ( 32'h7 == bubble_sort_verificator.core.data_memory.data_pool[4]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 4 ARE DIFFERENT");
 
-        assert ( 5 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000a8]) 
+        assert ( 32'h8 == bubble_sort_verificator.core.data_memory.data_pool[5]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 5 ARE DIFFERENT");
 
-        assert ( 3 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000a4]) 
+        assert ( 32'h18 == bubble_sort_verificator.core.data_memory.data_pool[6]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 6 ARE DIFFERENT");
 
-        assert ( 3 == bubble_sort_verificator.core.data_memory.data_pool[32'h000000a0]) 
+        assert ( 32'h19 == bubble_sort_verificator.core.data_memory.data_pool[7]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 7 ARE DIFFERENT");
 
+        $display("[CHECKING FINISHED]");
         
     endtask //automatic
 
