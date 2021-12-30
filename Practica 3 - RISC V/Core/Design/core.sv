@@ -388,14 +388,63 @@ BNE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_c
 
 
 
+//Implementación registros PIPELINE
+
+//IF/ID
+always@(posedge CLK or negedge RESET_N)
+	begin
+	
+		IF_ID_Instruction <= instruction_memory_output_data;
+		IF_ID_PC <= pc_register_output;
+	end
+	
+
+//ID/EX
 
 
+always@(posedge CLK or negedge RESET_N)
+		begin
+		ID_EX_PC <= IF_ID_PC;
+		ID_EX_read_data1 <= register_bank_read_data_1;
+		ID_EX_read_data2 <= register_bank_read_data_2;
+		ID_EX_out_IMM_GEN <= immediate_generator_output;
+		ID_EX_instruction1 <= IF_ID_Instruction[30];
+		ID_EX_instruction1b <= IF_ID_Instruction[14:12];
+		ID_EX_instruction2 <= IF_ID_Instruction[11:7];
+		ID_EX_RegWrite <= main_controller_register_write;
+		ID_EX_MemtoReg <= main_controller_memory_to_register;
+		ID_EX_Branch <= main_controller_branch;
+		ID_EX_MemRead <= main_controller_memory_read;
+		ID_EX_ALUSrc <= main_controller_alu_source;
+		ID_EX_ALUOp <= main_controller_alu_option;
+		end
 
-// Check correctly working of the ADD instruction
+//EX/MEM
 
 
+always@(posedge CLK or negedge RESET_N)
+	begin
+		EX_MEM_addersum <= adder_sum_output;
+		EX_MEM_alu_result <= alu_result;
+		EX_MEM_read_data2 <= ID_EX_read_data2;
+		EX_MEM_instruction2 <= ID_EX_instruction2;
+		EX_MEM_zero <= alu_zero;
+		EX_MEM_RegWrite <= ID_EX_RegWrite;
+		EX_MEM_MemtoReg <= ID_EX_MemtoReg;
+		EX_Mem_Branch <= ID_EX_Branch;
+		EX_MEM_MemRead <= ID_EX_MemRead;
+	end
+	
+
+//MEM/WB
 
 
+always@(posedge CLK or negedge RESET_N)
+	begin
+		MEM_WB_RegWrite <= EX_MEM_RegWrite;
+		MEM_WB_MemtoReg <= EX_MEM_MemtoReg;
+		MEM_WB_alu_result <= EX_MEM_alu_result;
+		MEM_WB_data_memory_out <= data_memory_output_data;
+		MEM_WB_instruction2 <= EX_MEM_instruction2;
+	end
 
-
-endmodule
