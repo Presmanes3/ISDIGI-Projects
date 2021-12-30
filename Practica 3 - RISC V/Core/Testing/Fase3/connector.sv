@@ -1,3 +1,5 @@
+/* A FALTA DE AÑADIR EL REAL
+
 module duv_conector(system_iff.modport_DUV modport_DUV);
     asignar_duv div_conexion(
         .DOUT(modport_DUV.DOUT),
@@ -26,3 +28,4 @@ DUV duv_model(                  ADAPTAR
     .output(DOUT),
 );
 endmodule
+*/

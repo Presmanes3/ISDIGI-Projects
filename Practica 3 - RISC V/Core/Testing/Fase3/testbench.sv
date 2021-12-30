@@ -21,9 +21,10 @@ module testbench();
     //--------------------------------------------------------------------------------
 
     // Instanciamos ALU conector -----------------------------------------------------
+    /* A FALTA DE AÑADIR EL REAL
     duv_conector duv_conector_module(
         .modport_DUV(sys_iff)
-    );
+    );*/
     //--------------------------------------------------------------------------------
 
     basic_task basic_task_instance();
