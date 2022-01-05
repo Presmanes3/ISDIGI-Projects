@@ -25,41 +25,41 @@ module segmented_core
 
    // ========== DEFINE ALL WIRES ========== //
      //Wiring for IF/ID
-    wire [data_bits-1:0] IF_ID_PC;
-    wire [data_bits-1:0] IF_ID_instruction;
+    reg [data_bits-1:0] IF_ID_PC;
+    reg [data_bits-1:0] IF_ID_instruction;
 
     //Wiring for ID/EX
-    wire [data_bits-1:0] ID_EX_PC;
-    wire [data_bits-1:0] ID_EX_read_data1;
-    wire [data_bits-1:0] ID_EX_read_data2;
-    wire [data_bits-1:0] ID_EX_out_IMM_GEN;
-    wire ID_EX_instruction1;
-    wire [2:0] ID_EX_instruction1b;
-    wire [4:0] ID_EX_instruction2;
-    wire  ID_EX_RegWrite;
-    wire  ID_EX_MemtoReg;
-    wire  ID_EX_Branch;
-    wire  ID_EX_MemRead;
-    wire  ID_EX_ALUSrc;
-    wire  ID_EX_ALUOp;
+    reg [data_bits-1:0] ID_EX_PC;
+    reg [data_bits-1:0] ID_EX_read_data1;
+    reg [data_bits-1:0] ID_EX_read_data2;
+    reg [data_bits-1:0] ID_EX_out_IMM_GEN;
+    reg ID_EX_instruction1;
+    reg [2:0] ID_EX_instruction1b;
+    reg [4:0] ID_EX_instruction2;
+    reg  ID_EX_RegWrite;
+    reg  ID_EX_MemtoReg;
+    reg  ID_EX_Branch;
+    reg  ID_EX_MemRead;
+    reg  ID_EX_ALUSrc;
+    reg  ID_EX_ALUOp;
 
     //Wiring for EX_MEM
-    wire [data_bits-1:0] EX_MEM_addersum;
-    wire [data_bits-1:0] EX_MEM_alu_result;
-    wire [data_bits-1:0] EX_MEM_read_data2;
-    wire [4:0] EX_MEM_instruction2;
-    wire EX_MEM_zero;
-    wire EX_MEM_RegWrite;
-    wire EX_MEM_MemtoReg;
-    wire EX_MEM_Branch;
-    wire EX_MEM_MemRead;
+    reg [data_bits-1:0] EX_MEM_addersum;
+    reg [data_bits-1:0] EX_MEM_alu_result;
+    reg [data_bits-1:0] EX_MEM_read_data2;
+    reg [4:0] EX_MEM_instruction2;
+    reg EX_MEM_zero;
+    reg EX_MEM_RegWrite;
+    reg EX_MEM_MemtoReg;
+    reg EX_MEM_Branch;
+    reg EX_MEM_MemRead;
 
     //Wiring for
-    wire MEM_WB_RegWrite;
-    wire MEM_WB_MemtoReg;
-    wire MEM_WB_alu_result;
-    wire MEM_WB_data_memory_out;
-    wire MEM_WB_instruction2;
+    reg MEM_WB_RegWrite;
+    reg MEM_WB_MemtoReg;
+    reg MEM_WB_alu_result;
+    reg MEM_WB_data_memory_out;
+    reg MEM_WB_instruction2;
 
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
@@ -165,8 +165,8 @@ module segmented_core
 
     // ========== ASSIGN CABLES ========== //
     // ADDER SUM connections
-    assign adder_sum_input_1 = pc_register_output;
-    assign adder_sum_input_2 = immediate_generator_output;
+    assign adder_sum_input_1 = ID_EX_PC;
+    assign adder_sum_input_2 = ID_EX_out_IMM_GEN;//hay que shiftear 1 pero nome deja 
 
     // ADDER PC connections
     assign adder_pc_input_1 = pc_register_output;
@@ -200,14 +200,14 @@ module segmented_core
 
     // Register Bank connections
     assign register_bank_clk                        = clk;
-    assign register_bank_read_register_1_address    = instruction_memory_output_data[19 : 15];
-    assign register_bank_read_register_2_address    = instruction_memory_output_data[24 : 20];
-    assign register_bank_write_register_address     = instruction_memory_output_data[11 : 7 ];
+    assign register_bank_read_register_1_address    = IF_ID_instruction[19 : 15];
+    assign register_bank_read_register_2_address    = IF_ID_instruction[24 : 20];
+    assign register_bank_write_register_address     = IF_ID_instruction[11 : 7 ];
     assign register_bank_write_data                 = mux_two_data_mem_output;
     assign register_bank_write_enable               = main_controller_register_write;
 
     // Immediate generator connections
-    assign immediate_generator_input = instruction_memory_output_data;
+    assign immediate_generator_input = IF_ID_instruction;
 
     // MUX_THREE connections
     assign mux_three_input_1    = pc_register_output;
@@ -217,13 +217,13 @@ module segmented_core
     assign mux_three_select     = 2; 
 
     // MUX_TWO_ALU connections
-    assign mux_two_alu_input_1 = register_bank_read_data_2;
-    assign mux_two_alu_input_2 = immediate_generator_output;
+    assign mux_two_alu_input_1 = ID_EX_read_data2;
+    assign mux_two_alu_input_2 = ID_EX_out_IMM_GEN;
     assign mux_two_alu_select  = main_controller_alu_source;
 
     // MUX_TWO_MEM connections
-    assign mux_two_data_mem_input_1 = alu_result;
-    assign mux_two_data_mem_input_2 = data_memory_output_data;
+    assign mux_two_data_mem_input_1 = MEM_WB_alu_result;
+    assign mux_two_data_mem_input_2 = MEM_WB_data_memory_out;
     assign mux_two_data_mem_select  = main_controller_memory_to_register;
 
     // ALU controller connections
@@ -232,15 +232,15 @@ module segmented_core
     assign alu_controller_func_3_bits   = instruction_memory_output_data[14 : 12];
 
     // ALU connections
-    assign alu_input_1      = mux_three_output;
+    assign alu_input_1      = ID_EX_read_data1;
     assign alu_input_2      = mux_two_alu_output;
     assign alu_operation    = alu_controller_alu_operation;
 
     // Data memory connections
     assign data_memory_clk          = clk;
-    assign data_memory_read_address = alu_result[data_bits - 1 : 2];
+    assign data_memory_read_address = EX_MEM_alu_result[data_bits - 1 : 2];
     assign data_memory_input_data   = register_bank_read_data_2;
-    assign data_memory_write_enable = main_controller_memory_write;
+    assign data_memory_write_enable = EX_MEM_read_data2;
     assign data_memory_read_enable  = main_controller_memory_read;
 
     // Configure Adders and PC
