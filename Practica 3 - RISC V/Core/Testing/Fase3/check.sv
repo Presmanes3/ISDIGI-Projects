@@ -1,15 +1,15 @@
-`include "../../Design/core.sv"
+`include "../../Design/golden_model_core.sv"
 
 module core_instances;
 
 
     // CARGAMOS MODULOS SINCLE-CYCLE ------------------------------------------------------
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core_fib(
+    golden_model_core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core_fib(
         .clk(testbench.sys_iff.ck),
         .reset(testbench.sys_iff.RESET_N)
     );
 
-    core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core_bubble(
+    golden_model_core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core_bubble(
         .clk(testbench.sys_iff.ck),
         .reset(testbench.sys_iff.RESET_N)
     );

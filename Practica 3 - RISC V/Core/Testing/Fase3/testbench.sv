@@ -1,6 +1,6 @@
-`include "basic_task.sv"
-`include "interface.sv"
-`include "check.sv"
+`include "./basic_task.sv"
+`include "./interface.sv"
+`include "./check.sv"
 
 
 
