@@ -25,41 +25,41 @@ module segmented_core
 
    // ========== DEFINE ALL WIRES ========== //
      //Wiring for IF/ID
-    wire [data_bits-1:0] IF_ID_PC;
-    wire [data_bits-1:0] IF_ID_instruction;
+    reg [data_bits-1:0] IF_ID_PC;
+    reg [data_bits-1:0] IF_ID_instruction;
 
     //Wiring for ID/EX
-    wire [data_bits-1:0] ID_EX_PC;
-    wire [data_bits-1:0] ID_EX_read_data1;
-    wire [data_bits-1:0] ID_EX_read_data2;
-    wire [data_bits-1:0] ID_EX_out_IMM_GEN;
-    wire ID_EX_instruction1;
-    wire [2:0] ID_EX_instruction1b;
-    wire [4:0] ID_EX_instruction2;
-    wire  ID_EX_RegWrite;
-    wire  ID_EX_MemtoReg;
-    wire  ID_EX_Branch;
-    wire  ID_EX_MemRead;
-    wire  ID_EX_ALUSrc;
-    wire  ID_EX_ALUOp;
+    reg [data_bits-1:0] ID_EX_PC;
+    reg [data_bits-1:0] ID_EX_read_data1;
+    reg [data_bits-1:0] ID_EX_read_data2;
+    reg [data_bits-1:0] ID_EX_out_IMM_GEN;
+    reg ID_EX_instruction1;
+    reg [2:0] ID_EX_instruction1b;
+    reg [4:0] ID_EX_instruction2;
+    reg  ID_EX_RegWrite;
+    reg  ID_EX_MemtoReg;
+    reg  ID_EX_Branch;
+    reg  ID_EX_MemRead;
+    reg  ID_EX_ALUSrc;
+    reg  ID_EX_ALUOp;
 
     //Wiring for EX_MEM
-    wire [data_bits-1:0] EX_MEM_addersum;
-    wire [data_bits-1:0] EX_MEM_alu_result;
-    wire [data_bits-1:0] EX_MEM_read_data2;
-    wire [4:0] EX_MEM_instruction2;
-    wire EX_MEM_zero;
-    wire EX_MEM_RegWrite;
-    wire EX_MEM_MemtoReg;
-    wire EX_MEM_Branch;
-    wire EX_MEM_MemRead;
+    reg [data_bits-1:0] EX_MEM_addersum;
+    reg [data_bits-1:0] EX_MEM_alu_result;
+    reg [data_bits-1:0] EX_MEM_read_data2;
+    reg [4:0] EX_MEM_instruction2;
+    reg EX_MEM_zero;
+    reg EX_MEM_RegWrite;
+    reg EX_MEM_MemtoReg;
+    reg EX_MEM_Branch;
+    reg EX_MEM_MemRead;
 
     //Wiring for
-    wire MEM_WB_RegWrite;
-    wire MEM_WB_MemtoReg;
-    wire MEM_WB_alu_result;
-    wire MEM_WB_data_memory_out;
-    wire MEM_WB_instruction2;
+    reg MEM_WB_RegWrite;
+    reg MEM_WB_MemtoReg;
+    reg MEM_WB_alu_result;
+    reg MEM_WB_data_memory_out;
+    reg MEM_WB_instruction2;
 
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;

@@ -1,17 +1,20 @@
 `include "../../Design/golden_model_core.sv"
 
-module cores_encapsulator;
+module cores_encapsulator(
+    input clk,
+    input reset
+);
 
 
     // CARGAMOS MODULOS SINCLE-CYCLE ------------------------------------------------------
     golden_model_core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) core_fib(
-        .clk(testbench.sys_iff.ck),
-        .reset(testbench.sys_iff.RESET_N)
+        .clk(clk),
+        .reset(reset)
     );
 
     golden_model_core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) core_bubble(
-        .clk(testbench.sys_iff.ck),
-        .reset(testbench.sys_iff.RESET_N)
+        .clk(clk),
+        .reset(reset)
     );
     // ------------------------------------------------------------------------------------
 

@@ -9,10 +9,13 @@ module testbench();
 
     localparam T=20;
 
+    reg clk;
+    //-------------------------------------------------------------------------------
+
     // Definimos el reloj -----------------------------------------------------------
     always begin
         #(T/2)
-        sys_iff.CLK = ~sys_iff.CLK;
+        sys_iff.CLK= ~sys_iff.CLK;
     end
     //--------------------------------------------------------------------------------
 
@@ -31,12 +34,16 @@ module testbench();
 
     // Instanciación clase de test ---------------------------------------------------
     core_test core_test_inst;
-    cores_encapsulator cores();
+    cores_encapsulator cores(
+        .clk(sys_iff.software_clock),
+        .reset(sys_iff.RESET_N)
+    );
     //--------------------------------------------------------------------------------
     
 
     initial begin
         // Inicializo las class -----
+        clk = 0;
         core_test_inst = new;
         //--------------------------
 
@@ -44,11 +51,11 @@ module testbench();
         basic_task_instance.reset();
         
         // Inicio de la comprobación
-        @(sys_iff.ck)
+        @(sys_iff.CLK)
         
         core_test_inst.fibo_test();
 
-        @(sys_iff.ck)
+        @(sys_iff.CLK)
 
         core_test_inst.bubble_test();
         

@@ -19,9 +19,9 @@ module basic_task();
     endtask
 
     task reset();
-        @(testbench.sys_iff.ck)
+        @(testbench.sys_iff.software_clock)
         testbench.sys_iff.RESET_N = 1'b0;
-        @(testbench.sys_iff.ck)
+        @(testbench.sys_iff.software_clock)
         testbench.sys_iff.RESET_N = 1'b1; 
     endtask
 

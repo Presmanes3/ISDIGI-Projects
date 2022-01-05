@@ -26,9 +26,9 @@ interface system_iff;
     //--------------------------------------
 
     // Definimos clocking block -----------------------------------------------------
-    clocking ck @(posedge sys_iff.CLK); //usar ck como clock
+    clocking software_clock @(posedge CLK); 
         default input #1ns output #1ns;
-    endclocking:ck
+    endclocking
     //-------------------------------------------------------------------------------
 
     modport modport_DUV (
