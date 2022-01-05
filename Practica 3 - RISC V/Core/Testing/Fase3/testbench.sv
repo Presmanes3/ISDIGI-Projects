@@ -31,6 +31,7 @@ module testbench();
 
     // Instanciación clase de test ---------------------------------------------------
     core_test core_test_inst;
+    cores_encapsulator cores();
     //--------------------------------------------------------------------------------
     
 

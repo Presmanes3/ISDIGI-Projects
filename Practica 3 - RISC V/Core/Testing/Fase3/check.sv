@@ -1,6 +1,6 @@
 `include "../../Design/golden_model_core.sv"
 
-module core_instances;
+module cores_encapsulator;
 
 
     // CARGAMOS MODULOS SINCLE-CYCLE ------------------------------------------------------
@@ -22,6 +22,7 @@ endmodule
 
 class core_test;
 
+
     task fibo_test();
 
         int Nmax_num = 20;
@@ -31,10 +32,10 @@ class core_test;
 
             fork
                 begin
-                    @(core_instances.core_fib.instruction_memory_output_data != 32'h00000013);
+                    @(testbench.cores.core_fib.instruction_memory_output_data != 32'h00000013);
                 end
                 begin
-                    @(core_instances.core_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                    @(testbench.cores.core_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
                 end
             join
 
@@ -42,8 +43,8 @@ class core_test;
         $fwrite(txt,"ideal, real\n");
 
         for (int i = 0; i<Nmax_num-1; i++) begin
-            int ideal_valor = core_instances.core_fib.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = core_instances.core_fib.data_memory.data_pool[dir_ini_core+i*4];
+            int ideal_valor = testbench.cores.core_fib.data_memory.data_pool[dir_ini_core+i*4];
+            int real_valor = testbench.cores.core_fib.data_memory.data_pool[dir_ini_core+i*4];
 
             $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
         
@@ -63,18 +64,18 @@ class core_test;
 
             fork
                 begin
-                    @(core_instances.core_bubble.instruction_memory_output_data != 32'h00000013);
+                    @(testbench.cores.core_bubble.instruction_memory_output_data != 32'h00000013);
                 end
                 begin
-                    @(core_instances.core_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                    @(testbench.cores.core_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
                 end
             join
 
         $fwrite(txt,"ideal, real\n");
 
         for (int i = 0; i<Nmax_num-1; i++) begin
-            int ideal_valor = core_instances.core_bubble.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = core_instances.core_bubble.data_memory.data_pool[dir_ini_core+i*4];
+            int ideal_valor = testbench.cores.core_bubble.data_memory.data_pool[dir_ini_core+i*4];
+            int real_valor = testbench.cores.core_bubble.data_memory.data_pool[dir_ini_core+i*4];
 
             $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
         

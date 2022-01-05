@@ -1,97 +1,97 @@
-{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface system_iff
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(1): Cannot find `include file "memory.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(2): Cannot find `include file "register_bank.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(5): Cannot find `include file "pc.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(6): Cannot find `include file "ADDER.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(7): Cannot find `include file "immgen.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(8): Cannot find `include file "mux_2_input.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(9): Cannot find `include file "mux_3_input.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(3)
-** while parsing file included at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv(10): Cannot find `include file "jump_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-
-} {4.0 5.0 8.0 9.0 12.0 13.0 16.0 17.0 20.0 21.0 24.0 25.0 28.0 29.0 32.0 33.0} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
+{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface system_iff
 
 Top level modules:
 	--none--
 
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module memory
+
+Top level modules:
+	memory
+
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mux_2_input
+
+Top level modules:
+	mux_2_input
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module memory
 -- Compiling module register_bank
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv(3): Cannot find `include file "./Basic Components/Controllers/main_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv(4): Cannot find `include file "./Basic Components/Controllers/alu_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module main_controller
+-- Compiling module alu_controller
 -- Compiling module PC
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv(6): Cannot find `include file "./Basic Components/ADDER.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module ADDER
 -- Compiling module imm_gen
 -- Compiling module mux_2_input
 -- Compiling module mux_3_input
 -- Compiling module jump_controller
 -- Compiling module golden_model_core
 
-} {5.0 6.0 7.0 8.0 10.0 11.0} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv}
+Top level modules:
+	golden_model_core
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module data_forwarding
-** Error: (vlog-13069) C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv(31): near "end": syntax error, unexpected end.
 
+Top level modules:
+	data_forwarding
 
-} {4.0 5.0} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module clear_pipeline
 
 Top level modules:
 	clear_pipeline
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module memory
 -- Compiling module register_bank
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv(3): Cannot find `include file "./Basic Components/Controllers/main_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv(4): Cannot find `include file "./Basic Components/Controllers/alu_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module main_controller
+-- Compiling module alu_controller
 -- Compiling module PC
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv(6): Cannot find `include file "./Basic Components/ADDER.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module ADDER
 -- Compiling module imm_gen
 -- Compiling module mux_2_input
 -- Compiling module mux_3_input
 -- Compiling module jump_controller
 -- Compiling module segmented_core
 
-} {5.0 6.0 7.0 8.0 10.0 11.0} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv}
+Top level modules:
+	segmented_core
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module jump_controller
+
+Top level modules:
+	jump_controller
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module register_bank
+
+Top level modules:
+	register_bank
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling package basic_task_sv_unit
 -- Compiling module basic_task
@@ -126,47 +126,32 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/pc.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(1): Cannot find `include file "memory.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(2): Cannot find `include file "register_bank.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
--- Compiling module main_controller
--- Compiling module alu_controller
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(5): Cannot find `include file "pc.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(6): Cannot find `include file "ADDER.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(7): Cannot find `include file "immgen.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(8): Cannot find `include file "mux_2_input.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(9): Cannot find `include file "mux_3_input.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: ** while parsing file included at C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(1)
-** at C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv(10): Cannot find `include file "jump_controller.sv" in directories:
-    C:/questasim64_10.4/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.4/uvm-1.1d/../verilog_src/uvm-1.1d/src
--- Compiling module core
--- Compiling module core_instances
+-- Compiling module PC
 
-} {3.0 4.0 6.0 7.0 11.0 12.0 14.0 15.0 17.0 18.0 20.0 21.0 23.0 24.0 26.0 27.0} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv}
+Top level modules:
+	PC
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mux_3_input
+
+Top level modules:
+	mux_3_input
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module imm_gen
+
+Top level modules:
+	imm_gen
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module hazard_detection_unit
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv(20): (vlog-2730) Undefined variable: 'foce_jump_ex'.
 
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv(20): (vlog-2730) Undefined variable: 'force_jump_mem'.
+Top level modules:
+	hazard_detection_unit
 
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv(21): (vlog-2730) Undefined variable: 'foce_jump_id'.
-
-** Error: C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv(25): (vlog-2730) Undefined variable: 'rd_add_ex'.
-
-
-} {4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0} {}}
+} {} {}}
