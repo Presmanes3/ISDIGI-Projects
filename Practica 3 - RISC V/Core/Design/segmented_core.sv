@@ -24,6 +24,43 @@ module segmented_core
 );
 
    // ========== DEFINE ALL WIRES ========== //
+     //Wiring for IF/ID
+    wire [data_bits-1:0] IF_ID_PC;
+    wire [data_bits-1:0] IF_ID_instruction;
+
+    //Wiring for ID/EX
+    wire [data_bits-1:0] ID_EX_PC;
+    wire [data_bits-1:0] ID_EX_read_data1;
+    wire [data_bits-1:0] ID_EX_read_data2;
+    wire [data_bits-1:0] ID_EX_out_IMM_GEN;
+    wire ID_EX_instruction1;
+    wire [2:0] ID_EX_instruction1b;
+    wire [4:0] ID_EX_instruction2;
+    wire  ID_EX_RegWrite;
+    wire  ID_EX_MemtoReg;
+    wire  ID_EX_Branch;
+    wire  ID_EX_MemRead;
+    wire  ID_EX_ALUSrc;
+    wire  ID_EX_ALUOp;
+
+    //Wiring for EX_MEM
+    wire [data_bits-1:0] EX_MEM_addersum;
+    wire [data_bits-1:0] EX_MEM_alu_result;
+    wire [data_bits-1:0] EX_MEM_read_data2;
+    wire [4:0] EX_MEM_instruction2;
+    wire EX_MEM_zero;
+    wire EX_MEM_RegWrite;
+    wire EX_MEM_MemtoReg;
+    wire EX_MEM_Branch;
+    wire EX_MEM_MemRead;
+
+    //Wiring for
+    wire MEM_WB_RegWrite;
+    wire MEM_WB_MemtoReg;
+    wire MEM_WB_alu_result;
+    wire MEM_WB_data_memory_out;
+    wire MEM_WB_instruction2;
+
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
     wire [data_bits - 1 : 0] adder_sum_input_2;
@@ -325,6 +362,60 @@ module segmented_core
         .alu_operation  (alu_controller_alu_operation)
     );
 
+
+
+
+//Implementación registros PIPELINE
+
+//IF/ID
+always@(posedge clk)
+	begin	
+		IF_ID_instruction <= instruction_memory_output_data;
+		IF_ID_PC <= pc_register_output;
+	end
+	
+//ID/EX
+always@(posedge clk)
+		begin
+		ID_EX_PC <= IF_ID_PC;
+		ID_EX_read_data1 <= register_bank_read_data_1;
+		ID_EX_read_data2 <= register_bank_read_data_2;
+		ID_EX_out_IMM_GEN <= immediate_generator_output;
+		ID_EX_instruction1 <= IF_ID_instruction[30];
+		ID_EX_instruction1b <= IF_ID_instruction[14:12];
+		ID_EX_instruction2 <= IF_ID_instruction[11:7];
+		ID_EX_RegWrite <= main_controller_register_write;
+		ID_EX_MemtoReg <= main_controller_memory_to_register;
+		ID_EX_Branch <= main_controller_branch;
+		ID_EX_MemRead <= main_controller_memory_read;
+		ID_EX_ALUSrc <= main_controller_alu_source;
+		ID_EX_ALUOp <= main_controller_alu_option;
+		end
+
+//EX/MEM
+always@(posedge clk)
+	begin
+		EX_MEM_addersum <= adder_sum_output;
+		EX_MEM_alu_result <= alu_result;
+		EX_MEM_read_data2 <= ID_EX_read_data2;
+		EX_MEM_instruction2 <= ID_EX_instruction2;
+		EX_MEM_zero <= alu_zero;
+		EX_MEM_RegWrite <= ID_EX_RegWrite;
+		EX_MEM_MemtoReg <= ID_EX_MemtoReg;
+		EX_MEM_Branch <= ID_EX_Branch;
+		EX_MEM_MemRead <= ID_EX_MemRead;
+	end
+	
+
+//MEM/WB
+always@(posedge clk)
+	begin
+		MEM_WB_RegWrite <= EX_MEM_RegWrite;
+		MEM_WB_MemtoReg <= EX_MEM_MemtoReg;
+		MEM_WB_alu_result <= EX_MEM_alu_result;
+		MEM_WB_data_memory_out <= data_memory_output_data;
+		MEM_WB_instruction2 <= EX_MEM_instruction2;
+	end
 
 
 endmodule
