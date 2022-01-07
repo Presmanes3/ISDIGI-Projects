@@ -1,7 +1,7 @@
 `include "./Basic Components/memory.sv"
 `include "./Basic Components/register_bank.sv"
-`include "./Basic Components/Controllers/main_controller.sv"
-`include "./Basic Components/Controllers/alu_controller.sv"
+`include "./Controllers/main_controller.sv"
+`include "./Controllers/alu_controller.sv"
 `include "./Basic Components/pc.sv"
 `include "./Basic Components/ADDER.sv"
 `include "./Basic Components/immgen.sv"
@@ -320,7 +320,7 @@ module golden_model_core
     );
 
     alu_controller alu_control(
-        .func_7_bits    (alu_controller_func_7_bits),
+        .alu_controller_func_7_bits    (alu_controller_func_7_bits),
         .func_3_bits    (alu_controller_func_3_bits),
         .alu_option     (alu_controller_alu_option),
         .alu_operation  (alu_controller_alu_operation)
@@ -329,38 +329,38 @@ module golden_model_core
 
 // Check correctly working of the ADD instruction
 
-property SWp;
-//    @(posedge clk)
+  property SWp;
+   @(posedge clk)
    main_controller_alu_option==4'b0100 && alu_controller_func_3_bits== 3'b010 |-> main_controller_memory_write==1'b1|-> main_controller_register_write==1'b0|-> main_controller_alu_source==1'b1|-> main_controller_branch==1'b0|-> main_controller_memory_to_register==1'b0 |-> main_controller_memory_read==1'b0
    endproperty
 
    property BEQp;
-//    @(posedge clk)
+   @(posedge clk)
    main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0
    endproperty
    
    property RFORMAT;
-    // @(posedge clk)
+    @(posedge clk)
    main_controller_alu_option==4'b0110 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|-> main_controller_memory_read==1'b0
    endproperty
 
    property IFORMAT;
-//    @(posedge clk)
+   @(posedge clk)
     main_controller_alu_option==4'b0010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0
    endproperty
 
    property LWp;
-    // @(posedge clk)
+    @(posedge clk)
      main_controller_alu_option==4'b0000 && alu_controller_func_3_bits==3'b010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b1|->main_controller_memory_read==1'b1
    endproperty
 
-property BNEp;
-//    @(posedge clk)
+    property BNEp;
+   @(posedge clk)
    main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b001 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0
    endproperty
 
    property LUIp;
-//    @(posedge clk) 
+   @(posedge clk) 
     main_controller_alu_option==4'b0111 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b0|->main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0
    endproperty
 
@@ -372,6 +372,9 @@ SLTIU: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu
 XORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation == 4'b0100|->IFORMAT) else $display("XORI NOT CORRECT");
 ORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->IFORMAT) else $display("ORI NOT CORRECT");
 ANDI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->IFORMAT) else $display("ANDI NOT CORRECT");
+SLLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->IFORMAT) else $display("SLLI NOT CORRECT");
+SRLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b1 |-> alu_controller_alu_operation ==  4'b1110|->IFORMAT) else $display("SRLI NOT CORRECT");
+SRAI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b0 |-> alu_controller_alu_operation ==  4'b1111|->IFORMAT) else $display("SRAI NOT CORRECT");
 
 AUIPC: assert property(@(posedge clk) main_controller_alu_option==4'b0011 |-> alu_controller_alu_operation == 4'b0000) else $display("AUIPC NOT CORRECT");
 
@@ -384,14 +387,19 @@ XOR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_c
 OR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->RFORMAT) else $display("OR NOT CORRECT");
 AND: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->RFORMAT) else $display("AND NOT CORRECT");
 SUB: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->RFORMAT) else $display("SUB NOT CORRECT");
+SLL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->RFORMAT) else $display("SLL NOT CORRECT");
+SRL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1110|->RFORMAT) else $display("SRL NOT CORRECT");
+SRA: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1111|->RFORMAT) else $display("SRA NOT CORRECT");
 
 LUI: assert property(@(posedge clk) main_controller_alu_option==4'b0111|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000 |->LUIp) else $display("LUI NOT CORRECT");
 
 BEQ: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->BEQp) else $display("BEQ NOT CORRECT");
 BNE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation == 4'b0100|->BNEp) else $display("BNE NOT CORRECT");
+BGEU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0111|->BNEp) else $display("BGEU NOT CORRECT");
+BGE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1000|->BNEp) else $display("BGE NOT CORRECT");
+BLTU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b1001|->BNEp) else $display("BLTU NOT CORRECT");
+BLT: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation ==  4'b1010|->BNEp) else $display("BLT NOT CORRECT");
 
-
-
-
+JAL: assert property(@(posedge clk) main_controller_alu_option==4'b1101|-> alu_controller_alu_operation ==  4'b0000|->BNEp) else $display("JAR OR JALR NOT CORRECT");
 
 endmodule

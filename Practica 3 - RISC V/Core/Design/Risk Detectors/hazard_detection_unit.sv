@@ -14,15 +14,15 @@ module hazard_detection_unit(
     input rs2_addr_id,
     input force_jump_id,
     input force_jump_ex,
-    input force_jumo_mem
+    input force_jump_mem
 );
 
-assign flush = (foce_jump_ex || force_jump_mem || force_jump_wb);
-assign flush_pc = (foce_jump_id || force_jump_ex);
-assign flush_adder = (foce_jump_id || force_jump_ex || force_jump_mem);
+assign flush = (force_jump_ex || force_jump_mem || force_jump_wb);
+assign flush_pc = (force_jump_id || force_jump_ex);
+assign flush_adder = (force_jump_id || force_jump_ex || force_jump_mem);
 
 always_comb begin
-    if((mem_read_ex == 1) && (rd_addr_ex == rs1_addr_id) || (rd_add_ex == rs2_addr_id) && !branch_mux_mem) begin
+    if((mem_read_ex == 1) && (rd_addr_ex == rs1_addr_id) || (rd_addr_ex == rs2_addr_id) && !branch_mux_mem) begin
         pc_write_id = 0;
         hazard_mux = 1;
     end else begin

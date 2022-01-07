@@ -24,7 +24,7 @@ always_comb begin
     else forward1 = 2'b00;
 end
 
-always_comb
+always_comb begin
     if((reg_write_mem == 1) && (rd_addr_mem != 0) && (rs2_addr_ex == rd_addr_mem)) forward2 = 2'b10;
     else if ((reg_write_wb == 1) && (rd_addr_wb != 0) && (rs2_addr_ex == rd_addr_wb)) forward2 = 2'b01;
     else forward2 = 2'b00;
