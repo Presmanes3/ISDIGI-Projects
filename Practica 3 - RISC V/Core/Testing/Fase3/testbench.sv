@@ -19,6 +19,8 @@ module testbench();
     end
     //--------------------------------------------------------------------------------
 
+    
+
     // Instanciate the common system interface for signals ---------------------------
     system_iff sys_iff();
     //--------------------------------------------------------------------------------
@@ -51,15 +53,14 @@ module testbench();
         basic_task_instance.reset();
         
         // Inicio de la comprobación
-        @(sys_iff.CLK)
-        
+        @(posedge sys_iff.CLK)
+
         core_test_inst.fibo_test();
 
-        @(sys_iff.CLK)
+        // @(posedge sys_iff.CLK)
 
-        core_test_inst.bubble_test();
+        // core_test_inst.bubble_test();
         
-
         $stop();
         
     end

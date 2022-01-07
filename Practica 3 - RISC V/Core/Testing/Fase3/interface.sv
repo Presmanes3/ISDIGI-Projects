@@ -26,8 +26,8 @@ interface system_iff;
     //--------------------------------------
 
     modport modport_DUV (
-    input DOUT, CLK, RESET_N,
-    output DIN
+        input DOUT, CLK, RESET_N,
+        output DIN
     );
 
 
