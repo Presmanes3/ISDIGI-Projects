@@ -1,0 +1,123 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /testbench/cores/segmented_fib/clk
+add wave -noupdate /testbench/cores/segmented_fib/reset
+add wave -noupdate -group {REGISTER > IF ID} /testbench/cores/segmented_fib/IF_ID_PC
+add wave -noupdate -group {REGISTER > IF ID} /testbench/cores/segmented_fib/IF_ID_instruction
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_PC
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_read_data1
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_read_data2
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_out_IMM_GEN
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_instruction1
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_instruction1b
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_instruction2
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_RegWrite
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_MemtoReg
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_Branch
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_MemRead
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_ALUSrc
+add wave -noupdate -group {REGISTER > ID EX} /testbench/cores/segmented_fib/ID_EX_ALUOp
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_addersum
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_alu_result
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_read_data2
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_instruction2
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_zero
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_RegWrite
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_MemtoReg
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_Branch
+add wave -noupdate -group {REGISTER > EX MEM} /testbench/cores/segmented_fib/EX_MEM_MemRead
+add wave -noupdate -group {REGISTER > MEM WB} /testbench/cores/segmented_fib/MEM_WB_RegWrite
+add wave -noupdate -group {REGISTER > MEM WB} /testbench/cores/segmented_fib/MEM_WB_MemtoReg
+add wave -noupdate -group {REGISTER > MEM WB} /testbench/cores/segmented_fib/MEM_WB_alu_result
+add wave -noupdate -group {REGISTER > MEM WB} /testbench/cores/segmented_fib/MEM_WB_data_memory_out
+add wave -noupdate -group {REGISTER > MEM WB} /testbench/cores/segmented_fib/MEM_WB_instruction2
+add wave -noupdate -group {ADDER SUM} /testbench/cores/segmented_fib/adder_sum_input_1
+add wave -noupdate -group {ADDER SUM} /testbench/cores/segmented_fib/adder_sum_input_2
+add wave -noupdate -group {ADDER SUM} /testbench/cores/segmented_fib/adder_sum_output
+add wave -noupdate -group {ADDER PC} /testbench/cores/segmented_fib/adder_pc_input_1
+add wave -noupdate -group {ADDER PC} /testbench/cores/segmented_fib/adder_pc_input_2
+add wave -noupdate -group {ADDER PC} /testbench/cores/segmented_fib/adder_pc_output
+add wave -noupdate -group {PC REGISTER} /testbench/cores/segmented_fib/pc_register_input
+add wave -noupdate -group {PC REGISTER} /testbench/cores/segmented_fib/pc_register_output
+add wave -noupdate -group {PC REGISTER} /testbench/cores/segmented_fib/pc_register_clk
+add wave -noupdate -group {PC REGISTER} /testbench/cores/segmented_fib/pc_register_reset
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_clk
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_write_enable
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_read_enable
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_input_data
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_output_data
+add wave -noupdate -group {INSTRUCTION MEMORY} /testbench/cores/segmented_fib/instruction_memory_read_address
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_clk
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_write_enable
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_read_enable
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_input_data
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_output_data
+add wave -noupdate -group {DATA MEMORY} /testbench/cores/segmented_fib/data_memory_read_address
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_clk
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_read_register_1_address
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_read_register_2_address
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_write_register_address
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_write_data
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_write_enable
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_read_data_1
+add wave -noupdate -group {REGISTER BANK} /testbench/cores/segmented_fib/register_bank_read_data_2
+add wave -noupdate -group {IMMEDIATE GENERATOR} /testbench/cores/segmented_fib/immediate_generator_input
+add wave -noupdate -group {IMMEDIATE GENERATOR} /testbench/cores/segmented_fib/immediate_generator_output
+add wave -noupdate -group {MUX THREE INPUTS} /testbench/cores/segmented_fib/mux_three_input_1
+add wave -noupdate -group {MUX THREE INPUTS} /testbench/cores/segmented_fib/mux_three_input_2
+add wave -noupdate -group {MUX THREE INPUTS} /testbench/cores/segmented_fib/mux_three_input_3
+add wave -noupdate -group {MUX THREE INPUTS} /testbench/cores/segmented_fib/mux_three_output
+add wave -noupdate -group {MUX THREE INPUTS} /testbench/cores/segmented_fib/mux_three_select
+add wave -noupdate -group ALU /testbench/cores/segmented_fib/alu_input_1
+add wave -noupdate -group ALU /testbench/cores/segmented_fib/alu_input_2
+add wave -noupdate -group ALU /testbench/cores/segmented_fib/alu_operation
+add wave -noupdate -group ALU /testbench/cores/segmented_fib/alu_result
+add wave -noupdate -group ALU /testbench/cores/segmented_fib/alu_zero
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_alu_input_1
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_alu_input_2
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_alu_output
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_alu_select
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_data_mem_input_1
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_data_mem_input_2
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_data_mem_output
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_data_mem_select
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_pc_input_1
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_pc_input_2
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_pc_output
+add wave -noupdate -group {MUX TWO ALU} /testbench/cores/segmented_fib/mux_two_pc_select
+add wave -noupdate -group {JUMP CONTROLLER} /testbench/cores/segmented_fib/jump_controller_branch
+add wave -noupdate -group {JUMP CONTROLLER} /testbench/cores/segmented_fib/jump_controller_func_3_bits
+add wave -noupdate -group {JUMP CONTROLLER} /testbench/cores/segmented_fib/jump_controller_zero
+add wave -noupdate -group {JUMP CONTROLLER} /testbench/cores/segmented_fib/jump_controller_alu_result
+add wave -noupdate -group {JUMP CONTROLLER} /testbench/cores/segmented_fib/jump_controller_select
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_opcode
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_branch
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_memory_read
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_memory_to_register
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_alu_option
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_memory_write
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_alu_source
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_register_write
+add wave -noupdate -group {MAIN CONTROLLER} /testbench/cores/segmented_fib/main_controller_AuipcLui
+add wave -noupdate -group {ALU CONTROLLER} /testbench/cores/segmented_fib/alu_controller_func_7_bits
+add wave -noupdate -group {ALU CONTROLLER} /testbench/cores/segmented_fib/alu_controller_func_3_bits
+add wave -noupdate -group {ALU CONTROLLER} /testbench/cores/segmented_fib/alu_controller_alu_option
+add wave -noupdate -group {ALU CONTROLLER} /testbench/cores/segmented_fib/alu_controller_alu_operation
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {7247866 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 454
+configure wave -valuecolwidth 332
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {2834 ns} {3566 ns}
