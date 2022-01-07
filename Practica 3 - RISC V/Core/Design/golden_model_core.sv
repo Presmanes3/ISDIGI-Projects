@@ -320,7 +320,7 @@ module golden_model_core
     );
 
     alu_controller alu_control(
-        .alu_controller_func_7_bits    (alu_controller_func_7_bits),
+        .func_7_bits    (alu_controller_func_7_bits),
         .func_3_bits    (alu_controller_func_3_bits),
         .alu_option     (alu_controller_alu_option),
         .alu_operation  (alu_controller_alu_operation)

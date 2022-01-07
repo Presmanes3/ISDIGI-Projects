@@ -19,6 +19,8 @@ module testbench();
     end
     //--------------------------------------------------------------------------------
 
+    
+
     // Instanciate the common system interface for signals ---------------------------
     system_iff sys_iff();
     //--------------------------------------------------------------------------------
@@ -35,7 +37,7 @@ module testbench();
     // Instanciación clase de test ---------------------------------------------------
     core_test core_test_inst;
     cores_encapsulator cores(
-        .clk(sys_iff.software_clock),
+        .clk(sys_iff.CLK),
         .reset(sys_iff.RESET_N)
     );
     //--------------------------------------------------------------------------------
@@ -51,15 +53,14 @@ module testbench();
         basic_task_instance.reset();
         
         // Inicio de la comprobación
-        @(sys_iff.CLK)
-        
+        @(posedge sys_iff.CLK)
+
         core_test_inst.fibo_test();
 
-        @(sys_iff.CLK)
+        // @(posedge sys_iff.CLK)
 
-        core_test_inst.bubble_test();
+        // core_test_inst.bubble_test();
         
-
         $stop();
         
     end

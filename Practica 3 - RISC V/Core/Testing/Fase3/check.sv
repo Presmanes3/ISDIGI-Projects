@@ -37,33 +37,49 @@ class core_test;
 
     task fibo_test();
 
+
+
         int Nmax_num = 20;
         int dir_ini_core = 0;
         int dir_ini_DUV = 0;
-        integer txt = $fopen("fibbonaci.txt","a");
+        int file;
 
-            fork
-                begin
-                    @(testbench.cores.golden_fib.instruction_memory_output_data != 32'h00000013);
-                end
-                begin
-                    @(testbench.cores.segmented_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
-                end
-            join
+        string relative_path = "../../Proyecto Questasim/Basic Testing/../../";
+        string complete_path = {relative_path,"Core/Testing/Fase3/Out/fib_memory_testbench_out.txt"};
 
+        file = $fopen(complete_path,"w");
 
-        $fwrite(txt,"ideal, real\n");
+        $display("[FIBBONACCI] starting test!");
 
-        for (int i = 0; i<Nmax_num-1; i++) begin
-            int ideal_valor = testbench.cores.golden_fib.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = testbench.cores.segmented_fib.data_memory.data_pool[dir_ini_core+i*4];
-
-            $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
+        // Write header for the file
+        $fwrite(file,"[GOLDEN], [SEGMENTED]\n");
         
-            assert (ideal_valor == real_valor) else $info("El elemento numero ",i," de fibonaci NO COINCIDE");
+        fork
+            begin
+                // Wait till the golden model finishes
+                @(testbench.cores.golden_fib.instruction_memory_output_data != 32'h00000013);
+                $display("[FIBBONACCI] Golden model finished");
+            end
+            begin
+                // Wait till the segmented model finishes
+                //@(testbench.cores.segmented_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                $display("[FIBBONACCI] Segmented model finished");
+            end
+        join
+
+        $display("[FIBBONACCI] Starting with the checking");
+        // Write data into file and check if both are the same
+        for (int i = 0; i < Nmax_num; i++) begin
+            int golden_value = testbench.cores.golden_fib.data_memory.data_pool[i];
+            int segmented_value = testbench.cores.segmented_fib.data_memory.data_pool[i];
+
+            $fwrite(file,"%d, %d\n",golden_value, segmented_value);
+        
+            //assert (golden_value == segmented_value) else $info("El elemento numero ",i," de fibonaci NO COINCIDE");
         end 
 
-        $fclose(txt);
+        $display("[FIBBONACCI] finishing test!");
+        $fclose(file);
 
     endtask
 
@@ -72,29 +88,34 @@ class core_test;
         int Nmax_num = 20;
         int dir_ini_core = 0;
         int dir_ini_DUV = 0;
-        integer txt = $fopen("bubble_sort.txt","a");
+        int file;
+
+        string relative_path = "../../Proyecto Questasim/Basic Testing/../../";
+        string complete_path = {relative_path,"Core/Testing/Fase3/Out/bubble_memory_testbench_out.txt"};
+
+        file = $fopen(complete_path,"w");
 
             fork
                 begin
                     @(testbench.cores.golden_bubble.instruction_memory_output_data != 32'h00000013);
                 end
                 begin
-                    @(testbench.cores.segmented_bubble.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                    //@(testbench.cores.segmented_bubble.instruction_memory_output_data != 32'h00000013); //instruccion fin real
                 end
             join
 
-        $fwrite(txt,"ideal, real\n");
+        $fwrite(file,"ideal, real\n");
 
-        for (int i = 0; i<Nmax_num-1; i++) begin
-            int ideal_valor = testbench.cores.golden_bubble.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = testbench.cores.segmented_bubble.data_memory.data_pool[dir_ini_core+i*4];
+        for (int i = 0; i < Nmax_num; i++) begin
+            int golden_value = testbench.cores.golden_bubble.data_memory.data_pool[dir_ini_core+i*4];
+            int segmented_value = testbench.cores.segmented_bubble.data_memory.data_pool[dir_ini_core+i*4];
 
-            $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
+            $fwrite(file,"%d, %d\n",golden_value, segmented_value);
         
-            assert (ideal_valor == real_valor) else $info("El elemento numero ",i," de fibonaci NO COINCIDE");
+            assert (golden_value == segmented_value) else $info("El elemento numero ",i," de bubble sort NO COINCIDE");
         end 
 
-        $fclose(txt);
+        $fclose(file);
 
     endtask
 

@@ -14,7 +14,7 @@ interface system_iff;
 
     // SEÑALES DUV -------------------------
         // SALIDA
-        logic [15:0] DOUT;3
+        logic [15:0] DOUT;
         // ENTRADA
         logic [15:0] DIN;
     //--------------------------------------
@@ -28,12 +28,12 @@ interface system_iff;
     // Definimos clocking block -----------------------------------------------------
     clocking software_clock @(posedge CLK); 
         default input #1ns output #1ns;
-    endclocking
+    endclocking: software_clock
     //-------------------------------------------------------------------------------
 
     modport modport_DUV (
-    input DOUT, CLK, RESET_N,
-    output DIN
+        input DOUT, CLK, RESET_N,
+        output DIN
     );
 
 
