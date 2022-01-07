@@ -9,6 +9,17 @@
 `include "./Basic Components/mux_3_input.sv"
 `include "./Basic Components/jump_controller.sv"
 
+`include "./Segmented Registers/register_ex_mem.sv"
+`include "./Segmented Registers/register_id_ex.sv"
+`include "./Segmented Registers/register_if_id.sv"
+`include "./Segmented Registers/register_mem_wb.sv"
+
+`include "./Risk Detectors/clear_pipeline.sv"
+`include "./Risk Detectors/data_forwarding.sv"
+`include "./Risk Detectors/hazard_detection_unit.sv"
+
+`include "./Segmented Components/ALU_encapsulator.sv"
+
 module segmented_core
 #(
     parameter data_bits = 32,
@@ -22,43 +33,6 @@ module segmented_core
 );
 
    // ========== DEFINE ALL WIRES ========== //
-     //Wiring for IF/ID
-    reg [data_bits-1:0] IF_ID_PC;
-    reg [data_bits-1:0] IF_ID_instruction;
-
-    //Wiring for ID/EX
-    reg [data_bits-1:0] ID_EX_PC;
-    reg [data_bits-1:0] ID_EX_read_data1;
-    reg [data_bits-1:0] ID_EX_read_data2;
-    reg [data_bits-1:0] ID_EX_out_IMM_GEN;
-    reg ID_EX_instruction1;
-    reg [2:0] ID_EX_instruction1b;
-    reg [4:0] ID_EX_instruction2;
-    reg  ID_EX_RegWrite;
-    reg  ID_EX_MemtoReg;
-    reg  ID_EX_Branch;
-    reg  ID_EX_MemRead;
-    reg  ID_EX_ALUSrc;
-    reg  ID_EX_ALUOp;
-
-    //Wiring for EX_MEM
-    reg [data_bits-1:0] EX_MEM_addersum;
-    reg [data_bits-1:0] EX_MEM_alu_result;
-    reg [data_bits-1:0] EX_MEM_read_data2;
-    reg [4:0] EX_MEM_instruction2;
-    reg EX_MEM_zero;
-    reg EX_MEM_RegWrite;
-    reg EX_MEM_MemtoReg;
-    reg EX_MEM_Branch;
-    reg EX_MEM_MemRead;
-
-    //Wiring for
-    reg MEM_WB_RegWrite;
-    reg MEM_WB_MemtoReg;
-    reg MEM_WB_alu_result;
-    reg MEM_WB_data_memory_out;
-    reg MEM_WB_instruction2;
-
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
     wire [data_bits - 1 : 0] adder_sum_input_2;
@@ -161,6 +135,21 @@ module segmented_core
     wire [3 : 0] alu_controller_alu_option;
     wire [3 : 0] alu_controller_alu_operation;
 
+    // ========== INTERFACES FOR REGISTERS ========== //
+    // Interface for IF/ID
+
+    // Interface for ID/EX
+    register_ex_interface   reg_id_ex_wiring_ex;
+    register_m_interface    reg_id_m_wiring_ex;
+    register_wb_interface   reg_id_wb_wiring_ex;
+
+    // Interface for EX/MEM
+    register_m_interface    reg_ex_mem_wiring_ex;
+    register_wb_interface   reg_ex_mem_wiring_ex;
+
+    // Interface for MEM/WB
+    register_wb_interface   reg_mem_wb_wiring_ex;
+
     // ========== ASSIGN CABLES ========== //
     // ADDER SUM connections
     assign adder_sum_input_1 = ID_EX_PC;
@@ -230,8 +219,6 @@ module segmented_core
     assign alu_controller_func_3_bits   = instruction_memory_output_data[14 : 12];
 
     // ALU connections
-    assign alu_input_1      = ID_EX_read_data1;
-    assign alu_input_2      = mux_two_alu_output;
     assign alu_operation    = alu_controller_alu_operation;
 
     // Data memory connections
@@ -242,16 +229,16 @@ module segmented_core
     assign data_memory_read_enable  = main_controller_memory_read;
 
     // Configure Adders and PC
-    ADDER ADDER_SUM (                         // Adder cuya out es la entrada 1 del multiplexor conectado a PC
+    ADDER ADDER_SUM (                   // Adder cuya out es la entrada 1 del multiplexor conectado a PC
         .input1 (adder_sum_input_1),    // Entrada a salida del generador de inmediatos
         .input2 (adder_sum_input_2),    // Entrada a salida del pc
         .out    (adder_sum_output)      // Salida al multiplexor de suma
     );
 
-    ADDER ADDER_PC (                      // Adder cuya ouput es la entrada 0 del multiplexor conectado a PC
-        .input1 (adder_pc_input_1), // Entrada a salida del pc 
-        .input2 (adder_pc_input_2), // Entrada forzada a 4
-        .out    (adder_pc_output)   // Salida a
+    ADDER ADDER_PC (                    // Adder cuya ouput es la entrada 0 del multiplexor conectado a PC
+        .input1 (adder_pc_input_1),     // Entrada a salida del pc 
+        .input2 (adder_pc_input_2),     // Entrada forzada a 4
+        .out    (adder_pc_output)       // Salida a
     );
 
     mux_2_input mux_pc (                // multiplexor cuya salida está conectada a PC
@@ -276,12 +263,16 @@ module segmented_core
         .select(jump_controller_select)
     );
 
-    ALU ALU (                      
-        .input1             (alu_input_1),      // Entrada a salida del multiplexor de 3 entradas
-        .input2             (alu_input_2),      // Entrada a salida del multiplexor de 2 entradas
-        .operation          (alu_operation),    // Señal que indica la operacion a realizar
-        .operation_result   (alu_result),       // Resultado de la operacion
-        .Zero               (alu_zero)          // Bit que indica si el resultado de la operacion es 0
+    alu_encapsulator alu_encapsulator(
+        .register_data_1_in(),
+        .register_data_2_in(),
+        .forward_controller_1(),
+        .forward_controller_2(),
+        .prev_result_from_mux(),
+        .prev_result_from_reg(),
+        .alu_operation(alu_operation),
+        .alu_result(alu_result),
+        .alu_zero(alu_zero),
     );
 
     memory data_memory (         
@@ -300,21 +291,6 @@ module segmented_core
         .address        (instruction_memory_read_address),  // Direccion de entrada a salida del pc
         .input_data     (instruction_memory_input_data),    // Forzamos datos de entrada a 0
         .output_data    (instruction_memory_output_data)    // La salida es la instruccion del sistema
-    );
-
-    mux_3_input mux_alu1 (                  // multiplexor con el que definimos la primera entrada de la ALU
-        .input0     (mux_three_input_1),    // Entrada a salida del pc
-        .input1     (mux_three_input_2),    // Entrada nula
-        .input2     (mux_three_input_3),    // Entrada a salida 1 con data leida del banco de registros
-        .control    (mux_three_select),
-        .out        (mux_three_output)      // Salida del multiplexor de 3 entradas
-    );
-
-    mux_2_input mux_alu2(                   // multiplexor con el que definimos la segunda entrada de la ALU
-        .input1     (mux_two_alu_input_1),  // Entrada a la salida 2 con data leida del banco de registros
-        .input2     (mux_two_alu_input_2),  // Entrada a la salida del generador de inmediatos   
-        .control    (mux_two_alu_select),   // Control al alu source
-        .out        (mux_two_alu_output)
     );
 
     mux_2_input mux_mem (                        // multiplexor a la salida de la memoria de datos
@@ -360,60 +336,61 @@ module segmented_core
         .alu_operation  (alu_controller_alu_operation)
     );
 
+    register_if_id register_if_id(
+        .clk                    (clk),
+        .pc_in                  (reg_if_id_pc_in),
+        .pc_out                 (reg_if_id_pc_out),
+        .instruction_in         (reg_if_id_instruction_in),
+        .instruction_out        (reg_if_id_instruction_out),
+        .flush_adder_enable     (reg_if_id_flush_adder_enable),
+        .flush_pc_enable        (reg_if_id_flush_pc_enable),
+        .pc_write_enable        (reg_if_if_pc_write_enable)
+    );
 
+    register_id_ex register_id_ex(
+        .clk                    (clk),
+        .ex_wiring              (reg_id_ex_wiring_ex),
+        .m_wiring               (reg_id_ex_wiring_m),
+        .wb_wiring              (reg_id_ex_wiring_wb),
+        .instruction_in         (reg_id_ex_instruction_in),
+        .instruction_out        (reg_id_ex_instruction_out),
+        .pc_in                  (reg_id_ex_pc_in),
+        .pc_out                 (reg_id_ex_pc_out),
+        .read_data_1_in         (reg_id_ex_read_data_1_in),
+        .read_data_1_out        (reg_id_ex_read_data_1_out),
+        .read_data_2_in         (reg_id_ex_read_data_2_in),
+        .read_data_2_out        (reg_id_ex_read_data_2_out),
+        .immediate_gen_in       (reg_id_ex_immediate_gen_in),
+        .immediate_gen_out      (reg_id_ex_immediate_gen_out),
+        .instruction_11_7_in    (reg_id_ex_instruction_11_7_in),
+        .instruction_11_7_out   (reg_id_ex_instruction_11_7_out),
+        .instruction_30_12_in   (reg_id_ex_instruction_30_12_in),
+        .instruction_30_12_out  (reg_id_ex_instruction_30_12_out)
+    );
 
+    register_ex_mem register_ex_mem(
+        .clk                    (clk),
+        .m_wiring               (reg_ex_mem_wiring_m),
+        .wb_wiring              (reg_ex_mem_wiring_wb),
+        .adder_sum_in           (reg_ex_mem_adder_sum_in),
+        .adder_sum_out          (reg_ex_mem_adder_sum_out),
+        .alu_result_in          (reg_ex_mem_alu_result_in),
+        .alu_result_out         (reg_ex_mem_alu_result_out),
+        .alu_read_data_2_in     (reg_ex_mem_alu_read_data_2_in),
+        .alu_read_data_2_out    (reg_ex_mem_alu_read_data_2_out),
+        .instruction_11_7_in    (reg_ex_mem_instruction_11_7_in),
+        .instruction_11_7_out   (reg_ex_mem_instruction_11_7_out)
+    );
 
-//Implementación registros PIPELINE
-
-//IF/ID
-always@(posedge clk)
-	begin	
-		IF_ID_instruction <= instruction_memory_output_data;
-		IF_ID_PC <= pc_register_output;
-	end
-	
-//ID/EX
-always@(posedge clk)
-		begin
-		ID_EX_PC <= IF_ID_PC;
-		ID_EX_read_data1 <= register_bank_read_data_1;
-		ID_EX_read_data2 <= register_bank_read_data_2;
-		ID_EX_out_IMM_GEN <= immediate_generator_output;
-		ID_EX_instruction1 <= IF_ID_instruction[30];
-		ID_EX_instruction1b <= IF_ID_instruction[14:12];
-		ID_EX_instruction2 <= IF_ID_instruction[11:7];
-		ID_EX_RegWrite <= main_controller_register_write;
-		ID_EX_MemtoReg <= main_controller_memory_to_register;
-		ID_EX_Branch <= main_controller_branch;
-		ID_EX_MemRead <= main_controller_memory_read;
-		ID_EX_ALUSrc <= main_controller_alu_source;
-		ID_EX_ALUOp <= main_controller_alu_option;
-		end
-
-//EX/MEM
-always@(posedge clk)
-	begin
-		EX_MEM_addersum <= adder_sum_output;
-		EX_MEM_alu_result <= alu_result;
-		EX_MEM_read_data2 <= ID_EX_read_data2;
-		EX_MEM_instruction2 <= ID_EX_instruction2;
-		EX_MEM_zero <= alu_zero;
-		EX_MEM_RegWrite <= ID_EX_RegWrite;
-		EX_MEM_MemtoReg <= ID_EX_MemtoReg;
-		EX_MEM_Branch <= ID_EX_Branch;
-		EX_MEM_MemRead <= ID_EX_MemRead;
-	end
-	
-
-//MEM/WB
-always@(posedge clk)
-	begin
-		MEM_WB_RegWrite <= EX_MEM_RegWrite;
-		MEM_WB_MemtoReg <= EX_MEM_MemtoReg;
-		MEM_WB_alu_result <= EX_MEM_alu_result;
-		MEM_WB_data_memory_out <= data_memory_output_data;
-		MEM_WB_instruction2 <= EX_MEM_instruction2;
-	end
-
+    register_mem_wb register_mem_wb(
+        .clk                    (clk),
+        .wb_wiring              (reg_mem_wb_wiring_wb),
+        .alu_result_in          (reg_mem_wb_alu_result_in),
+        .alu_result_out         (reg_mem_wb_alu_result_out),
+        .data_memory_out_in     (reg_mem_wb_data_memory_out_in),
+        .data_memory_out_out    (reg_mem_wb_data_memory_out_out),
+        .instruction_11_7_in    (reg_mem_wb_instruction_11_7_in),
+        .instruction_11_7_out   (reg_mem_wb_instruction_11_7_out)
+    );
 
 endmodule
