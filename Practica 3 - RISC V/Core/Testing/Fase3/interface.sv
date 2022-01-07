@@ -14,7 +14,7 @@ interface system_iff;
 
     // SEÑALES DUV -------------------------
         // SALIDA
-        logic [15:0] DOUT;
+        logic [15:0] DOUT;3
         // ENTRADA
         logic [15:0] DIN;
     //--------------------------------------
