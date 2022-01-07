@@ -35,7 +35,7 @@ module testbench();
     // Instanciación clase de test ---------------------------------------------------
     core_test core_test_inst;
     cores_encapsulator cores(
-        .clk(sys_iff.software_clock),
+        .clk(sys_iff.CLK),
         .reset(sys_iff.RESET_N)
     );
     //--------------------------------------------------------------------------------

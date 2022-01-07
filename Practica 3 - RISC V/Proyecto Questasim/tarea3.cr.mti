@@ -43,30 +43,35 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	ADDER
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(1): Cannot find `include file "memory.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(2): Cannot find `include file "register_bank.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module main_controller
+-- Compiling module alu_controller
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(5): Cannot find `include file "pc.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(6): Cannot find `include file "ADDER.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(7): Cannot find `include file "immgen.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(8): Cannot find `include file "mux_2_input.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(9): Cannot find `include file "mux_3_input.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv(10): Cannot find `include file "jump_controller.sv" in directories:
+    C:/questasim64_2020.2/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_2020.2/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module core
+
+} {3.0 4.0 5.0 6.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling package basic_task_sv_unit
 -- Compiling module basic_task
 
 Top level modules:
 	basic_task
-
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv}
-QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling module memory
--- Compiling module register_bank
--- Compiling module main_controller
--- Compiling module alu_controller
--- Compiling module PC
--- Compiling module ADDER
--- Compiling module imm_gen
--- Compiling module mux_2_input
--- Compiling module mux_3_input
--- Compiling module jump_controller
--- Compiling module core
-
-Top level modules:
-	core
 
 } {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/mux_2_input.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
@@ -82,18 +87,8 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 Top level modules:
 	alu_controller
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling module PC
-
-Top level modules:
-	PC
-
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
-QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
--- Compiling package testbench_sv_unit
--- Compiling module basic_task
--- Compiling interface system_iff
 -- Compiling module memory
 -- Compiling module register_bank
 -- Compiling module main_controller
@@ -104,29 +99,80 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module mux_2_input
 -- Compiling module mux_3_input
 -- Compiling module jump_controller
--- Compiling module core
--- Compiling module core_instances
--- Compiling module testbench
+-- Compiling module golden_model_core
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(1)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\memory.sv(1): (vlog-2275) Existing module 'memory' will be overwritten.
+-- Compiling module memory
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(2)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\register_bank.sv(1): (vlog-2275) Existing module 'register_bank' will be overwritten.
+-- Compiling module register_bank
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(3)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Controllers\main_controller.sv(18): (vlog-2275) Existing module 'main_controller' will be overwritten.
+-- Compiling module main_controller
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(4)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Controllers\alu_controller.sv(5): (vlog-2275) Existing module 'alu_controller' will be overwritten.
+-- Compiling module alu_controller
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(5)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\pc.sv(1): (vlog-2275) Existing module 'PC' will be overwritten.
+-- Compiling module PC
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(6)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\ADDER.sv(1): (vlog-2275) Existing module 'ADDER' will be overwritten.
+-- Compiling module ADDER
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(7)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\immgen.sv(1): (vlog-2275) Existing module 'imm_gen' will be overwritten.
+-- Compiling module imm_gen
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(8)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\mux_2_input.sv(1): (vlog-2275) Existing module 'mux_2_input' will be overwritten.
+-- Compiling module mux_2_input
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(9)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\mux_3_input.sv(1): (vlog-2275) Existing module 'mux_3_input' will be overwritten.
+-- Compiling module mux_3_input
+** Warning: ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(2)
+** while parsing file included at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv(10)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Basic Components\jump_controller.sv(1): (vlog-2275) Existing module 'jump_controller' will be overwritten.
+-- Compiling module jump_controller
+-- Compiling module segmented_core
+-- Compiling module cores_encapsulator
+** Warning: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv(35): (vlog-13233) Design unit "check_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package check_sv_unit
 
 Top level modules:
-	core_instances
-	testbench
+	cores_encapsulator
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/pc.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+** Error: (vlog-13069) ** while parsing file included at C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv(2)
+** at C:\Users\ivanv\OneDrive\Escritorio\UPV\3 TELECO\A\ISDIGI\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv(17): near "3": syntax error, unexpected INTEGER NUMBER, expecting "SystemVerilog keyword 'assert' " or "SystemVerilog keyword 'assume' " or restrict .
+
+} {3.0 4.0} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/immgen.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module imm_gen
 
 Top level modules:
 	imm_gen
 
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
+} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling interface system_iff
+** Error: (vlog-13069) C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv(17): near "3": syntax error, unexpected INTEGER NUMBER, expecting "SystemVerilog keyword 'assert' " or "SystemVerilog keyword 'assume' " or restrict .
 
-Top level modules:
-	--none--
-
-} {} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv}
+} {4.0 5.0} {}} {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv}
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module main_controller
 
