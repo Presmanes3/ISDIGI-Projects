@@ -2,14 +2,12 @@
 `include "./Basic Components/register_bank.sv"
 `include "./Controllers/main_controller.sv"
 `include "./Controllers/alu_controller.sv"
-`include "./Basic Components/pc.sv"
+`include "./Segmented Components/pc_segmented.sv"
 `include "./Basic Components/ADDER.sv"
 `include "./Basic Components/immgen.sv"
 `include "./Basic Components/mux_2_input.sv"
 `include "./Basic Components/mux_3_input.sv"
 `include "./Basic Components/jump_controller.sv"
-
-
 
 module segmented_core
 #(

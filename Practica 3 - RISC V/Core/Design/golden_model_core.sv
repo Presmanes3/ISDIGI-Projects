@@ -2,7 +2,7 @@
 `include "./Basic Components/register_bank.sv"
 `include "./Controllers/main_controller.sv"
 `include "./Controllers/alu_controller.sv"
-`include "./Basic Components/pc.sv"
+`include "./Golden Components/pc_golden.sv"
 `include "./Basic Components/ADDER.sv"
 `include "./Basic Components/immgen.sv"
 `include "./Basic Components/mux_2_input.sv"

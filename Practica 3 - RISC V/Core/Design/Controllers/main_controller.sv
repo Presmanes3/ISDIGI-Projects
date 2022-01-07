@@ -19,6 +19,8 @@ module main_controller(
 
     input [6:0] opcode,
 
+    input hazard_mux_enable,
+
     output reg branch,
     output reg memory_read,
     output reg memory_to_register,
