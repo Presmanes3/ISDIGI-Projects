@@ -1,4 +1,27 @@
-{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
+{C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling interface system_iff
+-- Compiling package testbench_sv_unit
+-- Compiling module basic_task
+-- Compiling interface system_iff
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module golden_model_core
+-- Compiling module cores_encapsulator
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/interface.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface system_iff
 
@@ -14,6 +37,23 @@ Top level modules:
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module golden_model_core
+
+Top level modules:
+	golden_model_core
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -35,6 +75,23 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	clear_pipeline
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module memory
+-- Compiling module register_bank
+-- Compiling module main_controller
+-- Compiling module alu_controller
+-- Compiling module PC
+-- Compiling module ADDER
+-- Compiling module imm_gen
+-- Compiling module mux_2_input
+-- Compiling module mux_3_input
+-- Compiling module jump_controller
+-- Compiling module segmented_core
+
+Top level modules:
+	segmented_core
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
