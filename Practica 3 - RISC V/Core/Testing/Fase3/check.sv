@@ -19,7 +19,7 @@ module cores_encapsulator(
     );
     // ------------------------------------------------------------------------------------
 
-    // CARGAMOS MODULOS REALES ------------------------------------------------------------
+    // CARGAMOS MODULOS SEGMENTED ------------------------------------------------------------
     segmented_core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) segmented_fib(
         .clk(clk),
         .reset(reset)
@@ -56,7 +56,7 @@ class core_test;
 
         for (int i = 0; i<Nmax_num-1; i++) begin
             int ideal_valor = testbench.cores.golden_fib.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = testbench.cores.golden_fib.data_memory.data_pool[dir_ini_core+i*4];
+            int real_valor = testbench.cores.segmented_fib.data_memory.data_pool[dir_ini_core+i*4];
 
             $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
         
@@ -87,7 +87,7 @@ class core_test;
 
         for (int i = 0; i<Nmax_num-1; i++) begin
             int ideal_valor = testbench.cores.golden_bubble.data_memory.data_pool[dir_ini_core+i*4];
-            int real_valor = testbench.cores.golden_bubble.data_memory.data_pool[dir_ini_core+i*4];
+            int real_valor = testbench.cores.segmented_bubble.data_memory.data_pool[dir_ini_core+i*4];
 
             $fwrite(txt,"%d, %d\n",ideal_valor, real_valor);
         
