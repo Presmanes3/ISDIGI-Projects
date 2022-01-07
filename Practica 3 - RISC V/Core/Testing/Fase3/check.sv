@@ -62,7 +62,7 @@ class core_test;
             end
             begin
                 // Wait till the segmented model finishes
-                //@(testbench.cores.segmented_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                @(testbench.cores.segmented_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
                 $display("[FIBBONACCI] Segmented model finished");
             end
         join
