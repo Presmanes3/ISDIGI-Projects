@@ -16,7 +16,7 @@ module register_if_id #(
 );
 
 always_ff @( posedge clk ) begin 
-    pc_out          <= pc_in,
+    pc_out <= pc_in;
     instruction_out <= instruction_in;
 end
     

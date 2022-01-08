@@ -27,12 +27,14 @@ module register_id_ex #(
     input       [data_bits - 1 : 0] immediate_gen_in,
     output reg  [data_bits - 1 : 0] immediate_gen_out,
 
-    input       [data_bits - 1 : 0] instruction_11_7_in,
-    output reg  [data_bits - 1 : 0] instruction_11_7_out,
+    input       [4:0] instruction_11_7_in,
+    output reg  [4:0] instruction_11_7_out,
 
-    input       [data_bits - 1 : 0] instruction_30_12_in,
-    output reg  [data_bits - 1 : 0] instruction_30_12_out
+    input       [2:0] instruction_14_12_in,
+    output reg  [2:0] instruction_14_12_out,
 
+    input        instruction_30_in,
+    output reg   instruction_30_out
 );
 
 register_m register_m_instance(
@@ -54,7 +56,9 @@ always_ff @( posedge clk ) begin
     read_data_2_out         <= read_data_2_in;
     immediate_gen_out       <= immediate_gen_in;
     instruction_11_7_out    <= instruction_11_7_in;
-    instruction_30_12_out   <= instruction_30_12_in;
+    instruction_14_12_out   <= instruction_14_12_in;
+    instruction_30_out <= instruction_30_in;
+
 end
     
 endmodule

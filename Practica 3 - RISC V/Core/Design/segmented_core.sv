@@ -33,6 +33,49 @@ module segmented_core
 );
 
    // ========== DEFINE ALL WIRES ========== //
+//Wiring MEM/WB
+wire [data_bits - 1 : 0] reg_mem_wb_alu_result_in;
+wire [data_bits - 1 : 0] reg_mem_wb_alu_result_out;
+wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_in;
+wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_out;
+wire [4:0] reg_mem_wb_instruction_11_7_in;
+wire [4:0] reg_mem_wb_instruction_11_7_out;
+//Wiring EX/MEM
+wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_in;
+wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_out;
+wire [data_bits - 1 : 0] reg_ex_mem_alu_result_in;
+wire [data_bits - 1 : 0] reg_ex_mem_alu_result_out;
+wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_in;
+wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_out;
+wire [4:0] reg_ex_mem_instruction_11_7_in;
+wire [4:0] reg_ex_mem_instruction_11_7_out;
+//Wiring ID/EX
+wire [data_bits - 1 : 0] reg_id_ex_pc_in;
+wire [data_bits - 1 : 0] reg_id_ex_pc_out;
+wire [data_bits - 1 : 0] reg_id_ex_read_data_1_in;
+wire [data_bits - 1 : 0] reg_id_ex_read_data_1_out;
+wire [data_bits - 1 : 0] reg_id_ex_read_data_2_in;
+wire [data_bits - 1 : 0] reg_id_ex_read_data_2_out;
+wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_in;
+wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_out;
+wire [4:0] reg_id_ex_instruction_11_7_in;
+wire [4:0] reg_id_ex_instruction_11_7_out;
+wire [2:0] reg_id_ex_instruction_14_12_in;
+wire [2:0] reg_id_ex_instruction_14_12_out;
+wire reg_id_ex_instruction_30_in;
+wire reg_id_ex_instruction_30_out;
+wire [5:0] reg_id_ex_instruction_in;
+wire [5:0] reg_id_ex_instruction_out;
+
+//Wiring IF/ID
+wire [data_bits - 1 : 0] reg_if_id_pc_in;
+wire [data_bits - 1 : 0] reg_if_id_pc_out;
+wire [data_bits - 1 : 0] reg_if_id_instruction_in;
+wire [data_bits - 1 : 0] reg_if_id_instruction_out;
+wire  reg_if_if_pc_write_enable;
+wire  reg_if_id_flush_adder_enable;
+wire  reg_if_id_flush_pc_enable;
+
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
     wire [data_bits - 1 : 0] adder_sum_input_2;
@@ -128,6 +171,7 @@ module segmented_core
     wire main_controller_alu_source;
     wire main_controller_register_write;
     wire [1 : 0] main_controller_AuipcLui;
+    wire main_controller_hazard_mux_enable;
 
     // Wiring for ALU controller
     wire [6 : 0] alu_controller_func_7_bits;
@@ -139,21 +183,23 @@ module segmented_core
     // Interface for IF/ID
 
     // Interface for ID/EX
-    register_ex_interface   reg_id_ex_wiring_ex;
-    register_m_interface    reg_id_m_wiring_ex;
-    register_wb_interface   reg_id_wb_wiring_ex;
+    register_ex_interface ID_EX_int (reg_id_ex_wiring_ex);
+    register_m_interface  ID_M_int  (reg_id_m_wiring_ex);
+    register_wb_interface ID_WB_int  (reg_id_wb_wiring_ex);
 
     // Interface for EX/MEM
-    register_m_interface    reg_ex_mem_wiring_ex;
-    register_wb_interface   reg_ex_mem_wiring_ex;
+    register_m_interface  EX_M_int  (reg_ex_m_wiring_ex);
+    register_wb_interface EX_WB_int  (reg_ex_wb_wiring_ex);
 
     // Interface for MEM/WB
-    register_wb_interface   reg_mem_wb_wiring_ex;
+    register_wb_interface MEM_WB_int  (reg_mem_wb_wiring_ex);
 
     // ========== ASSIGN CABLES ========== //
+
+
     // ADDER SUM connections
-    assign adder_sum_input_1 = ID_EX_PC;
-    assign adder_sum_input_2 = ID_EX_out_IMM_GEN;//hay que shiftear 1 pero nome deja 
+    assign adder_sum_input_1 = reg_id_ex_pc_out;
+    assign adder_sum_input_2 = reg_id_ex_immediate_gen_out;//hay que shiftear 1 pero nome deja 
 
     // ADDER PC connections
     assign adder_pc_input_1 = pc_register_output;
@@ -187,14 +233,14 @@ module segmented_core
 
     // Register Bank connections
     assign register_bank_clk                        = clk;
-    assign register_bank_read_register_1_address    = IF_ID_instruction[19 : 15];
-    assign register_bank_read_register_2_address    = IF_ID_instruction[24 : 20];
-    assign register_bank_write_register_address     = IF_ID_instruction[11 : 7 ];
+    assign register_bank_read_register_1_address    = reg_if_id_instruction_out[19 : 15];
+    assign register_bank_read_register_2_address    = reg_if_id_instruction_out[24 : 20];
+    assign register_bank_write_register_address     = reg_if_id_instruction_out[11 : 7 ];
     assign register_bank_write_data                 = mux_two_data_mem_output;
     assign register_bank_write_enable               = main_controller_register_write;
 
     // Immediate generator connections
-    assign immediate_generator_input = IF_ID_instruction;
+    assign immediate_generator_input = reg_if_id_instruction_out;
 
     // MUX_THREE connections
     assign mux_three_input_1    = pc_register_output;
@@ -204,13 +250,13 @@ module segmented_core
     assign mux_three_select     = 2; 
 
     // MUX_TWO_ALU connections
-    assign mux_two_alu_input_1 = ID_EX_read_data2;
-    assign mux_two_alu_input_2 = ID_EX_out_IMM_GEN;
+    assign mux_two_alu_input_1 = reg_id_ex_read_data_2_out;
+    assign mux_two_alu_input_2 = reg_id_ex_immediate_gen_out;
     assign mux_two_alu_select  = main_controller_alu_source;
 
     // MUX_TWO_MEM connections
-    assign mux_two_data_mem_input_1 = MEM_WB_alu_result;
-    assign mux_two_data_mem_input_2 = MEM_WB_data_memory_out;
+    assign mux_two_data_mem_input_1 = reg_mem_wb_alu_result_out;
+    assign mux_two_data_mem_input_2 = reg_mem_wb_data_memory_out_out;
     assign mux_two_data_mem_select  = main_controller_memory_to_register;
 
     // ALU controller connections
@@ -223,9 +269,9 @@ module segmented_core
 
     // Data memory connections
     assign data_memory_clk          = clk;
-    assign data_memory_read_address = EX_MEM_alu_result[data_bits - 1 : 2];
+    assign data_memory_read_address = reg_ex_mem_alu_result_out[data_bits - 1 : 2];
     assign data_memory_input_data   = register_bank_read_data_2;
-    assign data_memory_write_enable = EX_MEM_read_data2;
+    assign data_memory_write_enable = reg_ex_mem_alu_read_data_2_out;
     assign data_memory_read_enable  = main_controller_memory_read;
 
     // Configure Adders and PC
@@ -272,7 +318,7 @@ module segmented_core
         .prev_result_from_reg(),
         .alu_operation(alu_operation),
         .alu_result(alu_result),
-        .alu_zero(alu_zero),
+        .alu_zero(alu_zero)
     );
 
     memory data_memory (         
@@ -321,6 +367,7 @@ module segmented_core
         .opcode             (main_controller_opcode),
         .branch             (main_controller_branch),
         .memory_read        (main_controller_memory_read),
+        .hazard_mux_enable  (main_controller_hazard_mux_enable),
         .memory_to_register (main_controller_memory_to_register),
         .alu_option         (main_controller_alu_option),
         .memory_write       (main_controller_memory_write),
@@ -328,6 +375,8 @@ module segmented_core
         .register_write     (main_controller_register_write),
         .AuipcLui           (main_controller_AuipcLui)
     );
+
+
 
     alu_controller alu_control(
         .func_7_bits    (alu_controller_func_7_bits),
@@ -349,9 +398,9 @@ module segmented_core
 
     register_id_ex register_id_ex(
         .clk                    (clk),
-        .ex_wiring              (reg_id_ex_wiring_ex),
-        .m_wiring               (reg_id_ex_wiring_m),
-        .wb_wiring              (reg_id_ex_wiring_wb),
+        .ex_wiring              (ID_EX_int),
+        .m_wiring               (ID_M_int),
+        .wb_wiring              (ID_WB_int),
         .instruction_in         (reg_id_ex_instruction_in),
         .instruction_out        (reg_id_ex_instruction_out),
         .pc_in                  (reg_id_ex_pc_in),
@@ -364,14 +413,17 @@ module segmented_core
         .immediate_gen_out      (reg_id_ex_immediate_gen_out),
         .instruction_11_7_in    (reg_id_ex_instruction_11_7_in),
         .instruction_11_7_out   (reg_id_ex_instruction_11_7_out),
-        .instruction_30_12_in   (reg_id_ex_instruction_30_12_in),
-        .instruction_30_12_out  (reg_id_ex_instruction_30_12_out)
+        .instruction_14_12_in   (reg_id_ex_instruction_14_12_in),
+        .instruction_14_12_out  (reg_id_ex_instruction_14_12_out),
+        .instruction_30_in      (reg_id_ex_instruction_30_in),
+        .instruction_30_out     (reg_id_ex_instruction_30_out)
+
     );
 
     register_ex_mem register_ex_mem(
         .clk                    (clk),
-        .m_wiring               (reg_ex_mem_wiring_m),
-        .wb_wiring              (reg_ex_mem_wiring_wb),
+        .m_wiring               (EX_M_int),
+        .wb_wiring              (EX_WB_int),
         .adder_sum_in           (reg_ex_mem_adder_sum_in),
         .adder_sum_out          (reg_ex_mem_adder_sum_out),
         .alu_result_in          (reg_ex_mem_alu_result_in),
@@ -384,7 +436,7 @@ module segmented_core
 
     register_mem_wb register_mem_wb(
         .clk                    (clk),
-        .wb_wiring              (reg_mem_wb_wiring_wb),
+        .wb_wiring              (MEM_WB_int),
         .alu_result_in          (reg_mem_wb_alu_result_in),
         .alu_result_out         (reg_mem_wb_alu_result_out),
         .data_memory_out_in     (reg_mem_wb_data_memory_out_in),
@@ -394,3 +446,6 @@ module segmented_core
     );
 
 endmodule
+
+
+
