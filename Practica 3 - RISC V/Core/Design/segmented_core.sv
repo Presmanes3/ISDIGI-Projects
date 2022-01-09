@@ -183,18 +183,35 @@ wire  reg_if_id_flush_pc_enable;
     // Interface for IF/ID
 
     // Interface for ID/EX
-    register_ex_interface ID_EX_int (reg_id_ex_wiring_ex);
-    register_m_interface  ID_M_int  (reg_id_m_wiring_ex);
-    register_wb_interface ID_WB_int  (reg_id_wb_wiring_ex);
+    register_ex_interface reg_id_ex_ex_wiring();
+    register_m_interface  reg_id_ex_m_wiring();
+    register_wb_interface reg_id_ex_wb_wiring();
 
     // Interface for EX/MEM
-    register_m_interface  EX_M_int  (reg_ex_m_wiring_ex);
-    register_wb_interface EX_WB_int  (reg_ex_wb_wiring_ex);
+    register_m_interface  reg_ex_mem_m_wiring();
+    register_wb_interface reg_ex_mem_wb_wiring();
 
     // Interface for MEM/WB
-    register_wb_interface MEM_WB_int  (reg_mem_wb_wiring_ex);
+    register_wb_interface reg_mem_wb_wb_wiring();
 
     // ========== ASSIGN CABLES ========== //
+
+    // REGISTER ID/EX WIRING connections
+    // SMALL REGISTER EX
+    assign reg_id_ex_ex_wiring.clk = clk;
+
+    // SMALL REGISTER M
+    assign reg_id_ex_m_wiring.clk = clk;
+
+    // SMALL REGISTER WB
+    assign reg_id_ex_wb_wiring.clk = clk;
+
+    // REGISTER EX/MEM WIRING connections
+    assign reg_ex_mem_ex_wiring.clk = clk;
+
+    // REGISTER MEM/WB WIRING connections
+    assign reg_mem_wb_ex_wiring.clk = clk;
+
 
 
     // ADDER SUM connections
@@ -398,9 +415,9 @@ wire  reg_if_id_flush_pc_enable;
 
     register_id_ex register_id_ex(
         .clk                    (clk),
-        .ex_wiring              (ID_EX_int),
-        .m_wiring               (ID_M_int),
-        .wb_wiring              (ID_WB_int),
+        .ex_wiring              (reg_id_ex_ex_wiring),
+        .m_wiring               (reg_id_ex_m_wiring),
+        .wb_wiring              (reg_id_ex_wb_wiring),
         .instruction_in         (reg_id_ex_instruction_in),
         .instruction_out        (reg_id_ex_instruction_out),
         .pc_in                  (reg_id_ex_pc_in),
@@ -422,8 +439,8 @@ wire  reg_if_id_flush_pc_enable;
 
     register_ex_mem register_ex_mem(
         .clk                    (clk),
-        .m_wiring               (EX_M_int),
-        .wb_wiring              (EX_WB_int),
+        .m_wiring               (reg_ex_mem_m_wiring),
+        .wb_wiring              (reg_ex_mem_wb_wiring),
         .adder_sum_in           (reg_ex_mem_adder_sum_in),
         .adder_sum_out          (reg_ex_mem_adder_sum_out),
         .alu_result_in          (reg_ex_mem_alu_result_in),
@@ -436,7 +453,7 @@ wire  reg_if_id_flush_pc_enable;
 
     register_mem_wb register_mem_wb(
         .clk                    (clk),
-        .wb_wiring              (MEM_WB_int),
+        .wb_wiring              (reg_mem_wb_wb_wiring),
         .alu_result_in          (reg_mem_wb_alu_result_in),
         .alu_result_out         (reg_mem_wb_alu_result_out),
         .data_memory_out_in     (reg_mem_wb_data_memory_out_in),
