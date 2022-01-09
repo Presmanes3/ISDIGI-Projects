@@ -32,49 +32,83 @@ module segmented_core
     input reset
 );
 
-   // ========== DEFINE ALL WIRES ========== //
-//Wiring MEM/WB
-wire [data_bits - 1 : 0] reg_mem_wb_alu_result_in;
-wire [data_bits - 1 : 0] reg_mem_wb_alu_result_out;
-wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_in;
-wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_out;
-wire [4:0] reg_mem_wb_instruction_11_7_in;
-wire [4:0] reg_mem_wb_instruction_11_7_out;
-//Wiring EX/MEM
-wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_in;
-wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_out;
-wire [data_bits - 1 : 0] reg_ex_mem_alu_result_in;
-wire [data_bits - 1 : 0] reg_ex_mem_alu_result_out;
-wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_in;
-wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_out;
-wire [4:0] reg_ex_mem_instruction_11_7_in;
-wire [4:0] reg_ex_mem_instruction_11_7_out;
-//Wiring ID/EX
-wire [data_bits - 1 : 0] reg_id_ex_pc_in;
-wire [data_bits - 1 : 0] reg_id_ex_pc_out;
-wire [data_bits - 1 : 0] reg_id_ex_read_data_1_in;
-wire [data_bits - 1 : 0] reg_id_ex_read_data_1_out;
-wire [data_bits - 1 : 0] reg_id_ex_read_data_2_in;
-wire [data_bits - 1 : 0] reg_id_ex_read_data_2_out;
-wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_in;
-wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_out;
-wire [4:0] reg_id_ex_instruction_11_7_in;
-wire [4:0] reg_id_ex_instruction_11_7_out;
-wire [2:0] reg_id_ex_instruction_14_12_in;
-wire [2:0] reg_id_ex_instruction_14_12_out;
-wire reg_id_ex_instruction_30_in;
-wire reg_id_ex_instruction_30_out;
-wire [5:0] reg_id_ex_instruction_in;
-wire [5:0] reg_id_ex_instruction_out;
+    // ========== DEFINE ALL WIRES ========== //
+    //Wiring MEM/WB
+    wire [data_bits - 1 : 0] reg_mem_wb_alu_result_in;
+    wire [data_bits - 1 : 0] reg_mem_wb_alu_result_out;
+    wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_in;
+    wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_out;
+    wire [4:0] reg_mem_wb_instruction_11_7_in;
+    wire [4:0] reg_mem_wb_instruction_11_7_out;
+    //Wiring EX/MEM
+    wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_in;
+    wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_out;
+    wire [data_bits - 1 : 0] reg_ex_mem_alu_result_in;
+    wire [data_bits - 1 : 0] reg_ex_mem_alu_result_out;
+    wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_in;
+    wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_out;
+    wire [4:0] reg_ex_mem_instruction_11_7_in;
+    wire [4:0] reg_ex_mem_instruction_11_7_out;
+    //Wiring ID/EX
+    wire [data_bits - 1 : 0] reg_id_ex_pc_in;
+    wire [data_bits - 1 : 0] reg_id_ex_pc_out;
+    wire [data_bits - 1 : 0] reg_id_ex_read_data_1_in;
+    wire [data_bits - 1 : 0] reg_id_ex_read_data_1_out;
+    wire [data_bits - 1 : 0] reg_id_ex_read_data_2_in;
+    wire [data_bits - 1 : 0] reg_id_ex_read_data_2_out;
+    wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_in;
+    wire [data_bits - 1 : 0] reg_id_ex_immediate_gen_out;
+    wire [4:0] reg_id_ex_instruction_11_7_in;
+    wire [4:0] reg_id_ex_instruction_11_7_out;
+    wire [2:0] reg_id_ex_instruction_14_12_in;
+    wire [2:0] reg_id_ex_instruction_14_12_out;
+    wire reg_id_ex_instruction_30_in;
+    wire reg_id_ex_instruction_30_out;
+    wire [5:0] reg_id_ex_instruction_in;
+    wire [5:0] reg_id_ex_instruction_out;
 
-//Wiring IF/ID
-wire [data_bits - 1 : 0] reg_if_id_pc_in;
-wire [data_bits - 1 : 0] reg_if_id_pc_out;
-wire [data_bits - 1 : 0] reg_if_id_instruction_in;
-wire [data_bits - 1 : 0] reg_if_id_instruction_out;
-wire  reg_if_if_pc_write_enable;
-wire  reg_if_id_flush_adder_enable;
-wire  reg_if_id_flush_pc_enable;
+    //Wiring IF/ID
+    wire [data_bits - 1 : 0] reg_if_id_pc_in;
+    wire [data_bits - 1 : 0] reg_if_id_pc_out;
+    wire [data_bits - 1 : 0] reg_if_id_instruction_in;
+    wire [data_bits - 1 : 0] reg_if_id_instruction_out;
+    wire  reg_if_if_pc_write_enable;
+    wire  reg_if_id_flush_adder_enable;
+    wire  reg_if_id_flush_pc_enable;
+
+    // Wiring Hazard detection unit
+    wire hazard_detect_hazard_mux;
+    wire hazard_detect_pc_write_id;
+    wire hazard_detect_flush;
+    wire hazard_detect_flush_pc;
+    wire hazard_detect_flush_adder;
+    wire hazard_detect_force_jump_wb;
+    wire hazard_detect_branch_mux_mem;
+    wire hazard_detect_mem_read_ex;
+    wire hazard_detect_rd_addr_ex;
+    wire hazard_detect_rs1_addr_id;
+    wire hazard_detect_rs2_addr_id;
+    wire hazard_detect_force_jump_id;
+    wire hazard_detect_foce_jump_ex;
+    wire hazard_detect_force_jump_mem;
+
+    // Wiring clear pipeline
+    wire clear_pipeline_branch_mux_mem;
+    wire clear_pipeline_jump_pc_mem;
+    wire clear_pipeline_clk;
+    wire clear_pipeline_reset;
+    wire clear_pipeline_clear_pipeline;
+
+    // Wiring data forwarding
+    wire [1:0] data_forwarding_forward1;
+    wire [1:0] data_forwarding_forward2;
+    wire [4:0] data_forwarding_rs1_addr_ex;
+    wire [4:0] data_forwarding_rs2_addr_ex;
+    wire data_forwarding_reg_write_mem;
+    wire data_forwarding_reg_write_wb;
+    wire [4:0] data_forwarding_rd_addr_mem;
+    wire d[4:0] data_forwarding_rd_addr_wb;
+
 
     // Wiring for ADDER_SUM
     wire [data_bits - 1 : 0] adder_sum_input_1;
@@ -393,14 +427,14 @@ wire  reg_if_id_flush_pc_enable;
         .AuipcLui           (main_controller_AuipcLui)
     );
 
-
-
     alu_controller alu_control(
         .func_7_bits    (alu_controller_func_7_bits),
         .func_3_bits    (alu_controller_func_3_bits),
         .alu_option     (alu_controller_alu_option),
         .alu_operation  (alu_controller_alu_operation)
     );
+
+    // ========== ========== REGISTERS ========== ========== //
 
     register_if_id register_if_id(
         .clk                    (clk),
@@ -460,6 +494,43 @@ wire  reg_if_id_flush_pc_enable;
         .data_memory_out_out    (reg_mem_wb_data_memory_out_out),
         .instruction_11_7_in    (reg_mem_wb_instruction_11_7_in),
         .instruction_11_7_out   (reg_mem_wb_instruction_11_7_out)
+    );
+
+    // ========== ========== RISK DETECTORS ========== ========== //
+    hazard_detection_unit hazard_detection_unit(
+        .pc_write_id    (hazard_detect_pc_write_id),
+        .hazard_mux     (hazard_detect_hazard_mux),
+        .flush          (hazard_detect_flush),
+        .flush_pc       (hazard_detect_flush_pc),
+        .flush_adder    (hazard_detect_flush_adder),
+        .force_jump_wb  (hazard_detect_force_jump_wb),
+        .branch_mux_mem (hazard_detect_branch_mux_mem),
+        .mem_read_ex    (hazard_detect_mem_read_ex),
+        .rd_addr_ex     (hazard_detect_rd_addr_ex),
+        .rs1_addr_id    (hazard_detect_rs1_addr_id),
+        .rs2_addr_id    (hazard_detect_rs2_addr_id),
+        .force_jump_id  (hazard_detect_force_jump_id),
+        .force_jump_ex  (hazard_detect_foce_jump_ex),
+        .jorce_jump_mem (hazard_detect_force_jump_mem)
+    );
+
+    clear_pipeline clear_pipeline(
+        .branch_mux_mem (clear_pipeline_branch_mux_mem),
+        .jump_pc_mem    (clear_pipeline_jump_pc_mem),
+        .clk            (clear_pipeline_clk),
+        .reset          (clear_pipeline_reset),
+        .clear_pipeline (clear_pipeline_clear_pipeline)
+    );
+
+    data_forwarding data_forwarding(
+        .forward1       (data_forwarding_forward1),
+        .forward2       (data_forwarding_forward2),
+        .rs1_addr_ex    (data_forwarding_rs1_addr_ex),
+        .rs2_addr_ex    (data_forwarding_rs2_addr_ex),
+        .reg_write_mem  (data_forwarding_reg_write_mem),
+        .reg_write_wb   (data_forwarding_reg_write_wb),
+        .rd_addr_mem    (data_forwarding_rd_addr_mem),
+        .rd_addr_wb     (data_forwarding_rd_addr_wb)
     );
 
 endmodule
