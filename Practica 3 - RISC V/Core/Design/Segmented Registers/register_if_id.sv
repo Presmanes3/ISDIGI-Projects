@@ -3,6 +3,7 @@ module register_if_id #(
 ) (
 
     input clk,
+    input pc_write_id_enable,
 
     input       [data_bits - 1 : 0] pc_in,
     output reg  [data_bits - 1 : 0] pc_out,
@@ -16,7 +17,7 @@ module register_if_id #(
 );
 
 always_ff @( posedge clk ) begin 
-    pc_out <= pc_in;
+    if(pc_write_id_enable) pc_out <= pc_in;
     instruction_out <= instruction_in;
 end
     

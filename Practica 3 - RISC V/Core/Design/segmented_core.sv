@@ -40,7 +40,9 @@ module segmented_core
     wire [data_bits - 1 : 0] reg_mem_wb_data_memory_out_out;
     wire [4:0] reg_mem_wb_instruction_11_7_in;
     wire [4:0] reg_mem_wb_instruction_11_7_out;
+
     //Wiring EX/MEM
+    wire reg_ex_mem_clear_pipeline;
     wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_in;
     wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_out;
     wire [data_bits - 1 : 0] reg_ex_mem_alu_result_in;
@@ -49,7 +51,9 @@ module segmented_core
     wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_out;
     wire [4:0] reg_ex_mem_instruction_11_7_in;
     wire [4:0] reg_ex_mem_instruction_11_7_out;
+
     //Wiring ID/EX
+    wire reg_id_ex_clear_pipeline;
     wire [data_bits - 1 : 0] reg_id_ex_pc_in;
     wire [data_bits - 1 : 0] reg_id_ex_pc_out;
     wire [data_bits - 1 : 0] reg_id_ex_read_data_1_in;
@@ -68,6 +72,7 @@ module segmented_core
     wire [5:0] reg_id_ex_instruction_out;
 
     //Wiring IF/ID
+    wire reg_if_id_pc_write_id_enable;
     wire [data_bits - 1 : 0] reg_if_id_pc_in;
     wire [data_bits - 1 : 0] reg_if_id_pc_out;
     wire [data_bits - 1 : 0] reg_if_id_instruction_in;
@@ -125,6 +130,7 @@ module segmented_core
     wire [data_bits - 1 : 0] pc_register_output;
     wire pc_register_clk;
     wire pc_register_reset;
+    wire pc_register_pc_write_id_enable;
 
     // Wiring for Instruction Memory (ROM)
     wire instruction_memory_clk;
@@ -261,8 +267,6 @@ module segmented_core
     // SMALL REGISTER WB
     assign reg_mem_wb_wb_wiring.clk = clk;
 
-
-
     // ADDER SUM connections
     assign adder_sum_input_1 = reg_id_ex_pc_out;
     assign adder_sum_input_2 = reg_id_ex_immediate_gen_out;//hay que shiftear 1 pero nome deja 
@@ -361,10 +365,11 @@ module segmented_core
     );
 
     PC PC (
-        .in     (pc_register_input),    // Entrada del pc
-        .out    (pc_register_output),    // Salida del pc
-        .clk    (pc_register_clk),
-        .reset  (pc_register_reset)
+        .in                 (pc_register_input),    // Entrada del pc
+        .out                (pc_register_output),    // Salida del pc
+        .pc_write_id_enable (pc_register_pc_write_id_enable),
+        .clk                (pc_register_clk),
+        .reset              (pc_register_reset)
     );
 
     jump_controller jump_controller_(
@@ -453,6 +458,7 @@ module segmented_core
 
     register_if_id register_if_id(
         .clk                    (clk),
+        .pc_write_id_enable     (reg_if_id_pc_write_id_enable),
         .pc_in                  (reg_if_id_pc_in),
         .pc_out                 (reg_if_id_pc_out),
         .instruction_in         (reg_if_id_instruction_in),
@@ -464,6 +470,7 @@ module segmented_core
 
     register_id_ex register_id_ex(
         .clk                    (clk),
+        .clear_pipeline         (reg_id_ex_clear_pipeline),
         .ex_wiring              (reg_id_ex_ex_wiring),
         .m_wiring               (reg_id_ex_m_wiring),
         .wb_wiring              (reg_id_ex_wb_wiring),
@@ -488,6 +495,7 @@ module segmented_core
 
     register_ex_mem register_ex_mem(
         .clk                    (clk),
+        .clear_pipeline         (reg_ex_mem_clear_pipeline),
         .m_wiring               (reg_ex_mem_m_wiring),
         .wb_wiring              (reg_ex_mem_wb_wiring),
         .adder_sum_in           (reg_ex_mem_adder_sum_in),

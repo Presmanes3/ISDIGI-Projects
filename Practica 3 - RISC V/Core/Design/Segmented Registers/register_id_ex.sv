@@ -7,10 +7,11 @@ module register_id_ex #(
 ) (
 
     input clk,
+    input clear_pipeline,
 
-    register_ex_interface ex_wiring,
-    register_m_interface m_wiring,
-    register_wb_interface wb_wiring,
+    register_ex_interface   ex_wiring,
+    register_m_interface    m_wiring,
+    register_wb_interface   wb_wiring,
 
     input       [5 : 0] instruction_in,
     output  reg [5 : 0] instruction_out,
@@ -37,6 +38,10 @@ module register_id_ex #(
     output reg   instruction_30_out
 );
 
+assign m_wiring.n_enable_output  = clear_pipeline;
+assign wb_wiring.n_enable_output = clear_pipeline;
+assign ex_wiring.n_enable_output = clear_pipeline;
+
 register_m register_m_instance(
     .wiring(m_wiring)
 );
@@ -50,15 +55,17 @@ register_ex register_ex_instance(
 );
 
 always_ff @( posedge clk ) begin
-    instruction_out         <= instruction_in;
-    pc_out                  <= pc_in;
-    read_data_1_out         <= read_data_1_in;
-    read_data_2_out         <= read_data_2_in;
-    immediate_gen_out       <= immediate_gen_in;
-    instruction_11_7_out    <= instruction_11_7_in;
-    instruction_14_12_out   <= instruction_14_12_in;
-    instruction_30_out <= instruction_30_in;
 
+    if(!clear_pipeline)begin
+        instruction_out         <= instruction_in;
+        pc_out                  <= pc_in;
+        read_data_1_out         <= read_data_1_in;
+        read_data_2_out         <= read_data_2_in;
+        immediate_gen_out       <= immediate_gen_in;
+        instruction_11_7_out    <= instruction_11_7_in;
+        instruction_14_12_out   <= instruction_14_12_in;
+        instruction_30_out      <= instruction_30_in;
+    end
 end
     
 endmodule

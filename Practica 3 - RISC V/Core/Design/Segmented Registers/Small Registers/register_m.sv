@@ -14,6 +14,8 @@ interface register_m_interface();
     logic branch_out;
     logic mem_write_out;
     logic mem_read_out;
+
+    logic n_enable_output;
 endinterface //register_m_interface
 
 
@@ -22,12 +24,14 @@ module register_m (
 );
 
 always_ff @( posedge wiring.clk ) begin 
-    wiring.jump_pc_in           <= wiring.jump_pc_out;
-    wiring.instruction_func_in  <= wiring.instruction_func_out;
-    wiring.force_jump_in        <= wiring.force_jump_out;
-    wiring.branch_in            <= wiring.branch_out;
-    wiring.mem_write_in         <= wiring.mem_write_out;
-    wiring.mem_read_in          <= wiring.mem_read_out;
+    if(!wiring.n_enable_output)begin 
+        wiring.jump_pc_in           <= wiring.jump_pc_out;
+        wiring.instruction_func_in  <= wiring.instruction_func_out;
+        wiring.force_jump_in        <= wiring.force_jump_out;
+        wiring.branch_in            <= wiring.branch_out;
+        wiring.mem_write_in         <= wiring.mem_write_out;
+        wiring.mem_read_in          <= wiring.mem_read_out;
+    end
 end
     
 endmodule

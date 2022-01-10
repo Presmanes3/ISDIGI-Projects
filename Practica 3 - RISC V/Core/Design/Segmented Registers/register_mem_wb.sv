@@ -18,6 +18,8 @@ module register_mem_wb #(
 
 );
 
+assign wb_wiring.n_enable_output = 1'b0;
+
 register_wb register_wb_instance(
     .wiring(wb_wiring)
 );

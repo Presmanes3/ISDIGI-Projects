@@ -14,6 +14,8 @@ module PC
 
 always_ff @(posedge clk or negedge reset) begin
 		if(!reset) 	out = 0;
-		else 		out <= in;
+		else begin
+			if(pc_write_id_enable) out <= in;
+		end
 	end
 endmodule 
