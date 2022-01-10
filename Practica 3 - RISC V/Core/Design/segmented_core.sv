@@ -107,7 +107,7 @@ module segmented_core
     wire data_forwarding_reg_write_mem;
     wire data_forwarding_reg_write_wb;
     wire [4:0] data_forwarding_rd_addr_mem;
-    wire d[4:0] data_forwarding_rd_addr_wb;
+    wire [4:0] data_forwarding_rd_addr_wb;
 
 
     // Wiring for ADDER_SUM
@@ -168,7 +168,17 @@ module segmented_core
     wire [data_bits - 1 : 0] alu_input_2;
     wire [3 : 0] alu_operation;
     wire [data_bits - 1 : 0] alu_result;
-    wire alu_zero;                
+    wire alu_zero;   
+
+    wire [data_bits - 1 : 0] alu_encapsulator_register_data_1_in;
+    wire [data_bits - 1 : 0] alu_encapsulator_register_data_2_in;
+    wire [1:0] alu_encapsulator_forward_controller_1;
+    wire [1:0] alu_encapsulator_forward_controller_2;
+    wire [data_bits - 1 : 0] alu_encapsulator_prev_result_from_mux;
+    wire [data_bits - 1 : 0] alu_encapsulator_prev_result_from_reg;
+    wire [3:0] alu_encapsulator_alu_operation;
+    wire [data_bits - 1 : 0] alu_encapsulator_alu_result;
+    wire alu_encapsulator_alu_zero;             
 
     // Wiring for MUX_TWO_ALU
     wire [data_bits - 1 : 0] mux_two_alu_input_1;
@@ -241,10 +251,15 @@ module segmented_core
     assign reg_id_ex_wb_wiring.clk = clk;
 
     // REGISTER EX/MEM WIRING connections
-    assign reg_ex_mem_ex_wiring.clk = clk;
+    // SMALL REGISTER M
+    assign reg_ex_mem_m_wiring.clk = clk;
+
+    // SMALL REGISTER WB
+    assign reg_ex_mem_wb_wiring.clk = clk;
 
     // REGISTER MEM/WB WIRING connections
-    assign reg_mem_wb_ex_wiring.clk = clk;
+    // SMALL REGISTER WB
+    assign reg_mem_wb_wb_wiring.clk = clk;
 
 
 
@@ -361,15 +376,15 @@ module segmented_core
     );
 
     alu_encapsulator alu_encapsulator(
-        .register_data_1_in(),
-        .register_data_2_in(),
-        .forward_controller_1(),
-        .forward_controller_2(),
-        .prev_result_from_mux(),
-        .prev_result_from_reg(),
-        .alu_operation(alu_operation),
-        .alu_result(alu_result),
-        .alu_zero(alu_zero)
+        .register_data_1_in     (alu_encapsulator_register_data_1_in),
+        .register_data_2_in     (alu_encapsulator_register_data_2_in),
+        .forward_controller_1   (alu_encapsulator_forward_controller_1),
+        .forward_controller_2   (alu_encapsulator_forward_controller_2),
+        .prev_result_from_mux   (alu_encapsulator_prev_result_from_mux),
+        .prev_result_from_reg   (alu_encapsulator_prev_result_from_reg),
+        .alu_operation          (alu_encapsulator_alu_operation),
+        .alu_result             (alu_encapsulator_alu_result),
+        .alu_zero               (alu_encapsulator_alu_zero)
     );
 
     memory data_memory (         
@@ -511,7 +526,7 @@ module segmented_core
         .rs2_addr_id    (hazard_detect_rs2_addr_id),
         .force_jump_id  (hazard_detect_force_jump_id),
         .force_jump_ex  (hazard_detect_foce_jump_ex),
-        .jorce_jump_mem (hazard_detect_force_jump_mem)
+        .force_jump_mem (hazard_detect_force_jump_mem)
     );
 
     clear_pipeline clear_pipeline(

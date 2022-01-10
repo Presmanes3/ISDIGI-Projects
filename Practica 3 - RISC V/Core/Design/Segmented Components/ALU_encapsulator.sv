@@ -24,17 +24,17 @@ module alu_encapsulator #(
     wire [data_bits - 1 : 0] alu_input_2;
 
     mux_3_input mux_alu_input_1(
-        .input1(register_data_1_in),  // Entrada a la salida del registro ID/EX salida read_data_1_out
-        .input2(prev_result_from_reg),  // Entrada a salida del registro EX/MEM salida alu_operation_out
-        .input3(prev_result_from_mux),  // Entrada a salida del multiplexor de 2 entradas del registro MEM/WB 
+        .input0(register_data_1_in),  // Entrada a la salida del registro ID/EX salida read_data_1_out
+        .input1(prev_result_from_reg),  // Entrada a salida del registro EX/MEM salida alu_operation_out
+        .input2(prev_result_from_mux),  // Entrada a salida del multiplexor de 2 entradas del registro MEM/WB 
         .control(forward_controller_1), // Entrada a la salida forward 1 del forwarding unit    
         .out(alu_input_1)      // Salida a entrada 1 de la ALu
     );
 
     mux_3_input mux_alu_input_2(
-        .input1(register_data_2_in),  // Entrada a la salida del registro ID/EX salida read_data_2_out
-        .input2(prev_result_from_reg),  // Entrada a salida del registro EX/MEM salida alu_operation_out
-        .input3(prev_result_from_mux),  // Entrada a salida del multiplexor de 2 entradas del registro MEM/WB 
+        .input0(register_data_2_in),  // Entrada a la salida del registro ID/EX salida read_data_2_out
+        .input1(prev_result_from_reg),  // Entrada a salida del registro EX/MEM salida alu_operation_out
+        .input2(prev_result_from_mux),  // Entrada a salida del multiplexor de 2 entradas del registro MEM/WB 
         .control(forward_controller_2), // Entrada a la salida forward 2 del forwarding unit    
         .out(alu_input_2)      // Salida a entrada 2 de la ALu
     );
