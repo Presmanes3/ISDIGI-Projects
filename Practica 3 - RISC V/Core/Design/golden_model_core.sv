@@ -1,13 +1,13 @@
-`include "./Basic Components/memory.sv"
-`include "./Basic Components/register_bank.sv"
-`include "./Controllers/main_controller.sv"
-`include "./Controllers/alu_controller.sv"
-`include "./Basic Components/pc.sv"
-`include "./Basic Components/ADDER.sv"
-`include "./Basic Components/immgen.sv"
-`include "./Basic Components/mux_2_input.sv"
-`include "./Basic Components/mux_3_input.sv"
-`include "./Basic Components/jump_controller.sv"
+// `include "./Basic Components/memory.sv"
+// `include "./Basic Components/register_bank.sv"
+// `include "./Controllers/main_controller.sv"
+// `include "./Controllers/alu_controller.sv"
+// `include "./Golden Components/pc_golden.sv"
+// `include "./Basic Components/ADDER.sv"
+// `include "./Basic Components/immgen.sv"
+// `include "./Basic Components/mux_2_input.sv"
+// `include "./Basic Components/mux_3_input.sv"
+// `include "./Basic Components/jump_controller.sv"
 
 /**
     @brief Top level entity for the RISC-V processor
@@ -250,7 +250,7 @@ module golden_model_core
         .Zero               (alu_zero)          // Bit que indica si el resultado de la operacion es 0
     );
 
-    memory data_memory (         
+    memory data_memory(         
         .clk            (data_memory_clk),          // Clock del sistema
         .write_enable   (data_memory_write_enable),   
         .read_enable    (data_memory_read_enable),
@@ -258,8 +258,10 @@ module golden_model_core
         .input_data     (data_memory_input_data),
         .output_data    (data_memory_output_data)
     );
+	 
+	 defparam data_memory.sintetizable = 1'b1;
 
-    memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
+   memory #(.sintetizable(1'b1), .input_file(program_file), .charge_file(1'b1)) instruction_memory  (
         .clk            (instruction_memory_clk),
         .write_enable   (instruction_memory_write_enable),  // Forzamos el bit de escritura a 0 para evitar su escritura
         .read_enable    (instruction_memory_read_enable),   // Forzamos el bit de lectura a 1 para forzar solo lectura
@@ -267,6 +269,9 @@ module golden_model_core
         .input_data     (instruction_memory_input_data),    // Forzamos datos de entrada a 0
         .output_data    (instruction_memory_output_data)    // La salida es la instruccion del sistema
     );
+	 
+	 
+
 
     mux_3_input mux_alu1 (                  // multiplexor con el que definimos la primera entrada de la ALU
         .input0     (mux_three_input_1),    // Entrada a salida del pc
@@ -300,6 +305,8 @@ module golden_model_core
         .read_data_1            (register_bank_read_data_1),
         .read_data_2            (register_bank_read_data_2)
     );
+	 
+	 defparam register_bank.sintetizable = 1'b1;
 
     imm_gen imm_gen (
         .instruction    (immediate_generator_input),
@@ -331,37 +338,37 @@ module golden_model_core
 
   property SWp;
    @(posedge clk)
-   main_controller_alu_option==4'b0100 && alu_controller_func_3_bits== 3'b010 |-> main_controller_memory_write==1'b1|-> main_controller_register_write==1'b0|-> main_controller_alu_source==1'b1|-> main_controller_branch==1'b0|-> main_controller_memory_to_register==1'b0 |-> main_controller_memory_read==1'b0
+   main_controller_alu_option==4'b0100 && alu_controller_func_3_bits== 3'b010 |-> main_controller_memory_write==1'b1|-> main_controller_register_write==1'b0|-> main_controller_alu_source==1'b1|-> main_controller_branch==1'b0|-> main_controller_memory_to_register==1'b0 |-> main_controller_memory_read==1'b0;
    endproperty
 
    property BEQp;
    @(posedge clk)
-   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0
+   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
    endproperty
    
    property RFORMAT;
     @(posedge clk)
-   main_controller_alu_option==4'b0110 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|-> main_controller_memory_read==1'b0
+   main_controller_alu_option==4'b0110 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|-> main_controller_memory_read==1'b0;
    endproperty
 
    property IFORMAT;
    @(posedge clk)
-    main_controller_alu_option==4'b0010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0
+    main_controller_alu_option==4'b0010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
    endproperty
 
    property LWp;
     @(posedge clk)
-     main_controller_alu_option==4'b0000 && alu_controller_func_3_bits==3'b010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b1|->main_controller_memory_read==1'b1
+     main_controller_alu_option==4'b0000 && alu_controller_func_3_bits==3'b010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b1|->main_controller_memory_read==1'b1;
    endproperty
 
     property BNEp;
    @(posedge clk)
-   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b001 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0
+   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b001 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
    endproperty
 
    property LUIp;
    @(posedge clk) 
-    main_controller_alu_option==4'b0111 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b0|->main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0
+    main_controller_alu_option==4'b0111 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b0|->main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
    endproperty
 
 LW: assert property(@(posedge clk) main_controller_alu_option==4'b0000 |-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b0000 |-> LWp) else $display("LW NOT CORRECT");

@@ -1,5 +1,8 @@
-module register_bank (
+module register_bank #(
+	parameter sintetizable = 1'b0
+)(
     input clk,
+	 input charge_file,
     input [4:0] read_register_1_addr,
     input [4:0] read_register_2_addr,
     input [4:0] write_register_addr,
@@ -20,8 +23,10 @@ parameter input_file = "Core/Design/Basic Components/register_bank_init.mem";
 parameter file_path = {relative_path, input_file};
 
 initial begin
+if(!sintetizable) begin
     $display(">>> CHARGING FILE [%s] IN REGISTER BANK", file_path);
     $readmemh(file_path, reg_pool );
+	end
 end
 
 always_ff @( posedge clk ) begin 
