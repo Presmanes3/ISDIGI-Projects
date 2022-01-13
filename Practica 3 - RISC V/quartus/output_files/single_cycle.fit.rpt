@@ -1,5 +1,5 @@
 Fitter report for single_cycle
-Thu Jan 13 20:43:33 2022
+Thu Jan 13 20:58:55 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jan 13 20:43:33 2022       ;
+; Fitter Status                      ; Successful - Thu Jan 13 20:58:55 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; single_cycle                                ;
 ; Top-level Entity Name              ; golden_model_core                           ;
@@ -1381,13 +1381,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/ivanv/OneDrive/Escritorio/quartus/output_files/single_cycle.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5825 megabytes
-    Info: Processing ended: Thu Jan 13 20:43:33 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 5823 megabytes
+    Info: Processing ended: Thu Jan 13 20:58:56 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+

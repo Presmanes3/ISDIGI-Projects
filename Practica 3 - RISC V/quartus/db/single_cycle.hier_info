@@ -1,5 +1,5 @@
 |golden_model_core
-clk => clk.IN4
+clk => data_memory_clk.IN3
 reset => pc_register_reset.IN1
 
 
@@ -1467,6 +1467,7 @@ input2[31] => LessThan7.IN33
 input2[31] => ShiftLeft0.IN33
 input2[31] => ShiftRight0.IN33
 input2[31] => Add1.IN1
+clk => ~NO_FANOUT~
 operation[0] => Mux0.IN19
 operation[0] => Mux1.IN19
 operation[0] => Mux2.IN19

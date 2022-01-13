@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Thu Jan 13 20:43:21 2022
+Thu Jan 13 20:58:44 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -30,11 +30,12 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  22. Port Connectivity Checks: "register_bank:register_bank"
  23. Port Connectivity Checks: "mux_3_input:mux_alu1"
  24. Port Connectivity Checks: "memory:instruction_memory"
- 25. Port Connectivity Checks: "ADDER:ADDER_PC"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+ 25. Port Connectivity Checks: "ALU:ALU"
+ 26. Port Connectivity Checks: "ADDER:ADDER_PC"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,7 +61,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 13 20:43:21 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 13 20:58:44 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; single_cycle                                ;
 ; Top-level Entity Name              ; golden_model_core                           ;
@@ -421,11 +422,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+--------------------+
 ; Port          ; Type  ; Severity ; Details            ;
 +---------------+-------+----------+--------------------+
+; clk           ; Input ; Info     ; Stuck at GND       ;
 ; write_enable  ; Input ; Info     ; Stuck at GND       ;
 ; read_enable   ; Input ; Info     ; Stuck at VCC       ;
 ; address[9..8] ; Input ; Info     ; Stuck at GND       ;
 ; input_data    ; Input ; Info     ; Stuck at GND       ;
 +---------------+-------+----------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU"                                                                                                                                    ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------+
@@ -466,7 +477,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jan 13 20:43:09 2022
+    Info: Processing started: Thu Jan 13 20:58:31 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -480,8 +491,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: mux_3_input File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/ivanv/onedrive/escritorio/upv/3 teleco/a/isdigi/isdigi-projects/practica 3 - risc v/core/design/basic components/mux_2_input.sv
     Info (12023): Found entity 1: mux_2_input File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/ivanv/onedrive/escritorio/upv/3 teleco/a/isdigi/isdigi-projects/practica 3 - risc v/core/design/basic components/memory_.sv
-    Info (12023): Found entity 1: memory_ File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory_.sv Line: 1
+Warning (12019): Can't analyze file -- file ../UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory_.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file /users/ivanv/onedrive/escritorio/upv/3 teleco/a/isdigi/isdigi-projects/practica 3 - risc v/core/design/basic components/memory.sv
     Info (12023): Found entity 1: memory File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/ivanv/onedrive/escritorio/upv/3 teleco/a/isdigi/isdigi-projects/practica 3 - risc v/core/design/basic components/jump_controller.sv
@@ -499,27 +509,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Warning (10222): Verilog HDL Parameter Declaration warning at register_bank.sv(19): Parameter Declaration in module "register_bank" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv Line: 19
 Warning (10222): Verilog HDL Parameter Declaration warning at register_bank.sv(20): Parameter Declaration in module "register_bank" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv Line: 20
 Warning (10222): Verilog HDL Parameter Declaration warning at register_bank.sv(23): Parameter Declaration in module "register_bank" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv Line: 23
-Warning (10222): Verilog HDL Parameter Declaration warning at memory_.sv(21): Parameter Declaration in module "memory_" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory_.sv Line: 21
-Warning (10222): Verilog HDL Parameter Declaration warning at memory_.sv(23): Parameter Declaration in module "memory_" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory_.sv Line: 23
 Warning (10222): Verilog HDL Parameter Declaration warning at memory.sv(22): Parameter Declaration in module "memory" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv Line: 22
 Warning (10222): Verilog HDL Parameter Declaration warning at memory.sv(24): Parameter Declaration in module "memory" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv Line: 24
 Info (12127): Elaborating entity "golden_model_core" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at golden_model_core.sv(27): object "a" assigned a value but never read File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at golden_model_core.sv(30): truncated value with size 32 to match size of target (1) File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at golden_model_core.sv(211): truncated value with size 30 to match size of target (10) File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 211
-Info (12128): Elaborating entity "ADDER" for hierarchy "ADDER:ADDER_SUM" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 221
-Info (12128): Elaborating entity "mux_2_input" for hierarchy "mux_2_input:mux_pc" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 234
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 241
-Info (12128): Elaborating entity "jump_controller" for hierarchy "jump_controller:jump_controller_" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 249
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 257
-Info (12128): Elaborating entity "memory" for hierarchy "memory:data_memory" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 266
-Info (12128): Elaborating entity "memory" for hierarchy "memory:instruction_memory" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 277
-Info (12128): Elaborating entity "mux_3_input" for hierarchy "mux_3_input:mux_alu1" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 288
-Info (12128): Elaborating entity "register_bank" for hierarchy "register_bank:register_bank" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 313
-Info (12128): Elaborating entity "imm_gen" for hierarchy "imm_gen:imm_gen" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 320
-Info (12128): Elaborating entity "main_controller" for hierarchy "main_controller:controller" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 333
-Info (12128): Elaborating entity "alu_controller" for hierarchy "alu_controller:alu_control" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 340
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10230): Verilog HDL assignment warning at golden_model_core.sv(205): truncated value with size 30 to match size of target (10) File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 205
+Info (12128): Elaborating entity "ADDER" for hierarchy "ADDER:ADDER_SUM" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 215
+Info (12128): Elaborating entity "mux_2_input" for hierarchy "mux_2_input:mux_pc" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 228
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 235
+Info (12128): Elaborating entity "jump_controller" for hierarchy "jump_controller:jump_controller_" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 243
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 251
+Info (12128): Elaborating entity "memory" for hierarchy "memory:data_memory" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 260
+Info (12128): Elaborating entity "memory" for hierarchy "memory:instruction_memory" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 271
+Info (12128): Elaborating entity "mux_3_input" for hierarchy "mux_3_input:mux_alu1" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 282
+Info (12128): Elaborating entity "register_bank" for hierarchy "register_bank:register_bank" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 307
+Info (12128): Elaborating entity "imm_gen" for hierarchy "imm_gen:imm_gen" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 314
+Info (12128): Elaborating entity "main_controller" for hierarchy "main_controller:controller" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 327
+Info (12128): Elaborating entity "alu_controller" for hierarchy "alu_controller:alu_control" File: C:/Users/ivanv/OneDrive/Escritorio/UPV/3 TELECO/A/ISDIGI/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv Line: 334
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/ivanv/OneDrive/Escritorio/quartus/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -529,11 +535,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4744 megabytes
-    Info: Processing ended: Thu Jan 13 20:43:21 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Thu Jan 13 20:58:44 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

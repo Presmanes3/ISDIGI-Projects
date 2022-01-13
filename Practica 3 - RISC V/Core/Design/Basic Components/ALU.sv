@@ -4,8 +4,6 @@
 module ALU (
 	input [31:0] input1,
 	input [31:0] input2,
-	
-	input clk,
 
 	input [3:0] operation,
 
