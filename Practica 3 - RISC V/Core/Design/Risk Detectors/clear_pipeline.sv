@@ -9,8 +9,7 @@ module clear_pipeline(
 );
 
 always_ff @( posedge clk or negedge reset) begin
-    clear_pipeline = 0;
-    if(!reset) clear_pipeline = 0;
-    else if(branch_mux_mem || jump_pc_mem) clear_pipeline = 1;
+    if(!reset) clear_pipeline <= 0;
+    else if(branch_mux_mem || jump_pc_mem) clear_pipeline <= 1;
 end
 endmodule

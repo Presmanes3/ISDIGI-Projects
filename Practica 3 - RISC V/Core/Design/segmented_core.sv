@@ -1,24 +1,24 @@
-`include "./Basic Components/memory.sv"
-`include "./Basic Components/register_bank.sv"
-`include "./Controllers/main_controller.sv"
-`include "./Controllers/alu_controller.sv"
-`include "./Segmented Components/pc_segmented.sv"
-`include "./Basic Components/ADDER.sv"
-`include "./Basic Components/immgen.sv"
-`include "./Basic Components/mux_2_input.sv"
-`include "./Basic Components/mux_3_input.sv"
-`include "./Basic Components/jump_controller.sv"
+//`include "./Basic Components/memory.sv"
+//`include "./Basic Components/register_bank.sv"
+//`include "./Controllers/main_controller.sv"
+//`include "./Controllers/alu_controller.sv"
+//`include "./Segmented Components/pc_segmented.sv"
+//`include "./Basic Components/ADDER.sv"
+//`include "./Basic Components/immgen.sv"
+//`include "./Basic Components/mux_2_input.sv"
+//`include "./Basic Components/mux_3_input.sv"
+//`include "./Basic Components/jump_controller.sv"
 
-`include "./Segmented Registers/register_ex_mem.sv"
-`include "./Segmented Registers/register_id_ex.sv"
-`include "./Segmented Registers/register_if_id.sv"
-`include "./Segmented Registers/register_mem_wb.sv"
+//`include "./Segmented Registers/register_ex_mem.sv"
+//`include "./Segmented Registers/register_id_ex.sv"
+//`include "./Segmented Registers/register_if_id.sv"
+//`include "./Segmented Registers/register_mem_wb.sv"
 
-`include "./Risk Detectors/clear_pipeline.sv"
-`include "./Risk Detectors/data_forwarding.sv"
-`include "./Risk Detectors/hazard_detection_unit.sv"
+//`include "./Risk Detectors/clear_pipeline.sv"
+//`include "./Risk Detectors/data_forwarding.sv"
+//`include "./Risk Detectors/hazard_detection_unit.sv"
 
-`include "./Segmented Components/ALU_encapsulator.sv"
+//`include "./Segmented Components/ALU_encapsulator.sv"
 
 module segmented_core
 #(
@@ -47,6 +47,8 @@ module segmented_core
     wire [data_bits - 1 : 0] reg_ex_mem_adder_sum_out;
     wire [data_bits - 1 : 0] reg_ex_mem_alu_result_in;
     wire [data_bits - 1 : 0] reg_ex_mem_alu_result_out;
+    wire reg_ex_mem_alu_zero_in;
+    wire reg_ex_mem_alu_zero_out;
     wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_in;
     wire [data_bits - 1 : 0] reg_ex_mem_alu_read_data_2_out;
     wire [4:0] reg_ex_mem_instruction_11_7_in;
@@ -170,12 +172,6 @@ module segmented_core
     wire [1 : 0] mux_three_select;
 
     // Wiring for ALU
-    wire [data_bits - 1 : 0] alu_input_1;
-    wire [data_bits - 1 : 0] alu_input_2;
-    wire [3 : 0] alu_operation;
-    wire [data_bits - 1 : 0] alu_result;
-    wire alu_zero;   
-
     wire [data_bits - 1 : 0] alu_encapsulator_register_data_1_in;
     wire [data_bits - 1 : 0] alu_encapsulator_register_data_2_in;
     wire [1:0] alu_encapsulator_forward_controller_1;
@@ -248,24 +244,50 @@ module segmented_core
 
     // REGISTER ID/EX WIRING connections
     // SMALL REGISTER EX
-   // assign reg_id_ex_ex_wiring.clk = clk;
+    assign reg_id_ex_ex_wiring.clk                  = clk;
+    assign reg_id_ex_ex_wiring.alu_op_in            = alu_controller_alu_operation;
+    assign reg_id_ex_ex_wiring.alu_src_in           = main_controller_alu_source;
+    assign reg_id_ex_ex_wiring.lui_src_in           = 1'b0;
 
     // SMALL REGISTER M
-    //assign reg_id_ex_m_wiring.clk = clk;
+    assign reg_id_ex_m_wiring.clk                   = clk;
+    assign reg_id_ex_m_wiring.jump_pc_in            = 1'bz;
+    assign reg_id_ex_m_wiring.instruction_func_in   = main_controller_opcode;
+    assign reg_id_ex_m_wiring.force_jump_in         = 1'b0;
+    assign reg_id_ex_m_wiring.branch_in             = main_controller_branch;
+    assign reg_id_ex_m_wiring.mem_write_in          = main_controller_memory_write;
+    assign reg_id_ex_m_wiring.mem_read_in           = main_controller_memory_read;
 
     // SMALL REGISTER WB
-    //assign reg_id_ex_wb_wiring.clk = clk;
+    assign reg_id_ex_wb_wiring.clk                  = clk;
+    assign reg_id_ex_wb_wiring.reg_write_in         = main_controller_register_write;
+    assign reg_id_ex_wb_wiring.jump_rd_in           = 1'b0;
+    assign reg_id_ex_wb_wiring.mem_to_reg_in        = main_controller_memory_to_register;
 
     // REGISTER EX/MEM WIRING connections
     // SMALL REGISTER M
-    //assign reg_ex_mem_m_wiring.clk = clk;
+    assign reg_ex_mem_m_wiring.clk                  = clk;
+    assign reg_ex_mem_m_wiring.jump_pc_in           = reg_id_ex_m_wiring.jump_pc_out;
+    assign reg_ex_mem_m_wiring.instruction_func_in  = reg_id_ex_m_wiring.instruction_func_out;
+    assign reg_ex_mem_m_wiring.force_jump_in        = reg_id_ex_m_wiring.force_jump_out;
+    assign reg_ex_mem_m_wiring.branch_in            = reg_id_ex_m_wiring.branch_out;
+    assign reg_ex_mem_m_wiring.mem_write_in         = reg_id_ex_m_wiring.mem_write_out;
+    assign reg_ex_mem_m_wiring.mem_read_in          = reg_id_ex_m_wiring.mem_read_out;
 
     // SMALL REGISTER WB
-    //assign reg_ex_mem_wb_wiring.clk = clk;
+    assign reg_ex_mem_wb_wiring.clk                 = clk;
+    assign reg_ex_mem_wb_wiring.reg_write_in        = reg_id_ex_wb_wiring.reg_write_out;
+    assign reg_ex_mem_wb_wiring.jump_rd_in          = reg_id_ex_wb_wiring.jump_rd_out;
+    assign reg_ex_mem_wb_wiring.mem_to_reg_in       = reg_id_ex_wb_wiring.mem_to_reg_out;
 
     // REGISTER MEM/WB WIRING connections
     // SMALL REGISTER WB
-    //assign reg_mem_wb_wb_wiring.clk = clk;
+    assign reg_mem_wb_wb_wiring.clk                 = clk;
+    assign reg_mem_wb_wb_wiring.reg_write_in        = reg_ex_mem_wb_wiring.reg_write_out;
+    assign reg_mem_wb_wb_wiring.jump_rd_in          = reg_ex_mem_wb_wiring.jump_rd_out;
+    assign reg_mem_wb_wb_wiring.mem_to_reg_in       = reg_ex_mem_wb_wiring.mem_to_reg_out;
+
+    // ============================================================================================ //
 
     // ADDER SUM connections
     assign adder_sum_input_1 = reg_id_ex_pc_out;
@@ -283,8 +305,8 @@ module segmented_core
     // JUMP CONTROLLER connections
     assign jump_controller_branch       = main_controller_branch;
     assign jump_controller_func_3_bits  = alu_controller_func_3_bits;
-    assign jump_controller_alu_result   = alu_result;
-    assign jump_controller_zero         = alu_zero;
+    assign jump_controller_alu_result   = reg_ex_mem_alu_result_out;
+    assign jump_controller_zero         = reg_ex_mem_alu_zero_out;
 
     // PC connections
     assign pc_register_input    = mux_two_pc_output;
@@ -307,7 +329,7 @@ module segmented_core
     assign register_bank_read_register_2_address    = reg_if_id_instruction_out[24 : 20];
     assign register_bank_write_register_address     = reg_if_id_instruction_out[11 : 7 ];
     assign register_bank_write_data                 = mux_two_data_mem_output;
-    assign register_bank_write_enable               = main_controller_register_write;
+    assign register_bank_write_enable               = reg_mem_wb_wb_wiring.reg_write_out;
 
     // Immediate generator connections
     assign immediate_generator_input = reg_if_id_instruction_out;
@@ -327,15 +349,24 @@ module segmented_core
     // MUX_TWO_MEM connections
     assign mux_two_data_mem_input_1 = reg_mem_wb_alu_result_out;
     assign mux_two_data_mem_input_2 = reg_mem_wb_data_memory_out_out;
-    assign mux_two_data_mem_select  = main_controller_memory_to_register;
+    assign mux_two_data_mem_select  = reg_mem_wb_wb_wiring.mem_to_reg_out;
 
     // ALU controller connections
-    assign alu_controller_alu_option    = main_controller_alu_option;
+    assign alu_controller_alu_option    = reg_id_ex_ex_wiring.alu_op_in;
     assign alu_controller_func_7_bits   = instruction_memory_output_data[31 : 25];
     assign alu_controller_func_3_bits   = instruction_memory_output_data[14 : 12];
 
     // ALU connections
     assign alu_operation    = alu_controller_alu_operation;
+    assign alu_encapsulator_register_data_1_in = 0;
+    assign alu_encapsulator_register_data_2_in = 0;
+    assign alu_encapsulator_forward_controller_1 = 0;
+    assign alu_encapsulator_forward_controller_2 = 0;
+    assign alu_encapsulator_prev_result_from_mux = 0;
+    assign alu_encapsulator_prev_result_from_reg = 0;
+    assign alu_encapsulator_alu_operation = alu_controller_alu_operation;
+    assign alu_encapsulator_alu_result = 0;
+    assign alu_encapsulator_alu_zero = 0;         
 
     // Data memory connections
     assign data_memory_clk          = clk;
@@ -343,47 +374,6 @@ module segmented_core
     assign data_memory_input_data   = register_bank_read_data_2;
     assign data_memory_write_enable = reg_ex_mem_alu_read_data_2_out;
     assign data_memory_read_enable  = main_controller_memory_read;
-
-    //interface ex assign
-    assign ex_wiring.clk = clk;
-    assign ex_wiring.alu_op_in = alu_controller_alu_operation;
-    assign ex_wiring.alu_src_in = main_controller_alu_source;
-
-    assign ex_wiring.alu_op_out = alu_controller_alu_operation;
-    assign ex_wiring.alu_src_out = main_controller_alu_source;
-
-
-   //interface m assign
-
-    assign m_wiring.clk = clk;
-
-    assign m_wiring.jump_pc_in =clear_pipeline_jump_pc_mem;
-    assign m_wiring.instruction_func_in =reg_id_ex_instruction_in;
-    assign m_wiring.force_jump_in = hazard_detect_foce_jump_ex;
-    assign m_wiring.branch_in = hazard_detect_branch_mux_mem;
-    assign m_wiring.mem_write_in = main_controller_memory_write;
-    assign m_wiring.mem_read_in = hazard_detect_mem_read_ex;
-
-    assign m_wiring.jump_pc_out = clear_pipeline_jump_pc_mem;
-    assign m_wiring.instruction_func_out = reg_id_ex_instruction_out;
-    assign m_wiring.force_jump_out = hazard_detect_foce_jump_ex;
-    assign m_wiring.branch_out = hazard_detect_branch_mux_mem;
-    assign m_wiring.mem_write_out = main_controller_memory_write;
-    assign m_wiring.mem_read_out = hazard_detect_mem_read_ex;
-
-
-    //interace wb assign
-
-    assign wb_wiring.clk = clk;
-
-    assign wb_wiring.reg_write_in = data_forwarding_reg_write_wb;
-    assign wb_wiring.jump_rd_in = data_forwarding_rd_addr_wb;
-    assign wb_wiring.mem_to_reg_in = main_controller_memory_to_register;
-
-    assign wb_wiring.reg_write_out= data_forwarding_reg_write_wb;
-    assign wb_wiring.jump_rd_out = data_forwarding_rd_addr_wb;
-    assign wb_wiring.mem_to_reg_out = main_controller_memory_to_register;
-
 
     // Configure Adders and PC
     ADDER ADDER_SUM (                   // Adder cuya out es la entrada 1 del multiplexor conectado a PC
@@ -445,6 +435,7 @@ module segmented_core
         .input_data     (data_memory_input_data),
         .output_data    (data_memory_output_data)
     );
+    defparam data_memory.sintetizable = 1'b1;
 
     memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
         .clk            (instruction_memory_clk),
@@ -454,6 +445,7 @@ module segmented_core
         .input_data     (instruction_memory_input_data),    // Forzamos datos de entrada a 0
         .output_data    (instruction_memory_output_data)    // La salida es la instruccion del sistema
     );
+    defparam instruction_memory.sintetizable = 1'b1;
 
     mux_2_input mux_mem (                        // multiplexor a la salida de la memoria de datos
         .input1     (mux_two_data_mem_input_1),  // Entrada a la salida de la memoria de datos
@@ -472,6 +464,7 @@ module segmented_core
         .read_data_1            (register_bank_read_data_1),
         .read_data_2            (register_bank_read_data_2)
     );
+    defparam register_bank.sintetizable = 1'b1;
 
     imm_gen imm_gen (
         .instruction    (immediate_generator_input),
