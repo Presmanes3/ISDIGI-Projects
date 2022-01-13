@@ -1,5 +1,5 @@
-`include "./Small Registers/register_wb.sv"
-`include "./Small Registers/register_m.sv"
+//`include "./Small Registers/register_wb.sv"
+//`include "./Small Registers/register_m.sv"
 
 module register_ex_mem #(
     parameter data_bits = 32
@@ -15,6 +15,9 @@ module register_ex_mem #(
 
     input       [data_bits - 1 : 0] alu_result_in,
     output reg  [data_bits - 1 : 0] alu_result_out,
+
+    input       [data_bits - 1 : 0] alu_zero_in,
+    output reg  [data_bits - 1 : 0] alu_zero_out,
 
     input       [data_bits - 1 : 0] alu_read_data_2_in,
     output reg  [data_bits - 1 : 0] alu_read_data_2_out,
@@ -38,6 +41,7 @@ always_ff @( posedge clk ) begin
     if(!clear_pipeline)begin
         adder_sum_out           <= adder_sum_in;
         alu_result_out          <= alu_result_in;
+        alu_zero_out            <= alu_zero_in;
         alu_read_data_2_out     <= alu_read_data_2_in;
         instruction_11_7_out    <= instruction_11_7_in;
     end

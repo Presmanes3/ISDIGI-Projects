@@ -1,6 +1,6 @@
-`include "./Small Registers/register_ex.sv"
-`include "./Small Registers/register_m.sv"
-`include "./Small Registers/register_wb.sv"
+//`include "./Small Registers/register_ex.sv"
+//`include "./Small Registers/register_m.sv"
+//`include "./Small Registers/register_wb.sv"
 
 module register_id_ex #(
     parameter data_bits = 32

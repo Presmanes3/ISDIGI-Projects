@@ -1,5 +1,5 @@
-`include "../Basic Components/ALU.sv"
-`include "../Basic Components/mux_3_input.sv"
+//`include "../Basic Components/ALU.sv"
+//`include "../Basic Components/mux_3_input.sv"
 
 module alu_encapsulator #(
     parameter data_bits = 32

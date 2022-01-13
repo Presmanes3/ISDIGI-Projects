@@ -1,4 +1,4 @@
-`include "./Small Registers/register_wb.sv"
+//`include "./Small Registers/register_wb.sv"
 
 module register_mem_wb #(
     parameter data_bits = 32
