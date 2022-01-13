@@ -380,6 +380,10 @@ module segmented_core
         .select(jump_controller_select)
     );
 
+    assign alu_encapsulator_register_data_1_in = 0;     // Entrada al registro ID/EX
+    assign alu_encapsulator_register_data_2_in = 0;     // Entrada al registro ID/EX
+    assign alu_encapsulator_forward_controller_1 = 0;   //
+
     alu_encapsulator alu_encapsulator(
         .register_data_1_in     (alu_encapsulator_register_data_1_in),
         .register_data_2_in     (alu_encapsulator_register_data_2_in),
