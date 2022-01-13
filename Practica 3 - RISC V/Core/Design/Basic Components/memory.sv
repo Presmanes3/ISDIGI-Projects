@@ -1,4 +1,5 @@
 module memory #(
+	 parameter sintetizable = 1'b0,
     parameter size = 1024,
     parameter input_file = "../Testing/Programs/Simple/R/ADD.mem",
     parameter charge_file = 1'b0,
@@ -24,7 +25,7 @@ parameter file_path = {relative_path, input_file};
 
 
 initial begin
-    if(charge_file)begin
+    if(charge_file && !sintetizable)begin
         $display(">>> CHARGING FILE [%s] IN MEMORY", file_path);
         $readmemh(file_path, data_pool );
     end

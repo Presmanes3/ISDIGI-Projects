@@ -36,6 +36,15 @@ module main_controller(
 assign alu_option = !hazard_mux_enable ? {opcode[6:4], opcode[2]} : 4'b0000;
 
 always_comb begin
+
+        AuipcLui            = 2'b00;
+        alu_source          = 1'b0;
+        memory_to_register  = 1'b0;
+        memory_read         = 1'b0;
+        memory_write        = 1'b0;
+        register_write      = 1'b0;
+        branch              = 1'b0; 
+		  
     if(!hazard_mux_enable)begin
         AuipcLui = 2'b10;
         case (alu_option)
