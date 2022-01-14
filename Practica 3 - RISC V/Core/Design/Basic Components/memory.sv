@@ -1,19 +1,25 @@
+interface memory_interface #(
+    parameter size = 1024,
+    parameter bits = $clog2(size)  // Compute the number of bits needed for a given size
+);
+    logic   clk;
+    logic   write_enable;
+    logic   read_enable;
+    logic   [bits - 1 : 0]  address;
+    logic   [31:0]          input_data;
+
+    logic   [31:0]          output_data;
+endinterface //memory_interface()
+
+
 module memory #(
-	 parameter sintetizable = 1'b0,
+	parameter sintetizable = 1'b0,
     parameter size = 1024,
     parameter input_file = "../Testing/Programs/Simple/R/ADD.mem",
     parameter charge_file = 1'b0,
     parameter bits = $clog2(size)  // Compute the number of bits needed for a given size
 ) (
-    // Declare inputs
-    input                       clk,
-    input                       write_enable,
-    input                       read_enable,
-    input       [bits - 1 : 0]  address,
-    input       [31:0]          input_data,
-
-    // Declare outputs
-    output reg  [31:0]          output_data
+    memory_interface memory_wiring
 );
 
 // Create the data pool which will contain the information
@@ -31,17 +37,17 @@ initial begin
     end
 end
 
-always_ff @( posedge clk ) begin 
-    if(write_enable) data_pool[address] = input_data;
+always_ff @( posedge memory_wiring.clk ) begin 
+    if(memory_wiring.write_enable) data_pool[memory_wiring.address] = memory_wiring.input_data;
 end
 
 always_comb begin 
-    output_data = 0;
-    if(read_enable) output_data = data_pool[address];
+    memory_wiring.output_data = 0;
+    if(memory_wiring.read_enable) memory_wiring.output_data = data_pool[memory_wiring.address];
 end
 
 
 
-// TODO add assert property for checking that input and output written and read
+// TODO add assert property for checking that logic and output written and read
 
 endmodule

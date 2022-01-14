@@ -1,33 +1,39 @@
+interface hazar_detection_unit_interface;
+    logic pc_write_id;
+    logic hazard_mux;
+    logic flush;
+    logic flush_pc;
+    logic flush_adder;
+
+    logic force_jump_wb;
+    logic branch_mux_mem;
+
+    logic mem_read_ex;
+    logic rd_addr_ex;
+    logic rs1_addr_id;
+    logic rs2_addr_id;
+    logic force_jump_id;
+    logic force_jump_ex;
+    logic force_jump_mem;
+endinterface //hazar_detection_unit_interface
+
+
+
 module hazard_detection_unit(
-    output reg pc_write_id,
-    output reg hazard_mux,
-    output flush,
-    output flush_pc,
-    output flush_adder,
-
-    input force_jump_wb,
-    input branch_mux_mem,
-
-    input mem_read_ex,
-    input rd_addr_ex,
-    input rs1_addr_id,
-    input rs2_addr_id,
-    input force_jump_id,
-    input force_jump_ex,
-    input force_jump_mem
+    hazard_detection_unit_interface wiring
 );
 
-assign flush = (force_jump_ex || force_jump_mem || force_jump_wb);
-assign flush_pc = (force_jump_id || force_jump_ex);
-assign flush_adder = (force_jump_id || force_jump_ex || force_jump_mem);
+assign wiring.flush = (wiring.force_jump_ex || wiring.force_jump_mem || wiring.force_jump_wb);
+assign wiring.flush_pc = (wiring.force_jump_id || wiring.force_jump_ex);
+assign wiring.flush_adder = (wiring.force_jump_id || wiring.force_jump_ex || wiring.force_jump_mem);
 
 always_comb begin
-    if((mem_read_ex == 1) && (rd_addr_ex == rs1_addr_id) || (rd_addr_ex == rs2_addr_id) && !branch_mux_mem) begin
-        pc_write_id = 0;
-        hazard_mux = 1;
+    if((wiring.mem_read_ex == 1) && (wiring.rd_addr_ex == wiring.rs1_addr_id) || (wiring.rd_addr_ex == wiring.rs2_addr_id) && !wiring.branch_mux_mem) begin
+        wiring.pc_write_id = 0;
+        wiring.hazard_mux = 1;
     end else begin
-        pc_write_id = 1;
-        hazard_mux = 0;
+        wiring.pc_write_id = 1;
+        wiring.hazard_mux = 0;
     end
 end
 endmodule

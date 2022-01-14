@@ -1,3 +1,22 @@
+interface main_controller_interface();
+    logic [6:0] opcode; 
+
+    logic hazard_mux_enable;
+
+    logic reg branch;
+    logic reg memory_read;
+    logic reg memory_to_register;
+    logic [3:0] alu_option;
+    logic memory_write;
+    logic alu_source;
+    logic register_write;
+
+    logic [1:0] AuipcLui;    
+
+endinterface //main_controller_interface
+
+
+
 
 /**
     @brief main controller circuit for controlling signals of the different modules
@@ -16,57 +35,44 @@
 
 */
 module main_controller(
-
-    input [6:0] opcode,
-
-    input hazard_mux_enable,
-
-    output reg branch,
-    output reg memory_read,
-    output reg memory_to_register,
-    output [3:0] alu_option,
-    output reg memory_write,
-    output reg alu_source,
-    output reg register_write,
-
-    output reg [1:0] AuipcLui    
+main_controller_interface main_controller_wiring
 );
 
 
-assign alu_option = !hazard_mux_enable ? {opcode[6:4], opcode[2]} : 4'b0000;
+assign main_controller_wiring.alu_option = !hazard_mux_enable ? {main_controller_wiring.opcode[6:4], main_controller_wiring.opcode[2]} : 4'b0000;
 
 always_comb begin
 
-        AuipcLui            = 2'b00;
-        alu_source          = 1'b0;
-        memory_to_register  = 1'b0;
-        memory_read         = 1'b0;
-        memory_write        = 1'b0;
-        register_write      = 1'b0;
-        branch              = 1'b0; 
+        main_controller_wiring.AuipcLui            = 2'b00;
+        main_controller_wiring.alu_source          = 1'b0;
+        main_controller_wiring.memory_to_register  = 1'b0;
+        main_controller_wiring.memory_read         = 1'b0;
+        main_controller_wiring.memory_write        = 1'b0;
+        main_controller_wiring.register_write      = 1'b0;
+        main_controller_wiring.branch              = 1'b0; 
 		  
     if(!hazard_mux_enable)begin
-        AuipcLui = 2'b10;
-        case (alu_option)
+        main_controller_wiring.AuipcLui = 2'b10;
+        case (main_controller_wiring.alu_option)
 
             // Type LOAD
             4'b0000: begin
-                alu_source          = 1'b1;
-                memory_to_register  = 1'b1; 
-                memory_read         = 1'b1;
-                memory_write        = 1'b0;
-                register_write      = 1'b1; 
-                branch              = 1'b0; 
+                main_controller_wiring.alu_source          = 1'b1;
+                main_controller_wiring.memory_to_register  = 1'b1; 
+                main_controller_wiring.memory_read         = 1'b1;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b1; 
+                main_controller_wiring.branch              = 1'b0; 
             end
 
             // Type I
             4'b0010: begin
-                alu_source          = 1'b1;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b0;
-                register_write      = 1'b1;
-                branch              = 1'b0;
+                main_controller_wiring.alu_source          = 1'b1;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b1;
+                main_controller_wiring.branch              = 1'b0;
             end
 
             4'b0011: begin
@@ -75,60 +81,60 @@ always_comb begin
 
             // Type STORAGE
             4'b0100: begin
-                alu_source          = 1'b1;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b1; 
-                register_write      = 1'b0;
-                branch              = 1'b0;
+                main_controller_wiring.alu_source          = 1'b1;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b1; 
+                main_controller_wiring.register_write      = 1'b0;
+                main_controller_wiring.branch              = 1'b0;
             end
 
             // Type R
             4'b0110: begin
-                alu_source          = 1'b0;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b0;
-                register_write      = 1'b1;
-                branch              = 1'b0;
+                main_controller_wiring.alu_source          = 1'b0;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b1;
+                main_controller_wiring.branch              = 1'b0;
             end
 
             // Type Write in memory
             4'b0111: begin
-                alu_source          = 1'b0;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b0;
-                register_write      = 1'b1;
-                branch              = 1'b0;
+                main_controller_wiring.alu_source          = 1'b0;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b1;
+                main_controller_wiring.branch              = 1'b0;
             end
 
             // Type CONDITIONAL JUMP
             4'b1100: begin
-                alu_source          = 1'b0;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b0;
-                register_write      = 1'b0;
-                branch              = 1'b1;
+                main_controller_wiring.alu_source          = 1'b0;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b0;
+                main_controller_wiring.branch              = 1'b1;
             end
             default: begin
-                alu_source          = 1'b0;
-                memory_to_register  = 1'b0;
-                memory_read         = 1'b0;
-                memory_write        = 1'b0;
-                register_write      = 1'b0;
-                branch              = 1'b0;    
+                main_controller_wiring.alu_source          = 1'b0;
+                main_controller_wiring.memory_to_register  = 1'b0;
+                main_controller_wiring.memory_read         = 1'b0;
+                main_controller_wiring.memory_write        = 1'b0;
+                main_controller_wiring.register_write      = 1'b0;
+                main_controller_wiring.branch              = 1'b0;    
             end
         endcase
     end else begin
-        AuipcLui            = 2'b00;
-        alu_source          = 1'b0;
-        memory_to_register  = 1'b0;
-        memory_read         = 1'b0;
-        memory_write        = 1'b0;
-        register_write      = 1'b0;
-        branch              = 1'b0;    
+        controller_wiring.AuipcLui            = 2'b00;
+        main_controller_wiring.alu_source          = 1'b0;
+        main_controller_wiring.memory_to_register  = 1'b0;
+        main_controller_wiring.memory_read         = 1'b0;
+        main_controller_wiring.memory_write        = 1'b0;
+        main_controller_wiring.register_write      = 1'b0;
+        main_controller_wiring.branch              = 1'b0;    
     end
 end
 

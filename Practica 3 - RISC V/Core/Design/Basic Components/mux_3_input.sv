@@ -1,20 +1,26 @@
+interface mux_3_input_interface#(parameter size = 32);
+
+	logic [size - 1 : 0] input0;
+	logic [size - 1 : 0] input1;
+	logic [size - 1 : 0] input2;
+	logic [size - 1 : 0] out;
+	logic [1:0] control;
+
+endinterface //mux_3_input_interface
+
 module mux_3_input
 #(parameter size = 32)
 (
-	input [size - 1 : 0] input0,
-	input [size - 1 : 0] input1,
-	input [size - 1 : 0] input2,
-	output reg [size - 1 : 0] out,
-	input [1:0] control
+mux_3_input_interface mux_3_input_wiring
 );
 
 always_comb begin
-		out = 0;
-		case(control)
-			2'b00: 		out = input0; 
-			2'b01: 		out = input1;
-			2'b10: 		out = input2;
-			default: 	out = input0;
+		mux_3_input_wiring.out = 0;
+		case(mux_3_input_wiring.control)
+			2'b00: 		mux_3_input_wiring.out = mux_3_input_wiring.input0; 
+			2'b01: 		mux_3_input_wiring.out = mux_3_input_wiring.input1;
+			2'b10: 		mux_3_input_wiring.out = mux_3_input_wiring.input2;
+			default: 	mux_3_input_wiring.out = mux_3_input_wiring.input0;
 		endcase
 	end
 endmodule

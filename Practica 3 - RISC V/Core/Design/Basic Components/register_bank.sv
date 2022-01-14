@@ -1,17 +1,26 @@
+interface register_bank_interface #(
+	parameter sintetizable = 1'b0
+);
+    logic clk;
+
+    logic [4:0] read_register_1_addr;
+    logic [4:0] read_register_2_addr;
+    logic [4:0] write_register_addr;
+
+    logic [31:0] write_data;
+    logic write_enable;
+
+    logic [31:0] read_data_1;
+    logic [31:0] read_data_2;
+endinterface //interfacename
+
+
+
+
 module register_bank #(
 	parameter sintetizable = 1'b0
 )(
-    input clk,
-	 input charge_file,
-    input [4:0] read_register_1_addr,
-    input [4:0] read_register_2_addr,
-    input [4:0] write_register_addr,
-
-    input [31:0] write_data,
-    input write_enable,
-
-    output reg [31:0] read_data_1,
-    output reg [31:0] read_data_2
+    register_bank_interface register_bank_wiring
 );
 
 reg [31:0] reg_pool [0 : 31];
@@ -29,20 +38,16 @@ if(!sintetizable) begin
 	end
 end
 
-always_ff @( posedge clk ) begin 
-    if(write_enable)begin
-        if(write_register_addr != 5'b00000)begin
-            reg_pool[write_register_addr] <= write_data;
+always_ff @( posedge register_bank_wiring.clk ) begin 
+    if(register_bank_wiring.write_enable)begin
+        if(register_bank_wiring.write_register_addr != 5'b00000)begin
+            reg_pool[register_bank_wiring.write_register_addr] <= register_bank_wiring.write_data;
         end
     end
 end
 
 
-assign read_data_1 = reg_pool[read_register_1_addr];
-assign read_data_2 = reg_pool[read_register_2_addr];
-
-
-// TODO add assert property for writting
-// TODO add assert property for reading
+assign register_bank_wiring.read_data_1 = reg_pool[register_bank_wiring.read_register_1_addr];
+assign register_bank_wiring.read_data_2 = reg_pool[register_bank_wiring.read_register_2_addr];
     
 endmodule

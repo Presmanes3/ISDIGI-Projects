@@ -9,9 +9,7 @@
 // `include "./Basic Components/mux_3_input.sv"
 // `include "./Basic Components/jump_controller.sv"
 
-/**
-    @brief Top level entity for the RISC-V processor
-*/
+
 module golden_model_core 
 #(
     parameter data_bits = 32,
@@ -20,9 +18,10 @@ module golden_model_core
     parameter program_file  = ""
 )
 (
-    input clk,
-    input reset
+    golden_interface wires
 );
+
+
 
     // ========== DEFINE ALL WIRES ========== //
     // Wiring for ADDER_SUM
@@ -208,205 +207,155 @@ module golden_model_core
     assign data_memory_read_enable  = main_controller_memory_read;
 
     // Configure Adders and PC
-    ADDER ADDER_SUM (                         // Adder cuya out es la entrada 1 del multiplexor conectado a PC
-        .input1 (adder_sum_input_1),    // Entrada a salida del generador de inmediatos
-        .input2 (adder_sum_input_2),    // Entrada a salida del pc
-        .out    (adder_sum_output)      // Salida al multiplexor de suma
+    
+    ADDER ADDER_SUM (                  
+        .adder_wiring               (wires.adder_sum_wiring)    
     );
 
-    ADDER ADDER_PC (                      // Adder cuya ouput es la entrada 0 del multiplexor conectado a PC
-        .input1 (adder_pc_input_1), // Entrada a salida del pc 
-        .input2 (adder_pc_input_2), // Entrada forzada a 4
-        .out    (adder_pc_output)   // Salida a
+    
+    ADDER ADDER_PC (                 
+        .adder_wiring               (wires.adder_pc_wiring)  
     );
 
-    mux_2_input mux_pc (                // multiplexor cuya salida está conectada a PC
-        .input1 (mux_two_pc_input_1),   // Entrada a salida del sumador 1
-        .input2 (mux_two_pc_input_2),   // Entrada a salida del sumador 'SUM'
-        .control(mux_two_pc_select),    // Control proveniente de la puerta AND
-        .out    (mux_two_pc_output)     // Salida a la entrada del pc
+    
+    mux_2_input mux_pc (  
+        .mux_2_input_pc_wiring      (wires.mux_pc_wiring)   
     );
 
+    
     PC PC (
-        .in     (pc_register_input),    // Entrada del pc
-        .out    (pc_register_output),    // Salida del pc
-        .clk    (pc_register_clk),
-        .reset  (pc_register_reset)
+        .pc_wiring                  (wires.pc_wiring)
     );
 
-    jump_controller jump_controller_(
-        .branch(jump_controller_branch),
-        .func_3_bits(jump_controller_func_3_bits),
-        .zero(jump_controller_zero),
-        .alu_result(jump_controller_alu_result),
-        .select(jump_controller_select)
+    
+    jump_controller jump_controller(
+        .jump_controler_wiring      (wires.jump_controler_wiring)
     );
+
 
     ALU ALU (                      
-        .input1             (alu_input_1),      // Entrada a salida del multiplexor de 3 entradas
-        .input2             (alu_input_2),      // Entrada a salida del multiplexor de 2 entradas
-        .operation          (alu_operation),    // Señal que indica la operacion a realizar
-        .operation_result   (alu_result),       // Resultado de la operacion
-        .Zero               (alu_zero)          // Bit que indica si el resultado de la operacion es 0
+        .alu_wiring                 (wires.alu_wiring);
     );
 
-    memory data_memory(         
-        .clk            (data_memory_clk),          // Clock del sistema
-        .write_enable   (data_memory_write_enable),   
-        .read_enable    (data_memory_read_enable),
-        .address        (data_memory_read_address),
-        .input_data     (data_memory_input_data),
-        .output_data    (data_memory_output_data)
+   
+    memory data_memory (         
+        .memory_wiring              (wires.data_memory_wiring)
     );
-	 
-	 defparam data_memory.sintetizable = 1'b1;
+    defparam data_memory.sintetizable = 1'b1;
 
-   memory #(.sintetizable(1'b1), .input_file(program_file), .charge_file(1'b1)) instruction_memory  (
-        .clk            (instruction_memory_clk),
-        .write_enable   (instruction_memory_write_enable),  // Forzamos el bit de escritura a 0 para evitar su escritura
-        .read_enable    (instruction_memory_read_enable),   // Forzamos el bit de lectura a 1 para forzar solo lectura
-        .address        (instruction_memory_read_address),  // Direccion de entrada a salida del pc
-        .input_data     (instruction_memory_input_data),    // Forzamos datos de entrada a 0
-        .output_data    (instruction_memory_output_data)    // La salida es la instruccion del sistema
+    
+    memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
+        .memory_wiring              (wires.instruction_memory_wiring)
     );
-	 
-	 
+    defparam instruction_memory.sintetizable = 1'b1;
 
-
-    mux_3_input mux_alu1 (                  // multiplexor con el que definimos la primera entrada de la ALU
-        .input0     (mux_three_input_1),    // Entrada a salida del pc
-        .input1     (mux_three_input_2),    // Entrada nula
-        .input2     (mux_three_input_3),    // Entrada a salida 1 con data leida del banco de registros
-        .control    (mux_three_select),
-        .out        (mux_three_output)      // Salida del multiplexor de 3 entradas
+    
+    mux_3_input mux_alu1 (
+        .mux_3_input_wiring         (wires.mux_alu1_wiring)
     );
 
-    mux_2_input mux_alu2(                   // multiplexor con el que definimos la segunda entrada de la ALU
-        .input1     (mux_two_alu_input_1),  // Entrada a la salida 2 con data leida del banco de registros
-        .input2     (mux_two_alu_input_2),  // Entrada a la salida del generador de inmediatos   
-        .control    (mux_two_alu_select),   // Control al alu source
-        .out        (mux_two_alu_output)
+    
+    mux_2_input mux_alu2(                   
+        .mux_2_input_wiring         (wires.mux_alu2_wiring)
     );
 
-    mux_2_input mux_mem (                        // multiplexor a la salida de la memoria de datos
-        .input1     (mux_two_data_mem_input_1),  // Entrada a la salida de la memoria de datos
-        .input2     (mux_two_data_mem_input_2),  // Entrada a la salida del multiplexor
-        .control    (mux_two_data_mem_select),   //
-        .out        (mux_two_data_mem_output)
+    
+    mux_2_input mux_mem (                        
+        .mux_2_input_wiring         (wires.mux_mem_wiring)
     );
 
     register_bank register_bank (
-        .clk                    (register_bank_clk),
-        .read_register_1_addr   (register_bank_read_register_1_address),
-        .read_register_2_addr   (register_bank_read_register_2_address),
-        .write_register_addr    (register_bank_write_register_address),
-        .write_data             (register_bank_write_data),
-        .write_enable           (register_bank_write_enable),
-        .read_data_1            (register_bank_read_data_1),
-        .read_data_2            (register_bank_read_data_2)
+        .register_banck_wiring      (wires.register_bank_wiring)
     );
-	 
-	 defparam register_bank.sintetizable = 1'b1;
+    defparam register_bank.sintetizable = 1'b1;
 
     imm_gen imm_gen (
-        .instruction    (immediate_generator_input),
-        .out            (immediate_generator_output)
+        .imm_gen_wiring             (wires.imm_gen_wiring)
     );
                 
     // Instanciate the control module
     main_controller controller(
-        .opcode             (main_controller_opcode),
-        .branch             (main_controller_branch),
-        .memory_read        (main_controller_memory_read),
-        .memory_to_register (main_controller_memory_to_register),
-        .alu_option         (main_controller_alu_option),
-        .memory_write       (main_controller_memory_write),
-        .alu_source         (main_controller_alu_source),
-        .register_write     (main_controller_register_write),
-        .AuipcLui           (main_controller_AuipcLui)
+    .main_controller_wiring         (wires.main_controller_wiring)
     );
-
+    
     alu_controller alu_control(
-        .func_7_bits    (alu_controller_func_7_bits),
-        .func_3_bits    (alu_controller_func_3_bits),
-        .alu_option     (alu_controller_alu_option),
-        .alu_operation  (alu_controller_alu_operation)
+        .alu_controller_wiring       (wires.alu_controller_wiring)
     );
 
 
 // Check correctly working of the ADD instruction
 
-  property SWp;
-   @(posedge clk)
-   main_controller_alu_option==4'b0100 && alu_controller_func_3_bits== 3'b010 |-> main_controller_memory_write==1'b1|-> main_controller_register_write==1'b0|-> main_controller_alu_source==1'b1|-> main_controller_branch==1'b0|-> main_controller_memory_to_register==1'b0 |-> main_controller_memory_read==1'b0;
-   endproperty
+//   property SWp;
+//    @(posedge clk)
+//    main_controller_alu_option==4'b0100 && alu_controller_func_3_bits== 3'b010 |-> main_controller_memory_write==1'b1|-> main_controller_register_write==1'b0|-> main_controller_alu_source==1'b1|-> main_controller_branch==1'b0|-> main_controller_memory_to_register==1'b0 |-> main_controller_memory_read==1'b0;
+//    endproperty
 
-   property BEQp;
-   @(posedge clk)
-   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
-   endproperty
+//    property BEQp;
+//    @(posedge clk)
+//    main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
+//    endproperty
    
-   property RFORMAT;
-    @(posedge clk)
-   main_controller_alu_option==4'b0110 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|-> main_controller_memory_read==1'b0;
-   endproperty
+//    property RFORMAT;
+//     @(posedge clk)
+//    main_controller_alu_option==4'b0110 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|-> main_controller_memory_read==1'b0;
+//    endproperty
 
-   property IFORMAT;
-   @(posedge clk)
-    main_controller_alu_option==4'b0010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
-   endproperty
+//    property IFORMAT;
+//    @(posedge clk)
+//     main_controller_alu_option==4'b0010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
+//    endproperty
 
-   property LWp;
-    @(posedge clk)
-     main_controller_alu_option==4'b0000 && alu_controller_func_3_bits==3'b010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b1|->main_controller_memory_read==1'b1;
-   endproperty
+//    property LWp;
+//     @(posedge clk)
+//      main_controller_alu_option==4'b0000 && alu_controller_func_3_bits==3'b010 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b1|-> main_controller_branch == 1'b0|-> main_controller_memory_to_register==1'b1|->main_controller_memory_read==1'b1;
+//    endproperty
 
-    property BNEp;
-   @(posedge clk)
-   main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b001 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
-   endproperty
+//     property BNEp;
+//    @(posedge clk)
+//    main_controller_alu_option==4'b1100 && alu_controller_func_3_bits== 3'b001 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b0|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b1 |->main_controller_memory_to_register==1'b0 |->main_controller_memory_read==1'b0;
+//    endproperty
 
-   property LUIp;
-   @(posedge clk) 
-    main_controller_alu_option==4'b0111 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b0|->main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
-   endproperty
+//    property LUIp;
+//    @(posedge clk) 
+//     main_controller_alu_option==4'b0111 && alu_controller_func_3_bits== 3'b000 |-> main_controller_memory_write == 1'b0|-> main_controller_register_write == 1'b1|-> main_controller_alu_source == 1'b0|-> main_controller_branch == 1'b0|->main_controller_memory_to_register==1'b0|->main_controller_memory_read==1'b0;
+//    endproperty
 
-LW: assert property(@(posedge clk) main_controller_alu_option==4'b0000 |-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b0000 |-> LWp) else $display("LW NOT CORRECT");
+// LW: assert property(@(posedge clk) main_controller_alu_option==4'b0000 |-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b0000 |-> LWp) else $display("LW NOT CORRECT");
 
-ADDI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000|->IFORMAT) else $display("ADDI NOT CORRECT");
-SLTI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b1010|->IFORMAT) else $display("SLTI NOT CORRECT");
-SLTIU: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b011 |-> alu_controller_alu_operation == 4'b1001|->IFORMAT) else $display("SLTIU NOT CORRECT");
-XORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation == 4'b0100|->IFORMAT) else $display("XORI NOT CORRECT");
-ORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->IFORMAT) else $display("ORI NOT CORRECT");
-ANDI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->IFORMAT) else $display("ANDI NOT CORRECT");
-SLLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->IFORMAT) else $display("SLLI NOT CORRECT");
-SRLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b1 |-> alu_controller_alu_operation ==  4'b1110|->IFORMAT) else $display("SRLI NOT CORRECT");
-SRAI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b0 |-> alu_controller_alu_operation ==  4'b1111|->IFORMAT) else $display("SRAI NOT CORRECT");
+// ADDI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000|->IFORMAT) else $display("ADDI NOT CORRECT");
+// SLTI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b1010|->IFORMAT) else $display("SLTI NOT CORRECT");
+// SLTIU: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b011 |-> alu_controller_alu_operation == 4'b1001|->IFORMAT) else $display("SLTIU NOT CORRECT");
+// XORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation == 4'b0100|->IFORMAT) else $display("XORI NOT CORRECT");
+// ORI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->IFORMAT) else $display("ORI NOT CORRECT");
+// ANDI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->IFORMAT) else $display("ANDI NOT CORRECT");
+// SLLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->IFORMAT) else $display("SLLI NOT CORRECT");
+// SRLI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b1 |-> alu_controller_alu_operation ==  4'b1110|->IFORMAT) else $display("SRLI NOT CORRECT");
+// SRAI: assert property(@(posedge clk) main_controller_alu_option==4'b0010|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_func_7_bits[5]== 1'b0 |-> alu_controller_alu_operation ==  4'b1111|->IFORMAT) else $display("SRAI NOT CORRECT");
 
-AUIPC: assert property(@(posedge clk) main_controller_alu_option==4'b0011 |-> alu_controller_alu_operation == 4'b0000) else $display("AUIPC NOT CORRECT");
+// AUIPC: assert property(@(posedge clk) main_controller_alu_option==4'b0011 |-> alu_controller_alu_operation == 4'b0000) else $display("AUIPC NOT CORRECT");
 
-SW: assert property(@(posedge clk) main_controller_alu_option==4'b0100|-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b0000|->SWp) else $display("SW NOT CORRECT");
+// SW: assert property(@(posedge clk) main_controller_alu_option==4'b0100|-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b0000|->SWp) else $display("SW NOT CORRECT");
 
-ADD: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000|->RFORMAT) else $display("ADD NOT CORRECT");
-SLT: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b1010|->RFORMAT) else $display("SLT NOT CORRECT");
-SLTU: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b011 |-> alu_controller_alu_operation == 4'b1001|->RFORMAT) else $display("SLTU NOT CORRECT");
-XOR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation == 4'b0100|->RFORMAT) else $display("XOR NOT CORRECT");
-OR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->RFORMAT) else $display("OR NOT CORRECT");
-AND: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->RFORMAT) else $display("AND NOT CORRECT");
-SUB: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->RFORMAT) else $display("SUB NOT CORRECT");
-SLL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->RFORMAT) else $display("SLL NOT CORRECT");
-SRL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1110|->RFORMAT) else $display("SRL NOT CORRECT");
-SRA: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1111|->RFORMAT) else $display("SRA NOT CORRECT");
+// ADD: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000|->RFORMAT) else $display("ADD NOT CORRECT");
+// SLT: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b010 |-> alu_controller_alu_operation == 4'b1010|->RFORMAT) else $display("SLT NOT CORRECT");
+// SLTU: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b011 |-> alu_controller_alu_operation == 4'b1001|->RFORMAT) else $display("SLTU NOT CORRECT");
+// XOR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation == 4'b0100|->RFORMAT) else $display("XOR NOT CORRECT");
+// OR: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b0011|->RFORMAT) else $display("OR NOT CORRECT");
+// AND: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0010|->RFORMAT) else $display("AND NOT CORRECT");
+// SUB: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->RFORMAT) else $display("SUB NOT CORRECT");
+// SLL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation ==  4'b1101|->RFORMAT) else $display("SLL NOT CORRECT");
+// SRL: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b0 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1110|->RFORMAT) else $display("SRL NOT CORRECT");
+// SRA: assert property(@(posedge clk) main_controller_alu_option==4'b0110|-> alu_controller_func_7_bits[5] == 1'b1 |-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1111|->RFORMAT) else $display("SRA NOT CORRECT");
 
-LUI: assert property(@(posedge clk) main_controller_alu_option==4'b0111|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000 |->LUIp) else $display("LUI NOT CORRECT");
+// LUI: assert property(@(posedge clk) main_controller_alu_option==4'b0111|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation == 4'b0000 |->LUIp) else $display("LUI NOT CORRECT");
 
-BEQ: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->BEQp) else $display("BEQ NOT CORRECT");
-BNE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation == 4'b0100|->BNEp) else $display("BNE NOT CORRECT");
-BGEU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0111|->BNEp) else $display("BGEU NOT CORRECT");
-BGE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1000|->BNEp) else $display("BGE NOT CORRECT");
-BLTU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b1001|->BNEp) else $display("BLTU NOT CORRECT");
-BLT: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation ==  4'b1010|->BNEp) else $display("BLT NOT CORRECT");
+// BEQ: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b000 |-> alu_controller_alu_operation ==  4'b0001|->BEQp) else $display("BEQ NOT CORRECT");
+// BNE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b001 |-> alu_controller_alu_operation == 4'b0100|->BNEp) else $display("BNE NOT CORRECT");
+// BGEU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b111 |-> alu_controller_alu_operation ==  4'b0111|->BNEp) else $display("BGEU NOT CORRECT");
+// BGE: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b101 |-> alu_controller_alu_operation ==  4'b1000|->BNEp) else $display("BGE NOT CORRECT");
+// BLTU: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b110 |-> alu_controller_alu_operation ==  4'b1001|->BNEp) else $display("BLTU NOT CORRECT");
+// BLT: assert property(@(posedge clk) main_controller_alu_option==4'b1100|-> alu_controller_func_3_bits== 3'b100 |-> alu_controller_alu_operation ==  4'b1010|->BNEp) else $display("BLT NOT CORRECT");
 
-JAL: assert property(@(posedge clk) main_controller_alu_option==4'b1101|-> alu_controller_alu_operation ==  4'b0000|->BNEp) else $display("JAR OR JALR NOT CORRECT");
+// JAL: assert property(@(posedge clk) main_controller_alu_option==4'b1101|-> alu_controller_alu_operation ==  4'b0000|->BNEp) else $display("JAR OR JALR NOT CORRECT");
 
 endmodule

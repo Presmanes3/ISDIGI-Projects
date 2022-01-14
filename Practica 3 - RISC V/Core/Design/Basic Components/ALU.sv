@@ -1,14 +1,18 @@
+interface ALU_interface();
+	logic [31:0] input1;
+	logic [31:0] input2;
+
+	logic [3:0] operation;
+
+	logic [31:0] result;
+	logic zero;
+endinterface//ALU_interface
+
 /**
 	@brief ALU module in charge of doing the operation between registers
 */
 module ALU (
-	input [31:0] input1,
-	input [31:0] input2,
-
-	input [3:0] operation,
-
-	output reg [31:0] operation_result,
-	output Zero
+	ALU_interface alu_wiring	
 );
 
 // Declare all the allowed operations
@@ -32,43 +36,43 @@ enum bit [3:0] {
 } operations;
 
 // Assign the value for zero wire
-assign Zero = (operation_result == 0) ? 1'b1 : 1'b0;
+assign alu_wiring.zero = (alu_wiring.result == 0) ? 1'b1 : 1'b0;
 
 always_comb begin
-  case(operation)
-    	ADD:  	operation_result  	= input1 + 	input2;   						// add i2 to i1
+  case(alu_wiring.operation)
+    	ADD:  	alu_wiring.result  	= alu_wiring.input1 + 	alu_wiring.input2;   						// add i2 to i1
 
-    	SUB:  	operation_result  	= input1 - 	input2;  						// substract i2 to i1
+    	SUB:  	alu_wiring.result  	= alu_wiring.input1 - 	alu_wiring.input2;  						// substract i2 to i1
          
-    	AND:  	operation_result  	= input1 & 	input2;    						// AND i1 with i2
+    	AND:  	alu_wiring.result  	= alu_wiring.input1 & 	alu_wiring.input2;    						// AND i1 with i2
       
-    	OR:		operation_result  	= input1 | 	input2;     					// OR i1 with i2
+    	OR:		alu_wiring.result  	= alu_wiring.input1 | 	alu_wiring.input2;     					// OR i1 with i2
       
-    	XOR:	operation_result  	= input1 ^  input2;   						// XOR i1 with i2
+    	XOR:	alu_wiring.result  	= alu_wiring.input1 ^  alu_wiring.input2;   						// XOR i1 with i2
       
-    	U_LOW_EQ:	operation_result	= input1 <= input2;						// Compare i1 <= i2 unsigned
+    	U_LOW_EQ:	alu_wiring.result	= alu_wiring.input1 <= alu_wiring.input2;						// Compare i1 <= i2 unsigned
 
-      	S_LOW_EQ:   operation_result    = $signed(input1) <= $signed(input2);	// Compare i1 <= i2 signed
+      	S_LOW_EQ:   alu_wiring.result    = $signed(alu_wiring.input1) <= $signed(alu_wiring.input2);	// Compare i1 <= i2 signed
 
-		U_HIGH_EQ:	operation_result 	= input1 >= input2;						// Compare i1 >= i2 unsigned
+		U_HIGH_EQ:	alu_wiring.result 	= alu_wiring.input1 >= alu_wiring.input2;						// Compare i1 >= i2 unsigned
 
-		S_HIGH_EQ:	operation_result 	= $signed(input1) >= $signed(input2);	// Compare i1 >= i2 signed
+		S_HIGH_EQ:	alu_wiring.result 	= $signed(alu_wiring.input1) >= $signed(alu_wiring.input2);	// Compare i1 >= i2 signed
 
-      	U_LOWER:    operation_result    = input1 < input2;						// Compare i1 < i2 unsigned
+      	U_LOWER:    alu_wiring.result    = alu_wiring.input1 < alu_wiring.input2;						// Compare i1 < i2 unsigned
 
-      	S_LOWER:    operation_result    = $signed(input1) < $signed(input2);	// Compare i1 < i2 signed
+      	S_LOWER:    alu_wiring.result    = $signed(alu_wiring.input1) < $signed(alu_wiring.input2);	// Compare i1 < i2 signed
 
-		U_HIGHER:   operation_result    = input1 > input2;						// Compare i1 > i2 unsigned
+		U_HIGHER:   alu_wiring.result    = alu_wiring.input1 > alu_wiring.input2;						// Compare i1 > i2 unsigned
 
-      	S_HIGHER:   operation_result    = $signed(input1) > $signed(input2);	// Compare i1 > i2 signed
+      	S_HIGHER:   alu_wiring.result    = $signed(alu_wiring.input1) > $signed(alu_wiring.input2);	// Compare i1 > i2 signed
 
-		SHIFT_LEFT:	operation_result 	= input1 << input2;						// Shift left input2 times
+		SHIFT_LEFT:	alu_wiring.result 	= alu_wiring.input1 << alu_wiring.input2;						// Shift left alu_wiring.input2 times
 
-		SHIFT_RIGHT_LOGIC:	operation_result = input1 >> input2;				// Shift right input2 times
+		SHIFT_RIGHT_LOGIC:	alu_wiring.result = alu_wiring.input1 >> alu_wiring.input2;				// Shift right input2 times
 
-		SHIFT_RIGHT_ARIT:	operation_result = input1 >>> input2;				// Shift right with sign extension
+		SHIFT_RIGHT_ARIT:	alu_wiring.result = alu_wiring.input1 >>> alu_wiring.input2;				// Shift right with sign extension
       
-    	default: 	operation_result 	= 0;
+    	default: 	alu_wiring.result 	= 0;
   endcase
 end
 
