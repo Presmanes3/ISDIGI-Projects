@@ -1,7 +1,7 @@
 module  data_memory_wiring_designator#(
     parameter data_bits = 32  
 )(
-    segmented_interface wires
+    golden_interface wires
 );
 assign wires.memory_wiring.clk          =   wires.clk;
 assign wires.memory_wiring.read_address =   wires.alu_wiring.alu_result[data_bits - 1 : 2];

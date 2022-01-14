@@ -1,5 +1,5 @@
 module adder_pc_wiring_designator(
- golden_interfaces wires
+ golden_interface wires
 );
 
 assign wires.adder_pc_wiring.input1 =   wires.pc_wiring.out;

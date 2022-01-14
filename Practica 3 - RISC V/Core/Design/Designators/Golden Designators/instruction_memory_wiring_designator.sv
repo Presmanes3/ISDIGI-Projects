@@ -2,7 +2,7 @@ module instruction_memory_wiring_designator #(
     parameter memory_size = 1024,
     parameter memory_address_bits = $clog2(memory_size)
 )(
-    segmented_interface wires
+    golden_interface wires
 );
 
     assign wires.instructions_memory_wiring.clk             = 1'b0;

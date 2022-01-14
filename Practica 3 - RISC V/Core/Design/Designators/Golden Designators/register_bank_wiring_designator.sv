@@ -1,5 +1,5 @@
 module register_bank_wiring_designator(
-    segmented_interface wires
+    golden_interface wires
 );
     assign wires.register_bank_wiring.clk                   = wires.clk;
     assign wires.register_bank_wiring.read_register_1_addr  = wires.instruction_memory_wiring.instruction_out[19 : 15]; 

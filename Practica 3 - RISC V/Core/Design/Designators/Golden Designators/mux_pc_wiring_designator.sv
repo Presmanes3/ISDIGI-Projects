@@ -1,5 +1,5 @@
 module mux_pc_wiring_designator(
-    segmented_interface wires
+    golden_interface wires
 );
 
     assign wires.mux_pc_wiring.input1  = wires.adder_pc_wiring.out;

@@ -1,5 +1,5 @@
 module pc_wiring_designator(
-    segmented_interface wires
+    golden_interface wires
 );
 
     assign wires.pc_wiring.clk                  = wires.clk;

@@ -1,5 +1,5 @@
 module alu_wiring_designator(
-    segmented_interface wires
+    golden_interface wires
 );
 
 assign wires.alu_wiring.alu_input_1= wires.mux_alu1_wiring.out;

@@ -1,6 +1,6 @@
 module mux_mem_wiring(
 
-segmented_interface wires
+golden_interface wires
 
 );
 

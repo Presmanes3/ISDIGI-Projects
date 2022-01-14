@@ -1,5 +1,5 @@
 module adder_sum_wiring_designator(
-    segmented_interface wires
+    golden_interface wires
 );
 
 assign wires.adder_sum_wiring.input1 = wires.pc_wiring.out;
