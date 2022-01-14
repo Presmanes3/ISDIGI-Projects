@@ -9,8 +9,6 @@ interface register_wb_interface();
     logic reg_write_out;
     logic jump_rd_out;
     logic mem_to_reg_out;
-
-    logic n_enable_output;
 endinterface //register_wb_interface
 
 
@@ -19,11 +17,9 @@ module register_wb (
 );
 
 always_ff @( posedge wiring.clk ) begin 
-    if(!wiring.n_enable_output)begin 
-        wiring.reg_write_out     <= wiring.reg_write_in;
-        wiring.jump_rd_out       <= wiring.jump_rd_in;
-        wiring.mem_to_reg_out    <= wiring.mem_to_reg_in;
-    end
+    wiring.reg_write_out     <= wiring.reg_write_in;
+    wiring.jump_rd_out       <= wiring.jump_rd_in;
+    wiring.mem_to_reg_out    <= wiring.mem_to_reg_in;
 end
     
 endmodule

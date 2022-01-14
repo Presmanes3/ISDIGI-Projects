@@ -22,6 +22,9 @@ interface register_ex_mem_interface #(
     logic  [data_bits - 1 : 0] alu_read_data_2_in;
     logic  [data_bits - 1 : 0] alu_read_data_2_out;
 
+    logic [2 : 0] func_3_bits_in;
+    logic [2 : 0] func_3_bits_out;
+
     logic  [4:0] instruction_11_7_in;
     logic  [4:0] instruction_11_7_out;
 endinterface //register_ex_mem_interface
@@ -50,6 +53,7 @@ always_ff @( posedge reg_ex_mem_wiring.clk ) begin
         reg_ex_mem_wiring.alu_zero_out            <= reg_ex_mem_wiring.alu_zero_in;
         reg_ex_mem_wiring.alu_read_data_2_out     <= reg_ex_mem_wiring.alu_read_data_2_in;
         reg_ex_mem_wiring.instruction_11_7_out    <= reg_ex_mem_wiring.instruction_11_7_in;
+        reg_ex_mem_wiring.func_3_bits_out         <= reg_ex_mem_wiring.func_3_bits_in;
     end
 end
     

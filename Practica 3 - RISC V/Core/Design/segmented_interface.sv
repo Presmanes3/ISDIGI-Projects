@@ -15,11 +15,11 @@ interface segmented_interface;
     alu_encapsulator_interface      alu_encapsulator_wiring();      // 3 OK - REVIEWED
     mux_2_input_interface           mux_mem_wiring();               // 1 OK - REVIEWED
     mux_2_input_interface           mux_pc_wiring();                // 2 OK - REVIEWED
-    jump_controler_interface        jump_controler_wiring();        // 3 OK - 
+    jump_controler_interface        jump_controler_wiring();        // 3 OK - REVIEWED
     main_controller_interface       main_controller_wiring();       // 0 OK - REVIEWED
     alu_controller_interface        alu_controller_wiring();        // 1 OK - REVIEWED
-    register_if_id_interface        reg_if_id_wiring();             // 2 OK 
-    register_id_ex_interface        reg_id_ex_wiring();             // 3 OK
-    register_ex_mem_interface       reg_ex_mem_wiring();            // 0 OK
+    register_if_id_interface        reg_if_id_wiring();             // 2 OK - REVIEWED
+    register_id_ex_interface        reg_id_ex_wiring();             // 3 OK - REVIEWED
+    register_ex_mem_interface       reg_ex_mem_wiring();            // 0 OK - REVIEWED
     register_mem_wb_interface       reg_mem_wb_wiring();            // 1 OK - REVIEWED
 endinterface
