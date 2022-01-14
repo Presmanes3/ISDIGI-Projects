@@ -373,8 +373,37 @@ module segmented_core
     assign data_memory_read_address = reg_ex_mem_alu_result_out[data_bits - 1 : 2];
     assign data_memory_input_data   = register_bank_read_data_2;
     assign data_memory_write_enable = reg_ex_mem_alu_read_data_2_out;
-    assign data_memory_read_enable  = main_controller_memory_read;
+    assign data_memory_read_enable  = main_controller_memory_read; 
+    
+    //reg if/id
+    //assign reg_if_id_pc_write_id_enable=;
+    assign reg_if_id_pc_in= pc_register_output;
+    assign reg_if_id_instruction_in=pc_register_output;
+    //assign reg_if_if_pc_write_enable=;
+    //assign reg_if_id_flush_adder_enable=;
+    //assign reg_if_id_flush_pc_enable=;//nosecomovan estas
 
+    //reg id/Ex
+    assign reg_id_ex_pc_in=reg_if_id_pc_out;
+    assign reg_id_ex_read_data_1_in=register_bank_read_data_1;
+    assign reg_id_ex_read_data_2_in=register_bank_read_data_2;
+    assign reg_id_ex_immediate_gen_in=immediate_generator_output;
+    assign reg_id_ex_instruction_11_7_in=reg_if_id_instruction_out[11:7];
+    assign reg_id_ex_instruction_14_12_in=reg_if_id_instruction_out[14:12];
+    assign reg_id_ex_instruction_30_in=reg_if_id_instruction_out[30];
+    assign reg_id_ex_instruction_in=reg_if_id_instruction_out;
+
+    //reg ex/em
+    assign reg_ex_mem_adder_sum_in=adder_sum_output;
+    assign reg_ex_mem_alu_result_in=alu_encapsulator_alu_result;
+    assign reg_ex_mem_alu_zero_in=alu_encapsulator_alu_zero;
+    assign reg_ex_mem_alu_read_data_2_in=reg_id_ex_read_data_2_out;
+    assign reg_ex_mem_instruction_11_7_in=reg_id_ex_instruction_11_7_out;
+
+    //reg mem/wb
+    assign reg_mem_wb_alu_result_in= reg_ex_mem_alu_result_out;
+    assign reg_mem_wb_data_memory_out_in=data_memory_output_data;
+    assign reg_mem_wb_instruction_11_7_in=reg_ex_mem_instruction_11_7_out;
     // Configure Adders and PC
     ADDER ADDER_SUM (                   // Adder cuya out es la entrada 1 del multiplexor conectado a PC
         .input1 (adder_sum_input_1),    // Entrada a salida del generador de inmediatos
