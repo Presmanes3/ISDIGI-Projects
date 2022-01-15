@@ -1,4 +1,4 @@
-interface mux_4_input_interface #(
+interface mux_4_input_interface# #(
     parameter bits = 32
 );
     logic [bits - 1 : 0] input0;
@@ -13,7 +13,7 @@ endinterface //mux_4_input_interface
 
 module mux_4_input(
     mux_4_input_interface mux_4_input_wiring
-);
+)
 
     always_comb begin
         

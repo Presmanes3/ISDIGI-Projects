@@ -1,6 +1,6 @@
-//`include "./Small Registers/register_ex.sv"
-//`include "./Small Registers/register_m.sv"
-//`include "./Small Registers/register_wb.sv"
+`include "./Small Registers/register_ex.sv"
+`include "./Small Registers/register_m.sv"
+`include "./Small Registers/register_wb.sv"
 
 interface reg_id_ex_interface #(
     parameter data_bits = 32

@@ -1,6 +1,6 @@
 interface adder_interface#(
     parameter size = 32
-);
+);;
 	logic [size - 1 : 0] input1;
 	logic [size - 1 : 0] input2;
 	logic [size - 1 : 0] out;

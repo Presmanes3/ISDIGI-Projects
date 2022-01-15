@@ -1,4 +1,4 @@
-//`include "./Small Registers/register_wb.sv"
+`include "./Small Registers/register_wb.sv"
 
 interface register_mem_wb_interface #(
     parameter data_bits = 32

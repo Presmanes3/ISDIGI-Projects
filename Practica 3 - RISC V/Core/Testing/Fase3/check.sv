@@ -1,35 +1,17 @@
-`include "../../Design/golden_model_core.sv"
-`include "../../Design/segmented_core.sv"
+`include "../../Design/core.sv"
 
 module cores_encapsulator(
     input clk,
     input reset
 );
-
-
-    // CARGAMOS MODULOS SINCLE-CYCLE ------------------------------------------------------
-    golden_model_core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) golden_fib(
+    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) fibo_core(
         .clk(clk),
-        .reset(reset)
-    );
-
-    golden_model_core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) golden_bubble(
+        .reset(reset);
+    )
+    core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) bubble_short_core(
         .clk(clk),
-        .reset(reset)
-    );
-    // ------------------------------------------------------------------------------------
-
-    // CARGAMOS MODULOS SEGMENTED ------------------------------------------------------------
-    segmented_core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) segmented_fib(
-        .clk(clk),
-        .reset(reset)
-    );
-
-    segmented_core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) segmented_bubble(
-        .clk(clk),
-        .reset(reset)
-    );
-    // ------------------------------------------------------------------------------------
+        .reset(reset);
+    )
 endmodule
 
 class core_test;
@@ -57,12 +39,12 @@ class core_test;
         fork
             begin
                 // Wait till the golden model finishes
-                @(testbench.cores.golden_fib.instruction_memory_output_data != 32'h00000013);
+                @(testbench.cores.fibo_core.golden_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
                 $display("[FIBBONACCI] Golden model finished");
             end
             begin
                 // Wait till the segmented model finishes
-                @(testbench.cores.segmented_fib.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                @(testbench.cores.fibo_core.segmented_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
                 $display("[FIBBONACCI] Segmented model finished");
             end
         join
@@ -70,8 +52,8 @@ class core_test;
         $display("[FIBBONACCI] Starting with the checking");
         // Write data into file and check if both are the same
         for (int i = 0; i < Nmax_num; i++) begin
-            int golden_value = testbench.cores.golden_fib.data_memory.data_pool[i];
-            int segmented_value = testbench.cores.segmented_fib.data_memory.data_pool[i];
+            int golden_value    = testbench.cores.fibo_core.golden_core.data_memory.data_pool[i];
+            int segmented_value = testbench.cores.fibo_core.segmented_core.data_memory.data_pool[i];
 
             $fwrite(file,"%d, %d\n",golden_value, segmented_value);
         
@@ -102,11 +84,11 @@ class core_test;
 
             fork
                 begin
-                    @(testbench.cores.golden_bubble.instruction_memory_output_data != 32'h00000013);
+                    @(testbench.cores.bubble_short_core.golden_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
                     $display("[BUBBLE] Golden model finished");
                 end
                 begin
-                    //@(testbench.cores.segmented_bubble.instruction_memory_output_data != 32'h00000013); //instruccion fin real
+                    //@(testbench.cores.bubble_short_core.segmented_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
                     $display("[BUBBLE] Segmented model finished");
                 end
             join
@@ -114,8 +96,8 @@ class core_test;
         $fwrite(file,"ideal, real\n");
 
         for (int i = 0; i < Nmax_num; i++) begin
-            int golden_value = testbench.cores.golden_bubble.data_memory.data_pool[i];
-            int segmented_value = testbench.cores.segmented_bubble.data_memory.data_pool[i];
+            int golden_value    = testbench.cores.bubble_short_core.golden_core.data_memory.data_pool[i];
+            int segmented_value = testbench.cores.bubble_short_core.segmented_core.data_memory.data_pool[i];
 
             $fwrite(file,"%d, %d\n",golden_value, segmented_value);
         

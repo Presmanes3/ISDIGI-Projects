@@ -100,7 +100,7 @@ always_comb begin
         4'b0110: begin
 
             if(alu_controler_wiring.func_7_bits[5] == 1'b0)begin
-                case (alu_controler_wiring.func_3_bits)
+                case (func_3_bits)
                     // ADD
                     3'b000: alu_controler_wiring.alu_operation = ADD;
 

@@ -58,11 +58,11 @@ module alu_encapsulator #(
     assign alu_wiring.operation = alu_encapsulator_wiring.alu_operation;
 
 
-    mux_4_input mux_alu_input_1(
+    mux_3_input mux_alu_input_1(
         .mux_4_input_wiring (input_1_wiring)
     );
 
-    mux_4_input mux_alu_input_2(
+    mux_3_input mux_alu_input_2(
         .mux_4_input_wiring (input_2_wiring)
     );
 

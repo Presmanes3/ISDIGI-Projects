@@ -3,9 +3,9 @@ interface main_controller_interface();
 
     logic hazard_mux_enable;
 
-    logic branch;
-    logic memory_read;
-    logic memory_to_register;
+    logic reg branch;
+    logic reg memory_read;
+    logic reg memory_to_register;
     logic [3:0] alu_option;
     logic memory_write;
     logic alu_source;
@@ -35,11 +35,11 @@ endinterface //main_controller_interface
 
 */
 module main_controller(
-	main_controller_interface main_controller_wiring
+main_controller_interface main_controller_wiring
 );
 
 
-assign main_controller_wiring.alu_option = !main_controller_wiring.hazard_mux_enable ? {main_controller_wiring.opcode[6:4], main_controller_wiring.opcode[2]} : 4'b0000;
+assign main_controller_wiring.alu_option = !hazard_mux_enable ? {main_controller_wiring.opcode[6:4], main_controller_wiring.opcode[2]} : 4'b0000;
 
 always_comb begin
 
@@ -51,7 +51,7 @@ always_comb begin
         main_controller_wiring.register_write      = 1'b0;
         main_controller_wiring.branch              = 1'b0; 
 		  
-    if(!main_controller_wiring.hazard_mux_enable)begin
+    if(!hazard_mux_enable)begin
         main_controller_wiring.AuipcLui = 2'b10;
         case (main_controller_wiring.alu_option)
 
@@ -128,7 +128,7 @@ always_comb begin
             end
         endcase
     end else begin
-        main_controller_wiring.AuipcLui            = 2'b00;
+        controller_wiring.AuipcLui            = 2'b00;
         main_controller_wiring.alu_source          = 1'b0;
         main_controller_wiring.memory_to_register  = 1'b0;
         main_controller_wiring.memory_read         = 1'b0;

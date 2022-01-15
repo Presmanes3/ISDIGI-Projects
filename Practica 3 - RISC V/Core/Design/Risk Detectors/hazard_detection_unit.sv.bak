@@ -1,4 +1,4 @@
-interface hazard_detection_unit_interface();
+interface hazar_detection_unit_interface;
     logic pc_write_id;
     logic hazard_mux;
     logic flush;
