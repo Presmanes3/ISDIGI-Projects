@@ -173,6 +173,7 @@ module golden_model_core
     assign immediate_generator_input = instruction_memory_output_data;
 
     // MUX_THREE connections
+    
     assign mux_three_input_1    = pc_register_output;
     assign mux_three_input_2    = 32'd0;
     assign mux_three_input_3    = register_bank_read_data_1;

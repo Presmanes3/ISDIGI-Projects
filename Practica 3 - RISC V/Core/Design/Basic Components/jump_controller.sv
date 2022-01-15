@@ -1,4 +1,4 @@
-interface jump_controler_interface;
+interface jump_controller_interface;
     logic branch;
     logic [2:0] func_3_bits;
     logic zero;
@@ -8,7 +8,7 @@ endinterface //jump_controler_interface
 
 
 module jump_controller (
-    jump_controler_interface jump_controler_wiring
+    jump_controller_interface jump_controler_wiring
 );
 
 always_comb begin

@@ -27,6 +27,21 @@ module core (
     reg_mem_wb_wiring_designator            reg_mem_wb_wiring_designator            (segmented_core_wires);
 
     // Designator instances for golden core
+    adder_sum_wiring_designator             adder_sum_wiring_designator             (golden_core_wires);
+    adder_pc_wiring_designator              adder_pc_wiring_designator              (golden_core_wires);
+    pc_wiring_designator                    pc_wiring_designator                    (golden_core_wires);
+    instruction_memory_wiring_designator    instruction_memory_wiring_designator    (golden_core_wires);
+    data_memory_wiring_designator           data_memory_wiring_designator           (golden_core_wires);
+    register_bank_wiring_designator         register_bank_wiring_designator         (golden_core_wires);
+    imm_gen_wiring_designator               imm_gen_wiring_designator               (golden_core_wires);
+    alu_wiring_designator                   alu_wiring_designator                   (golden_core_wires);
+    mux_mem_wiring_designator               mux_mem_wiring_designator               (golden_core_wires);
+    mux_three_alu_wiring_designator         mux_three_alu_wiring_designator         (golden_core_wires);
+    mux_mem_wiring_designator               mux_mem_wiring_designator               (golden_core_wires);
+    mux_pc_wiring_designator                mux_pc_wiring_designator                (golden_core_wires);
+    jump_controller_wiring_designator       jump_controller_wiring_designator       (golden_core_wires);
+    main_controller_wiring_designator       main_controller_wiring_designator       (golden_core_wires);
+    alu_controller_wiring_designator        alu_controller_wiring_designator        (golden_core_wires);
 
     // Instanciate the cores
     golden_model_core goden_core        (golden_core_wires);

@@ -1,4 +1,4 @@
-module alu_controller_wiring(
+module alu_controller_wiring_designator(
 
     golden_interface wires
 

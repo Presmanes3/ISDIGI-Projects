@@ -1,4 +1,4 @@
-module mux_mem_wiring(
+module mux_mem_wiring_designator(
 
 segmented_interface wires
 

@@ -1,4 +1,4 @@
-module jump_controler_designator(
+module jump_controler_wiring_designator(
     segmented_interface wires
 );
 

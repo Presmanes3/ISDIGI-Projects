@@ -1,4 +1,4 @@
-module reg_mem_wb_wiring(
+module reg_mem_wb_wiring_designator(
 
 segmented_interface wires
 
