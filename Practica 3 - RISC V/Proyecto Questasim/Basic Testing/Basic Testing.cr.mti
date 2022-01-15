@@ -126,33 +126,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	adder_pc_wiring_designator_segmented
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface memory_interface
--- Compiling module memory
--- Compiling interface register_bank_interface
--- Compiling module register_bank
--- Compiling interface main_controller_interface
--- Compiling module main_controller
--- Compiling interface alu_controller_interface
--- Compiling module alu_controller
--- Compiling module PC
--- Compiling interface adder_interface
--- Compiling module ADDER
--- Compiling interface imm_gen_interface
--- Compiling module imm_gen
--- Compiling interface mux_2_input_interface
--- Compiling module mux_2_input
--- Compiling interface mux_3_input_interface
--- Compiling module mux_3_input
--- Compiling interface jump_controller_interface
--- Compiling module jump_controller
--- Compiling interface golden_interface
--- Compiling module golden_model_core
-
-Top level modules:
-	golden_model_core
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module clear_pipeline
@@ -196,52 +169,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	mux_4_input
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface memory_interface
--- Compiling module memory
--- Compiling interface register_bank_interface
--- Compiling module register_bank
--- Compiling interface main_controller_interface
--- Compiling module main_controller
--- Compiling interface alu_controller_interface
--- Compiling module alu_controller
--- Compiling interface pc_interface
--- Compiling module PC
--- Compiling interface adder_interface
--- Compiling module ADDER
--- Compiling interface imm_gen_interface
--- Compiling module imm_gen
--- Compiling interface mux_2_input_interface
--- Compiling module mux_2_input
--- Compiling interface mux_3_input_interface
--- Compiling module mux_3_input
--- Compiling interface jump_controller_interface
--- Compiling module jump_controller
--- Compiling interface register_ex_mem_interface
--- Compiling module register_ex_mem
--- Compiling interface register_id_ex_interface
--- Compiling module register_id_ex
--- Compiling interface register_if_id_interface
--- Compiling module register_if_id
--- Compiling interface register_mem_wb_interface
--- Compiling module register_mem_wb
--- Compiling module clear_pipeline
--- Compiling module data_forwarding
--- Compiling interface hazard_detection_unit_interface
--- Compiling module hazard_detection_unit
--- Compiling interface alu_encapsulator_interface
--- Compiling module alu_encapsulator
--- Compiling interface segmented_interface
--- Compiling module segmented_core
-
-Top level modules:
-	mux_3_input
-	clear_pipeline
-	data_forwarding
-	hazard_detection_unit
-	segmented_core
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -391,6 +318,14 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	register_ex_mem
 
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module core
+-- Compiling module cores_encapsulator
+
+Top level modules:
+	cores_encapsulator
+
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface register_ex_interface
@@ -398,6 +333,19 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	register_ex
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling interface system_iff
+-- Compiling package testbench_sv_unit
+-- Compiling module basic_task
+-- Compiling interface system_iff
+-- Compiling module core
+-- Compiling module cores_encapsulator
+-- Compiling module testbench
+
+Top level modules:
+	testbench
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
