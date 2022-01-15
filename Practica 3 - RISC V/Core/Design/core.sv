@@ -66,7 +66,7 @@ module core #(
     reg_if_id_wiring_designator_segmented             reg_if_id_wiring_designator_segmented               (.wires(segmented_core_wires));
     reg_id_ex_wiring_designator_segmented             reg_id_ex_wiring_designator_segmented               (.wires(segmented_core_wires));
     reg_mem_wb_wiring_designator_segmented            reg_mem_wb_wiring_designator_segmented              (.wires(segmented_core_wires));
-
+    reg_ex_mem_wiring_designator_segmented            reg_ex_mem_wiring_designator_segmented              (.wires(segmented_core_wires));  
     //Designator instances for golden core
     adder_sum_wiring_designator             adder_sum_wiring_designator             (.wires(golden_core_wires));
     adder_pc_wiring_designator              adder_pc_wiring_designator              (.wires(golden_core_wires));

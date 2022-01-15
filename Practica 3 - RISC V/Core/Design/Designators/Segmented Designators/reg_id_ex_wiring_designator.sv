@@ -2,6 +2,8 @@ module reg_id_ex_wiring_designator_segmented (
     segmented_interface wires
 );
 
+    assign wires.reg_id_ex_wiring.clear_pipeline        = 1'b0;
+
     assign wires.reg_id_ex_wiring.clk                   = wires.clk;
     assign wires.reg_id_ex_wiring.pc_in                 = wires.reg_if_id_wiring.pc_out;
     assign wires.reg_id_ex_wiring.read_data_1_in        = wires.register_bank_wiring.read_data_1;
