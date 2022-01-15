@@ -15,16 +15,18 @@ class fibonnaci_test;
 
     task check();
 
-    assert (fibonnaci_verificator.core.data_memory.data_pool[0] == 32'd0) 
+    $display("[FIBONNACI CHECKING START]");
+
+    assert (Phase2_testbench.fibonnaci_verificator.core.data_memory.data_pool[0] == 32'd0) 
     else   $display("[ERROR] POSITION 0 OF FIBONACCI IS WRONG");
 
-    assert (fibonnaci_verificator.core.data_memory.data_pool[1] == 32'd1) 
+    assert (Phase2_testbench.fibonnaci_verificator.core.data_memory.data_pool[1] == 32'd1) 
     else   $display("[ERROR] POSITION 0 OF FIBONACCI IS WRONG");
 
     for(int x = 2 ; x < this.total_numbers_to_verify; x++ )begin
         golden_model.compute_new_number();
 
-        assert (fibonnaci_verificator.core.data_memory.data_pool[x] == golden_model.current_number)
+        assert (Phase2_testbench.fibonnaci_verificator.core.data_memory.data_pool[x] == golden_model.current_number)
         else   $display("[ERROR] POSITION %d OF FIBONACCI IS WRONG", x);
     end
 

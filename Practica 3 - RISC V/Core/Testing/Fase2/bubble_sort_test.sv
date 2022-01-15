@@ -11,31 +11,32 @@ class bubble_test;
 
     task check;
     
-        assert ( 32'h3 == bubble_sort_verificator.core.data_memory.data_pool[0]) 
+        $display("[BUBBLE SORT CHECKING START]");
+        assert ( 32'h3 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[0]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 0 ARE DIFFERENT");
 
-        assert ( 32'h3 == bubble_sort_verificator.core.data_memory.data_pool[1]) 
+        assert ( 32'h3 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[1]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 1 ARE DIFFERENT");
 
-        assert ( 32'h5 == bubble_sort_verificator.core.data_memory.data_pool[2]) 
+        assert ( 32'h5 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[2]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 2 ARE DIFFERENT");
 
-        assert ( 32'h6 == bubble_sort_verificator.core.data_memory.data_pool[3]) 
+        assert ( 32'h6 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[3]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 3 ARE DIFFERENT");
 
-        assert ( 32'h7 == bubble_sort_verificator.core.data_memory.data_pool[4]) 
+        assert ( 32'h7 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[4]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 4 ARE DIFFERENT");
 
-        assert ( 32'h8 == bubble_sort_verificator.core.data_memory.data_pool[5]) 
+        assert ( 32'h8 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[5]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 5 ARE DIFFERENT");
 
-        assert ( 32'h18 == bubble_sort_verificator.core.data_memory.data_pool[6]) 
+        assert ( 32'h18 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[6]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 6 ARE DIFFERENT");
 
-        assert ( 32'h19 == bubble_sort_verificator.core.data_memory.data_pool[7]) 
+        assert ( 32'h19 == Phase2_testbench.bubble_sort_verificator.core.data_memory.data_pool[7]) 
         else $info("ERROR [BUBBLE SHORT]: NUMBERS IN POSITION 7 ARE DIFFERENT");
 
-        $display("[CHECKING FINISHED]");
+        $display("[BUBBLE SORT CHECKING FINISHED]");
         
     endtask //automatic
 
