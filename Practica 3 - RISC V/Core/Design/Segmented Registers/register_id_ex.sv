@@ -62,6 +62,10 @@ register_ex register_ex_instance(
     .wiring(reg_id_ex_wiring.ex_wiring)
 );
 
+assign reg_id_ex_wiring.ex_wiring.clk   = reg_id_ex_wiring.clk;
+assign reg_id_ex_wiring.m_wiring.clk    = reg_id_ex_wiring.clk;
+assign reg_id_ex_wiring.wb_wiring.clk   = reg_id_ex_wiring.clk;
+
 always_ff @( posedge reg_id_ex_wiring.clk ) begin
 
     if(!reg_id_ex_wiring.clear_pipeline)begin

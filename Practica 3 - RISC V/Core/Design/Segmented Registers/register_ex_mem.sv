@@ -46,6 +46,9 @@ register_wb register_wb_instance(
     .wiring(reg_ex_mem_wiring.wb_wiring)
 );
 
+assign reg_ex_mem_wiring.m_wiring.clk   = reg_ex_mem_wiring.clk;
+assign reg_ex_mem_wiring.wb_wiring.clk  = reg_ex_mem_wiring.clk;
+
 always_ff @( posedge reg_ex_mem_wiring.clk ) begin 
     if(!reg_ex_mem_wiring.clear_pipeline)begin
         reg_ex_mem_wiring.adder_sum_out           <= reg_ex_mem_wiring.adder_sum_in;

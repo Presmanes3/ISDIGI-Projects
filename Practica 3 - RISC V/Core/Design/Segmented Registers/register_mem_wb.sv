@@ -29,6 +29,8 @@ register_wb register_wb_instance(
     .wiring(reg_mem_wb_wiring.wb_wiring)
 );
 
+assign reg_mem_wb_wiring.wb_wiring.clk = reg_mem_wb_wiring.clk;
+
 always_ff @( posedge reg_mem_wb_wiring.clk ) begin
     reg_mem_wb_wiring.alu_result_out          <= reg_mem_wb_wiring.alu_result_in;
     reg_mem_wb_wiring.data_memory_out_out     <= reg_mem_wb_wiring.data_memory_out_in;

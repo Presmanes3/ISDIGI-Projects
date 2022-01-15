@@ -16,11 +16,6 @@ interface register_if_id_interface #(
     logic pc_write_enable;
 endinterface //register_if_id_interface
 
-
-
-
-
-
 module register_if_id #(
     parameter data_bits = 32
 ) (

@@ -21,11 +21,9 @@
 `include "./Segmented Components/ALU_encapsulator.sv"
 `include "./segmented_interface.sv"
 
-
-
-
 module segmented_core
 #(
+    parameter sintetizable = 1'b0,
     parameter data_bits = 32,
     parameter memory_size = 1024,
     parameter memory_address_bits = $clog2(memory_size),
@@ -63,12 +61,12 @@ module segmented_core
     memory data_memory (         
         .memory_wiring              (wires.data_memory_wiring)
     );
-    defparam data_memory.sintetizable = 1'b1;
+    defparam data_memory.sintetizable = sintetizable;
 
     memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
         .memory_wiring              (wires.instruction_memory_wiring)
     );
-    defparam instruction_memory.sintetizable = 1'b1;
+    defparam instruction_memory.sintetizable = sintetizable;
 
     mux_2_input mux_mem (                        
         .mux_2_input_wiring         (wires.mux_mem_wiring)
@@ -77,7 +75,7 @@ module segmented_core
     register_bank register_bank (
         .register_bank_wiring       (wires.register_bank_wiring)
     );
-    defparam register_bank.sintetizable = 1'b1;
+    defparam register_bank.sintetizable = sintetizable;
 
     imm_gen imm_gen (
         .imm_gen_wiring             (wires.imm_gen_wiring)
