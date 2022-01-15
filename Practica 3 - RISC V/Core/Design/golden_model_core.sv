@@ -51,12 +51,12 @@ module golden_model_core
     memory data_memory (         
         .memory_wiring              (wires.data_memory_wiring)
     );
-    defparam data_memory.sintetizable = 1'b1;
+    defparam data_memory.sintetizable = 1'b0;
 
     memory #(.input_file(program_file), .charge_file(1'b1)) instruction_memory  (
         .memory_wiring              (wires.instruction_memory_wiring)
     );
-    defparam instruction_memory.sintetizable = 1'b1;
+    defparam instruction_memory.sintetizable = 1'b0;
 
     mux_3_input mux_alu1 (
         .mux_3_input_wiring         (wires.mux_alu1_wiring)
@@ -73,7 +73,7 @@ module golden_model_core
     register_bank register_bank (
         .register_bank_wiring      (wires.register_bank_wiring)
     );
-    defparam register_bank.sintetizable = 1'b1;
+    defparam register_bank.sintetizable = 1'b0;
 
     imm_gen imm_gen (
         .imm_gen_wiring             (wires.imm_gen_wiring)

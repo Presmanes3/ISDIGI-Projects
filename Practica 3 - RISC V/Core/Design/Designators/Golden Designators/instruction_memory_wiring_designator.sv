@@ -5,7 +5,7 @@ module instruction_memory_wiring_designator #(
     golden_interface wires
 );
 
-    assign wires.instruction_memory_wiring.clk             = 1'b0;
+    assign wires.instruction_memory_wiring.clk             = wires.clk;
     assign wires.instruction_memory_wiring.write_enable    = 1'b0;
     assign wires.instruction_memory_wiring.read_enable     = 1'b1;
     assign wires.instruction_memory_wiring.address         = wires.pc_wiring.out[memory_address_bits - 1  : 2];

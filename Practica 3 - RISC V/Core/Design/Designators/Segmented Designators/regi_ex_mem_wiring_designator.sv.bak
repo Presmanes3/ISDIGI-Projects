@@ -19,5 +19,4 @@ assign wires.reg_ex_mem_wiring.m_wiring.mem_read_in         = ;
 assign wires.reg_ex_mem_wiring.wb_wiring.reg_write_in   = ;
 assign wires.reg_ex_mem_wiring.wb_wiring.jump_rd_in     = ;
 assign wires.reg_ex_mem_wiring.wb_wiring.mem_to_reg_in  = ;
-assign wires.reg_ex_mem_wiring.wb_wiring.reg_write_in   = ;
 endmodule

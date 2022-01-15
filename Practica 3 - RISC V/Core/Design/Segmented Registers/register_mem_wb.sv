@@ -23,7 +23,7 @@ module register_mem_wb #(
     register_mem_wb_interface reg_mem_wb_wiring
 );
 
-assign reg_mem_wb_wiring.wb_wiring.n_enable_output = 1'b0;
+// assign reg_mem_wb_wiring.wb_wiring.n_enable_output = 1'b0;
 
 register_wb register_wb_instance(
     .wiring(reg_mem_wb_wiring.wb_wiring)

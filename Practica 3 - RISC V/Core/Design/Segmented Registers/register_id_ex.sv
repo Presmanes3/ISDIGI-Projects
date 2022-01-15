@@ -46,9 +46,9 @@ module register_id_ex #(
 
 );
 
-assign reg_id_ex_wiring.m_wiring.n_enable_output  = reg_id_ex_wiring.clear_pipeline;
-assign reg_id_ex_wiring.wb_wiring.n_enable_output = reg_id_ex_wiring.clear_pipeline;
-assign reg_id_ex_wiring.ex_wiring.n_enable_output = reg_id_ex_wiring.clear_pipeline;
+// assign reg_id_ex_wiring.m_wiring.n_enable_output  = reg_id_ex_wiring.clear_pipeline;
+// assign reg_id_ex_wiring.wb_wiring.n_enable_output = reg_id_ex_wiring.clear_pipeline;
+// assign reg_id_ex_wiring.ex_wiring.n_enable_output = reg_id_ex_wiring.clear_pipeline;
 
 register_m register_m_instance(
     .wiring(reg_id_ex_wiring.m_wiring)

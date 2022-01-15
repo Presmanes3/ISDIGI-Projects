@@ -35,8 +35,8 @@ module register_ex_mem #(
     register_ex_mem_interface reg_ex_mem_wiring
 );
 
-assign reg_ex_mem_wiring.m_wiring.n_enable_output   = reg_ex_mem_wiring.clear_pipeline;
-assign reg_ex_mem_wiring.wb_wiring.n_enable_output  = reg_ex_mem_wiring.clear_pipeline;
+// assign reg_ex_mem_wiring.m_wiring.n_enable_output   = reg_ex_mem_wiring.clear_pipeline;
+// assign reg_ex_mem_wiring.wb_wiring.n_enable_output  = reg_ex_mem_wiring.clear_pipeline;
 
 register_m register_m_instance(
     .wiring(reg_ex_mem_wiring.m_wiring)

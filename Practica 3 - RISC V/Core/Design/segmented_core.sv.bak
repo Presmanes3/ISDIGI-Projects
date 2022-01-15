@@ -86,7 +86,7 @@ module segmented_core
     );
 
     alu_controller alu_control(
-        .alu_controler_wiring       (alu_controler_wiring)
+        .alu_controller_wiring       (alu_controller_wiring)
     );
     // ========== ========== REGISTERS ========== ========== //
 

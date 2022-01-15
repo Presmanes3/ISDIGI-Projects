@@ -39,12 +39,12 @@ class core_test;
         fork
             begin
                 // Wait till the golden model finishes
-                @(testbench.cores.fibo_core.golden_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
+                @(testbench.cores.fibo_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
                 $display("[FIBBONACCI] Golden model finished");
             end
             begin
                 // Wait till the segmented model finishes
-                @(testbench.cores.fibo_core.segmented_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
+                // @(testbench.cores.fibo_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
                 $display("[FIBBONACCI] Segmented model finished");
             end
         join
@@ -62,6 +62,7 @@ class core_test;
 
         $display("[FIBBONACCI] finishing test!");
         $fclose(file);
+
 
     endtask
 
@@ -84,11 +85,11 @@ class core_test;
 
             fork
                 begin
-                    @(testbench.cores.bubble_short_core.golden_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
+                    @(testbench.cores.bubble_short_core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
                     $display("[BUBBLE] Golden model finished");
                 end
                 begin
-                    //@(testbench.cores.bubble_short_core.segmented_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
+                    //@(testbench.cores.bubble_short_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
                     $display("[BUBBLE] Segmented model finished");
                 end
             join

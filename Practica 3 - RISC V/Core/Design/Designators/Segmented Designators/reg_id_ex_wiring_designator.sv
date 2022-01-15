@@ -26,6 +26,5 @@ assign wires.reg_id_ex_wiring.m_wiring.mem_read_in         = 0;
 assign wires.reg_id_ex_wiring.wb_wiring.reg_write_in   = 0;
 assign wires.reg_id_ex_wiring.wb_wiring.jump_rd_in     = 0;
 assign wires.reg_id_ex_wiring.wb_wiring.mem_to_reg_in  = 0;
-assign wires.reg_id_ex_wiring.wb_wiring.reg_write_in   = 0;
 
 endmodule
