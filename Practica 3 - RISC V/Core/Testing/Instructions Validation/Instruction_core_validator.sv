@@ -7,12 +7,15 @@ module Instruction_core_validator #(
     input reset
 );
 
-    parameter file_path = {"Core/Testing/Programs/Simple/", program_file}
+    parameter file_path = {"Core/Testing/Programs/Simple/", program_file};
 
     core #(.program_file(file_path)) core(
         .clk(clk),
         .reset(reset)
     );
+
+    int single_value = 0;
+    int segmented_value = 0;
 
     task check();
         $display("==============================================================");
@@ -31,9 +34,9 @@ module Instruction_core_validator #(
             end
         join
 
-        $display("[CHECKING MEMORIES]")
-        int single_value    = core.golden_core.data_memory.data_pool[0];
-        int segmented_value = core.segmented_core.data_memory.data_pool[0];
+        $display("[CHECKING MEMORIES]");
+        single_value    = core.golden_core.data_memory.data_pool[0];
+        segmented_value = core.segmented_core.data_memory.data_pool[0];
 
         assert(single_value == segmented_value) else $info("[VALUE ERROR] SINGLE (%d) != SEGMENTED (%d)", single_value, segmented_value);
 
