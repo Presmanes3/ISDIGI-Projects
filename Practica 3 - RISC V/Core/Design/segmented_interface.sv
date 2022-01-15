@@ -22,4 +22,11 @@ interface segmented_interface;
     register_id_ex_interface        reg_id_ex_wiring();             // 3 OK - REVIEWED
     register_ex_mem_interface       reg_ex_mem_wiring();            // 0 OK - REVIEWED
     register_mem_wb_interface       reg_mem_wb_wiring();            // 1 OK - REVIEWED
+    register_id_ex_regex_interface  reg_id_ex_regex_wiring();       //ok
+    register_id_ex_regm_interface   reg_id_ex_regm_wiring();        //ok
+    register_id_ex_regwb_interface   reg_id_ex_regwb_wiring();      //ok
+    register_ex_mem_regm_interface   reg_ex_mem_regm_wiring();      //ok
+    register_ex_mem_regwb_interface   reg_ex_mem_regwb_wiring();    //ok
+    register_mem_wb_regwb_interface   reg_mem_wb_regwb_wiring(); //ok
+
 endinterface
