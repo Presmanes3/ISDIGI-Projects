@@ -1,4 +1,4 @@
-module reg_ex_mem_wiring_designator(
+module reg_ex_mem_wiring_designator_segmented (
     segmented_interface wires
 );
 

@@ -31,7 +31,7 @@ module alu_encapsulator #(
 
     mux_4_input_interface   input_1_wiring();
     mux_4_input_interface   input_2_wiring();
-    alu_interface           alu_wiring();
+    ALU_interface           alu_wiring();
 
     // Cable assigment for input 1
     assign input_1_wiring.input0    = alu_encapsulator_wiring.register_data_1_in;

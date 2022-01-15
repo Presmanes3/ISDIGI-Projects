@@ -1,4 +1,4 @@
-module adder_pc_wiring_designator(
+module adder_pc_wiring_designator_segmented(
 
 segmented_interface wires
 

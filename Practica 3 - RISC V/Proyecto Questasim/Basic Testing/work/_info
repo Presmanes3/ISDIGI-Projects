@@ -28,25 +28,25 @@ R1
 R0
 vADDER
 Z2 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z3 !s110 1642246015
+Z3 !s110 1642251560
 !i10b 1
 !s100 6hITnc_]T]Uhi2kkZ]JCA2
-Io:1OI5adeJEHQ_i4g[IC^1
+IUgci1PLzH43ZWQM7H6_A60
 Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 !s105 ADDER_sv_unit
+Z5 !s105 segmented_core_sv_unit
 S1
 Z6 dC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Proyecto Questasim/Basic Testing
 Z7 w1642242779
-Z8 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ADDER.sv
-Z9 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ADDER.sv
+Z8 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\ADDER.sv
+Z9 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\ADDER.sv
 Z10 L0 12
 Z11 OL;L;10.4;61
 r1
 !s85 0
 31
-Z12 !s108 1642246015.251000
-Z13 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ADDER.sv|
-Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ADDER.sv|
+Z12 !s108 1642251560.246000
+Z13 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\segmented_interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\ALU_encapsulator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\hazard_detection_unit.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\data_forwarding.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\clear_pipeline.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_mem_wb.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_if_id.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_id_ex.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_ex_mem.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\pc_segmented.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\memory.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv|
 !i113 0
 Z15 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@a@d@d@e@r
@@ -55,7 +55,7 @@ R2
 R3
 !i10b 1
 !s100 ZeCHPJB=UeNb[<P3J?iUA2
-IY@C8z:51Z8eo]n75hTBIb2
+IUoVeQ`JjSn80_1j4F[9HA0
 R4
 R5
 S1
@@ -75,12 +75,12 @@ R14
 R15
 vadder_pc_wiring_designator
 R2
-Z16 !s110 1642246016
+Z16 !s110 1642251562
 !i10b 1
 !s100 eF>mQC9XGXB[O_BzKnBUz0
 Ii7EaH5F3Yn?2M0E>>KRAj2
 R4
-!s105 adder_pc_wiring_designator_sv_unit
+Z17 !s105 adder_pc_wiring_designator_sv_unit
 S1
 R6
 w1642240587
@@ -91,9 +91,32 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.126000
+!s108 1642251562.646000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_pc_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_pc_wiring_designator.sv|
+!i113 0
+R15
+vadder_pc_wiring_designator_segmented
+R2
+Z18 !s110 1642251564
+!i10b 1
+!s100 SXOG;X5a5:ca=oB_Z<QFI2
+I_RiM9T_bU2Nb1;b1iCgk:2
+R4
+R17
+S1
+R6
+w1642247965
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_pc_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_pc_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251564.255000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_pc_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_pc_wiring_designator.sv|
 !i113 0
 R15
 vadder_sum_wiring_designator
@@ -103,7 +126,7 @@ R16
 !s100 X:^6K1^kfF?UP`1c19KVG3
 Ic7AKR5UCfE3k0>cPRW^NE3
 R4
-!s105 adder_sum_wiring_designator_sv_unit
+Z19 !s105 adder_sum_wiring_designator_sv_unit
 S1
 R6
 w1642194352
@@ -114,92 +137,138 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.358000
+!s108 1642251562.722000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv|
 !i113 0
 R15
-vALU
+vadder_sum_wiring_designator_segmented
 R2
-R3
+R18
 !i10b 1
-!s100 g8N_X7_@c]J`Z;2DkF^B^2
-IdZc3X>jh8BXE6fa^4eRI80
+!s100 83l^i_N<PJFENI98Po[7V3
+Iehi51ne;78z<@NaINYdPE1
 R4
-Z17 !s105 ALU_sv_unit
+R19
 S1
 R6
-Z18 w1642180675
-Z19 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv
-Z20 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv
-Z21 L0 14
+w1642247968
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_sum_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_sum_wiring_designator.sv
+L0 1
 R11
 r1
 !s85 0
 31
-Z22 !s108 1642246015.305000
-Z23 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv|
-Z24 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv|
+!s108 1642251564.314000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_sum_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/adder_sum_wiring_designator.sv|
+!i113 0
+R15
+vALU
+R2
+Z20 !s110 1642251556
+!i10b 1
+!s100 g8N_X7_@c]J`Z;2DkF^B^2
+IdZc3X>jh8BXE6fa^4eRI80
+R4
+Z21 !s105 ALU_sv_unit
+S1
+R6
+Z22 w1642247886
+Z23 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv
+Z24 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv
+Z25 L0 14
+R11
+r1
+!s85 0
+31
+Z26 !s108 1642251556.869000
+Z27 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv|
+Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/ALU.sv|
 !i113 0
 R15
 n@a@l@u
 Yalu_controler_interface
 R2
-R16
+!s110 1642247676
 !i10b 1
 !s100 V=m>dZneJ[OdgZIWHm9:B3
-IVF?fYg@2dKjIPh[?1QkYH0
+IcX2Lg1B5N1PhMYL_aWnE;1
 R4
-Z25 !s105 alu_controller_sv_unit
+R5
 S1
 R6
-Z26 w1642243128
-Z27 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv
-Z28 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv
+w1642243128
+Z29 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\alu_controller.sv
+Z30 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\alu_controller.sv
 L0 5
 R11
 r1
 !s85 0
 31
-Z29 !s108 1642246016.074000
-Z30 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv|
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/alu_controller.sv|
+!s108 1642247676.939000
+Z31 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\ALU_encapsulator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\hazard_detection_unit.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\data_forwarding.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\clear_pipeline.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_mem_wb.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_if_id.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_id_ex.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_ex_mem.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\pc_segmented.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\memory.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv|
+R14
 !i113 0
 R15
 valu_controller
 R2
-R16
+R3
 !i10b 1
-!s100 <RRdTDO1VFl`52hGSnKze3
-IAc>k:ae<@ZDQj=fWedYJo1
+!s100 ^@=eFa[M5>>BV=R4RE]Sm1
+IULj6F=RMz`zKbz:LT@l7j1
 R4
-R25
+R5
 S1
 R6
-R26
-R27
-R28
-Z32 L0 13
+Z32 w1642248234
+R29
+R30
+L0 13
 R11
 r1
 !s85 0
 31
+R12
+R13
+R14
+!i113 0
+R15
+Yalu_controller_interface
+R2
+R3
+!i10b 1
+!s100 =1knaDlOkU>JJHDM_CI5M2
+IG^iGZgo=k7M=`69k=U;z<0
+R4
+R5
+S1
+R6
+R32
 R29
 R30
-R31
+L0 5
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
 !i113 0
 R15
 valu_controller_wiring_designator
 R2
 R16
 !i10b 1
-!s100 6iI=S?dWH@FSf8ibj5N3;1
-I3Bb<Z`RocclSBE4imJTnc1
+!s100 VVeRJ6i1:Njb6bn<?bQlB0
+IKQCcFcknhK6ng;CgzDg7C2
 R4
-!s105 alu_controller_wiring_designator_sv_unit
+Z33 !s105 alu_controller_wiring_designator_sv_unit
 S1
 R6
-w1642242008
+Z34 w1642251550
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv
 L0 1
@@ -207,42 +276,65 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.506000
+!s108 1642251562.806000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv|
 !i113 0
 R15
-valu_encapsulator
+valu_controller_wiring_designator_segmented
 R2
-Z33 !s110 1642246018
+R18
 !i10b 1
-!s100 zb^65Q`g[Z^=?>nanz67D3
-IYCi]AOSLaW`i=2YlzGYz52
+!s100 Q3YFR1ol83[E3B;38zb6m2
+IPi<P5Y?>K^mA5@9=oA>S<1
 R4
-Z34 !s105 ALU_encapsulator_sv_unit
+R33
 S1
 R6
-Z35 w1642243042
-Z36 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/ALU_encapsulator.sv
-Z37 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/ALU_encapsulator.sv
+w1642247970
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_controller_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_controller_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251564.379000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_controller_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_controller_wiring_designator.sv|
+!i113 0
+R15
+valu_encapsulator
+R2
+R3
+!i10b 1
+!s100 5B2?jFeNRg13>Uk2_Y@j11
+Il6ER`e0>VO::]1nABGAio3
+R4
+R5
+S1
+R6
+Z35 w1642247861
+Z36 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\ALU_encapsulator.sv
+Z37 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\ALU_encapsulator.sv
 L0 25
 R11
 r1
 !s85 0
 31
-Z38 !s108 1642246018.668000
-Z39 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/ALU_encapsulator.sv|
-Z40 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/ALU_encapsulator.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yalu_encapsulator_interface
 R2
-R33
+R3
 !i10b 1
 !s100 lK:OBVjfM<c[`a9O5gz;D0
-I6mWU^@QX6WHD9Sc7bW7P31
+ICLW3hb9iA;@OI<`^C4oMQ3
 R4
-R34
+R5
 S1
 R6
 R35
@@ -253,32 +345,78 @@ R11
 r1
 !s85 0
 31
-R38
-R39
-R40
+R12
+R13
+R14
 !i113 0
 R15
-YALU_interface
+valu_encapsulator_wiring_designator
 R2
-R3
-!i10b 1
-!s100 Akmb5R?zkUbLDEcX593`W1
-IFCFhUb>Y<8M^7A46RSS]E3
+Z38 DXx4 work 17 testbench_sv_unit 0 22 Ki>9`Dz4Tfa:mAQ`Ld=Rn3
 R4
-R17
+r1
+!s85 0
+31
+!i10b 1
+!s100 JU0N0?ePB?S3iMRY<hGcD0
+IGW47YmoYVDl@f:F0n=M^^1
+Z39 !s105 testbench_sv_unit
 S1
 R6
+w1642186336
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv
+Z40 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv
+L0 1
+R11
+Z41 !s108 1642247870.145000
+Z42 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\immediate_generator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_three_alu_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_alu1_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\jump_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\instruction_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\imm_gen_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
+Z43 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
+!i113 0
+R15
+valu_encapsulator_wiring_designator_segmented
+R2
 R18
-R19
-R20
+!i10b 1
+!s100 ogg32Da?5AVaLX]Q;hDJn3
+IOdZiDjYHcZ<4<L``>KP9H1
+R4
+!s105 alu_encapsulator_wiring_designator_sv_unit
+S1
+R6
+w1642249399
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
+!s108 1642251564.541000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv|
+!i113 0
+R15
+YALU_interface
+R2
+R20
+!i10b 1
+!s100 Akmb5R?zkUbLDEcX593`W1
+IFCFhUb>Y<8M^7A46RSS]E3
+R4
+R21
+S1
+R6
 R22
 R23
 R24
+L0 1
+R11
+r1
+!s85 0
+31
+R26
+R27
+R28
 !i113 0
 R15
 n@a@l@u_interface
@@ -286,13 +424,13 @@ valu_wiring_designator
 R2
 R16
 !i10b 1
-!s100 V<PCO5M<>gSYM_<:bB6]H3
-InP_DCLJLPBF7gOjb9?HA60
+!s100 `ic?jldE0DRngTEi508;O0
+ILO6lUo]zXoj?T5ecK?R@Y0
 R4
 !s105 alu_wiring_designator_sv_unit
 S1
 R6
-w1642241526
+w1642251172
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv
 L0 1
@@ -300,32 +438,32 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.586000
+!s108 1642251562.902000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv|
 !i113 0
 R15
 vbasic_task
 R2
-Z41 !s110 1642242221
-!i10b 1
-!s100 V5MzKZ`H9Q<jY;1R0KM310
-I7hci>^VFbCfDK1nnc:i=d0
+Z44 DXx4 work 17 testbench_sv_unit 0 22 `_iN7UANg6ZFnO6bThU3A3
 R4
-Z42 !s105 testbench_sv_unit
-S1
-R6
-Z43 w1641419468
-8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv
-Z44 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv
-L0 7
-R11
 r1
 !s85 0
 31
-Z45 !s108 1642242221.689000
-Z46 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\segmented_core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\golden_model_core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
-Z47 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
+!i10b 1
+!s100 V5MzKZ`H9Q<jY;1R0KM310
+I7hci>^VFbCfDK1nnc:i=d0
+R39
+S1
+R6
+Z45 w1641419468
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv
+Z46 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv
+L0 7
+R11
+Z47 !s108 1642251562.267000
+Z48 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\instruction_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\jump_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\immediate_generator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_alu2_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_alu1_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\jump_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\instruction_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\imm_gen_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
+R43
 !i113 0
 R15
 Xbasic_task_sv_unit
@@ -340,12 +478,12 @@ I]h0I4>Ok82_Md[oU<o8E03
 !i103 1
 S1
 R6
-R43
+R45
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv
 L0 2
 R11
-!s108 1642242220.947000
+!s108 1642251561.016000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/basic_task.sv|
 !i113 0
@@ -375,73 +513,103 @@ r1
 R15
 Xcheck_sv_unit
 R2
-!s110 1642178363
+!s110 1642251561
 !i10b 1
-!s100 YD7zGgi:K=YlD5WC3JzK_0
-I`G?U:Eh?=NnfeIL]lLK0V2
-V`G?U:Eh?=NnfeIL]lLK0V2
+!s100 @8X8D@WK`zg]cm]NGO;3O3
+I42U7I3cXKdZi`OgWf7ffT3
+V42U7I3cXKdZi`OgWf7ffT3
 !i103 1
 S1
 R6
-Z48 w1642178360
+R34
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\golden_model_core.sv
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv
-L0 35
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\adder_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\adder_sum_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\alu_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\alu_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\data_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\imm_gen_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\instruction_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\jump_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\main_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_alu1_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_alu2_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\register_bank_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\adder_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\adder_sum_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\alu_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\data_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\immediate_generator_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\main_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\mux_mem_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\mux_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\jump_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\instruction_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\register_bank_wiring_designator.sv
+L0 17
 R11
 r1
 !s85 0
 31
-!s108 1642178363.464000
-!s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\segmented_core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\golden_model_core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv|
+!s108 1642251561.086000
+!s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\instruction_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\jump_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\mux_mem_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\immediate_generator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\alu_encapsulator_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Segmented Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\register_bank_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_alu2_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\mux_alu1_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\main_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\jump_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\instruction_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\imm_gen_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\data_memory_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\alu_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\alu_controller_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\adder_sum_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\.\Designators\Golden Designators\adder_pc_wiring_designator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\..\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv|
 !i113 0
 R15
 vclear_pipeline
 R2
-R33
+R3
 !i10b 1
 !s100 9n@DCEmf[MgCUolCCbEBN0
-IR07zV:YhJga6HXP0imj<b0
+Ih<5VY;9c[iN]I1]ci5W<;0
 R4
-!s105 clear_pipeline_sv_unit
+R5
 S1
 R6
 w1642104511
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\clear_pipeline.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\clear_pipeline.sv
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246018.477000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/clear_pipeline.sv|
+R12
+R13
+R14
 !i113 0
 R15
 vcore
 R2
-R33
-!i10b 1
-!s100 FQf0V@7DRd9b0z5h8bA4z1
-I_3]m@NZKZVB9b`8j:MiZV0
+R44
 R4
-!s105 core_sv_unit
-S1
-R6
-w1642245198
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv
-L0 1
-R11
 r1
 !s85 0
 31
-!s108 1642246018.863000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/core.sv|
+!i10b 1
+!s100 IVZ]6dP[IBBVl<D86DnO=1
+Ikm<>1gDa^D<@7R<cQH=?K1
+R39
+S1
+R6
+w1642251443
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv
+Z49 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\core.sv
+L0 34
+R11
+R47
+R48
+R43
 !i113 0
 R15
 vcore_instances
@@ -454,17 +622,17 @@ r1
 !i10b 1
 !s100 ]9PfRg5k?LbB7LiJaSh;?2
 Ig:ZD6CIblSc<:>GISYio93
-R42
+R39
 S1
 R6
 w1641416956
-Z49 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv
-Z50 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv
+Z50 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv
+Z51 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv
 L0 3
 R11
 !s108 1641416999.333000
-Z51 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\golden_model_core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
-R47
+Z52 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Basic Components\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\golden_model_core.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\check.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\basic_task.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv|
+R43
 !i113 0
 R15
 vcore_instances_module
@@ -477,76 +645,76 @@ r1
 !i10b 1
 !s100 zgLU1bE06dEBbYJS_OLZA2
 I0D9B8;1OP>hfh9ifBkfjI2
-R42
+R39
 S1
 R6
 w1641417016
-R49
 R50
+R51
 L0 3
 R11
 !s108 1641417043.776000
-R51
-R47
+R52
+R43
 !i113 0
 R15
 vcores_encapsulator
 R2
-R41
-!i10b 1
-!s100 K07V<kh<>XPnAZgU8G1E72
-IMz:MFjI]4=`KM5Zm3Q3G:2
+R44
 R4
-R42
-S1
-R6
-w1641772121
-R49
-R50
-L0 4
-R11
 r1
 !s85 0
 31
-R45
-R46
+!i10b 1
+!s100 NSz;S@Y03Ld_oGJ]QDAYH1
+IkaBBG40JZW6]Z?[H1Z>L00
+R39
+S1
+R6
+w1642246943
+R50
+R51
+L0 3
+R11
 R47
+R48
+R43
 !i113 0
 R15
 vdata_forwarding
 R2
-R33
+R3
 !i10b 1
 !s100 f^?Ye0>1MRg1fV97U@cc`1
-IQ4T3GG1gUeDSN;a1<YZGX1
+IMUAkJZK9i<gHn<OOV9=jm0
 R4
-!s105 data_forwarding_sv_unit
+R5
 S1
 R6
 w1641415781
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\data_forwarding.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\data_forwarding.sv
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246018.538000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv|
+R12
+R13
+R14
 !i113 0
 R15
 vdata_memory_wiring_designator
 R2
-R16
+Z53 !s110 1642251563
 !i10b 1
-!s100 aN?jUonlm:H7BCEU:Xh0[3
-I?[@FzG3aEd502d^_T0];l1
+!s100 LAI6<hJDdF?f5?KaU9_Li3
+I9nI2GfoTGmjR9G_F@=4EA1
 R4
-!s105 data_memory_wiring_designator_sv_unit
+Z54 !s105 data_memory_wiring_designator_sv_unit
 S1
 R6
-w1642240904
+w1642250969
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv
 L0 1
@@ -554,124 +722,147 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.673000
+!s108 1642251562.993000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/data_memory_wiring_designator.sv|
 !i113 0
 R15
-Ygolden_interface
+vdata_memory_wiring_designator_segmented
 R2
-Z52 !s110 1642246019
+R18
 !i10b 1
-!s100 h<g]V8gzCPa7d^[DE7>?P3
-IZh<I2<c]O>Rk][_];N`NL3
+!s100 >9zIooigiLQVTZjg`8=E:2
+IeK]b3CfYSII=FjmUF=BV10
 R4
-!s105 golden_interface_sv_unit
+R54
 S1
 R6
-w1642242085
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_interface.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_interface.sv
+w1642249144
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246018.998000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_interface.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_interface.sv|
+!s108 1642251564.846000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv|
 !i113 0
 R15
-vgolden_model_core
+Ygolden_interface
 R2
-R52
+R3
 !i10b 1
-!s100 zoeXe`=;L2fj4J_[IfdBZ3
-ImN;]K]EnLI`8GTFI8QPEA1
+!s100 ;O9S`=k13?0mE:KEY1EW71
+IbH1bY0GCB27W1V@1T;JUL3
 R4
-!s105 golden_model_core_sv_unit
+Z55 !s105 golden_model_core_sv_unit
 S1
 R6
-w1642246010
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv
-R32
+w1642250966
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\golden_interface.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\golden_interface.sv
+L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246019.074000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv|
+Z56 !s108 1642251559.600000
+Z57 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\golden_interface.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Golden Components\pc_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\memory.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv|
+Z58 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv|
+!i113 0
+R15
+vgolden_model_core
+R2
+R3
+!i10b 1
+!s100 b;k`fHI>2k:V9K08;iT_g0
+Iek99h3X3N71[<Smb@z;063
+R4
+R55
+S1
+R6
+w1642248515
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/golden_model_core.sv
+R25
+R11
+r1
+!s85 0
+31
+R56
+R57
+R58
 !i113 0
 R15
 Yhazar_detection_unit_interface
 R2
-Z53 !s110 1642242220
+Z59 !s110 1642242220
 !i10b 1
 !s100 GiKZ:c?XENc__AmWBFdG=2
 I]Uncih`z=;;nfQ^8=2bUH2
 R4
-Z54 !s105 hazard_detection_unit_sv_unit
+!s105 hazard_detection_unit_sv_unit
 S1
 R6
 w1642177117
-Z55 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv
-Z56 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv
 L0 1
 R11
 r1
 !s85 0
 31
 !s108 1642242220.623000
-Z57 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv|
-Z58 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv|
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv|
 !i113 0
 R15
 vhazard_detection_unit
 R2
-R33
+R3
 !i10b 1
 !s100 I4eR;[5VGV?Sl<Dh`oBe>0
-IA:]>jcMLMnfhe6Q@Rn2E73
+IR=`:BjP=XWfc8Q]m1O@aV3
 R4
-R54
+R5
 S1
 R6
-Z59 w1642244780
-R55
-R56
+Z60 w1642244780
+Z61 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\hazard_detection_unit.sv
+Z62 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Risk Detectors\hazard_detection_unit.sv
 L0 22
 R11
 r1
 !s85 0
 31
-Z60 !s108 1642246018.604000
-R57
-R58
+R12
+R13
+R14
 !i113 0
 R15
 Yhazard_detection_unit_interface
 R2
-R33
+R3
 !i10b 1
 !s100 ::<kPhK2BTM4G`ag4z51n3
-IU`oM?=fT49PWCOUHF]^@g0
+I^P8DKbljG:D@iZ<ZEdlK10
 R4
-R54
+R5
 S1
 R6
-R59
-R55
-R56
+R60
+R61
+R62
 L0 1
 R11
 r1
 !s85 0
 31
-R60
-R57
-R58
+R12
+R13
+R14
 !i113 0
 R15
 vimm_gen
@@ -679,22 +870,22 @@ R2
 R3
 !i10b 1
 !s100 0>7=P:a@N3YA5VXd`_3Y11
-IU1jbIcfg0BH^b_3ol_>MD2
+I^Ym>65@J`nXehjdI9=Wn;1
 R4
-Z61 !s105 immgen_sv_unit
+R5
 S1
 R6
-Z62 w1642184695
-Z63 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv
-Z64 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv
+Z63 w1642184695
+Z64 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\immgen.sv
+Z65 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\immgen.sv
 L0 9
 R11
 r1
 !s85 0
 31
-Z65 !s108 1642246015.359000
-Z66 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv|
-Z67 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/immgen.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yimm_gen_interface
@@ -702,35 +893,35 @@ R2
 R3
 !i10b 1
 !s100 m^FV7SAAT;NQGo93YF4im0
-IF7Im?CgmQj:eMT?XV`PYh0
+IkX?Sb35S]Fn_KFheC;_N50
 R4
-R61
+R5
 S1
 R6
-R62
 R63
 R64
+R65
 L0 1
 R11
 r1
 !s85 0
 31
-R65
-R66
-R67
+R12
+R13
+R14
 !i113 0
 R15
 vimmediate_generator_wiring_designator
 R2
-R16
+R53
 !i10b 1
-!s100 MDA>`eNMHm><Ecz;<EDBf0
-Ie_CS:W=ULda4b>3UNW:RD2
+!s100 _DSBX?840oHD<AI[IR0C:0
+IdE[iWFa57MAV6TBW<YYd:0
 R4
 !s105 imm_gen_wiring_designator_sv_unit
 S1
 R6
-w1642245858
+w1642251064
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv
 L0 1
@@ -738,22 +929,45 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.849000
+!s108 1642251563.058000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv|
 !i113 0
 R15
-vinstruction_memory_wiring_designator
+vimmediate_generator_wiring_designator_segmented
 R2
-Z68 !s110 1642246017
+R18
 !i10b 1
-!s100 8nTaRY6Nf9^hoG8FnXnTF2
-IC`mAJ9ooV;jbEi@mcIQIF3
+!s100 0hZS_J]dM7dRFUHW8z[402
+I2lB>Fiio>>gaY7^AFkj[E2
 R4
-!s105 instruction_memory_wiring_designator_sv_unit
+!s105 immediate_generator_wiring_designator_sv_unit
 S1
 R6
-w1642194364
+w1642247978
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251564.935000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv|
+!i113 0
+R15
+vinstruction_memory_wiring_designator
+R2
+R53
+!i10b 1
+!s100 LZ_ZEG:7EIa9_ER5K1i=I2
+I`@R_aP3CA21CQod`A8o?61
+R4
+Z66 !s105 instruction_memory_wiring_designator_sv_unit
+S1
+R6
+w1642250859
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/instruction_memory_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/instruction_memory_wiring_designator.sv
 L0 1
@@ -761,88 +975,111 @@ R11
 r1
 !s85 0
 31
-!s108 1642246016.966000
+!s108 1642251563.124000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/instruction_memory_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/instruction_memory_wiring_designator.sv|
 !i113 0
 R15
-Yjump_controler_interface
+vinstruction_memory_wiring_designator_segmented
 R2
-!s110 1642240638
+Z67 !s110 1642251565
 !i10b 1
-!s100 ok<edEU8aJ>`jbUO_I@bb3
-IgL=2QCQ`;>goDb]ZJ[82M1
+!s100 ag?RFeoC4o6Ub=ZTW[Q`13
+I^Z4i[]O[bihhKNCRNKFV]2
 R4
-Z69 !s105 jump_controller_sv_unit
+R66
 S1
 R6
-w1642177440
-Z70 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv
-Z71 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv
+w1642249059
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642240638.548000
-Z72 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv|
-Z73 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv|
+!s108 1642251564.994000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv|
 !i113 0
 R15
 vjump_controller
 R2
 R3
 !i10b 1
-!s100 MQMA688f[`PS7Soa`]60m2
-IOOAJffDUef;QQLc=576cB2
+!s100 ae^dJhkOLJYKgNToPEbzG0
+IffDM>zH;I9o0?FK>c1]P?0
 R4
-R69
+R5
 S1
 R6
-Z74 w1642241106
-R70
-R71
-L0 10
+Z68 w1642249234
+Z69 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\jump_controller.sv
+Z70 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\jump_controller.sv
+Z71 L0 10
 R11
 r1
 !s85 0
 31
-Z75 !s108 1642246015.415000
-R72
-R73
+R12
+R13
+R14
 !i113 0
 R15
 Yjump_controller_interface
 R2
 R3
 !i10b 1
-!s100 f7iH1l7G20Y3A[on^D9G23
-IFQ>9m?1gZX]e`^DU=AOY70
+Z72 !s100 f7iH1l7G20Y3A[on^D9G23
+Z73 I34DKA]I7b]j1@lfdIPbKG0
 R4
-R69
+R55
 S1
 R6
-R74
+R68
+R69
 R70
-R71
 L0 1
 R11
 r1
 !s85 0
 31
-R75
+R56
+R57
+R58
+!i113 0
+R15
+Yjump_controller_interface
+R2
+R3
+!i10b 1
 R72
 R73
+R4
+R5
+S1
+R6
+R68
+R69
+R70
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
 !i113 0
 R15
 vjump_controller_wiring_designator
 R2
-R68
+R53
 !i10b 1
 !s100 O2`XP4_Uk<RGSlOlMM1i91
 IAgkfIY?@ED<WdLMoKkRA71
 R4
-!s105 jump_controller_wiring_designator_sv_unit
+Z74 !s105 jump_controller_wiring_designator_sv_unit
 S1
 R6
 w1642245781
@@ -853,55 +1090,78 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.072000
+!s108 1642251563.185000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/jump_controller_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/jump_controller_wiring_designator.sv|
 !i113 0
 R15
-vmain_controller
+vjump_controller_wiring_designator_segmented
 R2
-R16
+R67
 !i10b 1
-!s100 @R_mOF^445CDBUCaH64[]3
-I;JndJ^kcPN4KNnfJGn68H0
+!s100 NO?M9NjXkBUF?hg;:VMkT3
+I]KHeLn78]_l@GBX9X=:iF3
 R4
-Z76 !s105 main_controller_sv_unit
+R74
 S1
 R6
-Z77 w1642243101
-Z78 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv
-Z79 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv
-L0 37
-R11
-r1
-!s85 0
-31
-Z80 !s108 1642246016.023000
-Z81 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv|
-Z82 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Controllers/main_controller.sv|
-!i113 0
-R15
-Ymain_controller_interface
-R2
-R16
-!i10b 1
-!s100 ^^1heb?WOi<7c6Y?zO@@Q0
-IG<jB_BNG2T`[D7j;A3a=20
-R4
-R76
-S1
-R6
-R77
-R78
-R79
+w1642249677
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/jump_controller_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/jump_controller_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
-R80
-R81
-R82
+!s108 1642251565.080000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/jump_controller_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/jump_controller_wiring_designator.sv|
+!i113 0
+R15
+vmain_controller
+R2
+R3
+!i10b 1
+!s100 @R_mOF^445CDBUCaH64[]3
+IH]dIcEK]?U:e7;L@9c^EY1
+R4
+R5
+S1
+R6
+Z75 w1642243101
+Z76 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\main_controller.sv
+Z77 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Controllers\main_controller.sv
+L0 37
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+Ymain_controller_interface
+R2
+R3
+!i10b 1
+!s100 ^^1heb?WOi<7c6Y?zO@@Q0
+I[?H2_:7Y62zDJ7a04cDR30
+R4
+R5
+S1
+R6
+R75
+R76
+R77
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
 !i113 0
 R15
 Xmain_controller_verificator_sv_unit
@@ -914,7 +1174,7 @@ VgT?3BlIf2ofMO6PzF?FmX1
 !i103 1
 S1
 R6
-Z83 w1641415000
+Z78 w1641415000
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/main_controller_verificator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/main_controller_verificator.sv
 L0 2
@@ -929,12 +1189,12 @@ r1
 R15
 vmain_controller_wiring_designator
 R2
-R68
+R53
 !i10b 1
 !s100 J9J5]S>3nC]bY?3TmN8]_2
 IDh6F?zLNU94`RVoee]MKL1
 R4
-!s105 main_controller_wiring_designator_sv_unit
+Z79 !s105 main_controller_wiring_designator_sv_unit
 S1
 R6
 w1642241014
@@ -945,9 +1205,32 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.212000
+!s108 1642251563.251000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/main_controller_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/main_controller_wiring_designator.sv|
+!i113 0
+R15
+vmain_controller_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 zm;KXRZE^ZI4UKzk_bPEP0
+I1o4`;9>V>?D<]E[RRo4EU3
+R4
+R79
+S1
+R6
+Z80 w1642247999
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.196000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv|
 !i113 0
 R15
 vmemory
@@ -955,22 +1238,22 @@ R2
 R3
 !i10b 1
 !s100 ioFNEbfAHHfNT?Z9WPK8a1
-I2Y4D4Z]0Gd_HH;HWNZ3L>0
+Ih>O>V7We3VDNECN[0EU513
 R4
-Z84 !s105 memory_sv_unit
+R5
 S1
 R6
-Z85 w1642177367
-Z86 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv
-Z87 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv
-Z88 L0 15
+Z81 w1642177367
+Z82 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\memory.sv
+Z83 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\memory.sv
+Z84 L0 15
 R11
 r1
 !s85 0
 31
-Z89 !s108 1642246015.467000
-Z90 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv|
-Z91 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/memory.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Ymemory_interface
@@ -978,22 +1261,22 @@ R2
 R3
 !i10b 1
 !s100 3zEJPT<QWJM5>@0zI0F[`2
-IhK?:W>k@HKciiJEmFHCn62
+ILIEC;>kg`Gc2_eJSA;8LR2
 R4
-R84
+R5
 S1
 R6
-R85
-R86
-R87
+R81
+R82
+R83
 L0 1
 R11
 r1
 !s85 0
 31
-R89
-R90
-R91
+R12
+R13
+R14
 !i113 0
 R15
 vmux_2_input
@@ -1001,22 +1284,22 @@ R2
 R3
 !i10b 1
 !s100 _1G1mz>]:;U:laGeZGEZT2
-IYDNdK?]bIa[iib8HBU`Xj2
+I2bYj@2C@8eO?`Uz_DKBIj2
 R4
-Z92 !s105 mux_2_input_sv_unit
+R5
 S1
 R6
-Z93 w1642177475
-Z94 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv
-Z95 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv
+Z85 w1642248224
+Z86 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_2_input.sv
+Z87 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_2_input.sv
 R10
 R11
 r1
 !s85 0
 31
-Z96 !s108 1642246015.524000
-Z97 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv|
-Z98 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Ymux_2_input_interface
@@ -1024,7 +1307,99 @@ R2
 R3
 !i10b 1
 !s100 3UYHzS8?A3jG4?2^KeY_10
-IS8QM<L9G4<cB??zDV0SAg2
+I33U`9m1QNkUz@K1VQom0=1
+R4
+R5
+S1
+R6
+R85
+R86
+R87
+L0 2
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+vmux_3_input
+R2
+R3
+!i10b 1
+!s100 bJSLT@PdOAK9=RaSJ>8Ic0
+IRYB91W2]]hJF1ff4aMkaN2
+R4
+R5
+S1
+R6
+Z88 w1642177390
+Z89 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_3_input.sv
+Z90 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\mux_3_input.sv
+L0 11
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+Ymux_3_input_interface
+R2
+R3
+!i10b 1
+!s100 Pb`_Yc;76:ofLPm2`]::R2
+IRMaCbd@R0[P655[`3]23l0
+R4
+R5
+S1
+R6
+R88
+R89
+R90
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+vmux_4_input
+R2
+Z91 !s110 1642251557
+!i10b 1
+!s100 PZE6jNEEf^0S5AiX;2PGm0
+IadIoLRhPA]P`35lHbGXDO1
+R4
+Z92 !s105 mux_4_input_sv_unit
+S1
+R6
+Z93 w1642242880
+Z94 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv
+Z95 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv
+R25
+R11
+r1
+!s85 0
+31
+Z96 !s108 1642251557.292000
+Z97 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv|
+Z98 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv|
+!i113 0
+R15
+Ymux_4_input_interface
+R2
+R91
+!i10b 1
+!s100 U1i8ojm3<Wj7dcRJm;_ZG1
+IWP:4X:[24?nVaR32Z0eDY3
 R4
 R92
 S1
@@ -1032,7 +1407,7 @@ R6
 R93
 R94
 R95
-L0 2
+L0 1
 R11
 r1
 !s85 0
@@ -1042,109 +1417,17 @@ R97
 R98
 !i113 0
 R15
-vmux_3_input
+vmux_alu1_wiring_designator
 R2
-R3
+R53
 !i10b 1
-!s100 bJSLT@PdOAK9=RaSJ>8Ic0
-I;SZllAQUEE3_1QN<oFDX^0
-R4
-Z99 !s105 mux_3_input_sv_unit
-S1
-R6
-Z100 w1642177390
-Z101 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv
-Z102 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv
-L0 11
-R11
-r1
-!s85 0
-31
-Z103 !s108 1642246015.609000
-Z104 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv|
-Z105 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_3_input.sv|
-!i113 0
-R15
-Ymux_3_input_interface
-R2
-R3
-!i10b 1
-!s100 Pb`_Yc;76:ofLPm2`]::R2
-I=]hW8eF66J63:R_WT0UUb3
-R4
-R99
-S1
-R6
-R100
-R101
-R102
-L0 1
-R11
-r1
-!s85 0
-31
-R103
-R104
-R105
-!i113 0
-R15
-vmux_4_input
-R2
-R3
-!i10b 1
-!s100 PZE6jNEEf^0S5AiX;2PGm0
-IadIoLRhPA]P`35lHbGXDO1
-R4
-Z106 !s105 mux_4_input_sv_unit
-S1
-R6
-Z107 w1642242880
-Z108 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv
-Z109 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv
-R21
-R11
-r1
-!s85 0
-31
-Z110 !s108 1642246015.774000
-Z111 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv|
-Z112 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_4_input.sv|
-!i113 0
-R15
-Ymux_4_input_interface
-R2
-R3
-!i10b 1
-!s100 U1i8ojm3<Wj7dcRJm;_ZG1
-IWP:4X:[24?nVaR32Z0eDY3
-R4
-R106
-S1
-R6
-R107
-R108
-R109
-L0 1
-R11
-r1
-!s85 0
-31
-R110
-R111
-R112
-!i113 0
-R15
-vmux_mem_wiring_designator
-R2
-R68
-!i10b 1
-!s100 bg1=L1OTzW3N[Z>6a[ldQ0
-Ie7LB9Wk7UI@lT7J55S?oJ1
+!s100 E8KVghedgV<J;>U?ZR_Im3
+IDIBY3U7E26lQK;g8lGjm;2
 R4
 !s105 mux_alu1_wiring_designator_sv_unit
 S1
 R6
-w1642242025
+w1642250166
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu1_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu1_wiring_designator.sv
 L0 1
@@ -1152,22 +1435,91 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.291000
+!s108 1642251563.304000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu1_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu1_wiring_designator.sv|
 !i113 0
 R15
-vmux_pc_wiring_designator
+vmux_alu2_wiring_designator
 R2
-R68
+R53
 !i10b 1
-!s100 53>fU8iKXPkFTn_Gm=;ZF1
-I[2V49]3KZ0<f98Te89Y>]3
+!s100 DK0WWZ^cWa<VgJ3;iiBP@1
+Ihb:e>>jU:_oO1WOInL=1l0
 R4
-!s105 mux_pc_wiring_designator_sv_unit
+!s105 mux_alu2_wiring_designator_sv_unit
 S1
 R6
-w1642240876
+w1642251516
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu2_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu2_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251563.356000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu2_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_alu2_wiring_designator.sv|
+!i113 0
+R15
+vmux_mem_wiring_designator
+R2
+R53
+!i10b 1
+!s100 fWk;mLB3=n@53@m]5M[P^1
+I][`m2JUd_iH;UIgT`T5Cn1
+R4
+Z99 !s105 mux_mem_wiring_designator_sv_unit
+S1
+R6
+w1642251300
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_mem_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_mem_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251563.509000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_mem_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_mem_wiring_designator.sv|
+!i113 0
+R15
+vmux_mem_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 9nZP8TTToYW5CJ@c1]2jW3
+Il3>FY4KUhK9VX84GhEEYD1
+R4
+R99
+S1
+R6
+w1642249585
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.376000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv|
+!i113 0
+R15
+vmux_pc_wiring_designator
+R2
+R18
+!i10b 1
+!s100 VfAJLFNc[@d4F42Q]Xj];0
+Ii35Uz=P<<cPaEA3f08SC?2
+R4
+Z100 !s105 mux_pc_wiring_designator_sv_unit
+S1
+R6
+R68
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_pc_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_pc_wiring_designator.sv
 L0 1
@@ -1175,89 +1527,89 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.411000
+!s108 1642251563.576000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_pc_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_pc_wiring_designator.sv|
 !i113 0
 R15
-vmux_three_alu_wiring_designator
+vmux_pc_wiring_designator_segmented
 R2
-R68
+R67
 !i10b 1
-!s100 gZUaeRUMOh`fbD_[7ClH]0
-IV>b<k68M4ZUjOzaOcn40d2
+!s100 REh`GCI8Agi3Uh7RSga@<0
+I[o669XZMSAeVKf4H^FcIM1
 R4
-!s105 mux_three_alu_wiring_designator_sv_unit
+R100
 S1
 R6
-w1642245924
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_three_alu_wiring_designator.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_three_alu_wiring_designator.sv
+R68
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_pc_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_pc_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246017.527000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_three_alu_wiring_designator.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/mux_three_alu_wiring_designator.sv|
+!s108 1642251565.532000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_pc_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_pc_wiring_designator.sv|
 !i113 0
 R15
 vPC
 R2
-R33
+R3
 !i10b 1
-!s100 CQ5c^K]lfamS^>nkWmTo@1
-ISHTK9;]<R_Dll40o61]4N1
+!s100 9P]CRUcEYUaegA<8=iQ0D0
+I=2MilCN86U^glD?;Z3M;12
 R4
-!s105 pc_golden_sv_unit
+R5
 S1
 R6
-w1641559161
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Golden Components/pc_golden.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Golden Components/pc_golden.sv
-L0 1
+Z101 w1642176859
+Z102 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\pc_segmented.sv
+Z103 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Components\pc_segmented.sv
+R71
 R11
 r1
 !s85 0
 31
-!s108 1642246018.784000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Golden Components/pc_golden.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Golden Components/pc_golden.sv|
+R12
+R13
+R14
 !i113 0
 R15
 n@p@c
 Ypc_interface
 R2
-R33
+R3
 !i10b 1
 !s100 F=[X4]<^A]XN@A_iGF@MZ2
-Ibz5B[YT:7d8bB=@_>?[;K0
+I:R;XS27`;]oI?^`:0[E681
 R4
-!s105 pc_segmented_sv_unit
+R5
 S1
 R6
-w1642176859
-8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv
-FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv
+R101
+R102
+R103
 L0 1
 R11
 r1
 !s85 0
 31
-!s108 1642246018.724000
-!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv|
+R12
+R13
+R14
 !i113 0
 R15
 vpc_wiring_designator
 R2
-R68
+R18
 !i10b 1
 !s100 M8iZdXBbFN7CPFV:=o_jC1
 IVZHVZX1fGoAINFG@f<_fE3
 R4
-!s105 pc_wiring_designator_sv_unit
+Z104 !s105 pc_wiring_designator_sv_unit
 S1
 R6
 w1642194383
@@ -1268,9 +1620,32 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.830000
+!s108 1642251564.132000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/pc_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/pc_wiring_designator.sv|
+!i113 0
+R15
+vpc_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 A@A:=GgDMGWzIba>1B;?W3
+IE>:4>hSCG:d9a4@ic8_Va3
+R4
+R104
+S1
+R6
+w1642248014
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.630000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv|
 !i113 0
 R15
 vphase_2_testbench
@@ -1286,14 +1661,14 @@ IBP65Xa]jam^I92P=0ShTH0
 !s105 phase_2_testbench_sv_unit
 S1
 R6
-Z113 w1638698375
-Z114 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv
-Z115 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv
+Z105 w1638698375
+Z106 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv
+Z107 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv
 L0 5
 R11
-Z116 !s108 1638698388.224000
-Z117 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\verification_manager.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv|
-Z118 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv|
+Z108 !s108 1638698388.224000
+Z109 !s107 C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\verification_manager.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_2_input.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\immgen.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\ADDER.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\pc.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\alu_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\Controllers\main_controller.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv|C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv|
+Z110 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/phase_2_testbench.sv|
 !i113 0
 R15
 Xphase_2_testbench_sv_unit
@@ -1308,9 +1683,9 @@ IgIG75CLZ4hdRMCZ6ALjHU3
 !i103 1
 S1
 R6
-R113
-R114
-R115
+R105
+R106
+R107
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\core.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\memory.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\register_bank.sv
@@ -1323,37 +1698,221 @@ FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\mux_3_input.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\..\Design\jump_controller.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\verification_manager.sv
-Z119 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv
+Z111 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\main_controller_verificator.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\fibonnaci_test.sv
 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\.\.\Golden Model\fibonnaci_golden.sv
 L0 1
 R11
-R116
-R117
-R118
+R108
+R109
+R110
+!i113 0
+R15
+vreg_ex_mem_wiring_designator
+R2
+R38
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 TVRg4;0IJeAATPRMZ]fnn1
+IA@8BT[nLd5[I<_N4mk]n?2
+R39
+S1
+R6
+w1642247473
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv
+Z112 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_ex_mem_wiring_designator.sv
+L0 1
+R11
+R41
+R42
+R43
+!i113 0
+R15
+vreg_ex_mem_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 66kX=HzLbi_B0C<ikc>8F2
+II4ddPLBB[Bb;:d3YDUQhI0
+R4
+!s105 reg_ex_mem_wiring_designator_sv_unit
+S1
+R6
+w1642248002
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_ex_mem_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_ex_mem_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.718000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_ex_mem_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_ex_mem_wiring_designator.sv|
 !i113 0
 R15
 Yreg_id_ex_interface
 R2
-R33
+!s110 1642247762
 !i10b 1
 !s100 DQdT>zJmZ@Tk2?H5h55Cg0
-I2WY?Bi?kj_0O42<Z3AhHF2
+I6cmTjWW5fS;CnM4]3ZgZ;2
 R4
-Z120 !s105 register_id_ex_sv_unit
+R5
 S1
 R6
-Z121 w1642243004
-Z122 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_id_ex.sv
-Z123 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_id_ex.sv
+w1642243004
+Z113 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_id_ex.sv
+Z114 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_id_ex.sv
 L0 5
 R11
 r1
 !s85 0
 31
-Z124 !s108 1642246018.028000
-Z125 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_id_ex.sv|
-Z126 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_id_ex.sv|
+!s108 1642247762.197000
+R31
+R14
+!i113 0
+R15
+vreg_id_ex_wiring_designator
+R2
+R38
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 AHe^oK]9HRoVJ6SE^S0OK1
+I1Y1ohlP8`OiJ0iFD@R_Q72
+R39
+S1
+R6
+w1642242761
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv
+Z115 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_id_ex_wiring_designator.sv
+L0 1
+R11
+R41
+R42
+R43
+!i113 0
+R15
+vreg_id_ex_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 XdjfK7SYU8C9cH5BWQR[S2
+Ic2[R?m?cnXSkO1:9PdB5F2
+R4
+!s105 reg_id_ex_wiring_designator_sv_unit
+S1
+R6
+R80
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.783000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv|
+!i113 0
+R15
+vreg_if_id_wiring_designator
+R2
+R38
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 Z<^SI:i?VO4DQZ2c[l8bn3
+IWG18ka5U4lXNK9]?=V[L83
+R39
+S1
+R6
+w1642243449
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv
+Z116 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_if_id_wiring_designator.sv
+L0 1
+R11
+R41
+R42
+R43
+!i113 0
+R15
+vreg_if_id_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 7gzOfED^F<o2MdUV2O3hP1
+IDT7dT<XZLWkkZORJPmEW50
+R4
+!s105 reg_if_id_wiring_designator_sv_unit
+S1
+R6
+w1642247995
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_if_id_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_if_id_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.850000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_if_id_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_if_id_wiring_designator.sv|
+!i113 0
+R15
+vreg_mem_wb_wiring_designator
+R2
+R38
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 a?N7OZ?7:7JNUN@8CkjzM0
+Id?G`HB3KB1G=kI>WzkK<k2
+R39
+S1
+R6
+w1642242085
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv
+Z117 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\reg_mem_wb_wiring_designator.sv
+L0 1
+R11
+R41
+R42
+R43
+!i113 0
+R15
+vreg_mem_wb_wiring_designator_segmented
+R2
+R67
+!i10b 1
+!s100 RE;9^@f:l;4;cS3abScM<0
+INdlSYmE?<4NlCJM]ff6^g2
+R4
+!s105 reg_mem_wb_wiring_designator_sv_unit
+S1
+R6
+w1642247981
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_mem_wb_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_mem_wb_wiring_designator.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1642251565.919000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_mem_wb_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_mem_wb_wiring_designator.sv|
 !i113 0
 R15
 vregister_bank
@@ -1361,22 +1920,22 @@ R2
 R3
 !i10b 1
 !s100 =][6RSh6T0@5<nNbb^D^E2
-I`0gYnJT]K6_a]6[STO[L40
+IL;@IS[;VT`EIcX;fSoDD61
 R4
-Z127 !s105 register_bank_sv_unit
+R5
 S1
 R6
-Z128 w1642177399
-Z129 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv
-Z130 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv
-Z131 L0 20
+Z118 w1642177399
+Z119 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\register_bank.sv
+Z120 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Basic Components\register_bank.sv
+Z121 L0 20
 R11
 r1
 !s85 0
 31
-Z132 !s108 1642246015.944000
-Z133 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv|
-Z134 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yregister_bank_interface
@@ -1384,35 +1943,35 @@ R2
 R3
 !i10b 1
 !s100 n0W:SZQLe:kiB96Y_KmMS3
-I1>B@7]JOU:N[XG7J[m;Mb1
+IDBVn>jeB=5MU6?aKX2O7M2
 R4
-R127
+R5
 S1
 R6
-R128
-R129
-R130
+R118
+R119
+R120
 L0 1
 R11
 r1
 !s85 0
 31
-R132
-R133
-R134
+R12
+R13
+R14
 !i113 0
 R15
 vregister_bank_wiring_designator
 R2
-R68
+R18
 !i10b 1
-!s100 WF13=1moQ@BQlWFjEDfHO2
-IMlT1<@RnCjQMe0^9ZDM^]1
+!s100 @97VciTA43W_DQBV:OL@A1
+IHAa@ZP]5>;KJNof_i55z?1
 R4
-!s105 register_bank_wiring_designator_sv_unit
+Z122 !s105 register_bank_wiring_designator_sv_unit
 S1
 R6
-w1642242031
+w1642251016
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/register_bank_wiring_designator.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/register_bank_wiring_designator.sv
 L0 1
@@ -1420,432 +1979,508 @@ R11
 r1
 !s85 0
 31
-!s108 1642246017.902000
+!s108 1642251564.196000
 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/register_bank_wiring_designator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/register_bank_wiring_designator.sv|
 !i113 0
 R15
-vregister_ex
+vregister_bank_wiring_designator_segmented
 R2
-R33
+!s110 1642251566
 !i10b 1
-!s100 <6G;<nmLcomoNMSMd@o>W2
-IT09G]M]@:zj7^O2i>2l843
+!s100 kCW3I1CiFYF`n51?JiB7c1
+ITc^e9zUF`FajG54>]lA<:2
 R4
-Z135 !s105 register_ex_sv_unit
+R122
 S1
 R6
-Z136 w1642194250
-Z137 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv
-Z138 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv
-R21
-R11
-r1
-!s85 0
-31
-Z139 !s108 1642246018.218000
-Z140 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv|
-Z141 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv|
-!i113 0
-R15
-Yregister_ex_interface
-R2
-R33
-!i10b 1
-!s100 ;;G2A=D]fn_NoeP[VlG^i1
-IhLk^>BFmWQ_TJ_OXmmYfR1
-R4
-R135
-S1
-R6
-R136
-R137
-R138
+w1642249294
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/register_bank_wiring_designator.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/register_bank_wiring_designator.sv
 L0 1
 R11
 r1
 !s85 0
 31
-R139
-R140
-R141
+!s108 1642251565.986000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/register_bank_wiring_designator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/register_bank_wiring_designator.sv|
+!i113 0
+R15
+vregister_ex
+R2
+Z123 !s110 1642251558
+!i10b 1
+!s100 <6G;<nmLcomoNMSMd@o>W2
+IT09G]M]@:zj7^O2i>2l843
+R4
+Z124 !s105 register_ex_sv_unit
+S1
+R6
+Z125 w1642194250
+Z126 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv
+Z127 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv
+R25
+R11
+r1
+!s85 0
+31
+Z128 !s108 1642251558.035000
+Z129 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv|
+Z130 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_ex.sv|
+!i113 0
+R15
+Yregister_ex_interface
+R2
+R123
+!i10b 1
+!s100 ;;G2A=D]fn_NoeP[VlG^i1
+IhLk^>BFmWQ_TJ_OXmmYfR1
+R4
+R124
+S1
+R6
+R125
+R126
+R127
+L0 1
+R11
+r1
+!s85 0
+31
+R128
+R129
+R130
 !i113 0
 R15
 vregister_ex_mem
 R2
-R68
+R3
 !i10b 1
 !s100 g55B8<WHNFlI>4NimAYMc0
-I204kJLX`?[QcPn96Alihk3
+Iz[CdfU5RLMB7le;4hQ:;[1
 R4
-Z142 !s105 register_ex_mem_sv_unit
+R5
 S1
 R6
-Z143 w1642243003
-Z144 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv
-Z145 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv
+Z131 w1642247791
+Z132 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_ex_mem.sv
+Z133 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_ex_mem.sv
 L0 32
 R11
 r1
 !s85 0
 31
-Z146 !s108 1642246017.965000
-Z147 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv|
-Z148 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yregister_ex_mem_interface
 R2
-R68
+R3
 !i10b 1
 !s100 Kb4=E6Y6K<;PLiR=k2hTA1
-IbH1a0RHBgZ^8SfUNfHI[U3
+IiV`K1jL7nJ5390c:XY=m93
 R4
-R142
+R5
 S1
 R6
-R143
-R144
-R145
+R131
+R132
+R133
 L0 4
 R11
 r1
 !s85 0
 31
-R146
-R147
-R148
+R12
+R13
+R14
 !i113 0
 R15
 vregister_id_ex
 R2
-R33
+R3
 !i10b 1
-!s100 @D=R?32cH?^2ZcTNLaiEc3
-In:`S6>gU4[ZlLn25]k6Vb2
+!s100 4AH<A=IQ4VCSkCJEO`>3U2
+ICbHl6?JiQNizjH`M<K2MO2
 R4
-R120
+R5
 S1
 R6
-R121
-R122
-R123
+Z134 w1642247788
+R113
+R114
 L0 42
 R11
 r1
 !s85 0
 31
-R124
-R125
-R126
+R12
+R13
+R14
+!i113 0
+R15
+Yregister_id_ex_interface
+R2
+R3
+!i10b 1
+!s100 c^9ZZchR_z]7X?0h2@Qhc2
+I1id7mXh:=JDTmm?BH7S>@1
+R4
+R5
+S1
+R6
+R134
+R113
+R114
+L0 5
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
 !i113 0
 R15
 vregister_if_id
 R2
-R33
+R3
 !i10b 1
 !s100 n32fndB3l<oo1cfB1Se1c0
-IYko8;8IDggT`jJ5WE3S:o0
+Im4offmMKlVZC73LS:H]n;3
 R4
-Z149 !s105 register_if_id_sv_unit
+R5
 S1
 R6
-Z150 w1642187373
-Z151 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_if_id.sv
-Z152 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_if_id.sv
+Z135 w1642187373
+Z136 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_if_id.sv
+Z137 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_if_id.sv
 L0 24
 R11
 r1
 !s85 0
 31
-Z153 !s108 1642246018.091000
-Z154 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_if_id.sv|
-Z155 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_if_id.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yregister_if_id_interface
 R2
-R33
+R3
 !i10b 1
 !s100 NdYmRmD_@Tl:1KM;>EAa22
-IThgB6kKP@zIGhV3fXRB[:0
+IL]1fOKL_Gl0Wn9^laV?M83
 R4
-R149
+R5
 S1
 R6
-R150
-R151
-R152
+R135
+R136
+R137
 L0 2
 R11
 r1
 !s85 0
 31
-R153
-R154
-R155
+R12
+R13
+R14
 !i113 0
 R15
 vregister_m
 R2
-R33
+R123
 !i10b 1
 !s100 G9UU<aSoT:NGN@g_J3Bha3
 I?iLT]=KnEb`cFlNePz8Y43
 R4
-Z156 !s105 register_m_sv_unit
+Z138 !s105 register_m_sv_unit
 S1
 R6
-R136
-Z157 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv
-Z158 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv
+R125
+Z139 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv
+Z140 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv
 L0 21
 R11
 r1
 !s85 0
 31
-Z159 !s108 1642246018.289000
-Z160 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv|
-Z161 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv|
+Z141 !s108 1642251558.191000
+Z142 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv|
+Z143 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv|
 !i113 0
 R15
 Yregister_m_interface
 R2
-R33
+R123
 !i10b 1
 !s100 YXgdP8V@58`1nPCLmDzFe2
 I4H<UZ^Yo`^K1RgdemjWGe3
 R4
-R156
+R138
 S1
 R6
-R136
-R157
-R158
+R125
+R139
+R140
 L0 1
 R11
 r1
 !s85 0
 31
-R159
-R160
-R161
+R141
+R142
+R143
 !i113 0
 R15
 vregister_mem_wb
 R2
-R33
+R3
 !i10b 1
-!s100 AUEF[>dKICM5`C9C`M7kd1
-I9eo0FSaeeCm=`K:iAfgCD2
+!s100 hgV[mWnZ?f9Q39^]L6DQR3
+IndbJPhOhZdFJVBPWBJ[Xa0
 R4
-Z162 !s105 register_mem_wb_sv_unit
+R5
 S1
 R6
-Z163 w1642242998
-Z164 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv
-Z165 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv
-R131
+Z144 w1642248768
+Z145 8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_mem_wb.sv
+Z146 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Design\.\Segmented Registers\register_mem_wb.sv
+R121
 R11
 r1
 !s85 0
 31
-Z166 !s108 1642246018.154000
-Z167 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv|
-Z168 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Yregister_mem_wb_interface
 R2
-R33
+R3
 !i10b 1
 !s100 IQzR157zeHA<2RUDT;j6?1
-IN0ZzJIbT<]nQDj>Xf=TSN1
+IDGBB@I4FB_1=K>mI96k<21
 R4
-R162
+R5
 S1
 R6
-R163
-R164
-R165
+R144
+R145
+R146
 L0 3
 R11
 r1
 !s85 0
 31
-R166
-R167
-R168
+R12
+R13
+R14
 !i113 0
 R15
 vregister_wb
 R2
-R33
+R123
 !i10b 1
 !s100 5[U]_z0EkNBaSJeU^AbNd0
 I2KiZl<c2KZYiR6KO:[ZTm1
 R4
-Z169 !s105 register_wb_sv_unit
+Z147 !s105 register_wb_sv_unit
 S1
 R6
-R136
-Z170 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv
-Z171 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv
-R88
+R125
+Z148 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv
+Z149 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv
+R84
 R11
 r1
 !s85 0
 31
-Z172 !s108 1642246018.399000
-Z173 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv|
-Z174 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv|
+Z150 !s108 1642251558.317000
+Z151 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv|
+Z152 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_wb.sv|
 !i113 0
 R15
 Yregister_wb_interface
 R2
-R33
+R123
 !i10b 1
 !s100 1`5f3;_M<n9AzS5??CIMQ2
 Ic25oOgozk?I6UjTe6hmCh1
 R4
-R169
+R147
 S1
 R6
-R136
-R170
-R171
+R125
+R148
+R149
 L0 2
 R11
 r1
 !s85 0
 31
-R172
-R173
-R174
+R150
+R151
+R152
 !i113 0
 R15
 vsegmented_core
 R2
-R52
+R3
 !i10b 1
-!s100 n`CJi?ckl9M[i46O9MZn03
-I;MdB514W?ke852MQ]>a=42
+!s100 4KS8Siif[4gAnMWo8QLFc2
+I5hTYGb77U;5AljT?gKcIe2
 R4
-Z175 !s105 segmented_core_sv_unit
+R5
 S1
 R6
-Z176 w1642245147
-Z177 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv
-Z178 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv
-L0 50
+w1642248827
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv
+L0 27
 R11
 r1
 !s85 0
 31
-Z179 !s108 1642246019.137000
-Z180 !s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv|
-Z181 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_core.sv|
+R12
+R13
+R14
 !i113 0
 R15
 Ysegmented_interface
 R2
-R52
+R3
 !i10b 1
-!s100 0@:D``;V<=ITRR^3<7:`43
-IH4JkG;5>T?AW_D6RZKG121
+!s100 mWLVAFjc4^lXJMAXJXN<]1
+I[3XVB0`G[N2=H]kPYn2Hb3
 R4
-R175
+!s105 segmented_interface_sv_unit
 S1
 R6
-R176
-R177
-R178
-L0 23
-R11
-r1
-!s85 0
-31
-R179
-R180
-R181
-!i113 0
-R15
-Ysystem_iff
-R2
-R41
-!i10b 1
-!s100 DFlfjDd2>Rc]<Ed<Nh]K71
-I:`Bg:e>BWYJ[BnYd9CV^c3
-R4
-R42
-S1
-R6
-w1642105361
-8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv
-Z182 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv
+w1642248854
+8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv
+FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv
 L0 1
 R11
 r1
 !s85 0
 31
-R45
-R46
+!s108 1642251560.425000
+!s107 C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv|
+!i113 0
+R15
+Ysystem_iff
+R2
+R44
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 DFlfjDd2>Rc]<Ed<Nh]K71
+I:`Bg:e>BWYJ[BnYd9CV^c3
+R39
+S1
+R6
+w1642105361
+8C:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv
+Z153 FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\interface.sv
+L0 1
+R11
 R47
+R48
+R43
 !i113 0
 R15
 vtestbench
 R2
-R41
-!i10b 1
-!s100 Qh<7d=gXPN<ScPjzF6zmz1
-IQ9L;@o9ZHB<6keBh4WeGH3
+R44
 R4
-R42
-S1
-R6
-w1641555560
-Z183 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv
-Z184 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv
-L0 7
-R11
 r1
 !s85 0
 31
-R45
-R46
+!i10b 1
+!s100 Qh<7d=gXPN<ScPjzF6zmz1
+IQ9L;@o9ZHB<6keBh4WeGH3
+R39
+S1
+R6
+w1641555560
+Z154 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv
+Z155 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/testbench.sv
+L0 7
+R11
 R47
+R48
+R43
 !i113 0
 R15
 Xtestbench_sv_unit
 R2
-VUi]N:mZfOm6<TZB4h`eN:1
+V`_iN7UANg6ZFnO6bThU3A3
 r1
 !s85 0
 31
 !i10b 1
-!s100 09ZRFgThCDl2Nj0iYobn;0
-IUi]N:mZfOm6<TZB4h`eN:1
+!s100 c7ajzFK;QILfohV7;D85Y1
+I`_iN7UANg6ZFnO6bThU3A3
 !i103 1
 S1
 R6
-R48
-R183
-R184
-R44
-R182
-R50
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\golden_model_core.sv
-FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\segmented_core.sv
+R34
+R154
+R155
+R46
+R153
+R51
+R49
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\adder_sum_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\alu_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\data_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\imm_gen_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\instruction_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\jump_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\main_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_alu1_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_alu2_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\mux_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Golden Designators\register_bank_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\adder_sum_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\alu_controller_wiring_designator.sv
+R40
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\data_memory_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\immediate_generator_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\main_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_mem_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\mux_pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\pc_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\jump_controller_wiring_designator.sv
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\instruction_memory_wiring_designator.sv
+R115
+R116
+R112
+R117
+FC:\Users\Javier Presmanes\Documents\Universidad\3ro Teleco\Primer Cuatri\ISDIGI\Practicas\ISDIGI-Projects\Practica 3 - RISC V\Core\Testing\Fase3\.\..\..\Design\.\Designators\Segmented Designators\register_bank_wiring_designator.sv
 L0 2
 R11
-!s108 1642178363.678000
-R46
 R47
+R48
+R43
 !i113 0
 R15
 Xverification_manager_sv_unit
 R2
-R53
+R59
 !i10b 1
 !s100 0_T[=k[zELo2X3glK94gQ1
 Ii<lP3nNIMDzMO9<fh>W9f0
@@ -1853,10 +2488,10 @@ Vi<lP3nNIMDzMO9<fh>W9f0
 !i103 1
 S1
 R6
-R83
+R78
 8C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/verification_manager.sv
 FC:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/verification_manager.sv
-R119
+R111
 L0 2
 R11
 r1

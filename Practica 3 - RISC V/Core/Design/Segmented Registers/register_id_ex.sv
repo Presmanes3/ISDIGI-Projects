@@ -2,7 +2,7 @@
 //`include "./Small Registers/register_m.sv"
 //`include "./Small Registers/register_wb.sv"
 
-interface reg_id_ex_interface #(
+interface register_id_ex_interface #(
     parameter data_bits = 32
 );
 
@@ -42,7 +42,7 @@ endinterface //reg_id_ex_interface
 module register_id_ex #(
     parameter data_bits = 32
 ) (
-    reg_id_ex_interface reg_id_ex_wiring
+    register_id_ex_interface reg_id_ex_wiring
 
 );
 

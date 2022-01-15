@@ -6,12 +6,12 @@ module cores_encapsulator(
 );
     core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) fibo_core(
         .clk(clk),
-        .reset(reset);
-    )
+        .reset(reset)
+    );
     core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) bubble_short_core(
         .clk(clk),
-        .reset(reset);
-    )
+        .reset(reset)
+    );
 endmodule
 
 class core_test;

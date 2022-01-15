@@ -1,4 +1,4 @@
-module reg_id_ex_wiring_designator(
+module reg_id_ex_wiring_designator_segmented (
     segmented_interface wires
 );
 

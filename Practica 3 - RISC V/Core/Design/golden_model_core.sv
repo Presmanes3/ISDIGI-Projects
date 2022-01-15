@@ -1,13 +1,14 @@
-// `include "./Basic Components/memory.sv"
-// `include "./Basic Components/register_bank.sv"
-// `include "./Controllers/main_controller.sv"
-// `include "./Controllers/alu_controller.sv"
-// `include "./Golden Components/pc_golden.sv"
-// `include "./Basic Components/ADDER.sv"
-// `include "./Basic Components/immgen.sv"
-// `include "./Basic Components/mux_2_input.sv"
-// `include "./Basic Components/mux_3_input.sv"
-// `include "./Basic Components/jump_controller.sv"
+`include "./Basic Components/memory.sv"
+`include "./Basic Components/register_bank.sv"
+`include "./Controllers/main_controller.sv"
+`include "./Controllers/alu_controller.sv"
+`include "./Golden Components/pc_golden.sv"
+`include "./Basic Components/ADDER.sv"
+`include "./Basic Components/immgen.sv"
+`include "./Basic Components/mux_2_input.sv"
+`include "./Basic Components/mux_3_input.sv"
+`include "./Basic Components/jump_controller.sv"
+`include "./golden_interface.sv"
 
 
 module golden_model_core 
@@ -32,7 +33,7 @@ module golden_model_core
     );
 
     mux_2_input mux_pc (  
-        .mux_2_input_pc_wiring      (wires.mux_pc_wiring)   
+        .mux_2_input_wiring      (wires.mux_pc_wiring)   
     );
 
     PC PC (
@@ -40,7 +41,7 @@ module golden_model_core
     );
 
     jump_controller jump_controller(
-        .jump_controler_wiring      (wires.jump_controler_wiring)
+        .jump_controller_wiring      (wires.jump_controller_wiring)
     );
 
     ALU ALU (                      
@@ -70,7 +71,7 @@ module golden_model_core
     );
 
     register_bank register_bank (
-        .register_banck_wiring      (wires.register_bank_wiring)
+        .register_bank_wiring      (wires.register_bank_wiring)
     );
     defparam register_bank.sintetizable = 1'b1;
 

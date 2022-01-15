@@ -1,4 +1,4 @@
-module alu_controller_wiring_designator(
+module alu_controller_wiring_designator_segmented(
 
     segmented_interface wires
 

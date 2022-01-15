@@ -1,4 +1,4 @@
-module reg_if_id_wiring_designator(
+module reg_if_id_wiring_designator_segmented (
     segmented_interface wires
 );
 

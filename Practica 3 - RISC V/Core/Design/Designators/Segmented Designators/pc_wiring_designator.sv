@@ -1,4 +1,4 @@
-module pc_wiring_designator(
+module pc_wiring_designator_segmented (
     segmented_interface wires
 );
 

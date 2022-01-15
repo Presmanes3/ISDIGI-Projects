@@ -50,7 +50,7 @@ module segmented_core
     );
 
     jump_controller jump_controller(
-        .jump_controler_wiring      (jump_controler_wiring)
+        .jump_controller_wiring      (jump_controller_wiring)
     );
 
     alu_encapsulator alu_encapsulator(

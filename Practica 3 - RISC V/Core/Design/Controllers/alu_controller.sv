@@ -2,7 +2,7 @@
 
 @param alu_option   Signal from main control
 */
-interface alu_controler_interface;
+interface alu_controller_interface;
     logic [6:0] func_7_bits;
     logic [2:0] func_3_bits;
     logic [3:0] alu_option;
@@ -11,7 +11,7 @@ endinterface //interfacename
 
 
 module alu_controller(
-    alu_controler_interface alu_controler_wiring
+    alu_controller_interface alu_controller_wiring
 );
 
 // Declare all the allowed operations

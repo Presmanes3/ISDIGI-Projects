@@ -1,4 +1,4 @@
-module main_controller_wiring_designator#(
+module main_controller_wiring_designator_segmented#(
     parameter data_bits=32
 )(
 segmented_interface wires

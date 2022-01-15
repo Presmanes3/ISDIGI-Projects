@@ -1,7 +1,9 @@
-module mux_mem_wiring_designator(
+module mux_alu1_wiring_designator(
     golden_interface wires
 );
-    assign wires.mux_mem_wiring.input1 =   wires.alu_wiring.alu_result;
-    assign wires.mux_mem_wiring.input2 =   wires.data_memory_wiring.alu_result_out;
-    assign wires.mux_mem_wiring.select =   wires.main_controller_wiring.mem_to_reg;
+
+    assign wires.mux_alu1_wiring.input0 = wires.pc_wiring.out;
+    assign wires.mux_alu1_wiring.input1 = 32'd0;
+    assign wires.mux_alu1_wiring.input2 = wires.register_bank_wiring.read_data_1;
+    assign wires.mux_alu1_wiring.control = 2;
 endmodule 

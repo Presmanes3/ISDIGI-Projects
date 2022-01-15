@@ -9,10 +9,11 @@ interface golden_interface;
     jump_controller_interface   jump_controller_wiring();       // OK - REVIEWED
     pc_interface                pc_wiring();                    // OK - REVIEWED
     memory_interface            instruction_memory_wiring();    // OK - REVIEWED
-    mux_3_input_interface       mux_three_alu_wiring();         // OK - REVIEWED
-    mux_alu1_interface          mux_alu1_wiring();              // OK - REVIEWED
+    mux_3_input_interface       mux_alu1_wiring();              // OK - REVIEWED
+    mux_2_input_interface       mux_alu2_wiring();              // OK - REVIEWED
+    mux_2_input_interface       mux_mem_wiring();               // OK - REVIEWED
     imm_gen_interface           imm_gen_wiring();               // OK - REVIEWED
-    register_bank_interface     register_banck_wiring();        // OK - REVIEWED
+    register_bank_interface     register_bank_wiring();         // OK - REVIEWED
     main_controller_interface   main_controller_wiring();       // OK - REVIEWED
     alu_controller_interface    alu_controller_wiring();        // OK - REVIEWED
     ALU_interface               alu_wiring();                   // OK - REVIEWED
