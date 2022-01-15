@@ -4,10 +4,17 @@ module cores_encapsulator(
     input clk,
     input reset
 );
-    core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) fibo_core(
+    // core #(.program_file("Core/Testing/Programs/Complex/Fibonnaci/fibo_20.mem")) fibo_core(
+    //     .clk(clk),
+    //     .reset(reset)
+    // );
+
+    core #(.program_file("Core/Testing/Programs/Simple/test_segmented.mem")) fibo_core(
         .clk(clk),
         .reset(reset)
     );
+
+
     core #(.program_file("Core/Testing/Programs/Complex/BubbleSort/bubble.mem")) bubble_short_core(
         .clk(clk),
         .reset(reset)
