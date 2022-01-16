@@ -25,7 +25,6 @@ module reg_id_ex_wiring_designator_segmented (
     assign wires.reg_id_ex_wiring.ex_wiring.alu_src_in      = wires.main_controller_wiring.alu_source;
     assign wires.reg_id_ex_wiring.ex_wiring.lui_src_in      = wires.main_controller_wiring.AuipcLui;
 
-
     assign wires.reg_id_ex_wiring.wb_wiring.reg_write_in    = wires.main_controller_wiring.register_write;
     assign wires.reg_id_ex_wiring.wb_wiring.jump_rd_in      = 1'bz;
     assign wires.reg_id_ex_wiring.wb_wiring.mem_to_reg_in   = wires.main_controller_wiring.memory_to_register;

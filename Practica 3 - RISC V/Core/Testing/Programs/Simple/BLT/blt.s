@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-blt x1, x2, Done # BLT jump to Done
+blt x1, x2, Done # BLT Compara si x1 es menor que x2 y si es así salta a DONE
 
 addi x0, x0, 1
 addi x0, x0, 1

@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-beq x1, x2, Done # BEQ jump to Done
+beq x1, x2, Done # BEQ Compara si x1 es igual a x2, si es así salta a la etiqueta Done
 
 addi x0, x0, 1
 addi x0, x0, 1

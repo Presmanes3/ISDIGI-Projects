@@ -3,8 +3,6 @@ interface segmented_interface;
     logic clk;
     logic reset;
 
-    hazard_detection_unit_interface  hazard_detection_unit_wiring();
-
     adder_interface                 adder_sum_wiring();             // 0 OK - REVIEWED
     adder_interface                 adder_pc_wiring();              // 1 OK - REVIEWED
     pc_interface                    pc_wiring();                    // 2 OK - REVIEWED
@@ -22,5 +20,9 @@ interface segmented_interface;
     register_id_ex_interface        reg_id_ex_wiring();             // 3 OK - REVIEWED
     register_ex_mem_interface       reg_ex_mem_wiring();            // 0 OK - REVIEWED
     register_mem_wb_interface       reg_mem_wb_wiring();            // 1 OK - REVIEWED
+
+    hazard_detection_unit_interface hazard_detection_unit_wiring();
+    clear_pipeline_interface        clear_pipeline_wiring();
+    data_forwarding_interface       data_forwarding_wiring();
 
 endinterface

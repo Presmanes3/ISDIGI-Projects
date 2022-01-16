@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-slli x3, x1, 1 # Slli x1 , 1 move to x3
+slli x3, x1, 1 # Slli Desplaza hacia la izquierda un número inmediato(1) el valor de x1 almacena en  x3; (X1 = 0001 => x11 = 0010)
 
 addi x0, x0, 1
 addi x0, x0, 1

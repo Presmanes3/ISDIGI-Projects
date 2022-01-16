@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-srli x3, x1, 1 # shift x1 ,1 move to x3
+srli x3, x1, 1 # Desplaza hacia la derecha un número almacenado en x1 el valor inmediato(1) en x3 (X1 = 0010 => x3 = 0001)
 
 addi x0, x0, 1
 addi x0, x0, 1

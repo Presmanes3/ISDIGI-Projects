@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-xori x3, x1, 0 # xor x1 and 0 move to x3
+xori x3, x1, 0 # Un XOR que escribe el resultado en registro x3 de la operación x1 XOR valor inmediato (0)
 
 addi x0, x0, 1
 addi x0, x0, 1

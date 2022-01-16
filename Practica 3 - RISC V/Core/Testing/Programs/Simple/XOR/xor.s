@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-xor x3, x1, x2 # xor x1 and x2 move to x3
+xor x3, x1, x2 # Compara el registro x1 y el x2 y hace el XOR se almacena en x3 un 1 si no 0
 
 addi x0, x0, 1
 addi x0, x0, 1

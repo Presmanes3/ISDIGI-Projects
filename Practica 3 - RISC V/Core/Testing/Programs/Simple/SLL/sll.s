@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-sll x3, x1, x2 # SLL x1 and x2 move to x3
+sll x3, x1, x2 # SLL Desplaza hacia la izquierda un número almacenado en x2 el valor de x1 almacena en  x3; (X1 = 0001 => x11 = 0010)
 
 addi x0, x0, 1
 addi x0, x0, 1

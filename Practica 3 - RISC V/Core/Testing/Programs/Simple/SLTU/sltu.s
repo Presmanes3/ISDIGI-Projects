@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-sltu x3, x1, x2 # Cmpares x1 and x2 move to x3
+sltu x3, x1, x2 # # Compara el registro x1 y el x2 (unsigned) y si es menor x1 se almacena en x3 un 1 si no 0
 
 addi x0, x0, 1
 addi x0, x0, 1

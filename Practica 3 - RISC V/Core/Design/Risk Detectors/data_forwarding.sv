@@ -1,14 +1,18 @@
+interface data_forwarding_interface;
+    logic  [1:0] forward1;
+    logic  [1:0] forward2;
+
+    logic  [4:0] rs1_addr_ex;
+    logic  [4:0] rs2_addr_ex;
+
+    logic  reg_write_mem;
+    logic  reg_write_wb;
+    logic  [4:0] rd_addr_mem;
+    logic  [4:0] rd_addr_wb;
+endinterface //interfacename
+
 module data_forwarding(
-    output reg [1:0] forward1,
-    output reg [1:0] forward2,
-
-    input [4:0] rs1_addr_ex,
-    input [4:0] rs2_addr_ex,
-
-    input reg_write_mem,
-    input reg_write_wb,
-    input [4:0] rd_addr_mem,
-    input [4:0] rd_addr_wb
+    data_forwarding_interface wiring
 );
 
 /**
@@ -19,15 +23,15 @@ loquesea
 */
 
 always_comb begin 
-    if((reg_write_mem == 1) && (rd_addr_mem != 0) && (rs1_addr_ex == rd_addr_mem)) forward1 = 2'b10;
-    else if ((reg_write_wb == 1) && (rd_addr_wb != 0) && (rs1_addr_ex == rd_addr_wb)) forward1 = 2'b01;
-    else forward1 = 2'b00;
+    if((wiring.reg_write_mem == 1) && (wiring.rd_addr_mem != 0) && (wiring.rs1_addr_ex == wiring.rd_addr_mem)) wiring.forward1 = 2'b10;
+    else if ((wiring.reg_write_wb == 1) && (wiring.rd_addr_wb != 0) && (wiring.rs1_addr_ex == wiring.rd_addr_wb)) wiring.forward1 = 2'b01;
+    else wiring.forward1 = 2'b00;
 end
 
 always_comb begin
-    if((reg_write_mem == 1) && (rd_addr_mem != 0) && (rs2_addr_ex == rd_addr_mem)) forward2 = 2'b10;
-    else if ((reg_write_wb == 1) && (rd_addr_wb != 0) && (rs2_addr_ex == rd_addr_wb)) forward2 = 2'b01;
-    else forward2 = 2'b00;
+    if((wiring.reg_write_mem == 1) && (wiring.rd_addr_mem != 0) && (wiring.rs2_addr_ex == wiring.rd_addr_mem)) wiring.forward2 = 2'b10;
+    else if ((wiring.reg_write_wb == 1) && (wiring.rd_addr_wb != 0) && (wiring.rs2_addr_ex == wiring.rd_addr_wb)) wiring.forward2 = 2'b01;
+    else wiring.forward2 = 2'b00;
 end
 
 endmodule

@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-bgeu x1, x2, Done # BGEU jump to Done
+bgeu x1, x2, Done # BGEU Compara si x1 es mayor o igual que x2 (unsigned) y si es así salta a Done
 
 addi x0, x0, 1
 addi x0, x0, 1

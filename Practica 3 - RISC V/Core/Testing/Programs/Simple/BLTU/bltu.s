@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-bltu x1, x2, Done # BLTu jump to Done
+bltu x1, x2, Done # BLTu Compara si x1 es menor que x2(unsigned)y si es así salta a DONE
 
 addi x0, x0, 1
 addi x0, x0, 1

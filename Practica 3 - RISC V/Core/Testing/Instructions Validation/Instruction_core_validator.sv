@@ -1,12 +1,27 @@
 `include "../../Design/core.sv"
 
+`timescale 1ns/100ps
+
 module Instruction_core_validator #(
     parameter program_file = "ADD/add.mem",
     parameter expected_mem_value = 0
     ) (
-    input clk,
-    input reset
+
 );
+
+
+
+    localparam T=20;
+
+    reg clk;
+    reg reset;
+    //-------------------------------------------------------------------------------
+
+    // Definimos el reloj -----------------------------------------------------------
+    always begin
+        #(T/2)
+        clk = ~clk;
+    end
 
     parameter file_path = {"Core/Testing/Programs/Simple/", program_file};
 
@@ -22,19 +37,14 @@ module Instruction_core_validator #(
         $display("==============================================================");
         $display("[TEST START] >>> %s", program_file);
 
-        fork
-            begin
-                // Wait till the golden model finishes
-                @(core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
-                $display("[SINGLE FINISHED]");
-            end
-            begin
-                // Wait till the segmented model finishes
-                 @(core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); 
-                $display("[SEGMENTED FINISHED]");
-            end
-        join
+        // Wait till the golden model finishes
+        @(core.golden_core_wires.instruction_memory_wiring.output_data != 32'h00000013);
+        $display("[SINGLE FINISHED]");
 
+        // Wait till the segmented model finishes
+            @(core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); 
+        $display("[SEGMENTED FINISHED]");
+            
         $display("[CHECKING MEMORIES]");
         single_value    = $signed(core.golden_core.data_memory.data_pool[0]);
         segmented_value = $signed(core.segmented_core.data_memory.data_pool[0]);
@@ -50,8 +60,22 @@ module Instruction_core_validator #(
         $display("==============================================================");
     endtask
 
-    initial begin
+    task start();
+        clk = 0;
+
+        reset_();
+
         check();
-    end
+    endtask
+
+    task reset_();
+        reset   = 1'b0;
+
+        @(posedge clk);
+
+        reset = 1'b1;
+
+        @(posedge clk);
+    endtask
 
 endmodule

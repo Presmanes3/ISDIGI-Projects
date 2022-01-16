@@ -30,6 +30,9 @@
 `include "./Designators/Segmented Designators/reg_ex_mem_wiring_designator.sv"
 `include "./Designators/Segmented Designators/reg_mem_wb_wiring_designator.sv"
 `include "./Designators/Segmented Designators/register_bank_wiring_designator.sv"
+`include "./Designators/Segmented Designators/hazard_detection_unit_designator.sv"
+`include "./Designators/Segmented Designators/clear_pipeline_designator.sv"
+`include "./Designators/Segmented Designators/data_forwarding_designator.sv"
 
 module core #(
         parameter program_file  = ""
@@ -67,6 +70,9 @@ module core #(
     reg_id_ex_wiring_designator_segmented             reg_id_ex_wiring_designator_segmented               (.wires(segmented_core_wires));
     reg_mem_wb_wiring_designator_segmented            reg_mem_wb_wiring_designator_segmented              (.wires(segmented_core_wires));
     reg_ex_mem_wiring_designator_segmented            reg_ex_mem_wiring_designator_segmented              (.wires(segmented_core_wires));  
+    hazard_detection_unit_designator                  hazard_detection_unit_designator                    (.wires(segmented_core_wires)); 
+    clear_pipeline_designator                         clear_pipeline_designator                           (.wires(segmented_core_wires)); 
+    data_forwarding_designator                        data_forwarding_designator                          (.wires(segmented_core_wires)); 
     
     //Designator instances for golden core
     adder_sum_wiring_designator             adder_sum_wiring_designator             (.wires(golden_core_wires));

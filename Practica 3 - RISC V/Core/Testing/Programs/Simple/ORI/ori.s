@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-ori x3, x1, 1 # or x1 and x2 move to x3
+ori x3, x1, 1 # or x1 and 1 move to x3
 
 addi x0, x0, 1
 addi x0, x0, 1

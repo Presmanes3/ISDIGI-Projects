@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-jal x1, Done # JAL jump to Done
+jal x1, Done # JAL Asigna al registro x1 el valor de PC+4 y salta a la etiqueta DONE
 
 addi x0, x0, 1
 addi x0, x0, 1

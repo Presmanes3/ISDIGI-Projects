@@ -8,9 +8,6 @@ interface ALU_interface();
 	logic zero;
 endinterface//ALU_interface
 
-/**
-	@brief ALU module in charge of doing the operation between registers
-*/
 module ALU (
 	ALU_interface alu_wiring	
 );

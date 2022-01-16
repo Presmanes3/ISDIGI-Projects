@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-srl x3, x2, x1 # shifts x2 ,x1 move to x3
+srl x3, x2, x1 # Desplaza hacia la derecha un número almacenado en x1 el valor de x2 en x3 (X2 = 0010 => x3 = 0001)
 
 addi x0, x0, 1
 addi x0, x0, 1

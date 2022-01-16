@@ -110,28 +110,17 @@ module segmented_core
 
     // ========== ========== RISK DETECTORS ========== ========== //
 
-    // hazard_detection_unit hazard_detection_unit(
-    //    .wiring                 (wires.hazard_detection_unit_wiring)
-    // );
+    hazard_detection_unit hazard_detection_unit(
+       .wiring                 (wires.hazard_detection_unit_wiring)
+    );
 
-    // clear_pipeline clear_pipeline(
-    //     .branch_mux_mem (clear_pipeline_branch_mux_mem),
-    //     .jump_pc_mem    (clear_pipeline_jump_pc_mem),
-    //     .clk            (clear_pipeline_clk),
-    //     .reset          (clear_pipeline_reset),
-    //     .clear_pipeline (clear_pipeline_clear_pipeline)
-    // );
+    clear_pipeline clear_pipeline(
+        .wiring                 (wires.clear_pipeline_wiring)
+    );
 
-    // data_forwarding data_forwarding(
-    //     .forward1       (data_forwarding_forward1),
-    //     .forward2       (data_forwarding_forward2),
-    //     .rs1_addr_ex    (data_forwarding_rs1_addr_ex),
-    //     .rs2_addr_ex    (data_forwarding_rs2_addr_ex),
-    //     .reg_write_mem  (data_forwarding_reg_write_mem),
-    //     .reg_write_wb   (data_forwarding_reg_write_wb),
-    //     .rd_addr_mem    (data_forwarding_rd_addr_mem),
-    //     .rd_addr_wb     (data_forwarding_rd_addr_wb)
-    // );
+    data_forwarding data_forwarding(
+        .wiring                 (wires.data_forwarding_wiring)
+    );
 endmodule
 
 

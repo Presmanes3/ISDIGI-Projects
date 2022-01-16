@@ -14,7 +14,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-bge x1, x2, Done # BGE jump to Done
+bge x1, x2, Done # BGE Compara si x1 es mayor o igual que x2 y si es así salta a Done
 
 addi x0, x0, 1
 addi x0, x0, 1

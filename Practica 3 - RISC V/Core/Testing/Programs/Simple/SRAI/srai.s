@@ -6,7 +6,7 @@ addi x0, x0, 1
 addi x0, x0, 1
 addi x0, x0, 1
 
-srai x3, x1, 1 # shift x1 ,1 move to x3
+srai x3, x1, 1 # Desplaza hacia la derecha un número inmediato(1) el valor de x1 en x3 extendiendo el signo(X1 = 0010 => x3 = 0001)
 
 addi x0, x0, 1
 addi x0, x0, 1
