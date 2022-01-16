@@ -55,13 +55,11 @@ class core_test;
 
             $fwrite(file,"%d, %d\n",golden_value, segmented_value);
         
-            //assert (golden_value == segmented_value) else $info("El elemento numero ",i," de fibonaci NO COINCIDE");
+            assert (golden_value == segmented_value) else $info("El elemento numero ",i," de fibonaci NO COINCIDE");
         end 
 
         $display("[FIBBONACCI] finishing test!");
         $fclose(file);
-
-
     endtask
 
     task bubble_test();
@@ -87,7 +85,7 @@ class core_test;
                     $display("[BUBBLE] Golden model finished");
                 end
                 begin
-                    //@(testbench.cores.bubble_short_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
+                    @(testbench.cores.bubble_short_core.segmented_core_wires.instruction_memory_wiring.output_data != 32'h00000013); //instruccion fin real
                     $display("[BUBBLE] Segmented model finished");
                 end
             join
