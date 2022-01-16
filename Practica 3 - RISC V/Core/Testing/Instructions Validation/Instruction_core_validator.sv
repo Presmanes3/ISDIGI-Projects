@@ -15,8 +15,8 @@ module Instruction_core_validator #(
         .reset(reset)
     );
 
-    int single_value = 0;
-    int segmented_value = 0;
+    int single_value;
+    int segmented_value;
 
     task check();
         $display("==============================================================");

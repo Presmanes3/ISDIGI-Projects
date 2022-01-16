@@ -17,13 +17,6 @@ Top level modules:
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/connector.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module pc_wiring_designator_segmented
-
-Top level modules:
-	pc_wiring_designator_segmented
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/mux_2_input.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface mux_2_input_interface
@@ -31,6 +24,13 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	mux_2_input
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/pc_wiring_designator.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module pc_wiring_designator_segmented
+
+Top level modules:
+	pc_wiring_designator_segmented
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Instructions Validation/Instruction_core_validator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Instructions Validation/Instruction_core_validator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -71,13 +71,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	Instruction_core_validator
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module immediate_generator_wiring_designator_segmented
-
-Top level modules:
-	immediate_generator_wiring_designator_segmented
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/main_controller_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/main_controller_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module main_controller_wiring_designator
@@ -85,12 +78,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	main_controller_wiring_designator
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/immediate_generator_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module reg_id_ex_wiring_designator_segmented
+-- Compiling module immediate_generator_wiring_designator_segmented
 
 Top level modules:
-	reg_id_ex_wiring_designator_segmented
+	immediate_generator_wiring_designator_segmented
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_verificator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_verificator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -100,12 +93,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	bubble_sort_verificator
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/reg_id_ex_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module alu_wiring_designator
+-- Compiling module reg_id_ex_wiring_designator_segmented
 
 Top level modules:
-	alu_wiring_designator
+	reg_id_ex_wiring_designator_segmented
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_pc_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_pc_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -113,6 +106,13 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	adder_pc_wiring_designator
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_wiring_designator.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module alu_wiring_designator
+
+Top level modules:
+	alu_wiring_designator
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/jump_controller.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -439,21 +439,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	jump_controller_wiring_designator_segmented
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface register_mem_wb_interface
--- Compiling module register_mem_wb
-
-Top level modules:
-	register_mem_wb
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module mux_mem_wiring_designator_segmented
-
-Top level modules:
-	mux_mem_wiring_designator_segmented
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Instructions Validation/Instruction_validation_testbench.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Instructions Validation/Instruction_validation_testbench.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module adder_pc_wiring_designator
@@ -493,6 +478,21 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	instruction_validation_testbench
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/mux_mem_wiring_designator.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mux_mem_wiring_designator_segmented
+
+Top level modules:
+	mux_mem_wiring_designator_segmented
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_mem_wb.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling interface register_mem_wb_interface
+-- Compiling module register_mem_wb
+
+Top level modules:
+	register_mem_wb
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/data_memory_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -539,14 +539,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	core
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface register_ex_mem_interface
--- Compiling module register_ex_mem
-
-Top level modules:
-	register_ex_mem
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/fibonnaci_verificator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/fibonnaci_verificator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling package fibonnaci_verificator_sv_unit
@@ -554,6 +546,14 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	fibonnaci_verificator
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/register_ex_mem.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling interface register_ex_mem_interface
+-- Compiling module register_ex_mem
+
+Top level modules:
+	register_ex_mem
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase3/check.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -646,13 +646,6 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	testbench
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module adder_sum_wiring_designator
-
-Top level modules:
-	adder_sum_wiring_designator
-
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Components/pc_segmented.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling interface pc_interface
@@ -661,12 +654,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	PC
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/adder_sum_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module instruction_memory_wiring_designator_segmented
+-- Compiling module adder_sum_wiring_designator
 
 Top level modules:
-	instruction_memory_wiring_designator_segmented
+	adder_sum_wiring_designator
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/alu_encapsulator_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -674,6 +667,13 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	alu_encapsulator_wiring_designator_segmented
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/instruction_memory_wiring_designator.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module instruction_memory_wiring_designator_segmented
+
+Top level modules:
+	instruction_memory_wiring_designator_segmented
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/data_forwarding.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -703,12 +703,11 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	instruction_memory_wiring_designator
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_test.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_test.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module main_controller_wiring_designator_segmented
 
 Top level modules:
-	main_controller_wiring_designator_segmented
+	--none--
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/Golden Model/fibonnaci_golden.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/Golden Model/fibonnaci_golden.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -716,18 +715,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_test.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Testing/Fase2/bubble_sort_test.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Segmented Designators/main_controller_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module main_controller_wiring_designator_segmented
 
 Top level modules:
-	--none--
-
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv}
-QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module immediate_generator_wiring_designator
-
-Top level modules:
-	immediate_generator_wiring_designator
+	main_controller_wiring_designator_segmented
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Basic Components/register_bank.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -736,6 +729,13 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
 Top level modules:
 	register_bank
+
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/imm_gen_wiring_designator.sv}
+QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module immediate_generator_wiring_designator
+
+Top level modules:
+	immediate_generator_wiring_designator
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Designators/Golden Designators/alu_controller_wiring_designator.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -759,13 +759,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	mux_pc_wiring_designator_segmented
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface register_m_interface
--- Compiling module register_m
+-- Compiling interface segmented_interface
 
 Top level modules:
-	register_m
+	--none--
 
 } {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Risk Detectors/hazard_detection_unit.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -775,11 +774,12 @@ QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	hazard_detection_unit
 
-} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/segmented_interface.sv}
+} {} {}} {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Javier Presmanes/Documents/Universidad/3ro Teleco/Primer Cuatri/ISDIGI/Practicas/ISDIGI-Projects/Practica 3 - RISC V/Core/Design/Segmented Registers/Small Registers/register_m.sv}
 QuestaSim-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling interface segmented_interface
+-- Compiling interface register_m_interface
+-- Compiling module register_m
 
 Top level modules:
-	--none--
+	register_m
 
 } {} {}}
