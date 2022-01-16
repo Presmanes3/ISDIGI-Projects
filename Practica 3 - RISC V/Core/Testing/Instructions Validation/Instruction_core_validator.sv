@@ -1,7 +1,8 @@
 `include "../../Design/core.sv"
 
 module Instruction_core_validator #(
-    parameter program_file = "ADD/add.mem"
+    parameter program_file = "ADD/add.mem",
+    parameter expected_mem_value = 0
     ) (
     input clk,
     input reset
@@ -35,12 +36,17 @@ module Instruction_core_validator #(
         join
 
         $display("[CHECKING MEMORIES]");
-        single_value    = core.golden_core.data_memory.data_pool[0];
-        segmented_value = core.segmented_core.data_memory.data_pool[0];
+        single_value    = $signed(core.golden_core.data_memory.data_pool[0]);
+        segmented_value = $signed(core.segmented_core.data_memory.data_pool[0]);
 
+        if(single_value == segmented_value) begin 
+            $display("[MEMORIES ARE EQUAL] [%d] [%d]", single_value, segmented_value);
+            assert (segmented_value == expected_mem_value) 
+            else   $info("[EXPECTED VALUE IS WRONG]");
+        end 
         assert(single_value == segmented_value) else $info("[VALUE ERROR] SINGLE (%d) != SEGMENTED (%d)", single_value, segmented_value);
 
-        $display("[TEST FINISH] >>> ", program_file);
+        $display("[TEST FINISH] >>> %s", program_file);
         $display("==============================================================");
     endtask
 
